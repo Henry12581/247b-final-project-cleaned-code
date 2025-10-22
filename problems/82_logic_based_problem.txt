@@ -1,0 +1,5 @@
+Problem 82:
+Ralph is going to practice playing tennis with a tennis ball machine that shoots out tennis balls for Ralph to hit. He loads up the machine with 175 tennis balls to start with. Out of the first 100 balls, he manages to hit 2/5 of them. Of the next 75 tennis balls, he manages to hit 1/3 of them. Out of all the tennis balls, how many did Ralph not hit?
+
+sat[not_hit_total = 110, first_hit_rate = 2/5, second_set = 75, total_balls = 175, hit_total = 65, first_set = 100, first_hit_total = 40, second_hit_rate = 1/3, second_hit_total = 25]
+110

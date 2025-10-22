@@ -1,0 +1,5 @@
+Problem 34:
+A painter uses 4 cans of paint. Each full can weighs 1.6 kg. After painting, each can is 60% full. What is the total remaining weight of paint in kilograms?
+
+
+3.84

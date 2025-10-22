@@ -1,0 +1,5 @@
+Problem 30:
+A chef uses 3 eggs, each 60g, and adds 180g of flour. He removes 1/4 of the mixture. How much does the remaining batter weigh in grams?
+
+
+270

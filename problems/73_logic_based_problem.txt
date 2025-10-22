@@ -1,0 +1,5 @@
+Problem 73:
+James writes a 3-page letter to 2 different friends twice a week.  How many pages does he write a year?
+
+sat[week = 12, letter = 3, year = 624, friends = 2]
+624

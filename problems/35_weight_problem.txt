@@ -1,0 +1,5 @@
+Problem 35:
+A pack of 10 identical pencils and a box weigh 230g. The box alone weighs 50g. If 4 pencils are removed, what is the new total weight in grams?
+
+
+158

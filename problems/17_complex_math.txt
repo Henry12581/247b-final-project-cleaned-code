@@ -1,0 +1,5 @@
+Problem 17:
+Rationalize 1 / (√5 - 2)
+
+Result:
+4.236067977499788

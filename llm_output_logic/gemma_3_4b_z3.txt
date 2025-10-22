@@ -1,0 +1,897 @@
+=== Problem 61 ===
+Response:
+```python
+def solve():
+  """Solves the deep-sea monster problem."""
+
+  total_consumed = 847
+  time_span = 300
+  ship_people_ratio = 2
+
+  # Let x be the number of people on the first ship.
+  # The number of people on subsequent ships is 2x, 4x, 8x, ... , 2^(n-1)x
+  # Total consumed over 300 years:
+  # x + 2x + 4x + ... + 2^(n-1)x = 847
+  # x * (1 + 2 + 4 + ... + 2^(n-1)) = 847
+
+  # The sum of the geometric series is: 1 + 2 + 4 + ... + 2^(n-1) = 2^n - 1
+  # So, x * (2^n - 1) = 847
+
+  # We know that the monster rises every 100 years. Let's consider the first 100 years.
+  # The number of people consumed in the first 100 years is:
+  # x + 2x + ... + 2^(n-1)x = x * (1 + 2 + 4 + ... + 2^(n-1))
+  # where n is the number of ships built in the first 100 years.
+
+  # Since the monster rises every 100 years, we can assume that the time span is divided into two equal parts: 100 years and 200 years.
+  # Let's consider the first 100 years. The number of ships built in the first 100 years is n = 100 / 100 = 1.
+  # So, x * (2^1 - 1) = 847
+  # x * 1 = 847
+  # x = 847
+
+  # However, the problem states that ships have been built larger over time. This means that each new ship has twice as many people as the last ship.
+  # Let $p_i$ be the number of people on ship $i$. Then $p_{i+1} = 2 p_i$.
+  # The monster rises every 100 years, so it consumes ships in intervals of 100 years.
+  # Over 300 years, there are two periods of 100 years. Let $x$ be the number of people on the first ship.
+  # In the first 100 years, the monster eats $x + 2x = 3x$.
+  # In the next 100 years, the monster eats $4x + 8x + ... = x(2^n - 1)$, where n is the number of ships built in the second 100 years.
+
+  # Let's consider the first 100 years. The number of people on the ship eaten is $x$.
+  # In the next 100 years, the number of people on the ship eaten is $2x$, then $4x$, and so on.
+  # Total consumed = $x + 2x + 4x + ... = x(1+2+4+...+2^{n-1}) = x(2^n - 1)$ where n is the number of ships built in the first 100 years.
+
+  # We are given that total consumed over 300 years is 847.
+  # So, $x(2^n - 1) + \text{consumed in next 100 years} = 847$.
+  # Since the monster rises every 100 years, we can assume that the number of ships built in each 100-year period is roughly equal.
+
+  # Let's consider the first 100 years. The number of people on the ship eaten is $x$.
+  # In the next 100 years, the number of people on the ship eaten is $2x$, then $4x$, and so on.
+  # Total consumed = $x + 2x + 4x + ... = x(1+2+4+...+2^{n-1}) = x(2^n - 1)$ where n is the number of ships built in the first 100 years.
+
+  # Let's assume that the number of ships built in each 100 year period is approximately equal.
+  # So, $x + 2x + ... = x(1+2+4+...+2^{n-1}) = x \cdot (2^n - 1) = 847$.
+
+  # We know that the monster rises every 100 years. Let's consider the first 100 years.
+  # The number of people on the ship eaten is $x$.
+  # In the next 100 years, the number of ships built will be approximately $n = \frac{200}{100} = 2$.
+  # So we have $x(2^2 - 1) = x(3) = 847$, which gives $x = \frac{847}{3} \approx 282.33$. This is not an integer, so it's not the correct approach.
+
+  # Let's consider the first 100 years. The number of ships built in this period is 1.
+  # So $x(2^1 - 1) = x = 847$.
+  # In the next 100 years, we have 2 periods of 100 years.
+  # Let's assume that the number of ships built in each period is equal. Then the number of ships built in the first 100 years is $n_1$ and in the second 100 years is $n_2$.
+  # We have $n_1 + n_2 = \frac{300}{100} = 3$. Since the ratio between ships is 2, we can say that $n_1 = n_2 = 1.5$, which isn't an integer.
+
+  # Let's consider the first 100 years. The number of people on the ship eaten is x.
+  # In the next 100 years, the monster eats twice as many people per ship. So we have $x + 2x + 4x + ... = x(1+2+4+...+2^{n-1}) = x(2^n - 1)$.
+
+  # Let's assume that in each 100 year period, the number of ships built is approximately equal.
+  # So $x(2^n - 1) = 847$. Since we have two periods of 100 years, $n=2$, so $x(2^2-1) = x(3) = 847$. This gives $x = \frac{847}{3} \approx 282.33$.
+  # Since the number of people must be an integer, this approach is not correct.
+
+  # Let's consider the first 100 years. The monster eats x people on a ship.
+  # In the next 100 years, it eats $2x$ on the second ship, $4x$ on the third ship, and so on.
+  # Total consumed = $x + 2x + 4x + ... = x(1+2+4+...+2^{n-1}) = x \cdot (2^n - 1)$.
+
+  # We know that over 300 years, the total consumed is 847.
+  # Let's assume that in each 100 year period, we have $n$ ships. Then the number of people on the first ship is x.
+  # The number of people on the second ship is $2x$, and so on.
+  # So the total consumed is $x + 2x + 4x + ... = x(1+2+4+...+2^{n-1}) = x \cdot (2^n - 1)$.
+
+  # We have $x(2^n - 1) = 847$.
+  # Since the monster rises every 100 years, we can assume that in each 100 year period, the number of ships built is approximately equal.
+  # So $n \approx \frac{300}{100} = 3$. Then $x(2
+
+=== Problem 62 ===
+Response:
+```python
+from z3 import *
+
+# Define the number of slices in a large pizza
+large_pizza_slices = 16
+
+# Define the number of slices in a small pizza
+small_pizza_slices = 8
+
+# Define the number of large pizzas bought
+num_large_pizzas = 2
+
+# Define the number of small pizzas bought
+num_small_pizzas = 2
+
+# Create a variable to represent the total number of slices eaten
+total_slices = Int("total_slices")
+
+# Create a formula that represents the total number of slices eaten is equal to the sum of slices from large and small pizzas
+formula = And(total_slices == num_large_pizzas * large_pizza_slices + num_small_pizzas * small_pizza_slices)
+
+# Solve the formula
+solver = Solver()
+solver.add(formula)
+
+# Check if a solution exists
+if solver.check() == sat:
+    # Get the value of the total slices variable
+    model = solver
+
+=== Problem 63 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+budget = 200
+shirt_cost = 30
+pants_cost = 46
+coat_cost = 38
+socks_cost = 11
+belt_cost = 18
+shoes_cost = X  # Unknown variable for shoes cost
+
+# Create the constraints
+total_spent = shirt_cost + pants_cost + coat_cost + socks_cost + belt_cost + shoes_cost
+remaining_budget = budget - total_spent
+
+# Add the constraint that the remaining budget is $16
+assert remaining_budget == 16, "The remaining budget should be $16"
+
+# Solve the constraints
+solver = Solver()
+solver.add(total_spent + shoes_cost <= budget)
+solver.add(remaining_budget == 16)
+solution = solver.model()
+
+# Extract the value of shoes_cost from the solution
+if solution:
+    shoes_cost_value = solution
+
+=== Problem 64 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+shorts_price = 7
+shoes_price = 10
+tops_price = C.Real("tops_price")  # Use Real to allow for decimal values
+num_shorts = 5
+num_shoes = 2
+num_tops = 4
+
+# Create the total cost expression
+total_cost = (num_shorts * shorts_price) + (num_shoes * shoes_price) + (num_tops * tops_price)
+
+# Ann's budget
+budget = 75
+
+# Formulate the constraint that the total cost must be less than or equal to her budget
+constraint = And(total_cost <= budget)
+
+# Create the solver and add the constraint
+solver = Solver()
+solver.add(constraint)
+
+# Solve the problem
+if solver.check() == sat:
+    # Extract the value of tops_price
+    tops_price_val = solver.model().get_value(tops_price
+
+=== Problem 65 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+snowflake_count = int(cxz3("snowflake_count"))
+truck_count = int(cxz3("truck_count"))
+rose_count = int(cxz3("rose_count"))
+
+# Create the constraints
+constraints = [
+    snowflake_count == 11,
+    truck_count == snowflake_count + 9,
+    rose_count == truck_count - 13,
+]
+
+# Create the solver
+solver = Solver()
+
+# Add the constraints to the solver
+solver.add(constraints)
+
+# Check if the solution is found
+if solver.check() == sat:
+    # Get the values of the variables
+    total_stamps = snowflake_count + truck_count +
+
+=== Problem 66 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+wallet_cost = 100
+money_needed = wallet_cost / 2
+parents_gift = 15
+grandparents_gift = parents_gift * 2
+total_money = money_needed + parents_gift + grandparents_gift
+
+# Create a Z3 solver
+solver = Solver()
+
+# Add constraints to the solver
+solver.add(total_money >= wallet_cost)
+
+# Solve the problem
+result = solver.check_satisfiability()
+
+if result == sat:
+    # Extract the solution
+    solution = solver.model()
+    print
+
+=== Problem 67 ===
+Response:
+```python
+from z3 import *
+
+# Let's define variables:
+# initial_files = number of files initially downloaded
+# deleted_files_round1 = number of files deleted in the first round
+# downloaded_files_round2 = number of files downloaded in the second round
+# irrelevant_files_round2 = number of irrelevant files downloaded in the second round
+
+initial_files = 800
+deleted_files_round1 = initial_files * 0.7  # 70% of 800
+downloaded_files_round2 = 400
+irrelevant_files_round2 = downloaded_files_round2 * (3/5)
+
+# Calculate the number of valuable files after the first round:
+valuable_files_after_round1 = initial_files - deleted_files_round1
+
+# Calculate the number of valuable files after the second round:
+valuable_files_after_round2 = valuable_files_after_round
+
+=== Problem 68 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+num_jaguars = 6
+birds_per_jaguar = 0  # We don't know this yet. Let Z3 figure it out.
+beetles_per_bird = 12
+birds_per_snake = 3
+snakes_per_jaguar = 5
+
+# Create the constraints
+# Each jaguar eats 5 snakes per day, and each snake eats 3 birds per day.
+# Therefore, each jaguar eats 5 * 3 = 15 birds per day.
+# Since there are 6 jaguars, the total number of birds eaten is 6 * 15 = 90.
+
+# We can express this as a Z3 formula:
+# Total beetles eaten = (number of jaguars) * (birds eaten by each jaguar) * (beetles per bird)
+# Let x be the number of birds eaten by each jaguar.
+# Then, the total number of birds eaten is 6 * x * 12.
+
+# We can also express this as:
+# Total beetles eaten = (number of jaguars) * (snakes eaten by each jaguar) * (birds eaten by each snake)
+# Let y be the number of snakes eaten by each jaguar.
+# Then, the total number of snakes eaten is 6 * y * 5.
+# Since each snake eats 3 birds per day, the total number of birds eaten is 6 * y * 5 * 3 = 90y
+
+# We want to find the number of beetles eaten each day.  Each bird eats 12 beetles.
+# So, we need to find the total number of birds eaten.
+
+# Let's define a variable for the number of birds per jaguar.
+x = Int("birds_per_jaguar")
+
+# The number of snakes eaten by each jaguar is 5 * x.
+y = Int("snakes_per_jaguar")
+
+# The total number of birds eaten is 6 * x * 12.
+# The total number of snakes eaten is 6 * y * 5.
+# The total number of beetles eaten is (6 * x * 12) * 12  (since each bird eats 12 beetles).
+
+# We can express the problem as a Z3 formula:
+# Total_beetles = (number_of_jaguars) * (birds_per_jaguar) * (beetles_per_bird)
+# Total_beetles = 6 * x * 12
+
+# The number of snakes eaten by each jaguar is 5 * x.
+# The total number of snakes eaten is 6 * y * 5.
+
+# We want to find the number of beetles eaten, which is (Total birds eaten) * (beetles per bird).
+# Total birds eaten = 6 * x * 12
+# Number of beetles eaten = (6 * x * 12) * 12 = 864x
+
+# We need to find the value of x such that the number of snakes eaten by each jaguar is an integer.
+# y = 5 * x must be an integer, so x must be a multiple of 1/5.  This isn't helpful.
+
+# Let's try another approach:
+# Each jaguar eats 5 snakes per day. There are 6 jaguars, so the total number of snakes eaten is 6 * 5 = 30.
+# Each snake eats 3 birds per day, so the total number of birds eaten by snakes is 30 * 3 = 90.
+# Each bird eats 12 beetles per day, so the total number of beetles eaten is 90 * 12 = 1080.
+
+# We can write this as a Z3 formula:
+out = Solver()
+out.add(x >= 0)  # Number of birds per jaguar must be non-negative
+out.add(y >= 0)   # Number of snakes per jaguar must be non-negative
+out.add(IntVector("x", 6).length() == 1) # We have one variable for the number of birds eaten by each jaguar
+out.add(IntVector("y", 6).length() == 1)  # We have one variable for the number of snakes eaten by each jaguar
+
+for i in range(6):
+    out.add(x[i] >= 0)
+    out.add(y[i] >= 0)
+
+
+out.setStrategy(ZeroOrOne()) # Use zero-one strategy to find a solution
+
+model = out.model()
+
+if model:
+  num_birds_per_jaguar = model.eval(x[0])
+  num_snakes_per
+
+=== Problem 69 ===
+Response:
+```python
+from z3 import *
+
+# Define the initial number of each color of hard hats
+pink_initial = 26
+green_initial = 15
+yellow_initial = 24
+
+# Carl takes away 4 pink hard hats
+pink_carl = 4
+
+# John takes away 6 pink hard hats and twice as many green hard hats as the number of pink hard hats he removed
+pink_john = 6
+green_john = 2 * pink_john
+
+# Create a Z3 solver
+solver = Solver()
+
+# Add constraints to represent the remaining number of each color of hard hats
+solver.add(pink_initial - pink_carl - pink_john >= 0)
+solver.add(green_initial - green_john >= 0)
+solver.add(yellow_initial >= 0)
+
+# Calculate the total number of hard hats remaining in the truck
+total_remaining = pink_initial - pink_carl - pink_john
+
+=== Problem 70 ===
+Response:
+```python
+def solve():
+  """Solves the problem using Z3."""
+
+  from z3 import Solver, Int, Model
+
+  # Define variables
+  walk_times = [Int("walk_time1"), Int("walk_time2")]
+  bike_times = [Int("bike_time1"), Int("bike_time2")]
+
+  # Set up constraints
+  solver = Solver()
+
+  # Walking times: 2 hours to walk to work, 2 hours to walk back
+  solver.add(walk_times[0] == 2)
+  solver.add(walk_times[1] == 2)
+
+  # Bike times: 1 hour to ride to work, 1 hour to ride back
+  solver.add(bike_times[0] == 1)
+  solver.add(bike_times[1] == 1)
+
+  # Walking frequency: walks to and from work three times a week
+  solver.add(walk_times[0] + walk_times[1] == 3 * 2) # 6 hours total walking
+
+  # Bike frequency: rides bike to and from work twice a week
+  solver.add(bike_times[0] + bike_times[1] == 2 * 2) # 4 hours total biking
+
+  # Solve the model
+  model = solver.check()
+
+  if model:
+    total_time = walk_times[0] + walk_times
+
+=== Problem 71 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+liters = Int("liters")
+salt_percentage = Float("salt_percentage")
+salt_amount_liters = Int("salt_amount_liters")
+ml = Int("ml")
+
+# Set up the equations
+# Jack collects 2 liters of seawater.
+assert liters == 2
+
+# The water is 20% salt.
+assert salt_percentage == 0.2
+
+# Calculate the amount of salt in liters.
+salt_amount_liters = liters * salt_percentage
+
+# Convert liters to milliliters.
+ml = salt_amount
+
+=== Problem 72 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+movie_cost = 2000
+dvd_cost = 6
+selling_price = 2.5 * movie_cost
+movies_per_day = 500
+days_per_week = 5
+weeks = 20
+
+# Calculate the profit per movie
+profit_per_movie = selling_price - movie_cost
+
+# Calculate the total number of movies sold in a week
+movies_sold_per_week = movies_per_day * days_per_week
+
+# Calculate the total number of movies sold in 20 weeks
+total_movies_sold = movies_sold_per_week * weeks
+
+# Calculate the total profit in 20 weeks
+total_profit =
+
+=== Problem 73 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+num_friends = 2
+letters_per_week = 2
+pages_per_letter = 3
+weeks_per_year = 52
+
+# Calculate the total number of letters written per week
+total_letters_per_week = num_friends * letters_per_week
+
+# Calculate the total number of pages written per week
+total_pages_per_week = total_letters_per_week * pages_per_letter
+
+# Calculate the total number of pages written per year
+total_pages_per_year = total_pages_per_week * weeks_per_
+
+=== Problem 74 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+cheddar_price = 10
+cream_cheese_price = cheddar_price / 2
+cold_cuts_price = 2 * cheddar_price
+
+# Create a Z3 solver
+solver = Solver()
+
+# Add constraints to the solver
+solver.add(cheddar_price == 10)
+solver.add(cream_cheese_price == cheddar_price / 2)
+solver.add(cold_cuts_price == 2 * cheddar_price)
+
+# Solve the problem
+result = solver.check_satisfiability()
+
+if result == sat:
+    # Print the solution
+    print("The total cost is:", cheddar_price + cream_cheese_price
+
+=== Problem 75 ===
+Response:
+```python
+from z3 import *
+
+# Let x be the number of minutes it takes Joy to read 120 pages.
+x = Int("x")
+
+# Joy can read 8 pages in 20 minutes, so she reads at a rate of 8/20 pages per minute.
+rate = Float(8) / Float(20)
+
+# The number of pages she reads in x minutes is rate * x.
+pages_read = rate * x
+
+# She needs to read 120 pages, so pages_read must equal 120.
+assert pages_read == Int(120)
+
+# We want to find the value of x (in minutes).
+solver = Solver()
+solver.add(x >= 0)  # Ensure x is non-negative
+solver.add(x == solve(pages_read)) # Solve for x
+
+model = solver.model()
+if model:
+    x_value = model[x]
+    hours =
+
+=== Problem 76 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+pages_yesterday = Int("pages_yesterday")
+pages_today = Int("pages_today")
+remaining_pages = Int("remaining_pages")
+pages_tomorrow = Int("pages_tomorrow")
+
+# Create the constraints
+# Yesterday she read 12 pages
+assert pages_yesterday == 12
+
+# Today she read twice as many pages as yesterday
+assert pages_today == 2 * pages_yesterday
+
+# Total number of pages read so far is 12 + (2*12) = 36
+total_read = pages_yesterday + pages_today
+
+# The remaining pages are 120 - total_read
+remaining_pages = 120 - total_read
+
+# She wants to read half of the remaining
+
+=== Problem 77 ===
+Response:
+```python
+from z3 import *
+
+# Let w be the initial weight of the box (in pounds)
+w = RealVar('w')
+
+# The box weighs 2 pounds with jelly beans
+z3.solver().add(w + 2 == 2)
+
+# The box weighs 3 times the original weight with brownies
+z3.solver().add(w + 2 + w * 3 == 3 * w)
+
+# The box weighs 2 pounds more with additional jelly beans
+z3.solver().add(w + 2 + w * 3 + 2 == 2 + w * 3)
+
+# The box weighs twice the previous weight with gummy worms
+z3.solver().add(w + 2 + w * 3 + 2 + w * 2 == 2 * (w + 2 + w * 3 + 2))
+
+# Solve the equations
+solution = z3.solver()
+if solution.check() == sat:
+    final_weight =
+
+=== Problem 78 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+n = int(expr("10"))  # Number of yellow flowers
+p = int(expr("80% * 10")) # Number of purple flowers (80% more than yellow)
+g = int(expr("0.25 * (n + p)")) # Number of green flowers
+
+# Create the Z3 solver
+s = Solver()
+
+# Add constraints to the solver
+s.add(n >= 0)
+s.add(p >= 0)
+s.add(g >= 0)
+s.add(n == 10)
+s.add(p == n * (1 + 0.8))
+s.add(g == 0.25 * (n + p))
+
+# Check if the constraints are satisfiable
+if s.check() == sat:
+    # Get the solution
+    model = s.model()
+    total_flowers
+
+=== Problem 79 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+credit = Int("credit")
+tuesday_payment = Int("tuesday_payment")
+thursday_payment = Int("thursday_payment")
+
+# Create the constraints
+# Mary spent the full credit limit
+assert credit == 100
+
+# She paid $15 on Tuesday and $23 on Thursday
+assert tuesday_payment == 15
+assert thursday_payment == 23
+
+# The total amount paid is the sum of the payments
+assert tuesday_payment + thursday_payment == credit
+
+# Solve the constraints
+solver = Solver()
+solver.add(credit == 100)
+solver.add(tuesday_payment == 15)
+solver.add(thursday_payment == 23)
+solution = solver.model()
+
+# Extract the value of 'credit' from the solution
+if solution:
+    remaining_credit
+
+=== Problem 80 ===
+Response:
+```python
+def solve():
+  # Let x be the previous monthly income.
+  # Rent and utilities were initially 40% of x, which is 0.4x.
+  # After the salary increase, the income is x + 600.
+  # Now rent and utilities are 25% of the new income, which is 0.25(x + 600).
+
+  # We can set up the equation: 0.4x = 0.25(x + 600)
+  # Expand the right side: 0.4x = 0.25x + 150
+  # Subtract 0.25x from both sides: 0.15x = 150
+  # Divide by 0.15: x = 150 / 0.15
+  # x = 1000
+
+  from z3 import *
+
+  x = Int("x")
+  rent_utilities_initial = 0.4 * x
+  new_income = x + 600
+  rent_utilities_new = 0.25 * new_income
+
+  solver = Solver()
+  solver.add(rent_utilities_initial == rent_utilities
+
+=== Problem 81 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+april_clips = Int("april_clips")
+may_clips = Int("may_clips")
+
+# Create the equations
+# Natalia sold 48 clips in April.
+solver.add(april_clips == 48)
+
+# She sold half as many clips in May as in April.
+solver.add(may_clips == april_clips / 2)
+
+# Calculate the total number of clips sold.
+total_clips = april_clips + may_clips
+
+# Solve the equations
+result = solver.check_model()
+
+if result == sat:
+    # Extract the solution
+    total_clips_value = model().get_solver().model()[total_clips]
+    print
+
+=== Problem 82 ===
+Response:
+```python
+def solve():
+  """Solves the tennis ball problem using Z3."""
+
+  from z3 import Solver, Int, Real
+
+  s = Solver()
+
+  # Define variables
+  total_balls = 175
+  hit_first_100 = total_balls * (2/5)
+  hit_next_75 = 75 * (1/3)
+  
+  # Add constraints
+  s.add(hit_first_100 <= total_balls)
+  s.add(hit_next_75 <= 75)
+
+  # Calculate the total number of balls hit
+  total_hit = hit_first_100 + hit_next_75
+
+  # Calculate the number of balls not hit
+  not_hit = total_balls - total_hit
+
+  # Check if the solution is valid
+  if s.check() == z3.SAT:
+    result = Int(not_hit)
+    s.add(result >= 0) # Ensure result is non-negative
+    solution =
+
+=== Problem 83 ===
+Response:
+```python
+def solve():
+  mango_trees = 60
+  coconut_trees = (mango_trees - 1) // 2
+  total_trees = mango_trees + coconut_trees
+  return total
+
+=== Problem 84 ===
+Response:
+```python
+def solve():
+  # Let s be the number of letters in Samantha's last name.
+  # Let b be the number of letters in Bobbie's last name.
+  # Let j be the number of letters in Jamie's last name (Grey).
+
+  # We are given that Samantha's last name has three fewer letters than Bobbie's last name:
+  # s = b - 3
+
+  # If Bobbie took two letters off her last name, she would have a last name twice the length of Jamie's:
+  # b - 2 = 2 * (j)
+
+  # Jamie's full name is Jamie Grey. So, j = 5 (Jamie) + 1 (Grey) = 6
+
+  # Substitute j = 6 into the second equation:
+  # b - 2 = 2 * 6
+  # b - 2 = 12
+  # b = 14
+
+  # Now substitute b = 14 into the first equation:
+  #
+
+=== Problem 85 ===
+Response:
+```python
+def solve():
+  """Solves the problem using Z3."""
+
+  from z3 import Solver, Int, Real
+
+  solver = Solver()
+
+  # Let x be Johnson's total profit.
+  x = solver.int("x")
+
+  # Mike's share is 2/7 of the total profit.
+  mike_share = solver.real("mike_share")
+  mike_share = 2 * x / 7
+
+  # Johnson's share is 5/7 of the total profit.
+  johnson_share = solver.real("johnson_share")
+  johnson_share = 5 * x / 7
+
+  # Johnson received $2500.
+  solver.assert(johnson_share == 2500)
+
+  # Solve for x (total profit).
+  solver.solve()
+
+  # Calculate Mike's initial share.
+  mike_initial = 2 * x / 7
+
+  # Mike spends $200 on a shirt.
+  spent_amount = solver.real("spent_amount")
+  spent_amount = 200
+
+  # Calculate Mike's remaining share after buying the shirt.
+  mike_remaining =
+
+=== Problem 86 ===
+Response:
+```python
+def solve():
+  """Solves the gnome problem."""
+
+  # Let x be the number of gnomes in the fifth house.
+  # The first four houses each have 3 gnomes.
+  # Total gnomes = (4 * 3) + x
+  # We are given that the total number of gnomes is 20.
+  # So, 12 + x = 20
+  # Therefore, x = 20 - 12
+  # x = 8
+
+=== Problem 87 ===
+Response:
+```python
+def solve():
+    work_days = 5
+    distance_to_work = 20  # miles
+    weekend_ride_distance = 200 # miles
+    bike_speed = 25  # mph
+
+    # Calculate total distance biked to work per day
+    daily_work_distance = 2 * distance_to_work
+
+    # Calculate total distance biked for workdays
+    total_work_distance = daily_work_distance * work_days
+
+    # Calculate time spent biking to and from work each day
+    time_to_work = daily_work_distance / bike_speed
+    time_from_work = daily_work_distance / bike_speed
+    daily_work_time = time_to_work + time_from_work
+
+    # Calculate total time spent biking to and from work per week
+    total_work_time = daily_work_time * work_days
+
+    # Calculate time spent on the weekend ride
+    weekend_ride_time = weekend_ride_distance / bike_speed
+
+    # Calculate total biking time for the week
+    
+
+=== Problem 88 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+hourly_wage = 18.00
+hours_per_shift = 8
+overtime_rate = hourly_wage + (hourly_wage / 2)
+days_per_week = 5
+total_hours = hours_per_shift * days_per_week
+
+# Calculate the regular earnings
+regular_earnings = total_hours * hourly_wage
+
+# Calculate the overtime hours
+overtime_hours = max(0, total_hours - hours_per_shift)
+
+# Calculate the overtime earnings
+overtime_earnings = overtime_hours * overtime_rate
+
+# Calculate the total earnings
+total_earnings =
+
+=== Problem 89 ===
+Response:
+```python
+def solve():
+  """Solves the shoe problem using Z3."""
+
+  from z3 import Solver, Int, Real
+
+  s = Solver()
+
+  # Define variables
+  allowance_per_month = 5
+  lawn_price = 15
+  driveway_price = 7
+  shoe_cost = 95
+  change = 15
+  lawns_mowed = 4
+
+  # Create the Z3 model
+  x = Int("x")  # Number of driveways shoveled
+  y = Int("y")  # Number of months saving
+
+  # Equations
+  s.add(allowance_per_month * y + lawn_price * lawns_mowed + driveway_price * x == shoe_cost + change)
+
+  # Solve the model
+  solution = s.model()
+
+  if solution:
+
+
+=== Problem 90 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+hours = Int("hours")
+earnings = RealVar("earnings")
+
+# Weng earns $12 an hour
+rate_per_hour = 12
+
+# She babysat for 50 minutes, which is 50/60 hours
+minutes = 50
+hours_babysitting = Float(minutes) / 60.0
+
+# Calculate the earnings
+earnings = rate_per_hour * hours
+

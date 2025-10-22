@@ -1,0 +1,511 @@
+=== Problem 21 ===
+Response:
+Here's the Z3 code to solve this problem:
+
+```python
+from z3 import *
+
+# Define variables
+apple_weight = 20 * 1000 # apple weight in grams
+total_weight_oz = 80
+num_pears = Int('num_pears')
+pear_weight_g = Int('pear_weight_g')
+
+# Calculate total weight of pears and apple in oz
+total_weight_oz_pears = num_pears / 2 * pear_weight_g / 28.35 # convert to oz
+total_weight_oz_apple = apple_weight / 453.59 # convert to oz
+
+# Set up equation
+eq = total_weight_oz_pears + total_weight_oz_apple == total_weight_oz
+
+# Solve the equation
+solution = solve([eq], [num_pears, pear_weight_g])
+
+print("Number of pears:", solution[num_pears])
+print("Weight per pear in grams:", solution[pear_weight_g])
+```
+
+This code uses Z3's `Int` function to define integer variables for the number of pears and the weight of each pear. It then sets up an equation based on the given conditions and solves it using the `solve` function.
+
+Please note that you need to have Z3 installed in your Python environment to run this code. You can install it using pip: `pip install z3-solver`.
+
+=== Problem 22 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+x = Int('x')  # weight of one orange in grams
+w = x / 3     # weight of orange eaten by brother in grams
+plate_weight = 400 + w + 200  # total weight of plate in grams
+total_weight = 1100           # total weight of plate and oranges in grams
+
+# Create a solver
+s = Solver()
+
+# Add constraints
+s.add(plate_weight == total_weight)
+s.add(w <= x)
+
+# Solve the system of equations
+solution = s.check()
+
+if solution == sat:
+    print("Solution found")
+    result = s.model()
+    print(f"One whole orange weighs {result[x]} grams")
+else:
+    print("No solution found")
+```
+
+=== Problem 23 ===
+Response:
+Here is the Z3 code in Python:
+```
+from z3 import *
+
+# Define the variables
+x = Int('x')  # weight of one full rod in grams
+
+# Set up the equation based on the problem statement
+eq = x + (x/2) - 2.8 * 1000  # convert kg to grams
+
+# Solve the equation
+solution = solve(eq, x)
+
+# Print the solution
+print(solution[0])
+```
+This code defines a single variable `x` representing the weight of one full rod in grams, sets up an equation based on the problem statement, solves for `x`, and prints the result.
+
+=== Problem 24 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+milk_volume = Real('milk_volume')
+water_volume = Real('water_volume')
+
+# Set up the constraints
+milk_volume_range = 0.75 * 1.5  # Half of the bottle volume
+water_volume_range = 0.25 * 1.5  # Other half of the bottle volume
+
+# Define the weights per ml
+milk_weight_per_ml = 1.03
+water_weight_per_ml = 1.00
+
+# Calculate the total weight of milk and water
+total_milk_weight = milk_volume_range * milk_weight_per_ml
+total_water_weight = water_volume_range * water_weight_per_ml
+
+# Calculate the total weight of the bottle contents
+total_weight = total_milk_weight + total_water_weight
+
+# Solve the problem
+s = Solver()
+s.add(milk_volume_range >= 0)
+s.add(water_volume_range >= 0)
+s.add(total_weight > 0)
+
+result = s.check()
+
+if result == sat:
+    print("The final answer is", total_weight)
+else:
+    print("No solution found")
+```
+
+=== Problem 25 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+jar_weight = 300  # initial weight of the jar in grams
+cookies = 5       # number of cookies initially placed in the jar
+total_weight = 950  # total weight after placing cookies in the jar
+cookies_eaten = 2   # number of cookies eaten
+
+# Create a solver
+s = Solver()
+
+# Define constraints
+jar_weight_constraint = s.add(jar_weight == 300)
+cookies_constraint = s.add(cookies * cookie_weight == total_weight - jar_weight)
+cookies_eaten_constraint = s.add(cookies - cookies_eaten == cookies)
+
+# Solve the system of constraints
+result = s.check()
+
+if result == sat:
+    # Get the value of cookie weight from the model
+    cookie_weight = s.model()[cookie_weight]
+    print(f"The weight of one cookie is {cookie_weight} grams")
+else:
+    print("No solution found")
+```
+
+=== Problem 26 ===
+Response:
+Here's a Z3 code in Python that solves this problem:
+
+```python
+from z3 import *
+
+# Define variables
+x = Int('x')  # weight of gold bar (in grams)
+y = Int('y')  # weight of silver added (in grams)
+
+# Set up equations based on the given information
+eq1 = x - 150 + y == 1200  # weight after removing 150g and adding 350g
+eq2 = x + y == 1400  # total weight
+
+# Solve the system of equations
+solution = solve((eq1, eq2), (x, y))
+
+# Calculate density ratio
+density_ratio = solution[x] / solution[y]
+
+print(density_ratio)
+```
+
+This code defines two variables `x` and `y`, representing the weight of gold bar in grams and the weight of silver added in grams, respectively. It then sets up two equations based on the given information: one for the total weight after removing 150g and adding 350g, and another for the total weight.
+
+The system of equations is solved using Z3's `solve` function, which returns a dictionary containing the values of the variables that satisfy both equations. The density ratio is then calculated by dividing the weight of gold bar (`x`) by the weight of silver added (`y`).
+
+=== Problem 27 ===
+Response:
+```python
+from z3 import *
+
+# Define the weights of the car and the tires
+car_weight = 820  # in kg
+tire_weight = 9.8  # in kg
+num_tires = 4
+
+# Calculate the total weight of all tires
+total_tire_weight = tire_weight * num_tires
+
+# Define the measured weight on the scale
+measured_weight = 859.2  # in kg
+
+# Create a solver
+s = Solver()
+
+# Add constraints to the solver
+s.add(measured_weight - car_weight == total_tire_weight)
+
+# Check if there is a solution
+if s.check() == sat:
+    # Get the model (i.e., the values of the variables)
+    m = s.model()
+    
+    # Calculate the weight of air added to each tire
+    air_added_per_tire = (measured_weight - car_weight) / num_tires
+    
+    print("The weight of air added to each tire is", air_added_per_tire, "kg")
+else:
+    print("No solution found")
+```
+
+=== Problem 28 ===
+Response:
+Here's a Z3 Python script to solve this problem:
+
+```python
+from z3 import *
+
+# Define variables for each bag of rice
+bag1_weight = Real('bag1_weight')
+bag2_weight = bag1_weight + 800/1000  # Convert grams to kilograms
+bag3_weight = bag2_weight - 300/1000  # Convert grams to kilograms
+
+# Set up the equation based on the problem statement
+eq = bag1_weight + bag2_weight + bag3_weight == 2.5
+
+# Solve the equation
+solution = solve((eq,), [bag1_weight, bag2_weight, bag3_weight])
+
+if solution:
+    print("The total weight of rice is {:.2f} kg".format(solution[bag1_weight]))
+else:
+    print("No solution found")
+```
+
+This script defines three variables for each bag of rice and sets up an equation based on the problem statement. It then uses Z3's `solve` function to find a solution that satisfies the equation.
+
+Note: The `/1000` is used to convert grams to kilograms, as there are 1000 grams in a kilogram.
+
+=== Problem 29 ===
+Response:
+```python
+from sympy import symbols, Eq, solve
+
+# Define variables
+x = symbols('x')
+
+# Calculate the weight of the heaviest tool in kg
+heaviest_tool_weight_kg = 2.4
+
+# Calculate the weight of each remaining tool in kg
+remaining_tools_weight_kg = (75/100) * heaviest_tool_weight_kg
+
+# Calculate the total weight of all tools in kg
+total_weight_kg = Eq(heaviest_tool_weight_kg + 4*remaining_tools_weight_kg, x)
+
+# Convert the total weight from kg to grams
+total_weight_g = x * 1000
+
+print(total_weight_g)
+```
+
+=== Problem 30 ===
+Response:
+```python
+from sympy import symbols, Eq, solve
+
+# Define variables
+eggs_weight = 3 * 60  # weight of eggs in grams
+flour_weight = 180   # weight of flour in grams
+removed_fraction = 1/4  # fraction of mixture removed
+
+# Calculate total weight of the batter before removal
+total_weight_before_removal = eggs_weight + flour_weight
+
+# Calculate weight of mixture removed
+weight_removed = (removed_fraction * total_weight_before_removal)
+
+# Calculate remaining weight of the batter after removal
+remaining_weight = total_weight_before_removal - weight_removed
+
+print(remaining_weight)
+```
+
+=== Problem 31 ===
+Response:
+```python
+from sympy import symbols, Eq, solve
+
+# Define variables
+oil_volume = symbols('oil_volume')
+onion_weight = symbols('onion_weight')
+
+# Given values
+oil_density = 920  # g/l
+pan_contents_volume = 750  # ml
+chopped_onions_weight = 300  # g
+
+# Convert oil volume from ml to l
+oil_volume_l = pan_contents_volume / 1000
+
+# Calculate weight of oil in the pan
+oil_weight = oil_density * oil_volume_l
+
+# Add weight of chopped onions
+total_weight = Eq(oil_weight + onion_weight, symbols('total_weight'))
+
+# Solve for total weight
+solution = solve(total_weight, symbols('total_weight'))
+print(solution[0])
+```
+
+=== Problem 32 ===
+Response:
+Here's the Z3 code to solve this problem:
+
+```python
+from z3 import *
+
+# Define variables for weights
+c = Int('c')  # Weight of one chair
+t = c  # Weight of table (since they are identical)
+s = c - 3   # Weight of stool
+
+# Set up equations based on given conditions
+eq1 = c + t + s == 35
+eq2 = c + t - s == 32
+
+# Solve the system of equations
+solution = solve((eq1, eq2), (c))
+
+# Print the solution for weight of one chair
+print("Weight of one chair:", solution[c])
+```
+
+This code defines three variables: `c` for the weight of a chair, `t` for the weight of a table (assuming it's identical to the chair and thus has the same weight), and `s` for the weight of a stool. The two equations represent the given conditions: when both chairs and the table are present, their total weight is 35 kg; when one chair is replaced with a stool weighing 3 kg less, the total weight becomes 32 kg.
+
+The `solve()` function is used to find the values of `c` that satisfy both equations simultaneously. The solution for `c`, which represents the weight of one chair, is then printed out.
+
+=== Problem 33 ===
+Response:
+```python
+from sympy import symbols, Eq, solve
+
+# Define variables
+sugar = symbols('sugar')
+salt = symbols('salt')
+
+# Original weights
+original_sugar = 3
+original_salt = 2
+
+# Used amounts
+used_sugar = 0.5
+used_salt = 1.25
+
+# Calculate remaining weights
+remaining_sugar = original_sugar - used_sugar
+remaining_salt = original_salt - used_salt
+
+# Calculate percentage of original weight remaining
+percentage_sugar = (remaining_sugar / original_sugar) * 100
+percentage_salt = (remaining_salt / original_salt) * 100
+
+print(f"Percentage of sugar remaining: {percentage_sugar}%")
+print(f"Percentage of salt remaining: {percentage_salt}%")
+```
+
+=== Problem 34 ===
+Response:
+Here's a Z3 Python code snippet that calculates the total remaining weight of paint:
+
+```python
+from z3 import *
+
+# Define variables
+num_cans = 4
+weight_per_can = 1.6  # kg
+remaining_percentage = 0.6  # 60%
+
+# Calculate the total initial weight of paint
+total_initial_weight = num_cans * weight_per_can
+
+# Calculate the remaining weight after painting
+total_remaining_weight = total_initial_weight * remaining_percentage
+
+print(total_remaining_weight)
+```
+
+This code defines the number of cans, the weight per can, and the percentage of paint remaining in each can. It then calculates the total initial weight of paint by multiplying the number of cans by the weight per can. Finally, it calculates the total remaining weight after painting by multiplying the total initial weight by the remaining percentage. The result is printed to the console.
+
+Note: This code uses the `z3` library's built-in support for floating-point numbers and percentages.
+
+=== Problem 35 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+pencil_weight = Symbol('pencil_weight')
+box_weight = Symbol('box_weight')
+
+# Set up equations based on given information
+eq1 = And(pencil_weight * 10 + box_weight - 50, 230)
+eq2 = pencil_weight * (10 - 4) + box_weight == 180
+
+# Solve the system of equations
+solution = solve((eq1, eq2), (pencil_weight, box_weight))
+
+# Print the solution
+print(solution[pencil_weight])
+```
+
+=== Problem 36 ===
+Response:
+```python
+from sympy import symbols, Eq, solve
+
+# Define variables
+crates = 8
+weight_per_crate = 15.5  # in kg
+packaging_per_crate = 2.5  # in kg
+
+# Calculate total weight of packaging
+total_packaging_weight = crates * packaging_per_crate
+
+# Calculate total weight of bananas
+total_banana_weight = Eq(weight_per_crate - packaging_per_crate, symbols('x'))
+solution = solve(total_banana_weight, symbols('x'))
+
+print("The total weight of just the bananas is: ", solution[0] * crates)
+```
+
+=== Problem 37 ===
+Response:
+```python
+from sympy import symbols, Eq, solve
+
+# Define variables
+bucket_weight = 5.3  # weight of the bucket with water (kg)
+empty_bucket_weight = 0.8  # weight of the empty bucket (kg)
+volume_of_water = 5  # volume of water in liters
+
+# Convert weights to grams and calculate density
+density = Eq((bucket_weight - empty_bucket_weight) * 1000 / (volume_of_water * 1000), symbols('x'))
+solution = solve(density, symbols('x'))
+
+print(solution[0])
+```
+
+=== Problem 38 ===
+Response:
+```python
+from sympy import symbols, Eq, solve
+
+# Define variables
+cat_weight = symbols('cat_weight')
+
+# Create equations based on given information
+eq1 = Eq(cat_weight + (cat_weight + 8), 22)
+
+# Solve for cat_weight
+solution = solve(eq1, cat_weight)
+print(solution[0])
+```
+
+=== Problem 39 ===
+Response:
+Here's how you can solve this problem using Z3:
+
+```python
+from z3 import *
+
+# Define the variables
+total_weight = Real('total_weight')
+baker_weight = Real('baker_weight')
+
+# Set up the equation based on the given information
+eq1 = total_weight / 8 - baker_weight == 0.6
+
+# Solve for the weight of the stored dough
+stored_dough_weight = Solver()
+stored_dough_weight.add(eq1)
+stored_dough_weight.add(total_weight > 0) # Ensure that the total weight is positive
+result = stored_dough_weight.check()
+
+if result == sat:
+    print("The final answer is", stored_dough_weight.model()[total_weight] * 1000, "grams")
+else:
+    print("No solution found")
+```
+
+This code defines two variables `total_weight` and `baker_weight`, sets up an equation based on the given information, solves for the weight of the stored dough, and prints out the result in grams.
+
+=== Problem 40 ===
+Response:
+```python
+from sympy import symbols, Eq, solve
+
+# Define variables
+x = symbols('x')
+
+# Set up equation: (1/3)*900 + 150 - x = total_weight
+equation = Eq((1/3)*900 + 150 - x, symbols('total_weight'))
+
+# Solve for total_weight
+solution = solve(equation, symbols('total_weight'))
+
+print(solution[0])
+```
+

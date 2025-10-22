@@ -1,0 +1,331 @@
+=== Cleaning Problem 1 ===
+
+
+```python
+import math
+
+# Compute pi squared
+pi_squared = math.pi ** 2
+
+# Compute pi raised to the power of pi squared
+result = math.pi ** pi_squared
+
+print(f"π^π^2 ≈ {result}")
+```
+=== Cleaning Problem 2 ===
+
+
+```python
+from z3 import *
+
+# Declare a real variable (though we don't really need it for this simplification)
+x = Real('x')
+
+# The expression to simplify: (e^{ln 3})^2
+# Since Z3 doesn't have direct e^ and ln functions, we can model it as follows:
+# e^(ln(3)) = 3, so (e^(ln(3)))^2 = 3^2 = 9
+
+# Verify that 3^2 equals 9
+s = Solver()
+s.add((3)**2 == 9)
+result = s.check()
+
+if result == sat:
+    print("Simplification is correct: (e^{ln 3})^2 = 9")
+else:
+    print("Simplification is incorrect")
+```
+=== Cleaning Problem 3 ===
+
+
+```python
+import math
+result = (27 * math.pi**2)**(1/3)
+print(round(result, 2))
+```
+=== Cleaning Problem 4 ===
+
+
+```python
+import math
+
+# Direct computation using change of base formula
+result = math.log(math.exp(5)) / math.log(10)
+print(result)
+```
+=== Cleaning Problem 5 ===
+
+
+```python
+result = (9/4) ** (3/2)
+expected = 27 / 8
+assert result == expected
+```
+=== Cleaning Problem 6 ===
+
+
+```python
+import math
+
+result = (math.sqrt(50) + math.sqrt(18)) / math.sqrt(2)
+print(result)
+```
+=== Cleaning Problem 7 ===
+
+
+```python
+from z3 import *
+
+# Create a solver instance
+s = Solver()
+
+# Define the variables
+x = Real('x')
+
+# Define the equation to solve: x = (16/81)^(1/4)
+s.add(x == (16.0 / 81.0) ** (1.0 / 4.0))
+
+# Check if the equation is satisfiable
+if s.check() == sat:
+    m = s.model()
+    print("The value of (16/81)^(1/4) is:", m[x])
+else:
+    print("No solution found.")
+```
+=== Cleaning Problem 8 ===
+
+
+```python
+import math
+result = math.pi ** math.sqrt(2)
+print("π^√2 ≈", result)
+```
+=== Cleaning Problem 9 ===
+
+
+```python
+from z3 import *
+
+# Create a solver instance
+s = Solver()
+
+# Declare real variables for the square roots
+sqrt2 = Real('sqrt2')
+sqrt3 = Real('sqrt3')
+sqrt6 = Real('sqrt6')
+
+# Add constraints that define these as square roots
+s.add(sqrt2 * sqrt2 == 2)
+s.add(sqrt3 * sqrt3 == 3)
+s.add(sqrt6 * sqrt6 == 6)
+
+# Add the constraint to check if √2 * √3 = √6
+s.add(sqrt2 * sqrt3 == sqrt6)
+
+# Check if the constraints are satisfiable
+result = s.check()
+
+if result == sat:
+    print("√2 × √3 is equal to √6")
+else:
+    print("√2 × √3 is not equal to √6")
+```
+=== Cleaning Problem 10 ===
+
+
+```python
+from z3 import *
+
+# Define the variable
+x = Real('x')
+
+# Define the expression to simplify
+expr = Log(Power(E, 2*x)) - Log(Power(E, x))
+
+# Simplify the expression
+simplified_expr = simplify(expr)
+
+# Evaluate for x = 1
+result = simplify(substitute(simplified_expr, (x, RealVal(1))))
+print("Result for x = 1:", result)
+```
+=== Cleaning Problem 11 ===
+
+
+```python
+import math
+
+result = (2 ** math.log2(5)) ** 3
+print(int(round(result)))
+```
+=== Cleaning Problem 12 ===
+
+
+```python
+from z3 import *
+
+# Create a solver instance
+s = Solver()
+
+# We'll approximate e^π by finding a real number x such that x ≈ e^π
+x = Real('x')
+
+# Define π (pi) as an approximation
+pi = 3.14159265358979323846
+
+# Define e (Euler's number) as an approximation
+e = 2.71828182845904523536
+
+# Constraint: x = e^π
+s.add(x == e**pi)
+
+# Check if the constraints are satisfiable
+if s.check() == sat:
+    m = s.model()
+    print(f"Approximation of e^π: {m[x].as_decimal(18)}")
+else:
+    print("No solution found")
+```
+=== Cleaning Problem 13 ===
+
+
+```python
+from z3 import *
+
+# Define the expression
+sqrt3 = Real('sqrt3')
+sqrt12 = Real('sqrt12')
+expr = (sqrt3 * sqrt12)**2
+
+# Add constraints that sqrt3^2 = 3 and sqrt12^2 = 12
+s = Solver()
+s.add(sqrt3**2 == 3, sqrt12**2 == 12)
+
+# Check if the expression simplifies to 36
+s.add(expr != 36)
+
+# The result should be "unsat", meaning expr must be 36
+result = s.check()
+print(result)  # Should output "unsat"
+```
+=== Cleaning Problem 14 ===
+
+
+```python
+from z3 import *
+import math
+
+solver = Solver()
+
+pi = Real('pi')
+e = Real('e')
+
+solver.add(pi > 3.141592653589793)
+solver.add(pi < 3.1415926535897932)
+solver.add(e > 2.718281828459045)
+solver.add(e < 2.7182818284590452)
+
+solver.add(e**pi <= pi**e)
+
+result = solver.check()
+
+if result == unsat:
+    print("e^π is larger than π^e (True)")
+else:
+    print("e^π is not larger than π^e (False)")
+```
+=== Cleaning Problem 15 ===
+
+
+```python
+(1 / (2 ** 0.5)) ** 4
+```
+=== Cleaning Problem 16 ===
+
+
+```python
+from z3 import *
+
+# Create a solver instance
+s = Solver()
+
+# Define the variables
+x = Real('x')
+
+# Define the equation to solve: x = sqrt(49 / 121)
+s.add(x == Sqrt(49 / 121))
+
+# Check if the equation is satisfiable
+if s.check() == sat:
+    m = s.model()
+    print("The value of sqrt(49 / 121) is:", m[x])
+else:
+    print("No solution found.")
+```
+=== Cleaning Problem 17 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+sqrt5 = Real('sqrt5')
+# Constrain sqrt5 to be the square root of 5
+s = Solver()
+s.add(sqrt5 * sqrt5 == 5, sqrt5 > 0)
+
+# Original expression: 1 / (sqrt(5) - 2)
+original = 1 / (sqrt5 - 2)
+
+# Rationalized expression: sqrt(5) + 2
+rationalized = sqrt5 + 2
+
+# Check if they are equal
+s.add(original != rationalized)
+result = s.check()
+
+if result == unsat:
+    print("The expressions are equivalent.")
+else:
+    print("The expressions are not equivalent.")
+```
+=== Cleaning Problem 18 ===
+
+
+```python
+from z3 import *
+
+# Create a solver instance
+s = Solver()
+
+# Define the variables
+log_value = Real('log_value')
+result = Real('result')
+
+# Add constraints based on the logarithmic identity
+s.add(log_value == Log(7.5, 10))  # log_value = log10(7.5)
+s.add(result == 10**log_value)    # result = 10^log_value
+
+# Check if the constraints are satisfiable
+if s.check() == sat:
+    m = s.model()
+    print(f"10^(log10(7.5)) = {m[result]}")
+else:
+    print("No solution found.")
+```
+=== Cleaning Problem 19 ===
+
+
+```python
+import math
+result = math.log2(8) + math.log2(4)
+print(int(result))
+```
+=== Cleaning Problem 20 ===
+
+
+```python
+import math
+result = (27**(1/3))**2 + (16**(1/4))**3
+print(result)
+```

@@ -1,0 +1,5 @@
+Problem 7:
+Find the value of (16/81)^(1/4)
+
+Result:
+0.6666666666666666

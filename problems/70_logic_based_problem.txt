@@ -1,0 +1,5 @@
+Problem 70:
+It takes Roque two hours to walk to work and one hour to ride his bike to work. Roque walks to and from work three times a week and rides his bike to and from work twice a week. How many hours in total does he take to get to and from work a week with walking and biking?
+
+sat[walk = 2, bike = 1, days_walk = 3, days_bike = 2, total_hours = 16]
+16

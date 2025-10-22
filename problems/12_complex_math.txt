@@ -1,0 +1,5 @@
+Problem 12:
+Approximate e^π
+
+Result:
+23.140692632779267

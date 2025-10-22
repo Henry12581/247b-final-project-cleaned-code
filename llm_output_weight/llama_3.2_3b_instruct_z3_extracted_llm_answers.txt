@@ -1,0 +1,20 @@
+21. [25.1507081253638]
+22. <function symbols at 0x0000021083A065E0>
+23. 1600/3
+24. 1.5225
+25. 130.0
+26. <function symbols at 0x0000021083A065E0>
+27. 0.0
+28. 2.5
+29. 2400.0
+30. 270.0
+31. 750
+32. Error: name 'y' is not defined
+33. 65.0
+34. 3.84
+35. 158.0
+36. 104.0
+37. Error: cannot import name 'Rational' from 'z3' (C:\Users\12515\PycharmProjects\247b llm z3 code\.venv\lib\site-packages\z3\__init__.py)
+38. <function symbols at 0x0000021083A065E0>
+39. Error: cannot import name 'Rational' from 'z3' (C:\Users\12515\PycharmProjects\247b llm z3 code\.venv\lib\site-packages\z3\__init__.py)
+40. 300.0

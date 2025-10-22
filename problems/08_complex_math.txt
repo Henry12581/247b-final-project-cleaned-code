@@ -1,0 +1,5 @@
+Problem 8:
+Evaluate π^√2
+
+Result:
+5.047497267370911

@@ -1,0 +1,420 @@
+=== Problem 21 ===
+Prompt:
+I have an apple that weighs 20g and my friend has two pears. If my friend puts half of the pears in a basket in front of him and I put my apple in another basket, in total, it weighs 80 oz. Assuming equal pear weight, what is the weight in grams per pear?
+Response:
+```python
+from z3 import *
+
+apple_weight_g = 20
+pear_count = 2
+basket_weight_oz = 80
+
+# Define variables
+pear_weight_g = Variable('pear_weight', real=True)
+
+# Equations
+# Apple weight in grams
+apple_weight_g_oz = apple_weight_g * 33.814  # Convert grams to ounces
+# Pear weight in grams
+pear_weight_g = pear_weight_g
+# Half of the pears in a basket
+half_pears = pear_count / 2
+# Total weight in ounces
+total_weight_oz = apple_weight_g_oz + half_pears * pear_weight_g
+
+# Solve for pear weight
+solver = Solver()
+solver.add(total_weight_oz == 80)
+solver.add(pear_weight_g >= 0)
+solution = solver.model()
+
+if solution:
+    pear_weight
+
+=== Problem 22 ===
+Prompt:
+Sarah has 3 oranges, each weighing the same. Her brother eats one-third of one orange and then adds a 200g watermelon slice to the same plate. If the plate now weighs 1.1 kg and the plate itself is 400g, how much does one whole orange weigh in grams?
+Response:
+```python
+from z3 import *
+
+o = Int('o')
+w = Int('w')
+p = Real(400)
+t = Real(1.1)
+
+x = o / 3
+assert x == 1
+
+s = x - (o/3)
+assert s == 1/3
+
+z = Model([
+    o,
+    w,
+    s + w == t + p,
+])
+
+if z:
+    print
+
+=== Problem 23 ===
+Prompt:
+Tom has 4 identical metal rods. He cuts one in half and adds it to a 2 kg bucket. The total weight becomes 2.8 kg. How much does one full rod weigh in grams?
+Response:
+```python
+from z3 import *
+
+x = Sum([1, 1, 1, 1])  # Weight of the four rods
+y = x / 4  # Weight of one rod in kilograms
+z = 2  # Weight of the bucket
+w = 2.8  # Total weight
+
+
+
+=== Problem 24 ===
+Prompt:
+A 1.5-liter bottle is filled halfway with milk and the rest with water. Milk weighs 1.03 g/ml, and water 1.00 g/ml. What is the total weight of the bottle contents in grams?
+Response:
+```python
+from z3 import *
+
+# Define the variables
+bottle_volume = 1.5
+milk_fraction = 0.5
+milk_density = 1.03
+water_density = 1.00
+
+# Calculate the volume of milk and water
+milk_volume = bottle_volume * milk_fraction
+water_volume = bottle_volume - milk_volume
+
+# Calculate the weight of milk and water
+milk_weight = milk_volume * milk_density
+water_weight = water_volume * water_density
+
+# Calculate the total weight
+total_weight = milk_weight + water_weight
+
+# Return
+
+=== Problem 25 ===
+Prompt:
+An empty jar weighs 300g. You place 5 identical cookies and the jar now weighs 950g. Later, you eat 2 cookies. What is the weight of one cookie in grams?
+Response:
+```python
+from z3 import *
+
+x = Sum([1 for _ in range(5)])
+jar_weight = 300
+cookies_weight = x
+total_weight = jar_weight + cookies_weight
+eat_cookies = 2
+final_weight = total_weight - eat_cookies
+
+solver = Solver()
+solver.add(x > 0)
+solver.add(final_weight == 950)
+model = solver.model()
+cookie
+
+=== Problem 26 ===
+Prompt:
+A gold bar weighs 1.2 kg. After removing 150g from it and adding 350g of silver, the total weight becomes 1.4 kg. What is the density ratio of gold to silver by weight?
+Response:
+```python
+from z3 import *
+
+gold_weight = 1.2
+silver_weight = 350
+removed_gold = 150
+total_weight = 1.4
+
+x = realvar('x')
+
+gold_density = gold_weight / (gold_weight - removed_gold)
+silver_density = silver_weight / (silver_weight + removed_gold)
+
+ratio = gold_density / silver_density
+
+solver = Solver()
+solver.
+
+=== Problem 27 ===
+Prompt:
+A car tire weighs 9.8 kg. Four identical tires are mounted on a car that otherwise weighs 820 kg. If a digital scale shows 859.2 kg, how much air (by weight) is added to each tire?
+Response:
+```python
+from z3 import *
+
+x = Sum([1.0 for _ in range(4)])
+s = RealVar('scale')
+
+car_weight = 820
+tire_weight = 9.8
+total_tire_weight = car_weight + x
+scale_reading = s
+
+solver = Solver()
+solver.add(x >= 0)
+solver.add(scale_reading == total_tire_weight)
+solution = solver.model()
+
+if solution:
+    air_added = (scale_reading - car_weight) / 4
+    
+
+=== Problem 28 ===
+Prompt:
+You have 3 bags of rice. The first weighs 2.5 kg, the second is 800 g heavier, and the third is 300 g lighter than the second. What is the total weight in kilograms?
+Response:
+```python
+from z3 import *
+
+bag1 = 2.5
+bag2 = bag1 + 0.8
+bag3 = bag2 - 0.3
+
+total_weight = bag1 + bag2 + bag3
+
+solver = Solver()
+solver.add(Int(total
+
+=== Problem 29 ===
+Prompt:
+A toolbox contains 5 tools. The heaviest tool weighs 2.4 kg, and each of the remaining tools weighs 75% as much. What is the total weight of the toolbox contents in grams?
+Response:
+```python
+from z3 import *
+
+x = [Real(s) for s in range(5)]
+heavy_tool = x[0]
+other_tools = x[1:]
+
+heavy_tool = 2.4
+for i in range(len(other_tools)):
+    other_tools[i] = heavy_tool * 0.75
+
+total_weight = heavy_tool + sum(other_tools)
+
+result = Int("total_weight")
+solver = Z3Solver()
+solver.add(
+
+=== Problem 30 ===
+Prompt:
+A chef uses 3 eggs, each 60g, and adds 180g of flour. He removes 1/4 of the mixture. How much does the remaining batter weigh in grams?
+Response:
+```python
+from z3 import *
+
+eggs = 3
+egg_weight = 60
+flour_weight = 180
+
+total_weight = eggs * egg_weight + flour_weight
+remaining_weight = total_weight - (total_weight * (1/4))
+
+solver = Solver()
+solver.add(remaining_weight == total_weight * (3/4))
+result = solver.model()
+
+if result:
+    print(int(result[
+
+=== Problem 31 ===
+Prompt:
+If one liter of oil weighs 920g and a chef pours 750 ml into a pan, then adds 300g of chopped onions, what is the total weight of the pan contents in grams?
+Response:
+```python
+from z3 import *
+
+oil_weight_per_liter = 920
+oil_volume = 750
+oil_mass = oil_volume * (oil_weight_per_liter / 1000)
+onion_mass = 300
+
+total_weight = oil_mass + onion_mass
+
+solver = Solver()
+solver.add(Int(total_weight))
+result = solver.check_model()
+
+
+
+=== Problem 32 ===
+Prompt:
+Two identical chairs and one table together weigh 35 kg. One chair is removed and replaced with a stool weighing 3 kg less. The total weight becomes 32 kg. What is the weight of one chair?
+Response:
+```python
+from z3 import *
+
+x, y = Var('x'), Var('y')
+
+solve([(x + y + 10) == 35, (x - 1 + y - 3) == 
+
+=== Problem 33 ===
+Prompt:
+A person buys 3 kg of sugar and 2 kg of salt. Later, he uses 1/2 kg of sugar and 1.25 kg of salt. What percentage of the original weight remains?
+Response:
+```python
+from z3 import *
+
+s = Sum([3, 2])
+u = Int("sugar_used")
+a = Int("salt_used")
+
+x = RealVar('remaining_weight')
+
+solver = Solver()
+solver.add(x >= s)
+solver.add(x >= u)
+solver.add(x >= a)
+
+solver.add(u == 0.5)
+solver.add(a == 1.25)
+
+result = solver.model()
+
+if result:
+    x_val = result[x]
+    remaining_percentage = (x_val / s) *
+
+=== Problem 34 ===
+Prompt:
+A painter uses 4 cans of paint. Each full can weighs 1.6 kg. After painting, each can is 60% full. What is the total remaining weight of paint in kilograms?
+Response:
+```python
+from z3 import *
+
+x = Real("x")
+y = Real("y")
+z = Real("z")
+w = Real("w")
+
+paint_cans = [x, y, z, w]
+full_weight = 1.6
+percentage_remaining = 0.4
+
+total_weight = sum(paint_cans) * full_weight
+remaining_weight = total_weight * percentage_remaining
+
+solver = Solver()
+solver.add(remaining_weight == 1.6 * 4 * (1 - 0.6))
+result = solver.model()
+
+if result
+
+=== Problem 35 ===
+Prompt:
+A pack of 10 identical pencils and a box weigh 230g. The box alone weighs 50g. If 4 pencils are removed, what is the new total weight in grams?
+Response:
+```python
+from z3 import *
+
+x = Real("x")
+y = Real("y")
+
+solve([(x + y == 230), (y == 50), (x - 4 == 0)], [x, y])
+
+new_weight = x + y - 4*1.0  # Assuming each pencil weighs 
+
+=== Problem 36 ===
+Prompt:
+A shipment contains 8 crates of bananas. Each crate weighs 15.5 kg including 2.5 kg packaging. What is the total weight of just the bananas?
+Response:
+```python
+from z3 import *
+
+n = 8
+crate_weight = 15.5
+packaging_weight = 2.5
+
+total_bananas_weight = (n * (crate_weight - packaging_weight))
+solver = Solver()
+solver.add(total_bananas_weight == (n * (crate_weight - packaging_weight)))
+result = solver.check_model()
+
+if result == sat:
+    print(total
+
+=== Problem 37 ===
+Prompt:
+If a 5-liter bucket full of water weighs 5.3 kg, and the empty bucket weighs 800g, what is the density of the water in g/ml?
+Response:
+```python
+from z3 import *
+
+bucket_capacity = 5
+bucket_weight_full = 5.3
+bucket_weight_empty = 800
+
+# Let density be represented by 'd' in g/ml
+# Weight of water = (Capacity in ml) * Density
+# Capacity in ml = Bucket capacity * (Weight of full bucket - Weight of empty bucket) / Weight of full bucket
+# d = (Bucket capacity * (Weight of full bucket - Weight of empty bucket)) / (Bucket capacity * Weight of full bucket)
+
+d = Solve(
+    And(
+        Real(d),
+        (bucket_capacity * (bucket_weight_full - bucket_weight_empty)) / (bucket_capacity * bucket
+
+=== Problem 38 ===
+Prompt:
+A cat and a dog together weigh 22 kg. The dog weighs 8 kg more than the cat. What is the weight of the cat?
+Response:
+```python
+from z3 import *
+
+cat = Var('cat')
+dog = Var('dog')
+
+solver = Solver()
+solver.add(cat + dog == 22)
+solver.add(dog == cat + 8)
+
+result = solver.model()
+
+if result:
+    print(result[cat])
+else
+
+=== Problem 39 ===
+Prompt:
+A baker divides a 2.4 kg dough into 8 equal buns. He bakes 5 of them and stores the rest. What is the weight of the stored dough in grams?
+Response:
+```python
+from z3 import *
+
+x = Real(8)
+y = Real(5)
+z = Real(3)
+
+solver = Solver()
+solver.add(x + y + z == 2.4 * 1000)
+m = solver.model()
+
+if m:
+    stored_dough = x + y * 1000
+    print(
+
+=== Problem 40 ===
+Prompt:
+One-third of a 900g bag of flour is used to make dough. Then 150g of oil is added. What is the final weight of the mixture in grams?
+Response:
+```python
+from z3 import *
+
+x = RealVar('x')
+f = 900
+d = f / 3
+o = 150
+result = x + d + o
+solver = Solver()
+solver.add(x >= 0)
+solver.add(x <= f)
+model = solver.model()
+if model:
+    print(model.check())
+    
+

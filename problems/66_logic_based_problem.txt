@@ -1,0 +1,5 @@
+Problem 66:
+Betty is saving money for a new wallet which costs $100. Betty has only half of the money she needs. Her parents decided to give her $15 for that purpose, and her grandparents twice as much as her parents. How much more money does Betty need to buy the wallet?
+
+sat[grandparents = 30, betty = 50, parents = 15, wallet = 100, remaining = 5]
+5

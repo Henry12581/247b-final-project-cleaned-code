@@ -1,0 +1,11 @@
+Score: 12/20
+
+Wrong Problems:
+2. ERROR parsing prediction or gold line
+5. ERROR parsing prediction or gold line
+7. ERROR parsing prediction or gold line
+9. Predicted: False | Correct: True
+10. ERROR parsing prediction or gold line
+14. Predicted: False | Correct: True
+17. ERROR parsing prediction or gold line
+20. ERROR parsing prediction or gold line

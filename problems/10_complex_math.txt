@@ -1,0 +1,5 @@
+Problem 10:
+Simplify ln(e^{2x}) - ln(e^x) for x = 1
+
+Result:
+1

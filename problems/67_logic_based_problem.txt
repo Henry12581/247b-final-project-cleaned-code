@@ -1,0 +1,5 @@
+Problem 67:
+Brennan was researching his school project and had to download files from the internet to his computer to use for reference. After downloading 800 files, he deleted 70% of them because they were not helpful. He downloaded 400 more files but again realized that 3/5 of them were irrelevant. How many valuable files was he left with after deleting the unrelated files he downloaded in the second round?
+
+sat[second_delete_rate = 3/5, first_download = 800, first_delete_rate = 7/10, second_download = 400, first_valuable = 240, total_valuable = 400, second_valuable = 160]
+400

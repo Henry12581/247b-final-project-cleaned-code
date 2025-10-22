@@ -1,0 +1,7 @@
+Score: 16/20
+
+Wrong Problems:
+1. ERROR parsing prediction or gold line
+3. Predicted: 6.48 | Correct: 6.435088191333076
+4. Predicted: 5 | Correct: 2.171472409516259
+8. Predicted: 4.8105 | Correct: 5.047497267370911

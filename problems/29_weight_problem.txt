@@ -1,0 +1,5 @@
+Problem 29:
+A toolbox contains 5 tools. The heaviest tool weighs 2.4 kg, and each of the remaining tools weighs 75% as much. What is the total weight of the toolbox contents in grams?
+
+
+9600

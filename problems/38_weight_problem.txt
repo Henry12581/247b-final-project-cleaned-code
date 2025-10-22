@@ -1,0 +1,5 @@
+Problem 38:
+A cat and a dog together weigh 22 kg. The dog weighs 8 kg more than the cat. What is the weight of the cat?
+
+
+7

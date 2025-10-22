@@ -1,0 +1,5 @@
+Problem 21:
+I have an apple that weighs 20g and my friend has two pears. If my friend puts half of the pears in a basket in front of him and I put my apple in another basket, in total, it weighs 80 oz. Assuming equal pear weight, what is the weight in grams per pear?
+
+
+2247.96185

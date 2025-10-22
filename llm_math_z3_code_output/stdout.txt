@@ -1,0 +1,174 @@
+
+=== Cleaning Problem 1 ===
+
+
+```python
+<cleaned working code>
+```
+=== Cleaning Problem 2 ===
+
+
+```python
+import math
+
+result = math.pow(math.pi, math.pi**2)
+print(result)
+```
+=== Cleaning Problem 3 ===
+
+
+```python
+import math
+result = (math.exp(math.log(3))) ** 2
+print(result)
+```
+=== Cleaning Problem 4 ===
+
+
+```python
+import math
+result = math.pow(27 * math.pi**2, 1/3)
+```
+=== Cleaning Problem 5 ===
+
+
+```python
+import math
+result = math.log10(math.exp(5))
+```
+=== Cleaning Problem 6 ===
+
+
+```python
+result = (9/4)**(3/2)
+```
+=== Cleaning Problem 7 ===
+
+
+```python
+import math
+result = (math.sqrt(50) + math.sqrt(18)) / math.sqrt(2)
+```
+=== Cleaning Problem 8 ===
+
+
+```python
+result = (16 / 81)**(1/4)
+```
+=== Cleaning Problem 9 ===
+
+
+```python
+import math
+
+result = math.pi ** math.sqrt(2)
+print(result)
+```
+=== Cleaning Problem 10 ===
+
+
+```python
+import math
+
+result = math.sqrt(2) * math.sqrt(3)
+expected_result = math.sqrt(6)
+print(abs(result - expected_result) < 1e-10)
+```
+=== Cleaning Problem 11 ===
+
+
+```python
+def simplify_ln(x):
+    return (2*x) - x
+
+result = simplify_ln(1)
+print(result)
+```
+=== Cleaning Problem 12 ===
+
+
+```python
+import math
+result = (2**math.log2(5))**3
+print(result)
+```
+=== Cleaning Problem 13 ===
+
+
+```python
+import math
+
+result = math.exp(math.pi)
+print(result)
+```
+=== Cleaning Problem 14 ===
+
+
+```python
+import math
+(math.sqrt(3) * math.sqrt(12))**2
+```
+=== Cleaning Problem 15 ===
+
+
+```python
+import math
+
+pi = math.pi
+e = math.e
+
+result1 = pi**e
+result2 = e**pi
+
+if result2 > result1:
+    print("True")
+else:
+    print("False")
+```
+=== Cleaning Problem 16 ===
+
+
+```python
+(1/2**0.5)**4
+```
+=== Cleaning Problem 17 ===
+
+
+```python
+import math
+result = math.sqrt(49 / 121)
+```
+=== Cleaning Problem 18 ===
+
+
+```python
+import math
+
+numerator = 1
+denominator = math.sqrt(5) - 2
+conjugate = math.sqrt(5) + 2
+rationalized_numerator = numerator * conjugate
+rationalized_denominator = denominator * conjugate
+print(f"({rationalized_numerator}) / ({rationalized_denominator})")
+```
+=== Cleaning Problem 19 ===
+
+
+```python
+import math
+result = 10 ** (math.log10(7.5))
+```
+=== Cleaning Problem 20 ===
+
+
+```python
+import math
+result = math.log2(8) + math.log2(4)
+```
+=== Cleaning Problem 21 ===
+
+
+```python
+result = (27**(1/3))**2 + (16**(1/4))**3
+```
+✅ Cleaned file saved to: gemma_3_4b_z3_cleaned_by_api.txt

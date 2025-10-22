@@ -1,0 +1,5 @@
+Problem 24:
+A 1.5-liter bottle is filled halfway with milk and the rest with water. Milk weighs 1.03 g/ml, and water 1.00 g/ml. What is the total weight of the bottle contents in grams?
+
+
+1522.5

@@ -1,0 +1,5 @@
+Problem 64:
+Ann's favorite store was having a summer clearance. For $75 she bought 5 pairs of shorts for $7 each and 2 pairs of shoes for $10 each. She also bought 4 tops, all at the same price. How much did each top cost?
+
+sat[total = 75, tops_cost = 5, shorts_cost = 7, shoes_num = 2, shoes_total = 20, tops_total = 20, shorts_num = 5, shorts_total = 35, shoes_cost = 10, tops_num = 4]
+5

@@ -1,0 +1,5 @@
+Problem 5:
+Evaluate (9/4)^(3/2)
+
+Result:
+3.375

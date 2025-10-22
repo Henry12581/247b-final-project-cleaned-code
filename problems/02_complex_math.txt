@@ -1,0 +1,5 @@
+Problem 2:
+Simplify (e^{ln 3})^2
+
+Result:
+9.000000000000004

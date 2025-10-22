@@ -1,0 +1,5 @@
+Problem 13:
+Simplify and evaluate (√3 × √12)^2
+
+Result:
+35.99999999999999

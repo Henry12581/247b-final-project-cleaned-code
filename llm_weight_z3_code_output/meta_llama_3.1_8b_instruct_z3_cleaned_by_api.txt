@@ -1,0 +1,315 @@
+=== Cleaning Problem 21 ===
+
+
+```python
+from z3 import *
+
+# Define variables
+apple_weight = 20  # in grams
+total_weight_oz = 80  # in ounces
+pear_weight = Real('pear_weight')
+
+# Convert total weight from oz to g (1 oz = 28.35g)
+total_weight_g = total_weight_oz * 28.35
+
+# Set up equation: apple + 1 pear = total_weight_g
+eq = apple_weight + pear_weight == total_weight_g
+
+# Solve for pear_weight
+solution = solve(eq)
+```
+=== Cleaning Problem 22 ===
+
+
+```python
+from z3 import *
+
+o = Real('o')
+s = Solver()
+
+s.add(3 * o - (1/3)*o + 200 + 400 == 1100)
+s.add(o > 0)
+
+if s.check() == sat:
+    m = s.model()
+    print(m[o].numerator().as_long())
+```
+=== Cleaning Problem 23 ===
+
+
+```python
+from z3 import *
+
+x = Real('x')
+s = Solver()
+s.add(x + 0.5*x == 2.8 - 2)
+s.check()
+result = s.model()[x]
+print(int(result * 1000))
+```
+=== Cleaning Problem 24 ===
+
+
+```python
+from z3 import *
+
+milk = Real('milk')
+water = Real('water')
+
+eq1 = milk + water == 1.5
+eq2 = (milk * 1.03) + (water * 1.00) == 1.5 * (1.03 + 1.00)/2
+
+solution = solve([eq1, eq2])
+
+print(solution[milk] * 1.03 + solution[water] * 1.00)
+```
+=== Cleaning Problem 25 ===
+
+
+```python
+from z3 import *
+
+x = Int('x')
+jar_weight_empty = 300
+total_weight_with_cookies = 950
+num_cookies = 5
+
+s = Solver()
+s.add(jar_weight_empty + x * num_cookies == total_weight_with_cookies)
+s.check()
+result = s.model()[x]
+print(result)
+```
+=== Cleaning Problem 26 ===
+
+
+```python
+from z3 import *
+
+# define variables
+gold_weight = Real('gold_weight')
+silver_weight = Real('silver_weight')
+
+# define equations
+eq1 = gold_weight - 1.2 + 0.15 + 0.35 == 1.4
+eq2 = silver_weight == 0.35
+
+# solve the system of equations
+solution = solve([eq1, eq2], [gold_weight, silver_weight])
+
+# calculate density ratio
+density_ratio = (1.2 / 0.35)
+print(density_ratio)
+```
+=== Cleaning Problem 27 ===
+
+
+```python
+from z3 import *
+
+tire_weight = 9.8
+num_tires = 4
+car_weight = 820
+total_weight = 859.2
+
+x = Real('x')
+s = Solver()
+s.add((tire_weight + x) * num_tires + car_weight == total_weight)
+s.check()
+m = s.model()
+print(m[x])
+```
+=== Cleaning Problem 28 ===
+
+
+```python
+first_bag = 2.5  # kg
+second_bag = first_bag + 0.8  # 800g = 0.8kg
+third_bag = second_bag - 0.3  # 300g = 0.3kg
+total_weight = first_bag + second_bag + third_bag
+print(f'The total weight is {total_weight} kg')
+```
+=== Cleaning Problem 29 ===
+
+
+```python
+heaviest_tool_weight = 2.4 * 1000  # Convert to grams
+remaining_tools_weights = [heaviest_tool_weight * 0.75 for _ in range(4)]
+total_weight = heaviest_tool_weight + sum(remaining_tools_weights)
+print(int(total_weight))
+```
+=== Cleaning Problem 30 ===
+
+
+```python
+from z3 import *
+
+eggs_weight = 60 * 3
+flour_weight = 180
+total_weight = eggs_weight + flour_weight
+removed_weight = total_weight / 4
+remaining_weight = total_weight - removed_weight
+print(remaining_weight)
+```
+=== Cleaning Problem 31 ===
+
+
+```python
+oil_weight = 920 * (750 / 1000)
+onion_weight = 300
+total_weight = oil_weight + onion_weight
+print(total_weight)
+```
+=== Cleaning Problem 32 ===
+
+
+```python
+from z3 import *
+
+c, t = Ints('c t')
+
+eq1 = 2*c + t == 35
+eq2 = c + (t - 3) == 32
+
+solution = solve([eq1, eq2])
+
+print(solution[c])
+```
+=== Cleaning Problem 33 ===
+
+
+```python
+from z3 import *
+
+sugar = Real('sugar')
+salt = Real('salt')
+
+s = Solver()
+s.add(sugar == 3 - 0.5)
+s.add(salt == 2 - 1.25)
+
+if s.check() == sat:
+    m = s.model()
+    remaining = m[sugar].as_decimal(6) + m[salt].as_decimal(6)
+    percentage = (remaining / (3 + 2)) * 100
+    print(percentage)
+```
+=== Cleaning Problem 34 ===
+
+
+```python
+from z3 import *
+
+cans = 4
+weight_full_can = 1.6
+percentage_full = 0.6
+
+x = [Real('x_%d' % i) for i in range(cans)]
+
+s = Solver()
+for i in range(cans):
+    s.add(x[i] == weight_full_can * percentage_full)
+
+total_weight = sum(x)
+print(s.check())
+print(s.model().eval(total_weight))
+```
+=== Cleaning Problem 35 ===
+
+
+```python
+from z3 import *
+
+pencil_weight = Int('pencil_weight')
+box_weight = Int('box_weight')
+
+weight_eq1 = 10 * pencil_weight + box_weight == 230
+weight_eq2 = box_weight == 50
+
+solution = solve([weight_eq1, weight_eq2], [pencil_weight])
+
+new_total_weight = solution[pencil_weight] * (10 - 4) + 50
+print(new_total_weight)
+```
+=== Cleaning Problem 36 ===
+
+
+```python
+from z3 import *
+
+crates = 8
+weight_per_crate = 15.5
+packaging_weight = 2.5
+
+x = Int('x')
+s = Solver()
+s.add(x == (weight_per_crate - packaging_weight) * crates)
+if s.check() == sat:
+    print(s.model()[x])
+```
+=== Cleaning Problem 37 ===
+
+
+```python
+from z3 import *
+
+# Define variables
+bucket_weight_empty = 800 # grams
+water_volume = 5 * 1000 # liters to milliliters
+total_weight_bucket_water = 5.3 * 1000 # kilograms to grams
+
+# Calculate weight of water in the bucket
+weight_water = total_weight_bucket_water - bucket_weight_empty
+
+# Calculate density of water
+density_water = weight_water / water_volume
+
+print(density_water)
+```
+=== Cleaning Problem 38 ===
+
+
+```python
+from z3 import *
+
+cat_weight = Int('cat_weight')
+dog_weight = Int('dog_weight')
+
+s = Solver()
+s.add(cat_weight + dog_weight == 22)
+s.add(dog_weight == cat_weight + 8)
+
+if s.check() == sat:
+    print(s.model()[cat_weight])
+```
+=== Cleaning Problem 39 ===
+
+
+```python
+from z3 import *
+
+# Define variables
+weight_dough = 2400  # Weight of dough in grams
+num_buns = 8         # Number of buns
+baked_buns = 5       # Number of baked buns
+
+# Calculate weight per bun
+weight_per_bun = weight_dough / num_buns
+
+# Calculate weight of stored dough
+weight_stored_dough = (num_buns - baked_buns) * weight_per_bun
+
+print(weight_stored_dough)
+```
+=== Cleaning Problem 40 ===
+
+
+```python
+from z3 import *
+
+x = Real('x')
+s = Solver()
+s.add(x == (1/3) * 900 + 150)
+s.check()
+print(s.model()[x])
+```

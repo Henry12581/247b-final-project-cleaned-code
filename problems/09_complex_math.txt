@@ -1,0 +1,5 @@
+Problem 9:
+Check if √2 × √3 == √6
+
+Result:
+True

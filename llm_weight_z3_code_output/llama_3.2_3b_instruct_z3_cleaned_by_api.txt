@@ -1,0 +1,303 @@
+
+=== Cleaning Problem 21 ===
+
+
+```python
+from z3 import *
+
+apple_weight = 20 * 1000
+total_weight_oz = 80
+num_pears = Int('num_pears')
+pear_weight_g = Int('pear_weight_g')
+total_weight_oz_pears = num_pears / 2 * pear_weight_g / 28.35
+total_weight_oz_apple = apple_weight / 453.59
+eq = total_weight_oz_pears + total_weight_oz_apple == total_weight_oz
+solve([eq], [num_pears, pear_weight_g])
+```
+=== Cleaning Problem 22 ===
+
+
+```python
+from z3 import *
+
+x = Int('x')
+w = x / 3
+s = Solver()
+s.add(400 + w + 200 == 1100)
+s.add(w <= x)
+if s.check() == sat:
+    result = s.model()
+    print(f"One whole orange weighs {result[x]} grams")
+```
+=== Cleaning Problem 23 ===
+
+
+```python
+from z3 import *
+
+x = Int('x')
+s = Solver()
+s.add(x + (x/2) == 2800)
+s.check()
+print(s.model()[x])
+```
+=== Cleaning Problem 24 ===
+
+
+```python
+from z3 import *
+
+milk_volume = Real('milk_volume')
+water_volume = Real('water_volume')
+s = Solver()
+s.add(milk_volume == 0.75 * 1.5)
+s.add(water_volume == 0.25 * 1.5)
+milk_weight_per_ml = 1.03
+water_weight_per_ml = 1.00
+total_milk_weight = milk_volume * milk_weight_per_ml
+total_water_weight = water_volume * water_weight_per_ml
+total_weight = total_milk_weight + total_water_weight
+s.check()
+result = s.model().eval(total_weight)
+print(result)
+```
+=== Cleaning Problem 25 ===
+
+
+```python
+from z3 import *
+
+s = Solver()
+cookie_weight = Int('cookie_weight')
+s.add(5 * cookie_weight == 950 - 300)
+if s.check() == sat:
+    print(f"The weight of one cookie is {s.model()[cookie_weight]} grams")
+else:
+    print("No solution found")
+```
+=== Cleaning Problem 26 ===
+
+
+```python
+from z3 import *
+
+x = Int('x')
+y = Int('y')
+eq1 = x - 150 + y == 1200
+eq2 = x + y == 1400
+solution = solve((eq1, eq2), (x, y))
+density_ratio = solution[x] / solution[y]
+print(density_ratio)
+```
+=== Cleaning Problem 27 ===
+
+
+```python
+from z3 import *
+
+car_weight = 820
+tire_weight = 9.8
+num_tires = 4
+total_tire_weight = tire_weight * num_tires
+measured_weight = 859.2
+
+s = Solver()
+s.add(measured_weight - car_weight == total_tire_weight)
+
+if s.check() == sat:
+    air_added_per_tire = (measured_weight - car_weight) / num_tires
+    print("The weight of air added to each tire is", air_added_per_tire, "kg")
+else:
+    print("No solution found")
+```
+=== Cleaning Problem 28 ===
+
+
+```python
+from z3 import *
+
+bag1 = Real('bag1')
+bag2 = bag1 + 800/1000
+bag3 = bag2 - 300/1000
+s = Solver()
+s.add(bag1 + bag2 + bag3 == 2.5)
+if s.check() == sat:
+    m = s.model()
+    result = m[bag1].as_decimal(2)
+    print(f"The total weight of rice is {result} kg")
+else:
+    print("No solution found")
+```
+=== Cleaning Problem 29 ===
+
+
+```python
+from sympy import symbols, Eq, solve
+
+x = symbols('x')
+heaviest_tool_weight_kg = 2.4
+remaining_tools_weight_kg = (75/100) * heaviest_tool_weight_kg
+total_weight_kg = heaviest_tool_weight_kg + 4 * remaining_tools_weight_kg
+total_weight_g = total_weight_kg * 1000
+print(total_weight_g)
+```
+=== Cleaning Problem 30 ===
+
+
+```python
+eggs_weight = 3 * 60
+flour_weight = 180
+removed_fraction = 1/4
+total_weight_before_removal = eggs_weight + flour_weight
+weight_removed = removed_fraction * total_weight_before_removal
+remaining_weight = total_weight_before_removal - weight_removed
+print(remaining_weight)
+```
+=== Cleaning Problem 31 ===
+
+
+```python
+from sympy import symbols, Eq, solve
+
+# Define variables
+oil_volume = symbols('oil_volume')
+onion_weight = symbols('onion_weight')
+
+# Given values
+oil_density = 920  # g/l
+pan_contents_volume = 750  # ml
+chopped_onions_weight = 300  # g
+
+# Convert oil volume from ml to l
+oil_volume_l = pan_contents_volume / 1000
+
+# Calculate weight of oil in the pan
+oil_weight = oil_density * oil_volume_l
+
+# Add weight of chopped onions
+total_weight = Eq(oil_weight + onion_weight, symbols('total_weight'))
+
+# Solve for total weight
+solution = solve(total_weight, symbols('total_weight'))
+print(solution[0])
+```
+=== Cleaning Problem 32 ===
+
+
+```python
+from z3 import *
+
+c = Int('c')
+t = c
+s = c - 3
+eq1 = c + t + s == 35
+eq2 = c + t - s == 32
+solution = solve((eq1, eq2), (c))
+print("Weight of one chair:", solution[c])
+```
+=== Cleaning Problem 33 ===
+
+
+```python
+sugar_remaining = (3 - 0.5) / 3 * 100
+salt_remaining = (2 - 1.25) / 2 * 100
+print(f"Percentage of sugar remaining: {sugar_remaining}%")
+print(f"Percentage of salt remaining: {salt_remaining}%")
+```
+=== Cleaning Problem 34 ===
+
+
+```python
+from z3 import *
+
+# Define variables
+num_cans = 4
+weight_per_can = 1.6  # kg
+remaining_percentage = 0.6  # 60%
+
+# Calculate the total initial weight of paint
+total_initial_weight = num_cans * weight_per_can
+
+# Calculate the remaining weight after painting
+total_remaining_weight = total_initial_weight * remaining_percentage
+
+print(total_remaining_weight)
+```
+=== Cleaning Problem 35 ===
+
+
+```python
+from z3 import *
+
+pencil_weight = Real('pencil_weight')
+box_weight = Real('box_weight')
+
+s = Solver()
+s.add(10 * pencil_weight + box_weight == 230)
+s.add(6 * pencil_weight + box_weight == 180)
+
+if s.check() == sat:
+    m = s.model()
+    print(m[pencil_weight])
+```
+=== Cleaning Problem 36 ===
+
+
+```python
+crates = 8
+weight_per_crate = 15.5
+packaging_per_crate = 2.5
+banana_weight_per_crate = weight_per_crate - packaging_per_crate
+total_banana_weight = banana_weight_per_crate * crates
+print(total_banana_weight)
+```
+=== Cleaning Problem 37 ===
+
+
+```python
+bucket_weight = 5.3
+empty_bucket_weight = 0.8
+volume_of_water = 5
+density = (bucket_weight - empty_bucket_weight) * 1000 / (volume_of_water * 1000)
+print(density)
+```
+=== Cleaning Problem 38 ===
+
+
+```python
+from sympy import symbols, Eq, solve
+
+cat_weight = symbols('cat_weight')
+eq1 = Eq(cat_weight + (cat_weight + 8), 22)
+solution = solve(eq1, cat_weight)
+print(solution[0])
+```
+=== Cleaning Problem 39 ===
+
+
+```python
+from z3 import *
+
+total_weight = Real('total_weight')
+baker_weight = Real('baker_weight')
+eq1 = total_weight / 8 - baker_weight == 0.6
+stored_dough_weight = Solver()
+stored_dough_weight.add(eq1)
+stored_dough_weight.add(total_weight > 0)
+result = stored_dough_weight.check()
+if result == sat:
+    print("The final answer is", stored_dough_weight.model()[total_weight] * 1000, "grams")
+else:
+    print("No solution found")
+```
+=== Cleaning Problem 40 ===
+
+
+```python
+from sympy import symbols, Eq, solve
+
+x = symbols('x')
+equation = Eq((1/3)*900 + 150 - x, 0)
+solution = solve(equation, x)
+print(solution[0])
+```

@@ -1,0 +1,5 @@
+Score: 18/20
+
+Wrong Problems:
+1. Predicted: 80117.589 | Correct: 80662.6659385545
+8. Predicted: 4.8147 | Correct: 5.047497267370911

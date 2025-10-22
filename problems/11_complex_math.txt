@@ -1,0 +1,5 @@
+Problem 11:
+Find the value of (2^{log₂5})^3
+
+Result:
+124.99999999999993

@@ -1,0 +1,763 @@
+=== Cleaning Problem 61 ===
+
+
+```python
+def solve():
+    total_consumed = 847
+    time_span = 300
+    ship_people_ratio = 2
+
+    # The problem can be modeled as a geometric series where:
+    # x + 2x + 4x + ... + 2^(n-1)x = 847
+    # x * (2^n - 1) = 847
+
+    # We need to find integer x and n that satisfy this equation
+    # Let's find possible n values where 2^n - 1 divides 847
+    for n in range(1, 10):
+        denominator = (2**n) - 1
+        if 847 % denominator == 0:
+            x = 847 // denominator
+            print(f"Solution found: x = {x}, n = {n}")
+            return x, n
+
+    print("No integer solution found")
+    return None, None
+
+solve()
+```
+=== Cleaning Problem 62 ===
+
+
+```python
+from z3 import *
+
+# Define the number of slices in a large pizza
+large_pizza_slices = 16
+
+# Define the number of slices in a small pizza
+small_pizza_slices = 8
+
+# Define the number of large pizzas bought
+num_large_pizzas = 2
+
+# Define the number of small pizzas bought
+num_small_pizzas = 2
+
+# Create a variable to represent the total number of slices eaten
+total_slices = Int("total_slices")
+
+# Create a formula that represents the total number of slices eaten is equal to the sum of slices from large and small pizzas
+formula = And(total_slices == num_large_pizzas * large_pizza_slices + num_small_pizzas * small_pizza_slices)
+
+# Solve the formula
+solver = Solver()
+solver.add(formula)
+
+# Check if a solution exists
+if solver.check() == sat:
+    # Get the value of the total slices variable
+    model = solver.model()
+    print("Total slices eaten:", model[total_slices])
+```
+=== Cleaning Problem 63 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+budget = 200
+shirt_cost = 30
+pants_cost = 46
+coat_cost = 38
+socks_cost = 11
+belt_cost = 18
+shoes_cost = Int('shoes_cost')
+
+# Create the constraints
+total_spent = shirt_cost + pants_cost + coat_cost + socks_cost + belt_cost + shoes_cost
+remaining_budget = budget - total_spent
+
+# Solve the constraints
+s = Solver()
+s.add(total_spent == budget - 16)
+if s.check() == sat:
+    m = s.model()
+    print("Shoes cost:", m[shoes_cost])
+else:
+    print("No solution found")
+```
+=== Cleaning Problem 64 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+shorts_price = 7
+shoes_price = 10
+tops_price = Real("tops_price")  # Use Real to allow for decimal values
+num_shorts = 5
+num_shoes = 2
+num_tops = 4
+
+# Create the total cost expression
+total_cost = (num_shorts * shorts_price) + (num_shoes * shoes_price) + (num_tops * tops_price)
+
+# Ann's budget
+budget = 75
+
+# Formulate the constraint that the total cost must be less than or equal to her budget
+constraint = (total_cost <= budget)
+
+# Create the solver and add the constraint
+solver = Solver()
+solver.add(constraint)
+
+# Solve the problem
+if solver.check() == sat:
+    # Extract the value of tops_price
+    tops_price_val = solver.model()[tops_price]
+    print(tops_price_val)
+```
+=== Cleaning Problem 65 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+snowflake_count = Int("snowflake_count")
+truck_count = Int("truck_count")
+rose_count = Int("rose_count")
+
+# Create the constraints
+constraints = [
+    snowflake_count == 11,
+    truck_count == snowflake_count + 9,
+    rose_count == truck_count - 13,
+]
+
+# Create the solver
+solver = Solver()
+
+# Add the constraints to the solver
+solver.add(constraints)
+
+# Check if the solution is found
+if solver.check() == sat:
+    # Get the values of the variables
+    model = solver.model()
+    print("Snowflake count:", model[snowflake_count])
+    print("Truck count:", model[truck_count])
+    print("Rose count:", model[rose_count])
+```
+=== Cleaning Problem 66 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+wallet_cost = 100
+money_needed = wallet_cost / 2
+parents_gift = 15
+grandparents_gift = parents_gift * 2
+total_money = money_needed + parents_gift + grandparents_gift
+
+# Create a Z3 solver
+solver = Solver()
+
+# Add constraints to the solver
+solver.add(total_money >= wallet_cost)
+
+# Solve the problem
+result = solver.check()
+
+if result == sat:
+    print("The condition is satisfiable")
+else:
+    print("The condition is not satisfiable")
+```
+=== Cleaning Problem 67 ===
+
+
+```python
+from z3 import *
+
+initial_files = 800
+deleted_files_round1 = initial_files * 0.7
+downloaded_files_round2 = 400
+irrelevant_files_round2 = downloaded_files_round2 * (3/5)
+
+valuable_files_after_round1 = initial_files - deleted_files_round1
+valuable_files_after_round2 = valuable_files_after_round1 + (downloaded_files_round2 - irrelevant_files_round2)
+
+print(valuable_files_after_round2)
+```
+=== Cleaning Problem 68 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+num_jaguars = 6
+birds_per_jaguar = Int('birds_per_jaguar')
+beetles_per_bird = 12
+birds_per_snake = 3
+snakes_per_jaguar = 5
+
+# Create solver
+s = Solver()
+
+# Each jaguar eats 5 snakes per day
+total_snakes = num_jaguars * snakes_per_jaguar
+
+# Each snake eats 3 birds per day
+total_birds = total_snakes * birds_per_snake
+
+# Each bird eats 12 beetles per day
+total_beetles = total_birds * beetles_per_bird
+
+# Add constraint that birds_per_jaguar must equal the calculated value
+s.add(birds_per_jaguar == total_birds / num_jaguars)
+
+# Check and print result
+if s.check() == sat:
+    m = s.model()
+    print(total_beetles)
+else:
+    print("No solution found")
+```
+=== Cleaning Problem 69 ===
+
+
+```python
+from z3 import *
+
+# Define the initial number of each color of hard hats
+pink_initial = 26
+green_initial = 15
+yellow_initial = 24
+
+# Carl takes away 4 pink hard hats
+pink_carl = 4
+
+# John takes away 6 pink hard hats and twice as many green hard hats as the number of pink hard hats he removed
+pink_john = 6
+green_john = 2 * pink_john
+
+# Calculate the remaining hard hats
+pink_remaining = pink_initial - pink_carl - pink_john
+green_remaining = green_initial - green_john
+yellow_remaining = yellow_initial
+
+# Calculate total remaining
+total_remaining = pink_remaining + green_remaining + yellow_remaining
+
+print(total_remaining)
+```
+=== Cleaning Problem 70 ===
+
+
+```python
+from z3 import Solver, Int
+
+def solve():
+    """Solves the problem using Z3."""
+    # Define variables
+    walk_times = [Int("walk_time1"), Int("walk_time2")]
+    bike_times = [Int("bike_time1"), Int("bike_time2")]
+
+    # Set up constraints
+    solver = Solver()
+
+    # Walking times: 2 hours to walk to work, 2 hours to walk back
+    solver.add(walk_times[0] == 2)
+    solver.add(walk_times[1] == 2)
+
+    # Bike times: 1 hour to ride to work, 1 hour to ride back
+    solver.add(bike_times[0] == 1)
+    solver.add(bike_times[1] == 1)
+
+    # Solve the model
+    if solver.check() == sat:
+        model = solver.model()
+        total_walk = model.evaluate(walk_times[0] + walk_times[1])
+        total_bike = model.evaluate(bike_times[0] + bike_times[1])
+        print(f"Total walking time: {total_walk}")
+        print(f"Total biking time: {total_bike}")
+
+solve()
+```
+=== Cleaning Problem 71 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+liters = Int("liters")
+salt_percentage = Real("salt_percentage")
+salt_amount_liters = Real("salt_amount_liters")
+ml = Real("ml")
+
+# Set up the equations
+s = Solver()
+s.add(liters == 2)
+s.add(salt_percentage == 0.2)
+s.add(salt_amount_liters == liters * salt_percentage)
+s.add(ml == salt_amount_liters * 1000)
+
+# Solve and print the result
+if s.check() == sat:
+    m = s.model()
+    print(m[ml])
+```
+=== Cleaning Problem 72 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+movie_cost = 2000
+dvd_cost = 6
+selling_price = 2.5 * movie_cost
+movies_per_day = 500
+days_per_week = 5
+weeks = 20
+
+# Calculate the profit per movie
+profit_per_movie = selling_price - movie_cost
+
+# Calculate the total number of movies sold in a week
+movies_sold_per_week = movies_per_day * days_per_week
+
+# Calculate the total number of movies sold in 20 weeks
+total_movies_sold = movies_sold_per_week * weeks
+
+# Calculate the total profit in 20 weeks
+total_profit = profit_per_movie * total_movies_sold
+
+print(total_profit)
+```
+=== Cleaning Problem 73 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+num_friends = 2
+letters_per_week = 2
+pages_per_letter = 3
+weeks_per_year = 52
+
+# Calculate the total number of letters written per week
+total_letters_per_week = num_friends * letters_per_week
+
+# Calculate the total number of pages written per week
+total_pages_per_week = total_letters_per_week * pages_per_letter
+
+# Calculate the total number of pages written per year
+total_pages_per_year = total_pages_per_week * weeks_per_year
+
+print(total_pages_per_year)
+```
+=== Cleaning Problem 74 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+cheddar_price = 10
+cream_cheese_price = cheddar_price / 2
+cold_cuts_price = 2 * cheddar_price
+
+# Create a Z3 solver
+solver = Solver()
+
+# Add constraints to the solver
+solver.add(cheddar_price == 10)
+solver.add(cream_cheese_price == cheddar_price / 2)
+solver.add(cold_cuts_price == 2 * cheddar_price)
+
+# Solve the problem
+result = solver.check()
+
+if result == sat:
+    # Print the solution
+    print("The total cost is:", cheddar_price + cream_cheese_price + cold_cuts_price)
+```
+=== Cleaning Problem 75 ===
+
+
+```python
+from z3 import *
+
+x = Int("x")
+rate = RealVal(8) / RealVal(20)
+pages_read = rate * x
+
+solver = Solver()
+solver.add(pages_read == 120)
+solver.add(x >= 0)
+
+if solver.check() == sat:
+    model = solver.model()
+    print(model[x])
+```
+=== Cleaning Problem 76 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+pages_yesterday = Int("pages_yesterday")
+pages_today = Int("pages_today")
+remaining_pages = Int("remaining_pages")
+pages_tomorrow = Int("pages_tomorrow")
+
+# Create the solver
+s = Solver()
+
+# Add constraints
+s.add(pages_yesterday == 12)
+s.add(pages_today == 2 * pages_yesterday)
+s.add(remaining_pages == 120 - (pages_yesterday + pages_today))
+s.add(pages_tomorrow == remaining_pages / 2)
+
+# Check and print the solution
+if s.check() == sat:
+    m = s.model()
+    print(m[pages_tomorrow])
+```
+=== Cleaning Problem 77 ===
+
+
+```python
+from z3 import *
+
+w = Real('w')
+s = Solver()
+
+s.add(w + 2 == 2)
+s.add(w + 2 + w * 3 == 3 * w)
+s.add(w + 2 + w * 3 + 2 == 2 + w * 3)
+s.add(w + 2 + w * 3 + 2 + w * 2 == 2 * (w + 2 + w * 3 + 2))
+
+if s.check() == sat:
+    m = s.model()
+    print(m[w])
+```
+=== Cleaning Problem 78 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+n = Int('n')
+p = Int('p')
+g = Int('g')
+
+# Create the Z3 solver
+s = Solver()
+
+# Add constraints to the solver
+s.add(n == 10)
+s.add(p == n * (1 + 0.8))
+s.add(g == 0.25 * (n + p))
+
+# Check if the constraints are satisfiable
+if s.check() == sat:
+    # Get the solution
+    model = s.model()
+    total_flowers = model[n].as_long() + model[p].as_long() + model[g].as_long()
+    print(total_flowers)
+```
+=== Cleaning Problem 79 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+credit = Int("credit")
+tuesday_payment = Int("tuesday_payment")
+thursday_payment = Int("thursday_payment")
+
+# Create the solver and constraints
+solver = Solver()
+solver.add(credit == 100)
+solver.add(tuesday_payment == 15)
+solver.add(thursday_payment == 23)
+solver.add(tuesday_payment + thursday_payment == credit)
+
+# Solve and print result
+if solver.check() == sat:
+    print("Solution is valid")
+else:
+    print("No solution found")
+```
+=== Cleaning Problem 80 ===
+
+
+```python
+from z3 import *
+
+def solve():
+    x = Int("x")
+    rent_utilities_initial = 0.4 * x
+    new_income = x + 600
+    rent_utilities_new = 0.25 * new_income
+
+    solver = Solver()
+    solver.add(rent_utilities_initial == rent_utilities_new)
+    solver.check()
+    model = solver.model()
+    print(model[x])
+
+solve()
+```
+=== Cleaning Problem 81 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+april_clips = Int("april_clips")
+may_clips = Int("may_clips")
+
+# Create solver
+s = Solver()
+
+# Add constraints
+s.add(april_clips == 48)
+s.add(may_clips == april_clips / 2)
+
+# Check satisfiability
+if s.check() == sat:
+    m = s.model()
+    total = m.evaluate(april_clips + may_clips)
+    print(total)
+```
+=== Cleaning Problem 82 ===
+
+
+```python
+from z3 import Solver, Int
+
+def solve():
+    """Solves the tennis ball problem using Z3."""
+    s = Solver()
+    total_balls = 175
+    hit_first_100 = total_balls * (2/5)
+    hit_next_75 = 75 * (1/3)
+    total_hit = hit_first_100 + hit_next_75
+    not_hit = total_balls - total_hit
+    result = Int('result')
+    s.add(result == not_hit)
+    s.add(result >= 0)
+    if s.check() == sat:
+        return s.model()[result]
+    return None
+
+print(solve())
+```
+=== Cleaning Problem 83 ===
+
+
+```python
+def solve():
+    mango_trees = 60
+    coconut_trees = (mango_trees - 1) // 2
+    total_trees = mango_trees + coconut_trees
+    return total_trees
+```
+=== Cleaning Problem 84 ===
+
+
+```python
+def solve():
+    # Let s be the number of letters in Samantha's last name.
+    # Let b be the number of letters in Bobbie's last name.
+    # Let j be the number of letters in Jamie's last name (Grey).
+
+    # We are given that Samantha's last name has three fewer letters than Bobbie's last name:
+    # s = b - 3
+
+    # If Bobbie took two letters off her last name, she would have a last name twice the length of Jamie's:
+    # b - 2 = 2 * (j)
+
+    # Jamie's full name is Jamie Grey. So, j = 5 (Jamie) + 4 (Grey) = 9
+
+    # Substitute j = 9 into the second equation:
+    # b - 2 = 2 * 9
+    # b - 2 = 18
+    # b = 20
+
+    # Now substitute b = 20 into the first equation:
+    # s = 20 - 3 = 17
+
+    print("Samantha's last name has", 17, "letters")
+    print("Bobbie's last name has", 20, "letters")
+    print("Jamie's last name has", 9, "letters")
+
+solve()
+```
+=== Cleaning Problem 85 ===
+
+
+```python
+from z3 import Solver, Int, Real
+
+def solve():
+    solver = Solver()
+    x = Int('x')
+    johnson_share = Real('johnson_share')
+    johnson_share = 5 * x / 7
+    solver.add(johnson_share == 2500)
+    if solver.check() == sat:
+        model = solver.model()
+        total_profit = model[x].as_long()
+        mike_share = 2 * total_profit / 7
+        mike_remaining = mike_share - 200
+        print(f"Mike's remaining share: ${mike_remaining}")
+
+solve()
+```
+=== Cleaning Problem 86 ===
+
+
+```python
+def solve():
+    """Solves the gnome problem."""
+    x = 20 - (4 * 3)
+    print(x)
+```
+=== Cleaning Problem 87 ===
+
+
+```python
+def solve():
+    work_days = 5
+    distance_to_work = 20  # miles
+    weekend_ride_distance = 200 # miles
+    bike_speed = 25  # mph
+
+    # Calculate total distance biked to work per day
+    daily_work_distance = 2 * distance_to_work
+
+    # Calculate total distance biked for workdays
+    total_work_distance = daily_work_distance * work_days
+
+    # Calculate time spent biking to and from work each day
+    time_to_work = distance_to_work / bike_speed
+    time_from_work = distance_to_work / bike_speed
+    daily_work_time = time_to_work + time_from_work
+
+    # Calculate total time spent biking to and from work per week
+    total_work_time = daily_work_time * work_days
+
+    # Calculate time spent on the weekend ride
+    weekend_ride_time = weekend_ride_distance / bike_speed
+
+    # Calculate total biking time for the week
+    total_time = total_work_time + weekend_ride_time
+    print(total_time)
+
+solve()
+```
+=== Cleaning Problem 88 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+hourly_wage = 18.00
+hours_per_shift = 8
+overtime_rate = hourly_wage + (hourly_wage / 2)
+days_per_week = 5
+total_hours = hours_per_shift * days_per_week
+
+# Calculate the regular earnings
+regular_earnings = total_hours * hourly_wage
+
+# Calculate the overtime hours
+overtime_hours = max(0, total_hours - 40)  # Assuming overtime after 40 hours
+
+# Calculate the overtime earnings
+overtime_earnings = overtime_hours * overtime_rate
+
+# Calculate the total earnings
+total_earnings = regular_earnings + overtime_earnings
+print(total_earnings)
+```
+=== Cleaning Problem 89 ===
+
+
+```python
+def solve():
+    """Solves the shoe problem using Z3."""
+    from z3 import Solver, Int, Real
+
+    s = Solver()
+
+    # Define variables
+    allowance_per_month = 5
+    lawn_price = 15
+    driveway_price = 7
+    shoe_cost = 95
+    change = 15
+    lawns_mowed = 4
+
+    # Create the Z3 model
+    x = Int("x")  # Number of driveways shoveled
+    y = Int("y")  # Number of months saving
+
+    # Equations
+    s.add(allowance_per_month * y + lawn_price * lawns_mowed + driveway_price * x == shoe_cost + change)
+
+    # Solve the model
+    if s.check() == sat:
+        solution = s.model()
+        print(solution)
+    else:
+        print("No solution found")
+
+solve()
+```
+=== Cleaning Problem 90 ===
+
+
+Here's the cleaned and working code:
+
+```python
+from z3 import *
+
+# Define the variables
+hours = Real("hours")
+earnings = Real("earnings")
+
+# Weng earns $12 an hour
+rate_per_hour = 12
+
+# She babysat for 50 minutes, which is 50/60 hours
+minutes = 50
+hours_babysitting = RealVal(minutes) / 60.0
+
+# Calculate the earnings
+s = Solver()
+s.add(hours == hours_babysitting)
+s.add(earnings == rate_per_hour * hours)
+s.check()
+m = s.model()
+print(m[earnings])
+```

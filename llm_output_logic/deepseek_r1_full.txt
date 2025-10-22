@@ -1,0 +1,4216 @@
+=== Problem 61 ===
+Prompt:
+A deep-sea monster rises from the waters once every hundred years to feast on a ship and sate its hunger. Over three hundred years, it has consumed 847 people. Ships have been built larger over time, so each new ship has twice as many people as the last ship. How many people were on the ship the monster ate in the first hundred years?
+[Thought Process]
+I need to find out how many people were on the ship that the monster ate first. It rises every hundred years, so over three hundred years, it has eaten three ships. Each ship has twice as many people as the previous one, and the total number of people eaten is 847.
+
+Let the number of people on the first ship be \( x \). Then, the second ship had \( 2x \) people, and the third ship had \( 2 \times 2x = 4x \) people, since it's twice the previous one each time.
+
+The ship in the first hundred years: \( x \) people
+
+Second hundred years: \( 2x \) people
+
+Third hundred years: \( 4x \) people
+
+Total people eaten: \( x + 2x + 4x = 7x \)
+
+And this equals 847. So:
+
+\( 7x = 847 \)
+
+Then, \( x = 847 / 7 \)
+
+Let me calculate that.
+
+847 divided by 7.
+
+7 times 121 is 847, because 7 times 100 is 700, 7 times 21 is 147, so 700 + 147 = 847. So yes, 847 / 7 = 121.
+
+So x = 121.
+
+The first ship had 121 people.
+
+The problem says "ships have been built larger over time, so each new ship has twice as many people as the last ship." And it ate one ship each hundred years, so three ships in total.
+
+First ship: x
+
+Second: twice the first, so 2x
+
+Third: twice the second, so 2*(2x) = 4x
+
+Sum: x + 2x + 4x = 7x = 847
+
+x = 847 / 7 = 121
+
+121 seems small, but maybe ships were smaller back then.
+
+I should check if the third ship is twice the second, which is consistent.
+
+Perhaps the "last ship" refers to the previous one it ate.
+
+But in this case, it should be fine.
+
+Maybe it started eating at year zero or something, but I think it's straightforward.
+
+Total people: 847, and the ships are in geometric progression with ratio 2.
+
+First term a, common ratio r=2.
+
+Number of terms n=3.
+
+Sum S = a*(r^n - 1)/(r - 1) = a*(8 - 1)/(2 - 1) = a*7/1 = 7a
+
+Same as before.
+
+S = 847, so 7a=847, a=121.
+
+Perhaps the monster ate in year 100, 200, 300, but it doesn't matter, the ships are at those times.
+
+Another thought: "once every hundred years" and "over three hundred years" might include the starting point or not, but since it says "rises from the waters once every hundred years" and "over three hundred years, it has consumed 847 people," and it specifies three instances: first, second, third hundred years.
+
+It says "the first hundred years," "the monster ate in the first hundred years," so I think three feedings.
+
+Perhaps the three hundred years is from year 0 to year 300, but it rises at year 100, 200, 300, so three times.
+
+Yes.
+
+Maybe it rises at year 0, but the problem says "once every hundred years" and "feast on a ship," so probably not at year zero, but at the end or beginning of the century.
+
+But the number of people should be the same.
+
+So I think 121 is correct.
+
+But let me see the answer.
+
+The problem is to box the answer.
+
+But 121 seems too straightforward, and I recall that 847 divided by 7 is 121, but let me confirm: 7*120=840, 7*1=7, 840+7=847, so 121.
+
+Perhaps the ships are different, but I think it's fine.
+
+Another interpretation: "each new ship has twice as many people as the last ship" — last ship meaning the one before, which is what I have.
+
+Perhaps "last ship" could be misinterpreted, but I think it's clear.
+
+Maybe the first ship is not x, but let's see.
+
+Suppose the ship eaten at time t has P people.
+
+Then at t+100, ship has 2P, at t+200, has 4P.
+
+Sum P + 2P + 4P = 7P = 847, P=121.
+
+Same thing.
+
+Perhaps the three hundred years include more, but it says "over three hundred years" and it rises once every hundred years, so three times.
+
+Unless it rises at the start and end, but I don't think so.
+
+For example, from year 0 to 300, it could rise at year 0, 100, 200, 300, but that would be four times.
+
+But the problem says "once every hundred years" and "over three hundred years."
+
+Let me read carefully.
+
+"A deep-sea monster rises from the waters once every hundred years to feast on a ship... Over three hundred years, it has consumed 847 people."
+
+Now, "over three hundred years" could be ambiguous.
+
+For example, if it rises at year 100, 200, 300, that's three times in 300 years.
+
+If it rises at year 0, 100, 200, 300, that might be four times, but year 0 might not be considered "over three hundred years" if three hundred years is from year 0 to year 300.
+
+But "over three hundred years" typically means a period of 300 years, and events during that period.
+
+For example, from year 0 to year 300, inclusive or exclusive.
+
+But let's see the context.
+
+It says "the first hundred years," "second hundred years," etc.
+
+Let me read the last part: "the ship the monster ate in the first hundred years?"
+
+It mentions "the first hundred years," implying periods: 0-100, 100-200, 200-300, for example.
+
+So it ate one ship in each century.
+
+So at some point in (0,100], it ate a ship, similarly (100,200], (200,300].
+
+So three ships.
+
+If it ate at t=100, t=200, t=300, that would be at the boundaries.
+
+But in terms of the hundred-year periods, it's one per period.
+
+So I think three feedings.
+
+Moreover, 847 divided by 7 is nice, 121, so it should be correct.
+
+Perhaps the ship sizes are relative to the last one eaten, but same as before.
+
+Another thought: "each new ship" might imply that the first ship is not compared, but the second has twice the first, third has twice the second, so it is.
+
+I think I'm overcomplicating.
+
+So the first ship had 121 people.
+
+But let me see if 121 is the answer.
+
+Perhaps I need to express it.
+
+But 121 is fine.
+
+Or maybe it's too small, but historically, ships might have had around 100 people or so, I don't know.
+
+In the context, it might be reasonable.
+
+Perhaps I misread the total.
+
+847 people, three ships, geometric sequence with ratio 2.
+
+First: x, second: 2x, third: 4x, sum 7x=847, x=121.
+
+If ratio is different, but it says twice, so ratio 2.
+
+Perhaps "twice as many as the last ship" meaning the last one it ate, which is what I have.
+
+I think it's correct.
+
+So the number of people on the first ship is 121.
+
+But the question is "how many people were on the ship the monster ate in the first hundred years?"
+
+So that should be x=121.
+
+But let me confirm the division: 847 ÷ 7.
+
+7 × 121 = 7×100=700, 7×21=147, 700+147=847, yes.
+
+847 ÷ 7 = 121.
+
+So I think that's the answer.
+
+[Final Answer]
+The monster rises every hundred years, so over three hundred years, it consumes three ships. Let the number of people on the first ship (eaten in the first hundred years) be \(x\). Since each subsequent ship has twice as many people as the previous one, the second ship has \(2x\) people, and the third ship has \(4x\) people.
+
+The total number of people consumed is given as 847. Therefore, the equation is:
+\[
+x + 2x + 4x = 847
+\]
+Simplifying the equation:
+\[
+7x = 847
+\]
+Solving for \(x\):
+\[
+x = \frac{847}{7} = 121
+\]
+
+Thus, the first ship had 121 people.
+
+\boxed{121}
+
+=== Problem 62 ===
+Prompt:
+Albert is wondering how much pizza he can eat in one day. He buys 2 large pizzas and 2 small pizzas. A large pizza has 16 slices and a small pizza has 8 slices. If he eats it all, how many pieces does he eat that day?
+[Thought Process]
+Albert has 2 large pizzas and 2 small pizzas. Each large pizza has 16 slices, and each small pizza has 8 slices. I need to find out how many pieces he eats in total if he eats all of them.
+
+First, I should calculate the total number of slices from the large pizzas. Since there are 2 large pizzas and each has 16 slices, I multiply 2 by 16.
+
+2 times 16 is 32. So, 32 slices from large pizzas.
+
+Next, for the small pizzas. There are 2 small pizzas, each with 8 slices. So, 2 times 8 is 16 slices.
+
+Now, to find the total slices, I add the slices from large and small pizzas together. 32 from large plus 16 from small.
+
+32 + 16 is 48.
+
+So, he eats 48 pieces in total.
+
+I should double-check. Two large pizzas: 16 slices each, so 16 * 2 = 32. Two small pizzas: 8 slices each, so 8 * 2 = 16. Total: 32 + 16 = 48. That seems right.
+
+I could also think about the total as (2 * 16) + (2 * 8) = 32 + 16 = 48.
+
+Yes, I think that's correct.
+
+[Final Answer]
+Albert buys 2 large pizzas and 2 small pizzas.  
+- Each large pizza has 16 slices, so 2 large pizzas have \(2 \times 16 = 32\) slices.  
+- Each small pizza has 8 slices, so 2 small pizzas have \(2 \times 8 = 16\) slices.  
+
+The total number of slices eaten is \(32 + 16 = 48\).  
+
+Thus, Albert eats 48 pieces of pizza that day.
+
+=== Problem 63 ===
+Prompt:
+Alexis is applying for a new job and bought a new set of business clothes to wear to the interview. She went to a department store with a budget of $200 and spent $30 on a button-up shirt, $46 on suit pants, $38 on a suit coat, $11 on socks, and $18 on a belt. She also purchased a pair of shoes, but lost the receipt for them. She has $16 left from her budget. How much did Alexis pay for the shoes?
+[Thought Process]
+Alexis had a budget of $200 for her business clothes. She bought several items: a button-up shirt for $30, suit pants for $46, a suit coat for $38, socks for $11, and a belt for $18. She also bought shoes, but she lost the receipt, so I don't know how much those cost. After all her purchases, she has $16 left. I need to find out how much she paid for the shoes.
+
+First, I should add up the cost of all the items she bought except for the shoes, because I know the prices for those. Then, since she spent money on shoes too, and ended up with $16 left from $200, I can figure out how much she spent in total, and then find the shoe price by subtracting the known items from the total spent.
+
+Let me list out the prices:
+
+- Shirt: $30
+
+- Pants: $46
+
+- Coat: $38
+
+- Socks: $11
+
+- Belt: $18
+
+- Shoes: ? (let's call this S for now)
+
+She spent money on all these, and after spending, she has $16 left from her $200 budget.
+
+So, the total amount she spent should be the budget minus what's left.
+
+Budget: $200
+
+Left: $16
+
+So, total spent = $200 - $16 = $184
+
+Now, this total spent includes all the items: shirt, pants, coat, socks, belt, and shoes.
+
+So, I can write an equation:
+
+Cost of shirt + cost of pants + cost of coat + cost of socks + cost of belt + cost of shoes = total spent
+
+Which is:
+
+30 + 46 + 38 + 11 + 18 + S = 184
+
+Now, I need to solve for S.
+
+First, add up all the known costs.
+
+Let me add step by step.
+
+Start with 30 + 46.
+
+30 + 46 = 76
+
+Then, 76 + 38.
+
+76 + 38: 76 + 30 = 106, plus 8 is 114? No.
+
+Better to do it properly.
+
+76 + 38: 70 + 30 = 100, 6 + 8 = 14, so 100 + 14 = 114. Yes.
+
+Now, add socks: 114 + 11.
+
+114 + 10 = 124, plus 1 is 125? No, 114 + 11.
+
+11 is 10 + 1, so 114 + 10 = 124, then 124 + 1 = 125. But that's wrong because 114 + 11 should be 125? 114 + 10 is 124, plus 1 is 125, yes.
+
+114 + 11: 10 + 11 is 21, but better: 114 + 10 = 124, 124 + 1 = 125, but I only added 11, which is 10+1, so yes 125.
+
+Actually, 114 + 11: 4 + 1 =5, 10+10=20, 100, so 125. Okay.
+
+Now, add belt: 125 + 18.
+
+125 + 18: 125 + 10 = 135, 135 + 8 = 143? 125 + 20 = 145 minus 2? Better: 125 + 18.
+
+5 + 8 = 13, carry over 1, so 2 + 1 = 3, plus carry over 1 is 4? Let's see: 125 + 18.
+
+Hundreds: 1 (from 125) but 125 is 100 + 25, easier: 125 + 10 = 135, 135 + 8 = 143. Yes.
+
+So, shirt, pants, coat, socks, belt total: 30 + 46 + 38 + 11 + 18 = 143.
+
+Now, that plus shoes equals total spent, which is 184.
+
+So, 143 + S = 184
+
+Therefore, S = 184 - 143
+
+Now, subtract: 184 - 143.
+
+184 - 140 = 44, but 143 is 140 + 3, so 184 - 140 = 44, then 44 - 3 = 41? No.
+
+When subtracting, it's 184 minus 143.
+
+So, 184 - 100 = 84, but better to align:
+
+  184
+
+-143
+
+_____
+
+First, units: 4 - 3 = 1
+
+Tens: 8 - 4 = 4
+
+Hundreds: 1 - 1 = 0
+
+So, 41.
+
+184 - 143: 180 - 140 = 40, 4 - 3 = 1, so 41.
+
+Yes.
+
+So, S = 41.
+
+Therefore, Alexis paid $41 for the shoes.
+
+Let me double-check the addition of known items.
+
+Shirt: 30
+
+Pants: 46
+
+30 + 46 = 76
+
+Coat: 38
+
+76 + 38: 76 + 30 = 106, 106 + 8 = 114? 38 is 30 + 8, so 76 + 30 = 106, then 106 + 8 = 114. Yes.
+
+Socks: 11
+
+114 + 11 = 125
+
+Belt: 18
+
+125 + 18: 125 + 10 = 135, 135 + 8 = 143. Yes.
+
+Total known: 143
+
+Total spent: 200 - 16 = 184
+
+Shoes: 184 - 143 = 41
+
+Now, if I add 143 + 41 = 184, and 184 + 16 = 200, perfect.
+
+Since she has $16 left, and budget $200, spent $184.
+
+And the items add to 143 without shoes, so shoes must be 184 - 143 = 41.
+
+I think that's correct.
+
+The problem says she went with a budget of $200 and spent on these items, and has $16 left, so yes.
+
+Also, she lost the receipt for shoes, so we need to find it.
+
+So, the answer should be $41.
+
+But let me make sure I didn't miss anything.
+
+Items: shirt $30, pants $46, coat $38, socks $11, belt $18, shoes ?
+
+Total spent: 200 - 16 = 184
+
+Sum of known: 30 + 46 is 76, 76 + 38: 70+30=100, 6+8=14, 100+14=114, 114+11=125, 125+18: 120+18=138? 125+18.
+
+125 + 10 =135, 135+8=143, yes.
+
+143 to 184 is 41, since 184 - 143=41.
+
+143 + 41: 140 + 40=180, 3+1=4, 180+4=184, yes.
+
+So, I think it's fine.
+
+[Final Answer]
+Alexis had a budget of $200 and has $16 left after her purchases. Therefore, the total amount spent is:  
+$200 - $16 = $184.  
+
+The costs of the known items are:  
+- Button-up shirt: $30  
+- Suit pants: $46  
+- Suit coat: $38  
+- Socks: $11  
+- Belt: $18  
+
+The sum of these known costs is:  
+$30 + $46 = $76  
+$76 + $38 = $114  
+$114 + $11 = $125  
+$125 + $18 = $143  
+
+Let \( S \) be the cost of the shoes. The total spent is the sum of all items, including the shoes:  
+$143 + S = 184$  
+
+Solving for \( S \):  
+$S = 184 - 143 = 41$  
+
+Thus, Alexis paid $41 for the shoes.
+
+\boxed{41}
+
+=== Problem 64 ===
+Prompt:
+Ann's favorite store was having a summer clearance. For $75 she bought 5 pairs of shorts for $7 each and 2 pairs of shoes for $10 each. She also bought 4 tops, all at the same price. How much did each top cost?
+[Thought Process]
+I need to find out how much each top cost. Ann spent a total of $75. She bought 5 pairs of shorts for $7 each and 2 pairs of shoes for $10 each. She also bought 4 tops, all at the same price. I need to find the price per top.
+
+First, I should figure out how much she spent on shorts and shoes. Then, subtract that from the total to find out how much was spent on the tops. Finally, divide that by 4 to get the cost per top.
+
+So, let's calculate the cost of the shorts. 5 pairs at $7 each. That's 5 times 7, which is $35.
+
+Now, the shoes: 2 pairs at $10 each. That's 2 times 10, which is $20.
+
+So, the total for shorts and shoes is 35 plus 20. 35 + 20 = $55.
+
+She spent a total of $75, so the amount spent on tops is 75 minus 55. 75 - 55 = $20.
+
+Now, she bought 4 tops for $20, so each top cost 20 divided by 4, which is $5.
+
+Let me double-check. Shorts: 5 * 7 = 35. Shoes: 2 * 10 = 20. Total for shorts and shoes: 35 + 20 = 55. Total spent: 75. So for tops: 75 - 55 = 20. Four tops: 20 / 4 = 5. So each top is $5.
+
+The problem says "summer clearance," but I don't think that affects the math. It's just a context.
+
+I could set up an equation. Let T be the cost of one top.
+
+Then, cost of shorts: 5 * 7 = 35
+
+Cost of shoes: 2 * 10 = 20
+
+Cost of tops: 4 * T
+
+Total: 35 + 20 + 4T = 75
+
+Simplify: 55 + 4T = 75
+
+Then, 4T = 75 - 55 = 20
+
+So, T = 20 / 4 = 5
+
+Same answer.
+
+I think that's correct. The question is straightforward, no tricks.
+
+So, each top cost $5.
+
+[Final Answer]
+Ann spent a total of $75.  
+The cost of the shorts is calculated as follows: 5 pairs × $7/pair = $35.  
+The cost of the shoes is: 2 pairs × $10/pair = $20.  
+The combined cost of the shorts and shoes is $35 + $20 = $55.  
+The amount spent on the tops is the total minus this amount: $75 - $55 = $20.  
+Since there are 4 tops, each top costs $20 ÷ 4 = $5.  
+
+Thus, each top cost $5.
+
+\boxed{5}
+
+=== Problem 65 ===
+Prompt:
+Bella bought stamps at the post office. Some of the stamps had a snowflake design, some had a truck design, and some had a rose design. Bella bought 11 snowflake stamps. She bought 9 more truck stamps than snowflake stamps, and 13 fewer rose stamps than truck stamps. How many stamps did Bella buy in all?
+[Thought Process]
+Bella bought stamps with different designs: snowflakes, trucks, and roses. I need to find out how many she bought in total. The problem gives me some information: she bought 11 snowflake stamps. Then it says she bought 9 more truck stamps than snowflake stamps. And she bought 13 fewer rose stamps than truck stamps. I need to find the total number.
+
+First, snowflake stamps: 11.
+
+Truck stamps: 9 more than snowflake stamps. So, truck stamps = snowflake stamps + 9. That would be 11 + 9.
+
+Let me calculate that: 11 + 9 = 20. So, 20 truck stamps.
+
+Now, rose stamps: 13 fewer than truck stamps. So, rose stamps = truck stamps - 13.
+
+Truck stamps are 20, so 20 - 13 = 7. So, 7 rose stamps.
+
+Now, total stamps: snowflake + truck + rose = 11 + 20 + 7.
+
+Add them up: 11 + 20 is 31, plus 7 is 38.
+
+So, Bella bought 38 stamps in all.
+
+Let me double-check.
+
+Snowflake: 11
+
+Truck: 9 more than snowflake, so 11 + 9 = 20, that seems right.
+
+Rose: 13 fewer than truck, so 20 - 13 = 7, that also seems correct.
+
+Total: 11 + 20 = 31, 31 + 7 = 38.
+
+I could also think in terms of variables.
+
+Let S be snowflake stamps. S = 11.
+
+T be truck stamps. T = S + 9 = 11 + 9 = 20.
+
+R be rose stamps. R = T - 13 = 20 - 13 = 7.
+
+Total = S + T + R = 11 + 20 + 7 = 38.
+
+Seems consistent.
+
+The problem says "some had a rose design," and I got 7, which is positive, so that makes sense. No issues with negative numbers.
+
+Also, "some" could be one or more, and 7 is fine.
+
+So, I think that's the answer.
+
+[Final Answer]
+Bella bought 11 snowflake stamps.  
+She bought 9 more truck stamps than snowflake stamps, so the number of truck stamps is 11 + 9 = 20.  
+She bought 13 fewer rose stamps than truck stamps, so the number of rose stamps is 20 - 13 = 7.  
+
+The total number of stamps is the sum of snowflake, truck, and rose stamps: 11 + 20 + 7 = 38.  
+
+Thus, Bella bought 38 stamps in all.
+
+\boxed{38}
+
+=== Problem 66 ===
+Prompt:
+Betty is saving money for a new wallet which costs $100. Betty has only half of the money she needs. Her parents decided to give her $15 for that purpose, and her grandparents twice as much as her parents. How much more money does Betty need to buy the wallet?
+[Thought Process]
+First, the wallet costs $100. Betty has only half of the money she needs. Half of $100 is $50. So, Betty has $50.
+
+Her parents are giving her $15 for the wallet.
+
+Her grandparents are giving her twice as much as her parents. Since her parents are giving $15, twice that is $30. So, grandparents are giving $30.
+
+Now, let's add up all the money she has or will receive:
+
+- Betty's own money: $50
+
+- Parents' contribution: $15
+
+- Grandparents' contribution: $30
+
+Total money = 50 + 15 + 30 = $95
+
+The wallet costs $100, so she needs $100 - $95 = $5 more.
+
+I should double-check. Betty has half of what she needs, which is half of $100, so $50. That's correct.
+
+Parents give $15.
+
+Grandparents give twice what parents give, so 2 * $15 = $30. That's right.
+
+Total: 50 + 15 = 65; 65 + 30 = 95. Yes.
+
+100 - 95 = 5.
+
+So, she needs $5 more.
+
+The question is: "How much more money does Betty need to buy the wallet?" So, $5.
+
+I think that's it. Let me see if there's any trick. The problem says "Betty has only half of the money she needs." And she needs $100, so half is $50. Then parents give $15, grandparents twice that, $30. Sum is 95, need 5 more.
+
+I could think in terms of what she still needs after her savings and the gifts.
+
+But I think I've got it right.
+
+[Final Answer]
+Betty needs $100 for the wallet. She has half of that amount, which is $100 / 2 = $50.  
+Her parents give her $15.  
+Her grandparents give her twice as much as her parents, which is 2 × $15 = $30.  
+
+The total money Betty has or will receive is:  
+- Betty's savings: $50  
+- Parents' contribution: $15  
+- Grandparents' contribution: $30  
+
+Total = $50 + $15 + $30 = $95.  
+
+The wallet costs $100, so Betty needs $100 - $95 = $5 more.  
+
+\boxed{5}
+
+=== Problem 67 ===
+Prompt:
+Brennan was researching his school project and had to download files from the internet to his computer to use for reference. After downloading 800 files, he deleted 70% of them because they were not helpful. He downloaded 400 more files but again realized that 3/5 of them were irrelevant. How many valuable files was he left with after deleting the unrelated files he downloaded in the second round?
+[Thought Process]
+I need to find out how many valuable files Brennan was left with after deleting the unrelated files from the second download. Let me break this down step by step.
+
+First, he downloaded 800 files. Then he deleted 70% of them because they weren't helpful. So, the number of files he deleted is 70% of 800.
+
+To find 70% of 800, I multiply 800 by 70/100, which is 800 times 0.7.
+
+800 * 0.7 = 560. So he deleted 560 files.
+
+That means the files he kept from the first download are the remaining 30%, because if he deleted 70%, he kept 30%.
+
+100% - 70% = 30%, so yes, 30% of 800.
+
+800 * 0.3 = 240. Or, 800 - 560 = 240. So, 240 files kept from first download.
+
+Now, he downloaded 400 more files. But then he realized that 3/5 of them were irrelevant. So, he deleted 3/5 of the 400 files.
+
+First, find how many were irrelevant: 3/5 of 400.
+
+3/5 * 400 = (3 * 400) / 5 = 1200 / 5 = 240. So, 240 files were irrelevant and deleted.
+
+Therefore, the valuable files from the second download are the remaining 2/5, because if 3/5 were irrelevant, then 2/5 were valuable.
+
+2/5 * 400 = (2 * 400) / 5 = 800 / 5 = 160.
+
+400 - 240 = 160. So, 160 valuable files from the second download.
+
+Now, the question is, how many valuable files was he left with after deleting the unrelated files from the second round?
+
+After the second deletion, he has the valuable files from the first download and the valuable files from the second download.
+
+The first download valuable files: 240
+
+Second download valuable files: 160
+
+So total valuable files: 240 + 160 = 400.
+
+The question says: "how many valuable files was he left with after deleting the unrelated files he downloaded in the second round?"
+
+So, after he deletes the unrelated files from the second download, he has the first batch valuable files plus the second batch valuable files.
+
+Yes.
+
+I should confirm if the first batch files are still there. He didn't delete them again, right? The deletion was only for the second batch when he realized some were irrelevant.
+
+Let me read the question carefully.
+
+"After downloading 800 files, he deleted 70% of them because they were not helpful."
+
+So, he deleted 70% of the first 800.
+
+Then, "He downloaded 400 more files but again realized that 3/5 of them were irrelevant."
+
+Then, "How many valuable files was he left with after deleting the unrelated files he downloaded in the second round?"
+
+So, after deleting the unrelated files from the second download, what does he have?
+
+He has all the valuable files from the first download, which he kept, and now the valuable files from the second download after deleting the irrelevant ones.
+
+Yes, so 240 + 160 = 400.
+
+But let me make sure about the numbers.
+
+First download: 800 files.
+
+Deleted 70%: 0.7 * 800 = 560 deleted.
+
+Kept: 800 - 560 = 240.
+
+Second download: 400 files.
+
+Deleted 3/5: 3/5 * 400 = 1200 / 5 = 240 deleted.
+
+Kept: 400 - 240 = 160.
+
+Total kept: 240 + 160 = 400.
+
+Since the first kept files are valuable, and the second kept files are valuable.
+
+The question is about valuable files after the second deletion.
+
+I think that's it.
+
+But let me see if there's any trick.
+
+Another way: after second deletion, he has files from first and second, but only the valuable ones.
+
+Yes.
+
+Perhaps the valuable files from first are included.
+
+I think I'm overthinking.
+
+Let me calculate the total files he ever had.
+
+He downloaded 800, deleted 560, so left with 240.
+
+Then downloaded 400 more, so now he has 240 + 400 = 640 files.
+
+But out of these 640, not all are valuable; the 400 new ones have some irrelevant.
+
+He then deletes 3/5 of the second 400, which is 240 files.
+
+After deleting these 240, he has the 240 from first, plus the remaining 160 from second, so 240 + 160 = 400.
+
+If I think about the 640 files before deletion, but after deleting 240 from the second batch, he has 640 - 240 = 400, but this 400 includes the 240 from first and 160 from second, all valuable now, since he deleted the irrelevant ones.
+
+In the 640, the 240 from first are valuable, and the 400 from second include both valuable and irrelevant, but after deletion, only valuable remain.
+
+So yes, total valuable files: 400.
+
+But is 400 the final answer?
+
+Let me see the question again.
+
+"How many valuable files was he left with after deleting the unrelated files he downloaded in the second round?"
+
+And unrelated files from second round are the 3/5 of 400, which he deleted.
+
+So after that, he has the valuable ones.
+
+Now, the valuable files consist of the first batch kept files and the second batch kept files.
+
+Perhaps I should express it in terms of what he has.
+
+Another thing: when he deleted the files from the first download, he kept 30% as valuable.
+
+Then for the second download, he kept 2/5 as valuable.
+
+So total valuable: (30% of 800) + (2/5 of 400)
+
+30% of 800: 0.3 * 800 = 240
+
+2/5 of 400: (2/5)*400 = 160
+
+240 + 160 = 400.
+
+(3/10 of 800) + (2/5 of 400), but 30% is 3/10? 30% = 30/100 = 3/10, yes.
+
+3/10 * 800 = 240, same.
+
+2/5 * 400 = 160.
+
+240 + 160 = 400.
+
+I think I'm confident.
+
+But let me see if the question is tricky.
+
+It says "after deleting the unrelated files he downloaded in the second round"
+
+So, after deleting the unrelated from second download, what he has left.
+
+He has the valuable from first, and valuable from second.
+
+Yes.
+
+Perhaps someone might think that the first files are not considered after, but no, he kept them.
+
+Another misinterpretation: when he downloads the second batch, he might delete some of the first or something, but the question doesn't say that.
+
+It only says he deleted files from the first batch initially, and then from the second batch later.
+
+So, I think 400 is correct.
+
+But let me check the numbers: 800 files, delete 70%, keep 240.
+
+400 more, delete 3/5, which is 60%, so keep 40%, 40% of 400 is 160.
+
+240 + 160 = 400.
+
+Total files downloaded: 800 + 400 = 1200.
+
+Total deleted: 560 from first + 240 from second = 800 deleted.
+
+So kept: 1200 - 800 = 400.
+
+Oh, same answer.
+
+Total deleted: 560 + 240 = 800, total downloaded 1200, so kept 400.
+
+And since all deleted were irrelevant, kept are valuable.
+
+So, no matter how I see, it's 400.
+
+I think it's solid.
+
+So, the answer should be 400.
+
+But let me see the question: "how many valuable files was he left with"
+
+And after second deletion, he has 400 valuable files.
+
+But is there any file that might be duplicated or something? No, all files are distinct, I assume.
+
+No mention of overlap.
+
+So, I think it's fine.
+
+[Final Answer]
+Brennan initially downloaded 800 files and deleted 70% of them because they were not helpful.  
+- 70% of 800 is \(0.70 \times 800 = 560\) files deleted.  
+- The number of valuable files kept from the first download is \(800 - 560 = 240\).  
+
+He then downloaded 400 more files but found that \(\frac{3}{5}\) of them were irrelevant and deleted them.  
+- \(\frac{3}{5}\) of 400 is \(\frac{3}{5} \times 400 = 240\) files deleted.  
+- The number of valuable files kept from the second download is \(400 - 240 = 160\).  
+
+After deleting the unrelated files from the second download, the total number of valuable files Brennan has is the sum of the valuable files from both downloads:  
+- Valuable files from first download: 240  
+- Valuable files from second download: 160  
+- Total: \(240 + 160 = 400\).  
+
+Thus, Brennan is left with 400 valuable files.
+
+\boxed{400}
+
+=== Problem 68 ===
+Prompt:
+Each bird eats 12 beetles per day, each snake eats 3 birds per day, and each jaguar eats 5 snakes per day. If there are 6 jaguars in a forest, how many beetles are eaten each day?
+[Thought Process]
+I need to find out how many beetles are eaten each day with 6 jaguars. Let me break this down step by step.
+
+First, each jaguar eats 5 snakes per day. So, for 6 jaguars, the number of snakes eaten per day would be:
+
+6 jaguars × 5 snakes/jaguar = 30 snakes per day.
+
+Each snake eats 3 birds per day. So, if 30 snakes are eaten per day, but that doesn't directly help. I need to find out how many birds are needed to feed those snakes that are being eaten, but it's a bit messy.
+
+I should think about the food chain from the bottom up. I need beetles eaten, which are consumed by birds, but birds are eaten by snakes, and snakes by jaguars.
+
+Since I'm starting from jaguars and going down to beetles, I should calculate the number of each animal required to support the jaguars.
+
+Let me denote:
+
+- Jaguars: 6
+
+Each jaguar eats 5 snakes per day, so snakes eaten per day: 6 × 5 = 30 snakes.
+
+But these 30 snakes are consumed by jaguars, so to have those 30 snakes available, there must be snakes eating birds to sustain themselves, but the snakes are being eaten, so I need the number of snakes that are being supported to be eaten.
+
+I think I need to find out how many birds are eaten to support those snakes that are eaten by jaguars.
+
+Similarly, birds eat beetles.
+
+So, let's think about the consumption.
+
+Each snake eats 3 birds per day. So, for one snake to live, it eats 3 birds per day.
+
+But when a snake is eaten by a jaguar, that snake has consumed birds during its life, but since we're talking about per day, it might be a rate.
+
+This might be overcomplicating. I think for a steady state, the number of prey consumed per predator per day is given, so I can work backwards or forwards.
+
+Since the question is about how many beetles are eaten each day, and it's given the consumption rates, I should start from the top and go down to the beetles required to support the top predators.
+
+So, for the jaguars:
+
+6 jaguars each eat 5 snakes per day, so total snakes eaten per day: 6 × 5 = 30 snakes.
+
+These 30 snakes need to be replaced or sustained, meaning that to have 30 snakes available to be eaten each day, there must be enough birds being eaten by snakes to support those 30 snakes.
+
+Each snake eats 3 birds per day, so for one snake, it consumes 3 birds per day to live.
+
+Therefore, to support 30 snakes, the number of birds eaten per day must be: 30 snakes × 3 birds/snake = 90 birds per day.
+
+Similarly, these 90 birds are eaten by snakes, so to have 90 birds available to be eaten each day, there must be enough beetles being eaten by birds to support those 90 birds.
+
+Each bird eats 12 beetles per day, so for one bird, it consumes 12 beetles per day.
+
+Therefore, to support 90 birds, the number of beetles eaten per day must be: 90 birds × 12 beetles/bird = 1080 beetles per day.
+
+So, the beetles eaten each day are 1080.
+
+I think I have it.
+
+Let me double-check.
+
+The question is: "how many beetles are eaten each day?" and with the given consumption rates and the number of jaguars.
+
+In this calculation, I assumed that the beetles eaten are only those consumed by the birds that are part of the food chain supporting the jaguars.
+
+Since there are no other consumers mentioned, I think this is fine.
+
+Another way to think is to find the total beetles consumed based on the hierarchy.
+
+I can work from beetles up to jaguars to find the ratio.
+
+For example, how many beetles are needed per bird? 12 per day.
+
+Per snake: each snake eats 3 birds, so per snake, beetles eaten: 3 birds × 12 beetles/bird = 36 beetles per day per snake.
+
+Then per jaguar: each jaguar eats 5 snakes, so per jaguar, beetles eaten: 5 snakes × 36 beetles/snake = 180 beetles per day per jaguar.
+
+Is that right?
+
+Per jaguar, it eats 5 snakes, each snake consumes 36 beetles per day, so indirectly, 180 beetles per day are consumed to support one jaguar.
+
+Then for 6 jaguars: 6 × 180 = 1080 beetles per day.
+
+Same answer.
+
+In this case, it's the beetles consumed by the birds that are eaten by the snakes that are eaten by the jaguar.
+
+Yes.
+
+Since each jaguar requires 5 snakes, each snake requires 3 birds, each bird requires 12 beetles.
+
+So, beetles per jaguar: 5 snakes/jaguar × 3 birds/snake × 12 beetles/bird = 5 × 3 × 12 = 15 × 12 = 180 beetles per jaguar per day.
+
+Then for 6 jaguars: 6 × 180 = 1080.
+
+5 × 3 = 15, 15 × 12 = 180, yes.
+
+6 × 180 = 1080.
+
+So, I think it's consistent.
+
+The question is about how many beetles are eaten, not how many are needed to support, but in this context, since the beetles are eaten by the birds to sustain them for the snakes and jaguars, it should be the same.
+
+I think it's fine.
+
+Is there any other source of beetle consumption? The problem doesn't mention, so I think we assume that the only beetles eaten are by these birds in the food chain.
+
+Similarly, only birds eaten are by snakes, and snakes by jaguars.
+
+So, for 6 jaguars, we have this.
+
+Another thing: are there multiple levels or something? I think it's straightforward.
+
+Perhaps I should consider if the birds are only eaten by snakes, etc., but I think it's covered.
+
+So, beetles eaten per day: 1080.
+
+But let me confirm the units.
+
+Jaguars: 6
+
+Snakes eaten per day: 6 × 5 = 30
+
+Birds eaten per day: 30 × 3 = 90
+
+Beetles eaten per day: 90 × 12 = 1080
+
+Or directly: beetles per day = number of jaguars × snakes per jaguar × birds per snake × beetles per bird = 6 × 5 × 3 × 12
+
+Now, 6 × 5 = 30
+
+30 × 3 = 90
+
+90 × 12 = 1080
+
+Or 5 × 3 × 12 = 15 × 12 = 180, then 6 × 180 = 1080.
+
+Or even: 6 × 5 × 3 × 12 = 6 × 180 = 1080, same.
+
+I can compute 5 × 3 × 12 = 15 × 12 = 180, then 180 × 6.
+
+180 × 6: 100×6=600, 80×6=480, 600+480=1080.
+
+Yes.
+
+So, I think it's correct.
+
+The problem says "each bird eats 12 beetles per day", etc., and "how many beetles are eaten each day?" with 6 jaguars.
+
+I think 1080 is the answer.
+
+But let me see if there's a trick.
+
+It says "there are 6 jaguars in a forest", and we're to find beetles eaten, assuming that the ecosystem is in balance with these numbers.
+
+It doesn't specify the number of snakes or birds, so we have to infer from the consumption rates.
+
+I think that's standard for such problems.
+
+Perhaps we need to consider that the snakes eaten by jaguars must be replaced, so birds must be eaten to produce new snakes, but since it's per day, and consumption is continuous, I think the daily rate is sufficient.
+
+Similarly for birds and beetles.
+
+So, I believe 1080 is correct.
+
+Another thought: when a snake is eaten by a jaguar, it no longer eats birds, so the birds it would have eaten are saved, but that might not be right because the snake was eating birds before being eaten, and another snake might take its place, but in a steady state, the consumption rates should balance.
+
+In my initial approach, I think it's fine.
+
+For example, to have a constant number of snakes, the number eaten by predators must be equal to the number supported by the prey, etc.
+
+But in this case, since jaguars eat snakes, snakes must consume enough birds to maintain their population, but the consumption rate given is per animal per day, so for the daily diet, it should be direct.
+
+I think I'm overthinking.
+
+I think 1080 is the answer.
+
+So, beetles eaten each day: 1080.
+
+But let me write it properly.
+
+[Final Answer]
+To determine the number of beetles eaten each day in a forest with 6 jaguars, the consumption rates are used step by step, starting from the top of the food chain.
+
+- Each jaguar eats 5 snakes per day.  
+  With 6 jaguars, the total number of snakes eaten per day is:  
+  \( 6 \times 5 = 30 \) snakes.
+
+- Each snake eats 3 birds per day.  
+  To support the 30 snakes eaten by jaguars, the number of birds eaten per day is:  
+  \( 30 \times 3 = 90 \) birds.
+
+- Each bird eats 12 beetles per day.  
+  To support the 90 birds eaten by snakes, the number of beetles eaten per day is:  
+  \( 90 \times 12 = 1080 \) beetles.
+
+Alternatively, the calculation can be done directly:  
+Beetles per day = Number of jaguars × Snakes per jaguar × Birds per snake × Beetles per bird  
+\( = 6 \times 5 \times 3 \times 12 \)  
+First, \( 5 \times 3 = 15 \), then \( 15 \times 12 = 180 \), and finally \( 180 \times 6 = 1080 \).
+
+Thus, with 6 jaguars, 1080 beetles are eaten each day, based on the given consumption rates and the assumption that the ecosystem is in a steady state where the prey consumption supports the predators.
+
+\boxed{1080}
+
+=== Problem 69 ===
+Prompt:
+In a truck, there are 26 pink hard hats, 15 green hard hats, and 24 yellow hard hats.  If Carl takes away 4 pink hard hats, and John takes away 6 pink hard hats and twice as many green hard hats as the number of pink hard hats that he removed, then calculate the total number of hard hats that remained in the truck.
+[Thought Process]
+I need to find out how many hard hats are left in the truck after Carl and John take some away. First, let's list what we have initially:
+
+- Pink hard hats: 26
+
+- Green hard hats: 15
+
+- Yellow hard hats: 24
+
+Yellow hard hats aren't mentioned in the actions, so maybe no one takes yellow ones? I need to read carefully.
+
+Carl takes away 4 pink hard hats. So, after Carl, the pink hard hats should be 26 minus 4, which is 22 pink left.
+
+Then John takes away 6 pink hard hats and twice as many green hard hats as the number of pink hard hats he removed. John removed 6 pink hard hats, so twice that for green would be 2 times 6, which is 12 green hard hats.
+
+Also, yellow hard hats aren't touched, so they should remain 24.
+
+Now, let's find out what's left after both actions.
+
+First, after Carl:
+
+Pink: 26 - 4 = 22
+
+Green: 15 (unchanged)
+
+Yellow: 24 (unchanged)
+
+Then John takes away 6 pink and 12 green.
+
+So, after John:
+
+Pink: 22 - 6 = 16
+
+Green: 15 - 12 = 3
+
+Yellow: 24 (still unchanged)
+
+Now, total hard hats left: pink + green + yellow = 16 + 3 + 24
+
+16 + 3 is 19, plus 24 is 43.
+
+Let me double-check.
+
+Initial total: 26 pink + 15 green + 24 yellow = 65 total.
+
+Carl takes 4 pink, so after Carl: 65 - 4 = 61
+
+Then John takes 6 pink and 12 green, so he takes 6 + 12 = 18 hard hats.
+
+So after John: 61 - 18 = 43
+
+Same as before.
+
+The problem says "twice as many green hard hats as the number of pink hard hats that he removed." John removed 6 pink, so twice is 12 green. That seems correct.
+
+Is there any trick here? Let me read the problem again.
+
+"In a truck, there are 26 pink hard hats, 15 green hard hats, and 24 yellow hard hats. If Carl takes away 4 pink hard hats, and John takes away 6 pink hard hats and twice as many green hard hats as the number of pink hard hats that he removed, then calculate the total number of hard hats that remained in the truck."
+
+It says "John takes away 6 pink hard hats and twice as many green hard hats as the number of pink hard hats that he removed."
+
+He removed 6 pink, so twice that is 12 green.
+
+But is it "as the number of pink hard hats that he removed"? Yes, and he removed 6 pink, so 12 green.
+
+Perhaps it could be misinterpreted, but I think it's clear.
+
+Another thing: are Carl and John taking hats at the same time or sequentially? The problem says "Carl takes away" and then "John takes away", so I think it's sequential, Carl first then John, which is what I did.
+
+If it were simultaneous, it might be different, but the problem says "If Carl takes away... and John takes away..." so it implies order.
+
+But in terms of the remaining, since they take different hats, it shouldn't matter if it's sequential or simultaneous, as long as no one takes the same hat, but here they take different types except both take pink, but Carl takes 4 pink, John takes 6 pink, so pink is reduced by both.
+
+In sequential, after Carl, pink is 22, then John takes 6 from 22, so 16 left.
+
+If simultaneous, Carl takes 4 pink, John takes 6 pink, so total pink taken: 10, so 26-10=16, same as before.
+
+Similarly for green, only John takes green, so no issue.
+
+Yellow untouched.
+
+So total should be fine.
+
+Initial pink: 26
+
+Carl takes 4 pink, so pink left: 22
+
+John takes 6 pink, so pink left: 16
+
+Green: initial 15
+
+John takes twice the pink he removed, which is 6, so 12 green, so green left: 15-12=3
+
+Yellow: 24
+
+Total: 16+3+24=43
+
+16+3=19, 19+24=43.
+
+26+15+24=65
+
+Taken: Carl 4 pink, John 6 pink + 12 green = 6+12=18, total taken 4+18=22, 65-22=43.
+
+4 from Carl, 18 from John, 22 taken, 65-22=43.
+
+Yes.
+
+The problem says "calculate the total number of hard hats that remained", and I have 43.
+
+But let me see if yellow is included; it should be, since it says total number of hard hats.
+
+Perhaps I should confirm if John takes green based on the pink he removed.
+
+"twice as many green hard hats as the number of pink hard hats that he removed."
+
+He removed 6 pink, so 12 green.
+
+It doesn't say anything about Carl affecting John or anything.
+
+Another point: when John takes pink, are there enough? After Carl took 4, there are 22 pink, John takes 6, which is fine.
+
+Similarly, green, 15, he takes 12, which is less than 15, so 3 left, fine.
+
+Yellow no issue.
+
+So I think 43 is correct.
+
+But let me see the answer.
+
+The problem is to box the answer.
+
+So total remained is 43.
+
+But let me write it properly.
+
+Initial:
+
+Pink: 26
+
+Green: 15
+
+Yellow: 24
+
+After Carl:
+
+Carl takes 4 pink, so pink: 26 - 4 = 22
+
+Green: 15
+
+Yellow: 24
+
+After John:
+
+John takes 6 pink and twice as many green as pink he removed, which is 6 pink, so 2*6=12 green.
+
+So pink: 22 - 6 = 16
+
+Green: 15 - 12 = 3
+
+Yellow: 24
+
+Total remaining: 16 + 3 + 24 = 43
+
+To be thorough, let's list the removals:
+
+Carl removed: 4 pink
+
+John removed: 6 pink and 12 green
+
+Total removed: 4 pink + 6 pink + 12 green = 10 pink + 12 green
+
+Initial pink: 26, so pink left: 26 - 10 = 16
+
+Green left: 15 - 12 = 3
+
+Yellow: 24
+
+Total: 16+3+24=43
+
+Since yellow not touched, initial total minus pink and green removed.
+
+Initial total: 26+15+24=65
+
+Pink removed: 4 by Carl + 6 by John = 10
+
+Green removed: 12 by John
+
+So total removed: 10 pink + 12 green = 22
+
+Thus remaining: 65 - 22 = 43, and yellow 24 included.
+
+Yes.
+
+I think it's consistent.
+
+So the total number of hard hats that remained is 43.
+
+[Final Answer]
+Initially, there are 26 pink hard hats, 15 green hard hats, and 24 yellow hard hats, making a total of \(26 + 15 + 24 = 65\) hard hats.
+
+Carl takes away 4 pink hard hats. After this removal, the number of pink hard hats is \(26 - 4 = 22\), and the total number of hard hats is \(65 - 4 = 61\).
+
+John then takes away 6 pink hard hats and twice as many green hard hats as the number of pink hard hats he removed. Since he removes 6 pink hard hats, he removes \(2 \times 6 = 12\) green hard hats.
+
+After John removes 6 pink hard hats, the number of pink hard hats is \(22 - 6 = 16\). After removing 12 green hard hats, the number of green hard hats is \(15 - 12 = 3\). The yellow hard hats remain unchanged at 24.
+
+The total number of hard hats remaining is the sum of the remaining hard hats: \(16\) pink \(+ 3\) green \(+ 24\) yellow \(= 43\).
+
+Alternatively, the total number of hard hats removed is \(4\) (by Carl) \(+ 6 + 12\) (by John) \(= 22\). Thus, the remaining hard hats are \(65 - 22 = 43\).
+
+\boxed{43}
+
+=== Problem 70 ===
+Prompt:
+It takes Roque two hours to walk to work and one hour to ride his bike to work. Roque walks to and from work three times a week and rides his bike to and from work twice a week. How many hours in total does he take to get to and from work a week with walking and biking?
+[Thought Process]
+I need to find out how many hours Roque spends getting to and from work each week with both walking and biking. Let me read the problem carefully.
+
+It takes him two hours to walk to work and one hour to ride his bike to work. So, one way to work: walking is 2 hours, biking is 1 hour.
+
+He walks to and from work three times a week. "To and from" means a round trip, right? So, each time he walks both ways, it's one round trip by walking.
+
+Similarly, he rides his bike to and from work twice a week, so that's two round trips by biking.
+
+Now, I need the total time for all these trips in a week.
+
+First, let's find out the time for one walking round trip.
+
+Walking to work: 2 hours
+
+Walking from work back home: also 2 hours, I assume, since it's the same distance.
+
+The problem doesn't specify if the time is different for to and from, but it should be the same, right? Because it's the same distance. So, walking one way is 2 hours, so round trip walking is 2 + 2 = 4 hours.
+
+Similarly, biking one way is 1 hour, so round trip biking is 1 + 1 = 2 hours.
+
+Now, he walks to and from three times a week. That means three round trips by walking.
+
+Each round trip walking is 4 hours, so for three times: 3 * 4 = 12 hours.
+
+He bikes to and from twice a week, so two round trips by biking.
+
+Each round trip biking is 2 hours, so 2 * 2 = 4 hours.
+
+Now, total time per week: walking time + biking time = 12 + 4 = 16 hours.
+
+Let me double-check.
+
+I could think in terms of one-way trips.
+
+He walks to work three times a week, and since he walks back each time, he also walks from work three times a week.
+
+Similarly for biking.
+
+When he walks to and from, it means for each day he does both ways by walking.
+
+So, for walking days: three days a week, he walks both to and from.
+
+Each day, walking both ways: to work 2 hours, from work 2 hours, total 4 hours per day.
+
+Three days: 3 * 4 = 12 hours.
+
+For biking days: two days a week, he bikes both ways.
+
+Each biking day: to work 1 hour, from work 1 hour, total 2 hours per day.
+
+Two days: 2 * 2 = 4 hours.
+
+Total: 12 + 4 = 16 hours.
+
+Since he bikes twice a week and walks three times, but each is a full round trip.
+
+Another way: total one-way trips.
+
+He goes to work five times a week? No.
+
+He works five days a week? The problem doesn't say how many days he works, but from the context, he goes three days by walking round trip and two days by biking round trip, so he works five days a week, I think.
+
+Let's see: "walks to and from work three times a week" – this might be ambiguous.
+
+"Walks to and from work three times a week" – I think it means three days he walks both ways.
+
+Similarly, "rides his bike to and from work twice a week" – two days he bikes both ways.
+
+So, total work days: 3 + 2 = 5 days.
+
+Now, on walking days, for to work: 2 hours, from work: 2 hours.
+
+On biking days, to work: 1 hour, from work: 1 hour.
+
+So, total time for to work: three days walking: 3 * 2 = 6 hours
+
+Two days biking: 2 * 1 = 2 hours
+
+Total to work: 6 + 2 = 8 hours
+
+Similarly, total from work: three days walking: 3 * 2 = 6 hours
+
+Two days biking: 2 * 1 = 2 hours
+
+Total from work: 6 + 2 = 8 hours
+
+Total per week: 8 + 8 = 16 hours.
+
+Same as before.
+
+Since to and from are symmetric, total time is twice the time for to work trips.
+
+Time for all to work trips: three walking at 2 hours each, two biking at 1 hour each.
+
+So, (3*2) + (2*1) = 6 + 2 = 8 hours to work.
+
+Then from work same, 8 hours, total 16.
+
+I think 16 hours is correct.
+
+But let me see if the problem says "three times a week" might be interpreted differently.
+
+For example, "walks to and from work three times a week" – could it mean he does three separate to and from trips, but that might not make sense.
+
+No, I think it's standard to interpret as three round trips or three days of both ways.
+
+Similarly for biking.
+
+The phrase "to and from" implies a round trip each time.
+
+I think I'm overthinking; 16 should be fine.
+
+But let me check the answer.
+
+The problem is to box the final answer.
+
+So, I think it's 16 hours.
+
+But is there any trick?
+
+One thing: when he walks, it takes 2 hours one way, bike 1 hour one way.
+
+And he does this for three days walking, two days biking.
+
+Total hours: as above.
+
+Perhaps I can calculate total walking time and total biking time separately.
+
+Total walking time: he walks both ways three times a week.
+
+Each both ways is 4 hours, so 3 * 4 = 12 hours walking.
+
+Total biking time: both ways twice, each 2 hours, so 2 * 2 = 4 hours biking.
+
+Total: 12 + 4 = 16.
+
+If I think in minutes: walking 2 hours * 60 = 120 minutes one way.
+
+But I don't need to, since hours are fine.
+
+Another thought: does "to and from" include both, so when he says "three times a week" for walking to and from, it means three instances of the round trip.
+
+Yes.
+
+I think it's consistent.
+
+So, total hours should be 16.
+
+But let me see if the answer makes sense.
+
+Suppose he only walked: if he walked all five days, but he doesn't.
+
+If he walked both ways five days: 5 * 4 = 20 hours.
+
+But he bikes two days, which is faster.
+
+Biking both ways: 2 hours per day, walking 4 hours per day.
+
+So for two biking days, he saves time compared to walking: instead of 4 hours, he takes 2, so saves 2 hours per day biking.
+
+But not necessary.
+
+Compared to all walking: all walking would be 5 days * 4 hours = 20 hours.
+
+But he bikes two days: each biking day he takes only 2 hours instead of 4, so he saves 2 hours per biking day.
+
+Two biking days save 4 hours compared to all walking.
+
+So total time: 20 - 4 = 16 hours.
+
+Same as before.
+
+If all biking: 5 days * 2 hours = 10 hours, but he walks three days, which take 4 instead of 2, so he has extra 2 hours per walking day, so 3 * 2 = 6 hours extra, so 10 + 6 = 16 hours.
+
+Again, 16.
+
+So, consistent.
+
+Therefore, the answer should be 16 hours.
+
+Now, the problem says "how many hours in total does he take to get to and from work a week with walking and biking?"
+
+And we have 16.
+
+But let me write it properly.
+
+So, final answer is 16.
+
+But I think I should box it.
+
+In the initial thought, I have it.
+
+Perhaps I can write it as an equation.
+
+Let W be time to walk one way: 2 hours.
+
+B be time to bike one way: 1 hour.
+
+Number of walking round trips: 3
+
+Each round trip walking: 2 * W = 4 hours
+
+Number of biking round trips: 2
+
+Each: 2 * B = 2 hours
+
+Total time: (3 * 2W) + (2 * 2B) = but since W and B are times, better to plug in.
+
+3 * 2 * 2 + 2 * 2 * 1? No.
+
+Time per walking round trip: 2W = 2*2 = 4
+
+Per biking round trip: 2B = 2*1 = 2
+
+Total: 3*4 + 2*2 = 12 + 4 = 16
+
+Since each round trip has one to and one from, but we already included.
+
+I think it's fine.
+
+So, I believe it's 16.
+
+[Final Answer]
+Roque walks to and from work three times a week. Each walking trip to work takes 2 hours, and each walking trip from work also takes 2 hours, so one round trip by walking takes 2 + 2 = 4 hours. For three round trips, the total walking time is 3 × 4 = 12 hours.
+
+Roque rides his bike to and from work twice a week. Each biking trip to work takes 1 hour, and each biking trip from work also takes 1 hour, so one round trip by biking takes 1 + 1 = 2 hours. For two round trips, the total biking time is 2 × 2 = 4 hours.
+
+The total time for both walking and biking in a week is 12 hours (walking) + 4 hours (biking) = 16 hours.
+
+\boxed{16}
+
+=== Problem 71 ===
+Prompt:
+Jack is stranded on a desert island. He wants some salt to season his fish. He collects 2 liters of seawater in an old bucket. If the water is 20% salt, how many ml of salt will Jack get when all the water evaporates?
+[Thought Process]
+Jack is stranded on a desert island and he has 2 liters of seawater that is 20% salt. He wants to know how many milliliters of salt he'll get after all the water evaporates. I need to find out how much salt is in that 2 liters.
+
+First, I know that 20% salt means that 20% of the seawater is salt. So, if I have 2 liters of seawater, 20% of that should be salt.
+
+But I need the answer in milliliters. Since both liters and milliliters are units of volume, and salt is a solid, but in this context, since it's dissolved, we're measuring the volume of salt after evaporation, which might not be straightforward. However, the problem seems to assume that the percentage is by volume or something. That might not be accurate.
+
+Typically, when we say seawater is 20% salt, it could be by weight or by volume. But in this case, since we're dealing with volumes before evaporation and asking for volume after, it might be tricky.
+
+Perhaps in this context, it's mass percentage, but we're given volumes. I need to be careful.
+
+Maybe for simplicity, the problem assumes that the percentage is by volume, so that when water evaporates, the salt left has that volume.
+
+That might be the case here, as it's a word problem.
+
+So, let's assume that 20% salt by volume means that in 100 ml of seawater, 20 ml is salt and 80 ml is water. But that doesn't make sense because salt dissolves and the volume isn't additive, but perhaps for this problem, we can go with that.
+
+Since the water evaporates, and salt is left, we're interested in the mass of salt, but the answer is asked in milliliters, which is volume.
+
+After evaporation, the salt is solid, so its volume might be different.
+
+But the problem says "how many ml of salt," so it must be referring to the volume of the salt crystals or something. That seems messy.
+
+Perhaps in this context, "ml of salt" means the volume it occupies, but we need to know the density or something.
+
+I think for this level of problem, it's probably assuming that the percentage is by volume, and that the salt volume is directly given.
+
+Maybe 20% salt means that salt makes up 20% of the mass, which is more common.
+
+But then, to find volume, I need density.
+
+Let me read the problem again: "the water is 20% salt" – it says "the water," but I think it means the seawater is 20% salt.
+
+And it asks for ml of salt, so volume.
+
+But salt density is about 2.16 g/cm³, but that might be overcomplicating.
+
+Perhaps the problem expects us to find the volume based on the percentage directly.
+
+Another thought: since the salt is dissolved, when water evaporates, the salt left will have a certain mass, and if we assume we're to find the volume it occupies, but that depends on how it's packed, etc.
+
+I think for simplicity, in such problems, we often take the percentage as by volume for the solution, meaning that 20% of the volume of seawater is salt.
+
+But technically, that's not correct for dissolved solids, but perhaps here it is.
+
+Since seawater density is close to water, and salt density is different, but let's see.
+
+I recall that seawater salinity is about 3.5% by weight, but here it's 20%, which is very high, so it's hypothetical.
+
+But for the problem, I think we should proceed with the volume percentage assumption.
+
+So, seawater volume = 2 liters
+
+Percentage salt = 20% by volume
+
+So, volume of salt = 20% of 2 liters
+
+20% of 2 liters = 0.2 * 2 = 0.4 liters
+
+Now, 0.4 liters to milliliters: since 1 liter = 1000 ml, so 0.4 liters = 400 ml
+
+So, Jack will get 400 ml of salt.
+
+But is that the volume of salt after evaporation? If we assume that the salt crystals have the same volume as when dissolved, which is not true, but perhaps for this problem.
+
+If percentage is by mass, then I need density.
+
+Assume 20% by mass.
+
+First, find mass of seawater.
+
+Density of seawater: since it's 20% salt, density might be higher than water.
+
+Density of water is 1 g/ml, but with salt, it's denser.
+
+But I don't know the density.
+
+Perhaps assume density is 1 g/ml for simplicity, but with 20% salt, it's not accurate.
+
+For example, if 20% salt by mass, then in 1 kg of seawater, there is 200 g salt and 800 g water.
+
+Volume of 1 kg seawater: since salt and water volumes, but not additive.
+
+Density of seawater with high salinity.
+
+But I think this is too complicated.
+
+Perhaps the problem intends for us to take the percentage as volume percentage.
+
+Moreover, the answer is to be in ml, and we have volume in liters, so multiplying percentage should give volume directly.
+
+Another way: after evaporation, the water is gone, so the salt left is the solute that was dissolved.
+
+The mass of salt can be found if we know mass percentage.
+
+But again, we need the mass of seawater.
+
+Let me denote.
+
+Let V = volume of seawater = 2 liters = 2000 ml (since 1 liter = 1000 ml)
+
+If we assume that seawater has density similar to water, say 1 g/ml, then mass of seawater = 2000 g
+
+If 20% salt by mass, then mass of salt = 20% of 2000 g = 0.2 * 2000 = 400 g
+
+Now, after evaporation, we have 400 g of salt.
+
+Now, to find volume in ml, we need density of salt.
+
+Density of salt (NaCl) is about 2.16 g/cm³, or 2.16 g/ml.
+
+So volume of salt = mass / density = 400 g / 2.16 g/ml ≈ 185.185 ml
+
+But that seems messy, and probably not what the problem wants, as it requires knowing salt density.
+
+Perhaps the salt volume is meant to be the volume it occupied in solution, but that doesn't make sense.
+
+Another idea: in chemistry, for dissolved solids, the volume percentage isn't direct, but for this problem, since it's simple, likely they mean 20% by volume, so volume of salt is 20% of seawater volume.
+
+Moreover, the problem says "how many ml of salt," implying the volume as if it were a liquid or something.
+
+But salt is solid.
+
+I think I should go with the first approach.
+
+Perhaps "20% salt" means that salt constitutes 20% of the volume when dissolved, but after evaporation, the crystal volume might be different.
+
+But I think for the purpose of this problem, we can take the volume directly.
+
+Let me see the units.
+
+Seawater: 2 liters
+
+20% salt, so salt volume = 0.2 * 2 L = 0.4 L = 400 ml
+
+And answer in ml, so 400 ml.
+
+Perhaps they want the volume in ml directly.
+
+Since 2 liters = 2000 ml, 20% of 2000 ml = 0.2 * 2000 = 400 ml.
+
+So I think 400 ml is the answer.
+
+I recall that in some contexts, salinity is given in parts per thousand, but here it's 20%, which is 200 ppt, while real seawater is 35 ppt, so it's concentrated, but for the problem, it's fine.
+
+So I'll go with that.
+
+[Final Answer]
+Jack collects 2 liters of seawater, which is 20% salt by volume. This means that 20% of the volume of the seawater is salt.
+
+To find the volume of salt, calculate 20% of 2 liters:  
+\[ 0.20 \times 2  \text{liters} = 0.4  \text{liters} \]
+
+Convert liters to milliliters (since 1 liter = 1000 milliliters):  
+\[ 0.4  \text{liters} \times 1000 = 400  \text{ml} \]
+
+Therefore, when all the water evaporates, Jack will get 400 ml of salt.
+
+\boxed{400}
+
+=== Problem 72 ===
+Prompt:
+James creates a media empire.  He creates a movie for $2000.  Each DVD cost $6 to make.  He sells it for 2.5 times that much.  He sells 500 movies a day for 5 days a week.  How much profit does he make in 20 weeks?
+[Thought Process]
+I need to find out how much profit James makes in 20 weeks. First, he creates a movie for $2000. I think that's the initial cost to produce the movie itself, like the cost of filming and editing, not the DVDs. Then, each DVD costs $6 to make. He sells each DVD for 2.5 times the cost to make it. So, selling price per DVD is 2.5 times $6.
+
+Let me calculate that. 2.5 times 6 is 15. So, he sells each DVD for $15.
+
+Now, the cost to make each DVD is $6, so the profit per DVD should be selling price minus cost, which is $15 - $6 = $9.
+
+But there's also the initial cost of creating the movie, which is $2000. That's a fixed cost that needs to be covered.
+
+He sells 500 movies a day. I think "movies" here means DVDs, right? Like, he sells 500 DVDs per day.
+
+And he does this for 5 days a week. So, in one week, he sells 500 DVDs/day * 5 days/week = 2500 DVDs per week.
+
+Now, we need the profit for 20 weeks.
+
+First, let's think about the costs.
+
+There is a one-time fixed cost of $2000 for creating the movie.
+
+Then, for each DVD, there is a variable cost of $6 to make.
+
+The revenue comes from selling each DVD for $15.
+
+Profit will be total revenue minus total costs.
+
+Total costs include both the fixed cost and the variable costs.
+
+Since the fixed cost is one-time, it should be subtracted only once, not per week or anything.
+
+The problem is: he creates the movie for $2000, and then makes and sells DVDs.
+
+In 20 weeks, he will have that initial $2000 cost, and then the cost of producing the DVDs he sells.
+
+Similarly, revenue from selling those DVDs.
+
+Now, let's find out how many DVDs he sells in 20 weeks.
+
+In one week: 500 DVDs/day * 5 days = 2500 DVDs/week.
+
+In 20 weeks: 2500 DVDs/week * 20 weeks = 50,000 DVDs.
+
+So, he sells 50,000 DVDs in 20 weeks.
+
+Now, total revenue: 50,000 DVDs * $15 per DVD = ?
+
+50,000 * 15.
+
+50,000 * 10 = 500,000
+
+50,000 * 5 = 250,000
+
+So, 500,000 + 250,000 = 750,000
+
+So, $750,000 revenue.
+
+Now, total costs:
+
+Fixed cost: $2,000
+
+Variable costs: 50,000 DVDs * $6 per DVD = 300,000
+
+50,000 * 6 = 300,000, yes.
+
+So, total cost = fixed cost + variable cost = 2,000 + 300,000 = 302,000
+
+Therefore, profit = revenue - total cost = 750,000 - 302,000
+
+Let me compute that: 750,000 minus 302,000.
+
+750,000 - 300,000 = 450,000
+
+Then 450,000 - 2,000 = 448,000
+
+Since it's 302,000, so 750,000 - 302,000 = 448,000
+
+Yes.
+
+So, profit is $448,000.
+
+But let me double-check.
+
+Profit per DVD, excluding the fixed cost, is $9, as I thought earlier.
+
+But that $9 is the contribution margin per DVD, which covers the fixed cost and then profit.
+
+In this case, since fixed cost is separate.
+
+Total contribution from DVDs: 50,000 DVDs * $9 = 450,000
+
+Then, this has to cover the fixed cost of $2000, so profit = 450,000 - 2,000 = 448,000
+
+Same as before.
+
+Now, is the fixed cost included correctly?
+
+He creates the movie for $2000 at the beginning, I assume.
+
+Then, over 20 weeks, he sells DVDs.
+
+So, yes, the fixed cost is incurred once.
+
+The problem says: "He creates a movie for $2000. Each DVD cost $6 to make."
+
+So, the movie creation is separate from DVD production.
+
+And he sells the DVDs.
+
+Also, it says "he sells 500 movies a day", but I think "movies" here is a bit ambiguous, but in context, it probably means DVDs, since each DVD has the movie on it.
+
+Perhaps it means he sells 500 copies per day.
+
+I think it's safe to assume that.
+
+Another thing: does the $2000 include anything? I think it's the cost to produce the movie content, not including the DVDs.
+
+Yes.
+
+Now, just to be thorough, let's think about the time frame.
+
+He creates the movie, which costs $2000, probably at time zero.
+
+Then, each day he makes and sells DVDs.
+
+He sells 500 a day for 5 days a week.
+
+In 20 weeks, 50,000 DVDs sold.
+
+Cost for DVDs: $6 each, so $300,000.
+
+Revenue: $15 each, $750,000.
+
+Fixed cost: $2000.
+
+Profit: 750,000 - 300,000 - 2,000 = 450,000 - 2,000 = 448,000.
+
+750,000 - 300,000 = 450,000, minus 2,000 is 448,000.
+
+Since profit per DVD is $9 after variable cost, but fixed cost is separate.
+
+Another way: total profit from operations: but I think I have it.
+
+The question is for 20 weeks, and he might have ongoing costs, but it seems straightforward.
+
+He might pay for the DVDs when he makes them, but since he sells them, it's fine.
+
+I think $448,000 is correct.
+
+But let me see the answer format.
+
+It should be in dollars, I think.
+
+Perhaps I should write it with commas or without.
+
+But in the box, probably just the number.
+
+Now, is there any other cost?
+
+The problem says "each DVD cost $6 to make" and he sells for 2.5 times that much, so $15.
+
+And the initial $2000.
+
+Also, he sells 500 a day, 5 days a week, so in 20 weeks.
+
+20 weeks might include the initial setup, but the fixed cost is separate.
+
+Perhaps the $2000 is sunk cost, but it should be included in profit calculation.
+
+Profit is revenue minus all costs.
+
+Yes.
+
+If we think about the DVDs, he makes them as he sells, I assume.
+
+But no issue.
+
+Perhaps for the DVDs, he might have inventory, but the problem says he sells 500 a day, so I think we can assume he makes and sells that many, so no inventory cost or anything.
+
+So, I think it's fine.
+
+Therefore, profit is $448,000.
+
+But let me confirm the numbers.
+
+DVD cost: $6
+
+Sell price: 2.5 * 6 = 15, yes.
+
+Per DVD profit before fixed cost: 15 - 6 = 9
+
+Number of DVDs per week: 500/day * 5 days = 2500/week
+
+In 20 weeks: 2500 * 20 = 50,000, yes.
+
+Contribution: 50,000 * 9 = 450,000
+
+Minus fixed cost: 450,000 - 2,000 = 448,000
+
+Total revenue: 50,000 * 15 = 750,000
+
+Total variable cost: 50,000 * 6 = 300,000
+
+Total cost: 300,000 + 2,000 = 302,000
+
+Profit: 750,000 - 302,000 = 448,000
+
+Difference: 750,000 - 300,000 = 450,000; 450,000 - 2,000 = 448,000.
+
+All consistent.
+
+So, I think that's the answer.
+
+But the problem says "how much profit does he make in 20 weeks?"
+
+And we have included the fixed cost which was incurred at the beginning, but since the 20 weeks include the period, it should be fine.
+
+If the fixed cost was before the 20 weeks, but the problem doesn't specify when he creates the movie, but logically, he creates it before selling DVDs, so for the profit over 20 weeks of sales, we need to include that cost because it's part of the business.
+
+Otherwise, if we don't include it, profit would be higher, but that doesn't make sense because he had to spend that money to start.
+
+So, I think it must be included.
+
+In accounting, for a period, if the fixed cost was incurred in a prior period, it might not be included, but here, since it's a single project, I think we include all costs.
+
+The problem says "James creates a media empire." and then he creates a movie, etc., so it's a new venture.
+
+Therefore, for the profit calculation, we should include the initial cost.
+
+Moreover, the question is about profit from this activity.
+
+So, I think $448,000 is correct.
+
+Perhaps the $2000 is amortized or something, but no, it's a simple problem, so I think full cost.
+
+Another thought: when he creates the movie for $2000, does that include the first DVD or something? But no, it says "creates a movie" and then "each DVD cost $6 to make", so separate.
+
+So, I think it's fine.
+
+Therefore, the profit is $448,000.
+
+Now, to box the answer.
+
+But let me write it properly.
+
+[Final Answer]
+James creates a movie for a fixed cost of $2000. Each DVD costs $6 to produce, and he sells each DVD for 2.5 times the production cost, which is $6 \times 2.5 = $15$.
+
+The profit per DVD, excluding the fixed cost, is $15 - $6 = $9$.
+
+James sells 500 DVDs per day for 5 days a week, so he sells $500 \times 5 = 2500$ DVDs per week.
+
+Over 20 weeks, he sells $2500 \times 20 = 50,000$ DVDs.
+
+The total contribution from DVD sales is $50,000 \times 9 = $450,000$.
+
+After subtracting the fixed cost of $2000, the total profit is $450,000 - $2000 = $448,000$.
+
+Alternatively, total revenue is $50,000 \times 15 = $750,000$, and total variable costs are $50,000 \times 6 = $300,000$. Adding the fixed cost gives total costs of $300,000 + $2000 = $302,000$. Profit is then $750,000 - $302,000 = $448,000$.
+
+Thus, James makes a profit of $448,000 in 20 weeks.
+
+\boxed{448000}
+
+=== Problem 73 ===
+Prompt:
+James writes a 3-page letter to 2 different friends twice a week.  How many pages does he write a year?
+[Thought Process]
+James writes a 3-page letter to 2 different friends twice a week. I need to find out how many pages he writes in a year. First, I should break this down step by step.
+
+He writes to 2 friends, and for each friend, he writes a 3-page letter. So, for one mailing, he writes 3 pages per friend. Since there are 2 friends, that would be 3 pages × 2 friends = 6 pages for one set of letters.
+
+He does this twice a week. So, in one week, he writes these letters two times. Therefore, per week, he writes 6 pages × 2 = 12 pages.
+
+Now, I need to find out how many pages in a year. So, how many weeks are there in a year? Typically, a year has 52 weeks. Sometimes people use 52 weeks for simplicity, but let me confirm if that's accurate.
+
+A year has 365 days, and 365 divided by 7 is 52 weeks and 1 day, or 52.142 weeks. But for this kind of problem, I think we should use 52 weeks, as it's a standard assumption unless specified otherwise.
+
+Sometimes people use 52 weeks exactly, ignoring the extra day, or 365 days. But since we're dealing with weeks, and he writes twice per week, it might be better to use weeks.
+
+I could calculate based on days, but that might be messy. Let me see.
+
+He writes twice a week, so per week: 12 pages.
+
+Per year: 12 pages/week × 52 weeks/year.
+
+But 52 weeks × 7 days/week = 364 days, which is one day short of 365. So in a non-leap year, there are 365 days, which is 52 weeks and 1 day.
+
+In that extra day, does he write? The problem says he writes twice a week, so on that extra day, it might not be a writing day, so probably we should not include it.
+
+Similarly, in leap years, 366 days, 52 weeks and 2 days, but again, only writes on specific days.
+
+To keep it simple, I think it's standard to use 52 weeks per year for such calculations.
+
+I could calculate the number of times he writes per year.
+
+He writes twice per week, so in 52 weeks, he writes 2 times/week × 52 weeks = 104 times per year.
+
+Each time, he writes to 2 friends, each with 3 pages, so per writing session, it's 6 pages.
+
+So, 104 times × 6 pages per time = 624 pages.
+
+If I think per week: 12 pages/week × 52 weeks = 624 pages.
+
+Now, what about the extra days? In a 365-day year, there is one extra day beyond 52 weeks. Since he writes twice a week, it depends on which days he writes. But the problem doesn't specify the days, so we should assume 52 full weeks, and the extra day doesn't contribute since it's not a writing day.
+
+Similarly, for leap year, but I think for simplicity, 52 weeks is fine.
+
+Sometimes people use 365 days directly.
+
+Let me try that.
+
+He writes twice a week. So, in one week, he writes on two days.
+
+Number of writing days per week: 2 days.
+
+But not every day is a writing day; only two specific days.
+
+In a year, number of days: 365.
+
+Number of times he writes: since he writes twice per week, the frequency is 2/7 times per day.
+
+So, pages per day: he writes 6 pages per writing session, but he doesn't write every day.
+
+So, average pages per day: (6 pages/session) × (2 sessions/week) / (7 days/week) = (6 × 2) / 7 = 12/7 pages per day.
+
+Then for 365 days: (12/7) × 365.
+
+Let me calculate that.
+
+First, 12/7 × 365.
+
+365 divided by 7 is 52.142857, but better to compute numerically.
+
+(12 × 365) / 7
+
+12 × 365 = 12 × 300 = 3600; 12 × 65 = 780; total 3600 + 780 = 4380
+
+So, 4380 / 7 = 626. something? Let me divide.
+
+7 × 625 = 4375, because 7×600=4200, 7×25=175, 4200+175=4375.
+
+4380 - 4375 = 5, so 625 + 5/7 ≈ 625.714, but pages must be whole, I think? No, he writes full pages, but the number can be fractional if we average, but in reality, he only writes on specific days, so the total should be integer.
+
+I think I confused myself.
+
+In a year, with 365 days, the number of weeks is 52 weeks and 1 day.
+
+In 52 weeks, he has 52 × 2 = 104 writing sessions.
+
+Now, on the extra day, it depends on the day of the week. If that day is one of his writing days, he might write, but since it's only one day, and he writes twice a week on specific days, it's possible that on that extra day, it is a writing day or not.
+
+For example, if he writes every Monday and Thursday, then in a non-leap year starting from Jan 1, etc., it varies.
+
+But the problem doesn't specify, so for estimation, we often use 52 weeks.
+
+Perhaps the problem expects 52 weeks.
+
+Another way: since he writes twice a week, regardless of the year, we can find per week and multiply by 52.
+
+I think for this context, 624 pages is fine.
+
+But let me see if the answer is expected to be exact.
+
+Perhaps I should consider the number of times he writes per year.
+
+In one week, 2 times.
+
+52 weeks: 104 times.
+
+Each time: 2 friends × 3 pages = 6 pages.
+
+104 × 6 = 624 pages.
+
+Now, in a leap year, 366 days, 52 weeks and 2 days.
+
+52 weeks: 104 times.
+
+The two extra days: if both are writing days, he might write twice more, but only if those days fall on writing days. But it depends on the starting point.
+
+For example, if the year starts on a writing day, etc.
+
+But it's messy, and I think for such problems, we assume 52 weeks per year.
+
+Similarly, in business contexts, often 52 weeks are used.
+
+So, I think 624 is the answer.
+
+But let me double-check the problem.
+
+"James writes a 3-page letter to 2 different friends twice a week."
+
+So, to each friend, he writes a separate 3-page letter, so for one friend, 3 pages, for two friends, 6 pages per writing occasion.
+
+And he does this twice a week, so per week, 12 pages.
+
+Per year, 52 weeks, 624 pages.
+
+Perhaps I should consider if he writes to the same friends or different, but it says 2 different friends, but it doesn't say if they change or not. I think we assume he writes to the same two friends each time.
+
+The problem says "to 2 different friends", meaning each time he writes to two distinct friends, but it might be the same two each week or different; but for the page count, it doesn't matter, as each letter is 3 pages.
+
+So, per session, 2 letters × 3 pages = 6 pages.
+
+Yes.
+
+Another thing: "twice a week" means two times per week, so he performs this activity two times weekly.
+
+Each time, he writes to two friends.
+
+So, in a week, he writes 4 letters? Let's see: twice a week, each time to two friends, so per week, he writes 2 times × 2 friends = 4 letters, each 3 pages, so 4 × 3 = 12 pages, same as before.
+
+Per year: 52 weeks × 4 letters/week × 3 pages/letter = 52 × 4 = 208 letters, times 3 = 624 pages.
+
+Or 52 × 12 = 624.
+
+Now, about the year: sometimes people use 52.142 weeks, but 52.142 × 12 = ? 52 × 12 = 624, 0.142 × 12 = about 1.7, so 625.7, which is not integer, but since he doesn't write on the extra day, it should be 624 for 52 weeks.
+
+In a 365-day year, there are 52 full weeks plus 1 day, but since the writing is twice per week, not every day, the number of writing sessions depends.
+
+The minimum number of writing sessions in a year: 52 weeks × 2 = 104, but with 365 days, it could be 104 or 105, depending on the starting day.
+
+Similarly for 366 days, 104 or 105 or 106.
+
+But I think for simplicity, and since the problem doesn't specify, we should use 52 weeks.
+
+Perhaps the problem implies a non-leap year or something.
+
+I recall that in many such problems, they use 365 days and calculate the number of times.
+
+But let's assume 365 days.
+
+Number of weeks: 365 / 7 = 52 weeks and 1 day, so 52 full weeks.
+
+In 52 weeks, there are exactly 52 × 2 = 104 writing sessions if the sessions are fixed days, but the extra day might or might not have a session.
+
+Since the problem says "twice a week", it might be interpreted as every week he writes twice, so for 52 weeks, 104 times, and the extra day is not a full week, so no writing.
+
+Similarly, in practice, for annual calculation, 52 weeks is standard.
+
+I think I'm overcomplicating.
+
+Let me see if there's another way.
+
+Perhaps the "twice a week" means he writes on two days per week, but the page count is per letter.
+
+I think I have it.
+
+Another point: "he writes a 3-page letter to 2 different friends" – this might be ambiguous.
+
+Does he write one letter to both friends? But it says "to 2 different friends", and "a 3-page letter", which might imply one letter, but that doesn't make sense for two friends.
+
+No, it says "a 3-page letter to 2 different friends", which is poorly worded.
+
+Let me read carefully: "James writes a 3-page letter to 2 different friends twice a week."
+
+This could be interpreted as: he writes one 3-page letter and sends it to two friends, but that would be unusual, as it's the same letter.
+
+Or, he writes a separate 3-page letter to each friend.
+
+I think the latter is more logical, because it says "to 2 different friends", implying separate letters.
+
+In context, it makes sense to have separate letters.
+
+If it were one letter to both, it would say "to both friends" or something.
+
+So, I think it's two separate 3-page letters.
+
+Therefore, per writing session, 6 pages.
+
+Twice a week, 12 pages per week.
+
+Per year, 52 weeks, 624 pages.
+
+To be thorough, let's assume 365 days.
+
+Number of times he writes: since twice per week, the number of writing days per year.
+
+There are 365 days, and he writes on 2 out of every 7 days.
+
+So, number of writing days = (2/7) * 365.
+
+Calculate: 2/7 * 365 = (2 * 365) / 7 = 730 / 7 = 104.2857...
+
+But since he can't write a fraction of a time, it must be an integer.
+
+In 365 days, the number of times a specific day of the week occurs.
+
+For example, if he writes on, say, Monday and Thursday, then in a year, the number of Mondays and Thursdays.
+
+In a non-leap year, there are 52 full weeks, so 52 of each day, plus one extra day.
+
+If the extra day is Monday, then 53 Mondays and 52 of others, similarly for Thursday.
+
+So, depending on the starting day, one day will have 53 occurrences, others 52.
+
+Therefore, for a specific pair of days, the total number of writing sessions: if both days are not the extra, then 52 + 52 = 104.
+
+If one of them is the extra day, then 53 + 52 = 105.
+
+Similarly for leap year.
+
+But since we don't know which days or the starting point, on average, it might be 104.285, but for a given year, it's either 104 or 105.
+
+But for this problem, since it's not specified, I think 104 is a safe minimum, or we should use the expected value.
+
+But I think for such problems, they expect 52 weeks * 12 = 624.
+
+Perhaps the problem assumes 52 weeks.
+
+I recall that in many textbooks, they use 52 weeks for a year in these contexts.
+
+For example, if it were daily, they might use 365, but for weekly, 52.
+
+So, I'll go with 624.
+
+But let me confirm the calculation.
+
+Per friend: he writes a 3-page letter.
+
+Number of friends: 2.
+
+So per writing session: 2 * 3 = 6 pages.
+
+Sessions per week: 2.
+
+Pages per week: 6 * 2 = 12.
+
+Weeks per year: 52.
+
+Pages per year: 12 * 52.
+
+Now, 10 * 52 = 520, 2 * 52 = 104, total 520 + 104 = 624.
+
+12 * 50 = 600, 12 * 2 = 24, 600 + 24 = 624.
+
+Yes.
+
+If we use 365 days: pages per day average 12/7.
+
+12/7 * 365 = (12 * 365) / 7.
+
+12 * 365: 10*365=3650, 2*365=730, total 3650+730=4380.
+
+4380 / 7 = 626? 7*625=4375, 4380-4375=5, so 625 and 5/7, which is about 625.714, so approximately 626 pages, but since pages are whole, and he writes only on whole sessions, it should be 104 or 105 sessions.
+
+104 sessions: 624 pages.
+
+105 sessions: 105 * 6 = 630 pages.
+
+But 105 sessions only if the extra day is a writing day.
+
+Since there are 7 days, and 2 writing days, the probability that the extra day is a writing day is 2/7, so expected number of sessions: 104 + (2/7) = 104.285, times 6 pages = 625.71, which rounds to 626, but since it's expected, but for actual, it's discrete.
+
+I think for this problem, 624 is fine.
+
+Perhaps the problem considers a year as 52 weeks exactly.
+
+I think I should go with 624.
+
+But let me see if there's another interpretation.
+
+"writes a 3-page letter to 2 different friends" – could it be one letter addressed to both? But that seems odd, as it's not typical to write one letter to two different friends unless it's a group, but it says "to 2 different friends", so likely separate.
+
+In the context, "letter" might be singular, but it could be understood as for each.
+
+I think it's standard to assume two separate letters.
+
+So, I'll stick with 624.
+
+Therefore, the answer should be 624 pages.
+
+But let me write it down.
+
+[Final Answer]
+James writes a 3-page letter to each of 2 different friends, resulting in 2 × 3 = 6 pages per writing session.  
+He does this twice a week, so he writes 6 pages/session × 2 sessions/week = 12 pages per week.  
+Assuming a year has 52 weeks, the total pages written in a year is 12 pages/week × 52 weeks = 624 pages.  
+
+This calculation uses 52 weeks as a standard for yearly computations, as the extra days in a 365- or 366-day year may not necessarily include additional writing sessions, depending on the specific days of the week.  
+
+\boxed{624}
+
+=== Problem 74 ===
+Prompt:
+Jasper will serve charcuterie at his dinner party. He buys 2 pounds of cheddar cheese for $10, a pound of cream cheese that cost half the price of the cheddar cheese, and a pack of cold cuts that cost twice the price of the cheddar cheese. How much does he spend on the ingredients?
+[Thought Process]
+Jasper is buying ingredients for his charcuterie. He gets 2 pounds of cheddar cheese for $10. So, the cost for cheddar cheese is $10 for 2 pounds. I should find out how much that is per pound, but I might not need to since the total is given.
+
+He buys a pound of cream cheese that cost half the price of the cheddar cheese. The cheddar cheese cost $10 for 2 pounds, so the price per pound of cheddar is $10 divided by 2, which is $5 per pound.
+
+Therefore, cream cheese costs half of that, so half of $5 is $2.50 per pound. And he buys one pound, so that's $2.50.
+
+Now, he also buys a pack of cold cuts that cost twice the price of the cheddar cheese. The cheddar cheese total was $10 for 2 pounds, but "the price" might refer to the total or per pound? I think I need to be careful.
+
+The problem says: "a pack of cold cuts that cost twice the price of the cheddar cheese." Now, "the cheddar cheese" could be ambiguous. Does it mean the total he paid for cheddar or the per pound price?
+
+Let me read carefully: "He buys 2 pounds of cheddar cheese for $10, a pound of cream cheese that cost half the price of the cheddar cheese, and a pack of cold cuts that cost twice the price of the cheddar cheese."
+
+It says "half the price of the cheddar cheese" and "twice the price of the cheddar cheese." But "the cheddar cheese" is not specified as per pound or total.
+
+However, for the cream cheese, it says "a pound of cream cheese that cost half the price of the cheddar cheese." Since cream cheese is specified per pound, it makes sense that "price of the cheddar cheese" here refers to the price per pound.
+
+Similarly for the cold cuts, it says "a pack of cold cuts," so it might be a fixed pack, so "price" could be total or per unit, but it's compared to "the cheddar cheese," which might be per pound.
+
+To avoid confusion, I should look at the context.
+
+Cheddar cheese: 2 pounds for $10, so per pound $5.
+
+Cream cheese: 1 pound, cost half the price of cheddar cheese. Since cheddar is $5 per pound, half is $2.50 per pound, and for one pound, $2.50.
+
+Cold cuts: a pack that costs twice the price of the cheddar cheese. Now, "the cheddar cheese" — is this the per pound price or the total price?
+
+If it's per pound, then twice $5 is $10 for the pack.
+
+If it's total, twice $10 is $20 for the pack.
+
+But let's see the wording: "twice the price of the cheddar cheese." The cheddar cheese is referred to as a whole, but in the context, when we say "the price," it might be ambiguous.
+
+However, earlier for cream cheese, it was "half the price of the cheddar cheese" and we interpreted it as per pound because cream cheese was per pound.
+
+For cold cuts, it's "a pack," so it might be a different unit.
+
+But to be consistent, I think "the price of the cheddar cheese" likely refers to the price per pound, as that's the unit price.
+
+Moreover, the problem might be simpler that way.
+
+Let me see if I can find a clue.
+
+The question is to find how much he spends on ingredients, so I need total cost.
+
+Cheddar: $10
+
+Cream cheese: half the price per pound of cheddar, so $2.50 for one pound.
+
+Cold cuts: twice the price of cheddar. If per pound, $10, or if total, $20.
+
+But let's think: if it's twice the total price of cheddar, that would be $20, but cheddar was 2 pounds for $10, so $20 might be a lot for a pack of cold cuts, but it's possible.
+
+If it's twice the per pound price, $10 for the pack, which might be reasonable.
+
+But I should not assume based on reasonableness; I need to interpret the text.
+
+Another way: the phrase "the price of the cheddar cheese" is used both for cream cheese and for cold cuts.
+
+For cream cheese, it says "half the price of the cheddar cheese," and since cream cheese is bought per pound, it must be referring to the per pound price of cheddar.
+
+Similarly, for cold cuts, "twice the price of the cheddar cheese" should be consistent, so it probably means twice the per pound price of cheddar.
+
+Therefore, cold cuts cost twice $5, which is $10 for the pack.
+
+Moreover, the cold cuts are "a pack," so it's a single item, so the cost is $10.
+
+Then total spend: cheddar $10 + cream cheese $2.50 + cold cuts $10 = $22.50.
+
+But let me write it down.
+
+Cheddar: 2 pounds for $10.
+
+Cheddar per pound: $5.
+
+Cream cheese: 1 pound at half the price of cheddar per pound, so half of $5 = $2.50 per pound, total $2.50 for one pound.
+
+Cold cuts: a pack at twice the price of cheddar per pound, so twice $5 = $10.
+
+Total: $10 + $2.50 + $10 = $22.50.
+
+If "the price of the cheddar cheese" meant the total he paid for cheddar, which is $10, then:
+
+Cream cheese: half of $10 = $5 for one pound? But that would be $5 per pound, while cheddar is $5 per pound, so half should be less, but $5 is same as cheddar per pound? Confusion.
+
+If cream cheese costs half the price of cheddar cheese, meaning half the total price, so half of $10 is $5, but that's for one pound, whereas cheddar per pound is $5, so cream cheese at $5 per pound would be same as cheddar, but it says "half the price," so it should be cheaper. Contradiction.
+
+Therefore, "the price" must refer to unit price, per pound.
+
+Similarly for cold cuts.
+
+If cold cuts cost twice the total cheddar price, $20, but cream cheese at half total would be $5 per pound, which is same as cheddar per pound, but cheddar per pound is $5, so cream cheese at $5 per pound is not half; it's the same.
+
+To be half the price, it must be per unit.
+
+Therefore, I think it's clear that "the price of the cheddar cheese" refers to the price per pound.
+
+So, cheddar per pound: $5
+
+Cream cheese per pound: half of $5 = $2.50
+
+He buys 1 pound, so $2.50
+
+Cold cuts pack: twice the per pound price of cheddar, so 2 * $5 = $10
+
+Now, total spend: cheddar $10 + cream cheese $2.50 + cold cuts $10 = $22.50
+
+But let me double-check the units.
+
+Cheddar: $10 for 2 pounds, so cost is $10.
+
+Cream cheese: $2.50 for 1 pound.
+
+Cold cuts: $10 for one pack.
+
+Total: 10 + 2.50 + 10 = 22.50
+
+Perhaps I should write it as fractions.
+
+$10 + $2.50 + $10 = $22.50
+
+Or in dollars: 10 + 2.5 + 10 = 22.5, so $22.50
+
+Now, is there any other interpretation?
+
+Another thought: when it says "a pound of cream cheese that cost half the price of the cheddar cheese," it might be interpreted as the cream cheese costs half of what the cheddar cheese costs, but cheddar cheese cost $10 total, so half would be $5 for the cream cheese, but that's for one pound, meaning $5 per pound.
+
+But cheddar is $5 per pound, so cream cheese at $5 per pound is same price, not half. But the phrase says "half the price," so it should be half per pound.
+
+I think it's inconsistent to interpret "price" as total for cream cheese but per pound for comparison.
+
+The standard way is to compare unit prices.
+
+In the context, it says "cost half the price of the cheddar cheese," and since both are cheese, likely per pound.
+
+Similarly, cold cuts might be different, but the comparison is to cheddar per pound.
+
+I think my first approach is correct.
+
+So, total spend is $22.50.
+
+But let me see if the answer should be in a box.
+
+The question is: "How much does he spend on the ingredients?"
+
+So, $22.50
+
+But perhaps write it as a decimal or fraction.
+
+$22.50 is fine, or 22.5 dollars.
+
+But in money, usually with two decimals.
+
+In the box, I can write 22.50 or 45/2, but decimal is fine.
+
+Since cheddar was given as $10, which is whole, but cream cheese is half of 5, so 2.50.
+
+I think $22.50 is acceptable.
+
+To be precise, let's calculate numerically.
+
+Cheddar: $10
+
+Cheddar per pound: 10/2 = $5
+
+Cream cheese per pound: (1/2) * 5 = $2.50
+
+Cream cheese cost: 1 * 2.50 = $2.50
+
+Cold cuts cost: twice cheddar per pound, so 2 * 5 = $10
+
+Total: 10 + 2.50 + 10 = 22.50
+
+If I think in terms of the cost.
+
+Another way: let P be the price per pound of cheddar.
+
+Cheddar: 2 pounds for 2P = $10, so 2P = 10, P = $5
+
+Cream cheese: 1 pound at (1/2)P = (1/2)(5) = $2.50
+
+Cold cuts: cost = 2 * P = 2 * 5 = $10 (since it's a pack, and we're using the per pound price for comparison)
+
+Total cost: 2P + (1/2)P + 2P? No.
+
+Cheddar cost is 2P = $10
+
+Cream cheese cost is (1/2)P for one pound, since unit price.
+
+Cold cuts cost is 2P for the pack.
+
+So total: 2P + (1/2)P + 2P = (4.5)P = 4.5 * 5 = 22.5
+
+Since P=5.
+
+2P + 0.5P + 2P = 4.5P, yes.
+
+So $22.50
+
+I think it's consistent.
+
+Therefore, he spends $22.50 on the ingredients.
+
+[Final Answer]
+Jasper buys 2 pounds of cheddar cheese for $10, so the price per pound of cheddar cheese is $10 / 2 = $5.  
+
+The cream cheese costs half the price per pound of the cheddar cheese, so it costs $5 / 2 = $2.50 per pound. Since he buys 1 pound of cream cheese, the cost is $2.50.  
+
+The pack of cold cuts costs twice the price per pound of the cheddar cheese, so it costs 2 × $5 = $10.  
+
+The total cost for the ingredients is the sum of the costs:  
+- Cheddar cheese: $10.00  
+- Cream cheese: $2.50  
+- Cold cuts: $10.00  
+
+$10.00 + $2.50 + $10.00 = $22.50.  
+
+\boxed{22.50}
+
+=== Problem 75 ===
+Prompt:
+Joy can read 8 pages of a book in 20 minutes. How many hours will it take her to read 120 pages?
+[Thought Process]
+I need to find out how many hours it will take Joy to read 120 pages if she can read 8 pages in 20 minutes. First, I should figure out her reading speed in pages per minute or something similar.
+
+She reads 8 pages in 20 minutes. So, to find out how many pages she reads per minute, I can divide the pages by the minutes. That would be 8 pages divided by 20 minutes.
+
+So, pages per minute = 8 / 20. Let me simplify that. Both 8 and 20 can be divided by 4. 8 ÷ 4 = 2, and 20 ÷ 4 = 5, so it's 2/5 pages per minute. 2/5 is 0.4 pages per minute.
+
+Since the question asks for hours, I should convert everything to hours. There are 60 minutes in an hour, so I can find out how many pages she reads per hour.
+
+First, in 20 minutes, she reads 8 pages. How many 20-minute intervals are there in an hour? Since an hour has 60 minutes, 60 ÷ 20 = 3. So, there are three 20-minute intervals in one hour.
+
+Therefore, in one hour, she reads 8 pages × 3 = 24 pages.
+
+So, her reading speed is 24 pages per hour.
+
+Now, I need to find out how long it takes to read 120 pages at 24 pages per hour.
+
+Time = total pages / speed
+
+So, time = 120 pages / 24 pages per hour.
+
+120 ÷ 24 = 5.
+
+So, it should take 5 hours.
+
+Let me double-check.
+
+I could use the pages per minute approach.
+
+Pages per minute: 8 / 20 = 0.4 pages per minute.
+
+For 120 pages, time in minutes = total pages / pages per minute = 120 / 0.4.
+
+120 divided by 0.4.
+
+Dividing by 0.4 is the same as multiplying by 10/4 or 5/2, which is 2.5. Better to think: 120 ÷ 0.4 = 120 ÷ (2/5) = 120 × (5/2) = 600 / 2 = 300 minutes.
+
+Now, 300 minutes to hours: since 60 minutes in an hour, 300 ÷ 60 = 5 hours.
+
+Same answer.
+
+I could set up a proportion.
+
+If 8 pages take 20 minutes, then 120 pages take how many minutes?
+
+Let t be the time in minutes for 120 pages.
+
+So, 8 / 20 = 120 / t
+
+Because pages per minute should be constant.
+
+So, 8/20 = 120/t
+
+Simplify 8/20 to 2/5.
+
+So, 2/5 = 120/t
+
+Cross-multiply: 2 * t = 5 * 120
+
+2t = 600
+
+t = 300 minutes.
+
+Then to hours: 300 / 60 = 5 hours.
+
+If I think in terms of hours from the start.
+
+20 minutes is 20/60 hours, which is 1/3 hour.
+
+She reads 8 pages in 1/3 hour.
+
+So, pages per hour: since 8 pages in 1/3 hour, then in one hour, 8 * 3 = 24 pages per hour, as before.
+
+Then for 120 pages: 120 / 24 = 5 hours.
+
+I think it's consistent.
+
+Is there any trick here? The question seems straightforward.
+
+Joy reads at a constant rate, I assume.
+
+No other information, so yes.
+
+So, it should take her 5 hours.
+
+The answer should be in hours, which it is.
+
+Let me see the question: "How many hours will it take her to read 120 pages?"
+
+And I got 5 hours.
+
+I should express it as a number or in a box.
+
+Since it's a word problem, probably just the number.
+
+But in the context, I think it's fine.
+
+Another way: the ratio of pages.
+
+120 pages is how many times 8 pages? 120 ÷ 8 = 15 times.
+
+So, if 8 pages take 20 minutes, then 15 times that should take 15 times the time, so 20 minutes * 15 = 300 minutes.
+
+300 minutes ÷ 60 = 5 hours.
+
+Same thing.
+
+So, no matter how I look at it, it's 5 hours.
+
+I think that's the answer.
+
+[Final Answer]
+Joy reads 8 pages in 20 minutes.  
+First, determine her reading rate in pages per hour.  
+Since there are 60 minutes in an hour, and she reads 8 pages in 20 minutes, calculate how many 20-minute intervals are in 60 minutes:  
+60 ÷ 20 = 3 intervals.  
+In one hour, she reads:  
+8 pages × 3 = 24 pages.  
+Thus, her reading rate is 24 pages per hour.  
+
+To read 120 pages, divide the total pages by her reading rate:  
+120 pages ÷ 24 pages per hour = 5 hours.  
+
+Alternatively, using minutes:  
+Her reading rate is 8 pages / 20 minutes = 0.4 pages per minute.  
+Time to read 120 pages:  
+120 pages ÷ 0.4 pages per minute = 300 minutes.  
+Convert minutes to hours:  
+300 minutes ÷ 60 minutes per hour = 5 hours.  
+
+Both methods confirm it will take her 5 hours to read 120 pages.
+
+\boxed{5}
+
+=== Problem 76 ===
+Prompt:
+Julie is reading a 120-page book. Yesterday, she was able to read 12 pages and today, she read twice as many pages as yesterday. If she wants to read half of the remaining pages tomorrow, how many pages should she read?
+[Thought Process]
+Julie is reading a 120-page book. Yesterday, she read 12 pages. Today, she read twice as many pages as yesterday, so that would be 2 times 12, which is 24 pages. So, total pages read so far: yesterday 12, today 24, so 12 + 24 = 36 pages.
+
+The book is 120 pages, so remaining pages are 120 minus 36. 120 - 36 = 84 pages left.
+
+She wants to read half of the remaining pages tomorrow. So, half of 84 is 84 divided by 2, which is 42.
+
+So, she should read 42 pages tomorrow.
+
+Let me double-check. Total pages: 120. Read: 12 + 24 = 36. Remaining: 120 - 36 = 84. Half of that: 84 / 2 = 42. Yes.
+
+The question is: "how many pages should she read?" and it says "tomorrow," so it should be 42.
+
+I think that's it.
+
+[Final Answer]
+Julie has read 12 pages yesterday and twice that amount today, which is \(2 \times 12 = 24\) pages.  
+The total pages read so far is \(12 + 24 = 36\) pages.  
+The book has 120 pages, so the remaining pages are \(120 - 36 = 84\).  
+She wants to read half of the remaining pages tomorrow, which is \(84 \div 2 = 42\) pages.  
+
+Thus, Julie should read 42 pages tomorrow.  
+
+\boxed{42}
+
+=== Problem 77 ===
+Prompt:
+Ken created a care package to send to his brother, who was away at boarding school.  Ken placed a box on a scale, and then he poured into the box enough jelly beans to bring the weight to 2 pounds.  Then, he added enough brownies to cause the weight to triple.  Next, he added another 2 pounds of jelly beans.  And finally, he added enough gummy worms to double the weight once again.  What was the final weight of the box of goodies, in pounds?
+[Thought Process]
+I need to find the final weight of the care package Ken sent to his brother. Let me go through the steps one by one.
+
+First, Ken puts a box on a scale. I don't know how much the box weighs, but since we're dealing with additions, I might need to find that out or represent it as a variable. Let me denote the weight of the empty box as B pounds.
+
+Then, he pours enough jelly beans to bring the weight to 2 pounds. So, after adding jelly beans, the total weight is 2 pounds. That means the jelly beans added weigh 2 minus B pounds. Let me call the weight of jelly beans added first as J1, so J1 = 2 - B.
+
+Then, he adds enough brownies to cause the weight to triple. So, after adding brownies, the weight triples from what it was before adding brownies. Before adding brownies, the weight was 2 pounds. So, after adding brownies, it should be 3 times 2, which is 6 pounds. Let me see.
+
+Let me list the weights step by step.
+
+Initial: Box alone, weight = B
+
+After adding first jelly beans: weight = 2 pounds
+
+So, jelly beans added: 2 - B
+
+Now, he adds brownies. The weight triples, meaning the new weight is three times the previous weight. Previous weight was 2 pounds, so new weight should be 3 * 2 = 6 pounds. So, after brownies, weight = 6 pounds.
+
+Therefore, the brownies added must be 6 - 2 = 4 pounds.
+
+Brownies added: weight after brownies minus weight before brownies = 6 - 2 = 4 pounds.
+
+Next, he adds another 2 pounds of jelly beans. So, he adds 2 pounds of jelly beans now.
+
+After brownies, weight was 6 pounds. Add 2 pounds of jelly beans, so weight becomes 6 + 2 = 8 pounds.
+
+Finally, he adds enough gummy worms to double the weight once again. So, adding gummy worms doubles the weight from what it was before adding them.
+
+Before adding gummy worms, weight was 8 pounds. After adding, it doubles, so 2 * 8 = 16 pounds.
+
+Therefore, final weight should be 16 pounds.
+
+But I have B, the weight of the box, in there. Did I use it? I have J1 = 2 - B, but when I added brownies, I didn't need B, because I just used the total weight.
+
+Similarly, when I added the second jelly beans, I added 2 pounds, so no B.
+
+And gummy worms doubled from 8 to 16.
+
+But B is still there. In the final weight, it's included, but I don't have a value for B. The problem is to find the final weight, which should be a number, so probably B cancels out or something.
+
+In my calculation, final weight is 16 pounds, which doesn't depend on B. Let me see.
+
+After first step: weight = 2 (including box)
+
+After brownies: weight triples to 6
+
+Add 2 lbs jelly beans: 6 + 2 = 8
+
+Add gummy worms: doubles to 16
+
+So final weight is 16 pounds.
+
+But is the box included? Yes, from the beginning.
+
+And the tripling includes the box and everything so far.
+
+Similarly, doubling includes everything.
+
+So final should be 16.
+
+But let me read the problem again to make sure.
+
+"Ken placed a box on a scale, and then he poured into the box enough jelly beans to bring the weight to 2 pounds."
+
+So, initial: box weight B
+
+After jelly beans: 2 lbs
+
+"Then, he added enough brownies to cause the weight to triple."
+
+Triple from what? It says "to cause the weight to triple," which should mean triple from the current weight, I think.
+
+Current weight is 2, so after brownies, it should be 3 times 2 = 6.
+
+"Next, he added another 2 pounds of jelly beans."
+
+So add 2 lbs, weight 6 + 2 = 8
+
+"And finally, he added enough gummy worms to double the weight once again."
+
+Double from current, which is 8, to 16.
+
+So final weight 16 pounds.
+
+But what about the box weight? It seems it doesn't matter, or it cancels out.
+
+For example, suppose box weighs B, jelly beans first: 2 - B added.
+
+Then brownies added: to triple weight to 6, so brownies added: 6 - 2 = 4, which is fixed, not depending on B.
+
+Then add 2 lbs jelly beans, so now jelly beans total: (2 - B) + 2 = 4 - B? No, first jelly beans: 2 - B, add another 2, so total jelly beans: 2 - B + 2 = 4 - B, but weight includes box, brownies, etc.
+
+After adding second jelly beans, weight is 8, as I had.
+
+Then gummy worms: double to 16.
+
+Gummy worms added: 16 - 8 = 8 lbs.
+
+But the point is, final weight is 16, regardless of B.
+
+So it should be fine.
+
+Perhaps I should set up equations.
+
+Let B be box weight.
+
+After first jelly beans: weight = B + J1 = 2, so J1 = 2 - B
+
+After brownies: weight = 2 + Br, and this weight is 3 times previous, so 2 + Br = 3 * 2 = 6, so Br = 4
+
+Thus weight after brownies: 6
+
+Add another 2 lbs jelly beans: so J2 = 2
+
+Weight now: 6 + 2 = 8
+
+After gummy worms: weight = 8 + G, and this is double the previous weight, so 8 + G = 2 * 8 = 16, so G = 8
+
+Final weight: 16
+
+So it seems consistent.
+
+The problem is, in the beginning, the box weight B is unknown, but it doesn't affect the final weight because the tripling and doubling are based on the total weight at those points.
+
+Another way: let the weight after each step be W.
+
+Start: W0 = B
+
+After first jelly beans: W1 = 2
+
+After brownies: W2 = 3 * W1 = 3 * 2 = 6
+
+After second jelly beans: W3 = W2 + 2 = 6 + 2 = 8
+
+After gummy worms: W4 = 2 * W3 = 2 * 8 = 16
+
+So W4 = 16
+
+No need for B.
+
+Perhaps the "triple" could be misinterpreted, but I think it's clear.
+
+Let me read the exact words: "then he added enough brownies to cause the weight to triple."
+
+Similarly, "gummy worms to double the weight once again."
+
+So, adding brownies causes the weight to triple, meaning the new weight is three times the old weight.
+
+Likewise for doubling.
+
+So I think 16 is correct.
+
+But let me see if there's a trick.
+
+Another interpretation: when it says "cause the weight to triple," it might mean that the weight increases by a factor of three, but perhaps including the addition.
+
+But that's what I did.
+
+For example, when adding brownies, let the weight before adding be W, then after adding brownies, it becomes 3W.
+
+Similarly for doubling.
+
+In this case, W was 2, so 3*2=6.
+
+If it meant something else, like the weight triples from original or something, but it says "to triple" from the current, I believe.
+
+The phrase is "cause the weight to triple," which implies from its current value.
+
+Similarly, "double the weight once again" means double from the current weight before adding gummy worms.
+
+So I think it's fine.
+
+Perhaps the box weight is zero, but it doesn't say that, but in my calculation, it works even with box weight.
+
+For example, suppose box is 0.5 pounds, then first jelly beans: 2 - 0.5 = 1.5 lbs
+
+Then brownies added to triple weight to 6, so add 4 lbs brownies (since 2 + 4 = 6, or 0.5 + 1.5 + 4 = 6)
+
+Then add 2 lbs jelly beans, so jelly beans total 1.5 + 2 = 3.5, weight 6 + 2 = 8
+
+Then gummy worms to double to 16, add 8 lbs gummy worms.
+
+Final: box 0.5 + jelly beans 3.5 + brownies 4 + gummy worms 8 = 0.5 + 3.5 = 4, +4=8, +8=16? 8 + 8 =16, but the weight before gummy worms was 8, which includes all, so after adding 8, it's 16.
+
+Similarly, if box is 1 pound, first jelly beans: 2-1=1 lb, weight 2.
+
+Brownies add 4, weight 6.
+
+Add 2 jelly beans, weight 8.
+
+Gummy worms add 8, weight 16.
+
+Always 16.
+
+So final weight is 16 pounds.
+
+The problem asks for the final weight in pounds, and I have 16.
+
+But let me see the answer.
+
+Perhaps I should consider the weight after tripling includes only up to brownies, etc., but I think I did.
+
+Another point: when he adds the second jelly beans, it says "another 2 pounds of jelly beans", so it's explicitly 2 pounds, not depending on anything.
+
+Similarly, the first jelly beans are to bring to 2 pounds, which includes box.
+
+But as above.
+
+I think it's correct.
+
+So final weight should be 16 pounds.
+
+But let me see the question: "what was the final weight of the box of goodies, in pounds?"
+
+And I have 16.
+
+But in the beginning, the box is on scale, and we add stuff, so final weight includes box and all goodies.
+
+Yes.
+
+Perhaps "the box of goodies" might be misinterpreted, but I think it means the box with all the contents.
+
+So I think 16 is the answer.
+
+But let me see if there's another way.
+
+Let me denote the weights.
+
+Let B be box weight.
+
+After first jelly beans: total weight = 2
+
+After brownies: weight triples, so 3 * 2 = 6
+
+After second jelly beans: 6 + 2 = 8
+
+After gummy worms: weight doubles, so 2 * 8 = 16
+
+Yes.
+
+The tripling and doubling are applied to the total weight at that point.
+
+I think it's consistent.
+
+So I should go with 16.
+
+[Final Answer]
+The final weight of the box of goodies is 16 pounds, determined as follows:
+
+- Ken starts with an empty box of unknown weight on the scale.
+- Adding enough jelly beans brings the total weight to 2 pounds.
+- Adding brownies triples the weight to \(3 \times 2 = 6\) pounds.
+- Adding another 2 pounds of jelly beans increases the weight to \(6 + 2 = 8\) pounds.
+- Adding gummy worms doubles the weight to \(2 \times 8 = 16\) pounds.
+
+The weight of the empty box is not needed for the calculation, as the operations (tripling and doubling) are applied to the total weight at each step, and the explicit addition of 2 pounds of jelly beans is independent of the box weight.
+
+Thus, the final weight is 16 pounds.
+
+\boxed{16}
+
+=== Problem 78 ===
+Prompt:
+Mark has a garden with flowers. He planted plants of three different colors in it. Ten of them are yellow, and there are 80% more of those in purple. There are only 25% as many green flowers as there are yellow and purple flowers. How many flowers does Mark have in his garden?
+[Thought Process]
+I need to find out how many flowers Mark has in his garden. There are three colors: yellow, purple, and green. It says that ten of them are yellow, so yellow = 10.
+
+Then, it says there are 80% more purple flowers than yellow flowers. So, if there are 10 yellow, then purple should be 10 plus 80% of 10. Let me calculate that.
+
+80% of 10 is 0.8 times 10, which is 8. So, purple should be 10 + 8 = 18. But let me make sure. "80% more" means 100% + 80% = 180% of the yellow. So, 180% of 10 is 1.8 times 10, which is 18. Yeah, same thing.
+
+So, purple = 18.
+
+Now, it says there are only 25% as many green flowers as there are yellow and purple flowers. So, yellow and purple together are 10 + 18 = 28.
+
+Then, green is 25% of that. 25% of 28.
+
+25% is one-fourth, so 28 divided by 4 is 7. Or, 0.25 times 28 = 7.
+
+So, green = 7.
+
+Now, total flowers should be yellow + purple + green = 10 + 18 + 7.
+
+10 + 18 is 28, plus 7 is 35.
+
+So, Mark has 35 flowers.
+
+But let me double-check the percentages to make sure.
+
+Yellow: 10
+
+Purple: 80% more than yellow. 80% of 10 is 8, so 10 + 8 = 18. Or, 1.80 * 10 = 18. Good.
+
+Yellow and purple together: 10 + 18 = 28.
+
+Green: 25% of yellow and purple. 25% of 28 is 7. 0.25 * 28 = 7. Or, 1/4 of 28 is 7. Good.
+
+Total: 10 + 18 = 28, 28 + 7 = 35.
+
+The problem says "25% as many green flowers as there are yellow and purple flowers." That seems correct.
+
+It says "there are only 25% as many green flowers as there are yellow and purple flowers." So, green = 25% of (yellow + purple).
+
+Yes.
+
+Sometimes "as many as" can be tricky, but I think it's clear.
+
+For example, if A is 25% as many as B, that means A = 0.25 * B.
+
+Yes.
+
+So, total should be 35.
+
+But let me see if there's another way to look at it.
+
+Let Y = yellow = 10
+
+P = purple = Y + 0.8Y = 1.8Y = 1.8 * 10 = 18
+
+Y + P = 10 + 18 = 28
+
+G = 0.25 * (Y + P) = 0.25 * 28 = 7
+
+Total = Y + P + G = 28 + 7 = 35
+
+I could also think in terms of fractions.
+
+But I think it's straightforward.
+
+The problem says "He planted plants of three different colors" and "flowers," so I think it's fine.
+
+And "how many flowers does Mark have in his garden?" so total flowers.
+
+So, I think 35 is the answer.
+
+But let me see if the 80% more is interpreted correctly.
+
+"80% more" is standard: it means add 80% of the original.
+
+For example, if something costs $100 and it's 50% more, it becomes $150.
+
+Similarly, here, 80% more than yellow, yellow 10, so 18.
+
+Another way: 100% of yellow is 10, 80% more is 180%, so 18.
+
+Yes.
+
+And green is 25% of the sum of yellow and purple.
+
+Yes.
+
+So, I think it's correct.
+
+[Final Answer]
+Mark has 10 yellow flowers.  
+
+There are 80% more purple flowers than yellow flowers. This means the number of purple flowers is 100% + 80% = 180% of the yellow flowers.  
+180% of 10 is calculated as:  
+1.8 × 10 = 18  
+So, there are 18 purple flowers.  
+
+The combined number of yellow and purple flowers is:  
+10 + 18 = 28  
+
+There are 25% as many green flowers as there are yellow and purple flowers combined. This means the number of green flowers is 25% of 28.  
+25% of 28 is calculated as:  
+0.25 × 28 = 7  
+So, there are 7 green flowers.  
+
+The total number of flowers is the sum of yellow, purple, and green flowers:  
+10 (yellow) + 18 (purple) + 7 (green) = 35  
+
+Thus, Mark has 35 flowers in his garden.
+
+\boxed{35}
+
+=== Problem 79 ===
+Prompt:
+Mary does her grocery shopping on Saturday. She does her shopping only at a specific store where she is allowed a credit of $100, which must be paid in full before her next shopping trip. That week she spent the full credit limit and paid $15 of it on Tuesday and $23 of it on Thursday. How much credit will Mary need to pay before her next shopping trip?
+[Thought Process]
+Mary has a credit of $100 at the store, and she spent the full amount. So, she owes $100. She paid $15 on Tuesday and $23 on Thursday. I need to find out how much she still needs to pay before her next shopping trip.
+
+First, she paid $15 and then $23. So, the total she has paid so far is $15 + $23. Let me calculate that: 15 + 23 is 38. So, she has paid $38.
+
+She owed $100 initially, so the remaining balance is $100 minus $38. That should be $62. Because 100 - 38 = 62.
+
+The question is: "How much credit will Mary need to pay before her next shopping trip?" I think that means how much she still owes, which should be $62.
+
+Let me double-check. She spent $100 on credit. Paid $15 on Tuesday, so after that, she owes 100 - 15 = $85. Then on Thursday, she paid $23, so 85 - 23 = $62. Same thing.
+
+The credit limit is $100, and she must pay it in full before the next trip. She has paid $38, so she needs to pay the remaining $62.
+
+I think that's straightforward. The answer should be $62.
+
+The problem says "she spent the full credit limit," which is $100, and she paid parts of it, so yes.
+
+I don't think there's any trick here. It seems simple arithmetic.
+
+So, Mary needs to pay $62 before her next shopping trip.
+
+[Final Answer]
+Mary spent the full credit limit of $100 on her grocery shopping.  
+She paid $15 on Tuesday and $23 on Thursday.  
+The total amount paid so far is $15 + $23 = $38.  
+The remaining balance to be paid is $100 - $38 = $62.  
+Therefore, Mary must pay $62 before her next shopping trip to settle the credit in full.
+
+=== Problem 80 ===
+Prompt:
+Mrs. Snyder used to spend 40% of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25% of her monthly income. How much was her previous monthly income?
+[Thought Process]
+I need to find Mrs. Snyder's previous monthly income. Let's denote her previous monthly income as \( p \) dollars. She used to spend 40% of that on rent and utilities, so that's \( 0.4p \).
+
+Now, her salary increased by $600, so her new monthly income is \( p + 600 \). After the increase, rent and utilities are only 25% of her new income. But the problem doesn't say that the actual amount she spends on rent and utilities changed; it just says that now it amounts to 25% of her income. I think we have to assume that the cost of rent and utilities hasn't changed, only her income increased.
+
+Let me read the problem again: "Mrs. Snyder used to spend 40% of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25% of her monthly income."
+
+It doesn't explicitly say that rent and utilities stayed the same, but I think it's implied because otherwise, we wouldn't be able to solve it with the given information. Probably, the amount spent on rent and utilities is constant.
+
+So, let's assume that the amount for rent and utilities is the same as before. So, that amount is still \( 0.4p \).
+
+After the increase, this same amount is 25% of the new income, so:
+
+\[ 0.4p = 0.25 \times (p + 600) \]
+
+Now I can solve for p.
+
+Write that equation:
+
+\[ 0.4p = 0.25(p + 600) \]
+
+Multiply both sides by 100 to eliminate decimals, or just work with decimals. I'll multiply by 100 to make it easier.
+
+100 times both sides:
+
+\[ 100 \times 0.4p = 100 \times 0.25(p + 600) \]
+
+Which is:
+
+\[ 40p = 25(p + 600) \]
+
+Now, divide both sides by 5 to simplify:
+
+\[ 8p = 5(p + 600) \]
+
+Or I can distribute the 25:
+
+\[ 40p = 25p + 25 \times 600 \]
+
+\[ 40p = 25p + 15000 \]
+
+Now, subtract 25p from both sides:
+
+\[ 40p - 25p = 15000 \]
+
+\[ 15p = 15000 \]
+
+Now, divide both sides by 15:
+
+\[ p = \frac{15000}{15} \]
+
+\[ p = 1000 \]
+
+So, her previous monthly income was $1000?
+
+Let me check.
+
+If previous income was $1000, 40% of that is $400 on rent and utilities.
+
+New income: 1000 + 600 = $1600
+
+25% of 1600 is 0.25 * 1600 = 400.
+
+Yes, $400, which matches the previous rent and utilities amount.
+
+Perfect.
+
+But is $1000 a reasonable monthly income? Well, it might be low, but mathematically it works.
+
+Perhaps I should consider if rent and utilities changed, but the problem doesn't say that, so I think it's fine.
+
+Another way to think: the increase in salary made the fixed rent and utilities a smaller percentage.
+
+The percentage point decrease is 40% - 25% = 15%, and that 15% corresponds to the increase in income relative to the rent, but I think I did it correctly.
+
+Let the rent and utilities be R.
+
+Previously, R = 0.4 * p
+
+Now, R = 0.25 * (p + 600)
+
+Set them equal: 0.4p = 0.25(p + 600)
+
+Same as before.
+
+The difference in percentage: previously 40%, now 25%, so the decrease of 15% in percentage points is due to the $600 increase.
+
+But it's not that simple because the percentage is of different bases.
+
+Let me see.
+
+The rent R is fixed.
+
+So, R = 0.4p
+
+R = 0.25(p + 600)
+
+So, 0.4p = 0.25p + 0.25*600
+
+0.4p = 0.25p + 150
+
+0.4p - 0.25p = 150
+
+0.15p = 150
+
+Then p = 150 / 0.15
+
+p = 150 * 100 / 15 = 15000 / 15 = 1000
+
+Same answer.
+
+150 divided by 0.15: 0.15 is 15/100, so divide by 15/100 is multiply by 100/15.
+
+So 150 * 100 / 15 = 15000 / 15 = 1000.
+
+Yes.
+
+So, previous monthly income was $1000.
+
+But the problem says "her salary was recently increased by $600", and I got $1000, which seems low for a monthly income, but perhaps it's possible, or maybe I misinterpreted.
+
+Perhaps "salary" is annual, but it says "monthly income" in the context.
+
+Let me read carefully.
+
+"Mrs. Snyder used to spend 40% of her monthly income on rent and utilities. Her salary was recently increased by $600..."
+
+It says "salary" increased by $600, but then refers to "monthly income". Probably, the salary increase is monthly, so $600 per month increase.
+
+Perhaps salary is annual, but that would be odd because rent is monthly.
+
+I think it's safe to assume the increase is monthly.
+
+Maybe in some contexts, salary is given annually, but here it says "monthly income" consistently.
+
+The first part: "monthly income", then "salary increased by $600", then "monthly income" again.
+
+I think it's reasonable to assume the $600 increase is per month.
+
+And mathematically it checks out.
+
+Perhaps the $600 is a one-time increase, but that doesn't make sense with the percentages given monthly.
+
+No, it says "now her rent and utilities only amount to 25% of her monthly income", so the increase is ongoing, monthly.
+
+So, I think $1000 is correct.
+
+But let me see if there's another way.
+
+Let the previous income be p.
+
+Rent and utilities: 0.4p
+
+New income: p + 600
+
+Rent and utilities now 25% of new income, so 0.25(p + 600)
+
+And since rent didn't change, 0.4p = 0.25(p + 600)
+
+As before.
+
+The increase in income is $600, which causes the percentage for rent to drop from 40% to 25%, meaning that $600 represents the difference that reduced the percentage.
+
+The rent amount is the same, so the increase in income is such that the same rent is now a smaller fraction.
+
+The decrease in percentage points is 15%, but this 15% of what?
+
+Previously, rent was 40% of p.
+
+Now, rent is 25% of (p + 600)
+
+But rent is the same, so the value of the percentage point difference.
+
+The absolute amount of rent decreased in percentage by 15 percentage points, but since the base increased, the actual dollar decrease isn't direct.
+
+For example, the $600 increase means that for the same rent, it takes a smaller share.
+
+Specifically, the rent was 40% of old income, now it is 25% of new income.
+
+So the dollar increase in income is $600, and the percentage decrease for rent is 15 percentage points, but the relationship is:
+
+From the equation, we have 0.4p = 0.25(p + 600)
+
+Which we solved.
+
+The $600 increase corresponds to the part that makes rent 25% instead of 40%, but it's not linear.
+
+Let me think in terms of the rent amount.
+
+Let R be rent.
+
+Then R = 0.4p
+
+Also, R = 0.25(p + 600)
+
+So p = R / 0.4
+
+p + 600 = R / 0.25
+
+Then, (R / 0.25) - (R / 0.4) = 600
+
+Because new income minus old income is 600.
+
+R / 0.25 - R / 0.4 = 600
+
+Compute that.
+
+First, R / 0.25 = R / (1/4) = 4R
+
+R / 0.4 = R / (2/5) = (5/2)R = 2.5R
+
+0.4 is 2/5, so R / (2/5) = (5/2)R = 2.5R
+
+R / 0.25 = R / (1/4) = 4R
+
+So, 4R - 2.5R = 600
+
+1.5R = 600
+
+So R = 600 / 1.5 = 600 / (3/2) = 600 * 2/3 = 1200 / 3 = 400
+
+R = 400
+
+Then previous income p = R / 0.4 = 400 / 0.4 = 4000 / 4 = 1000? 400 divided by 0.4.
+
+0.4 * 1000 = 400, so p=1000.
+
+Same as before.
+
+Now, new income 1600, 25% of 1600 is 400.
+
+Yes.
+
+So, consistently, previous monthly income was $1000.
+
+I think that's the answer.
+
+But just to be thorough, is there any other interpretation?
+
+Suppose the rent and utilities changed, but the problem doesn't say that, so I think it's not the case.
+
+Perhaps the $600 is not the increase in income, but something else, but it says "salary was recently increased by $600", and in context, it should be income increase.
+
+So, I think it's fine.
+
+[Final Answer]
+Mrs. Snyder's previous monthly income was \( p \) dollars. She spent 40% of this income on rent and utilities, so the amount spent was \( 0.4p \).
+
+After her salary increased by $600, her new monthly income became \( p + 600 \). The amount spent on rent and utilities remained the same, but now it amounts to 25% of her new income, so:
+\[
+0.4p = 0.25(p + 600)
+\]
+
+Solving for \( p \):
+\[
+0.4p = 0.25p + 150
+\]
+\[
+0.4p - 0.25p = 150
+\]
+\[
+0.15p = 150
+\]
+\[
+p = \frac{150}{0.15} = 1000
+\]
+
+Thus, Mrs. Snyder's previous monthly income was $1000.
+
+Verification:
+- Previous income: $1000
+- Rent and utilities: 40% of $1000 = $400
+- New income: $1000 + $600 = $1600
+- Rent and utilities now: 25% of $1600 = $400, which matches the previous amount spent.
+
+\boxed{1000}
+
+=== Problem 81 ===
+Prompt:
+Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?
+[Thought Process]
+I need to find out how many clips Natalia sold altogether in April and May. First, it says she sold clips to 48 of her friends in April. So, in April, she sold 48 clips.
+
+Then, in May, she sold half as many clips as she did in April. Half of April's sales would be half of 48.
+
+Let me calculate that: half of 48 is 24. So, she sold 24 clips in May.
+
+Now, altogether means the total for both months. So, I need to add April and May together: 48 plus 24.
+
+48 + 24 is 72.
+
+Let me double-check. April: 48 clips. May: half of that, so 48 divided by 2 is 24. Total: 48 + 24 = 72.
+
+The problem says "sold clips to 48 of her friends." I think that means she sold one clip to each friend, so 48 clips. It doesn't specify if she sold multiple to each, but it says "clips" and "to 48 friends," which probably means one per friend or just the total. I think it's safe to assume that she sold 48 clips in April.
+
+Similarly, in May, she sold half as many clips, not half as many friends, so it's about the number of clips.
+
+So, total clips sold: 48 + 24 = 72.
+
+The question is: "how many clips did Natalia sell altogether in April and May?"
+
+So, the answer should be 72.
+
+I think that's straightforward. No tricks here.
+
+Let me write it down.
+
+April: 48 clips
+
+May: half of April = 48 / 2 = 24 clips
+
+Total: 48 + 24 = 72 clips
+
+Altogether, she sold 72 clips.
+
+[Final Answer]
+Natalia sold 48 clips in April.  
+In May, she sold half as many clips as in April, which is \( \frac{48}{2} = 24 \) clips.  
+Altogether, the total number of clips sold in April and May is \( 48 + 24 = 72 \).  
+
+Thus, Natalia sold 72 clips altogether.
+
+=== Problem 82 ===
+Prompt:
+Ralph is going to practice playing tennis with a tennis ball machine that shoots out tennis balls for Ralph to hit. He loads up the machine with 175 tennis balls to start with. Out of the first 100 balls, he manages to hit 2/5 of them. Of the next 75 tennis balls, he manages to hit 1/3 of them. Out of all the tennis balls, how many did Ralph not hit?
+[Thought Process]
+I need to find out how many tennis balls Ralph did not hit. He starts with 175 balls. For the first 100, he hits 2/5 of them. For the next 75, he hits 1/3 of them. I need to find the total number he didn't hit.
+
+First, I should figure out how many he hit in the first 100. He hits 2/5 of 100. So, 2/5 times 100. That's (2/5) * 100 = 200/5 = 40. So, he hit 40 out of the first 100.
+
+Then, for the next 75, he hits 1/3 of them. So, (1/3) * 75 = 75/3 = 25. He hit 25 out of the next 75.
+
+Now, total hit: 40 + 25 = 65.
+
+Total balls: 175.
+
+So, not hit: 175 - 65 = 110.
+
+But let me double-check. I could also find the number not hit for each part.
+
+For the first 100, he hit 40, so not hit: 100 - 40 = 60.
+
+He didn't hit 2/5? No, he hit 2/5, so not hit is 1 - 2/5 = 3/5.
+
+3/5 of 100 is (3/5)*100 = 300/5 = 60. Same as above.
+
+For the next 75, he hit 1/3, so not hit: 1 - 1/3 = 2/3.
+
+2/3 of 75: (2/3)*75 = 150/3 = 50.
+
+75 divided by 3 is 25, times 2 is 50. Yes.
+
+So, not hit: first part 60, second part 50, total not hit: 60 + 50 = 110.
+
+Total balls 175, hit 65, not hit 110.
+
+But 175 - 65 = 110, yes.
+
+The problem says "out of all the tennis balls, how many did Ralph not hit?" So, 110.
+
+But let me make sure about the fractions.
+
+First 100: hit 2/5, so not hit 3/5.
+
+Next 75: hit 1/3, not hit 2/3.
+
+Total not hit: (3/5)*100 + (2/3)*75.
+
+Calculate: (3/5)*100 = 60
+
+(2/3)*75 = 50
+
+60 + 50 = 110.
+
+Since the groups are different sizes, I need to handle the fractions separately, which I did.
+
+I could think in terms of total.
+
+But total hit: (2/5)*100 + (1/3)*75 = 40 + 25 = 65.
+
+Total not hit: 175 - 65 = 110.
+
+Not hit directly: (3/5)*100 + (2/3)*75 = 60 + 50 = 110.
+
+All consistent.
+
+The machine had 175 balls, first 100, next 75, that's 100 + 75 = 175, all covered.
+
+No balls left or anything.
+
+So, I think 110 is the answer.
+
+But let me see if the question is tricky.
+
+"Out of all the tennis balls, how many did Ralph not hit?"
+
+Yes, and I have 110.
+
+Perhaps I should express it as a fraction, but no, it asks for the number.
+
+The problem says "he loads up the machine with 175 tennis balls", and we have 100 + 75 = 175, so all balls are accounted for.
+
+I think I'm good.
+
+Another way: total not hit fraction or something, but it might be messy because the fractions are for different groups.
+
+For example, not hit in first group: 60/100 = 3/5
+
+Not hit in second: 50/75 = 2/3
+
+But to find total not hit, I need to add the numbers, not the fractions, since denominators different.
+
+Weighted average, but unnecessary.
+
+Total not hit: 60 + 50 = 110 out of 175.
+
+Fraction: 110/175 = 22/35, but we don't need that.
+
+So, number is 110.
+
+I think I'm confident.
+
+[Final Answer]
+Ralph starts with 175 tennis balls.  
+- For the first 100 balls, he hits \( \frac{2}{5} \) of them.  
+  Number hit: \( \frac{2}{5} \times 100 = 40 \)  
+  Number not hit: \( 100 - 40 = 60 \)  
+- For the next 75 balls, he hits \( \frac{1}{3} \) of them.  
+  Number hit: \( \frac{1}{3} \times 75 = 25 \)  
+  Number not hit: \( 75 - 25 = 50 \)  
+
+Total number of balls not hit: \( 60 + 50 = 110 \)  
+
+Alternatively, the total number of balls hit is \( 40 + 25 = 65 \), so the number not hit is \( 175 - 65 = 110 \).  
+
+Thus, Ralph did not hit 110 tennis balls.
+
+\boxed{110}
+
+=== Problem 83 ===
+Prompt:
+Randy has 60 mango trees on his farm. He also has 5 less than half as many coconut trees as mango trees. How many trees does Randy have in all on his farm?
+[Thought Process]
+First, Randy has 60 mango trees. That's given.
+
+Next, he has 5 less than half as many coconut trees as mango trees. So, I need to find out how many coconut trees he has.
+
+Half of the mango trees would be half of 60. Half of 60 is 30.
+
+Then, 5 less than that would be 30 minus 5, which is 25. So, he has 25 coconut trees.
+
+Now, to find the total number of trees, I add the mango trees and the coconut trees: 60 + 25.
+
+60 + 25 is 85.
+
+The question is: "How many trees does Randy have in all on his farm?" So, that should be the mango trees plus the coconut trees.
+
+Let me double-check the coconut tree part. It says "5 less than half as many coconut trees as mango trees."
+
+The phrase is: "5 less than half as many coconut trees as mango trees."
+
+I think I might be parsing it wrong. Let me read it carefully.
+
+"He also has 5 less than half as many coconut trees as mango trees."
+
+The "as many coconut trees as mango trees" part means that the number of coconut trees is being compared to mango trees.
+
+"Half as many coconut trees as mango trees" would mean that coconut trees are half of mango trees.
+
+Then, "5 less than" that half.
+
+So, yes, half of mango trees is 30, minus 5 is 25.
+
+I could think of it as: let C be the number of coconut trees.
+
+Then, C = (1/2) * M - 5, where M is mango trees.
+
+M = 60, so C = (1/2)*60 - 5 = 30 - 5 = 25.
+
+Then total trees = M + C = 60 + 25 = 85.
+
+The phrase is a bit ambiguous, but I think that's standard.
+
+Sometimes people misread "5 less than half" as if it's modifying something else, but here it seems clear.
+
+Another way: "half as many coconut trees as mango trees" is clearly half of 60, which is 30 for coconut trees, but then it's 5 less than that, so 25.
+
+Yes.
+
+So total trees should be 85.
+
+The question says "how many trees," and it includes both mango and coconut trees, I assume. It doesn't mention any other trees, so that should be all.
+
+Just to be thorough, let's see the question: "Randy has 60 mango trees on his farm. He also has 5 less than half as many coconut trees as mango trees. How many trees does Randy have in all on his farm?"
+
+So, only mango and coconut trees are mentioned, so total is sum of both.
+
+Therefore, 60 + 25 = 85.
+
+I think that's it.
+
+[Final Answer]
+Randy has 60 mango trees.  
+The number of coconut trees is 5 less than half the number of mango trees.  
+Half of 60 is 30.  
+5 less than 30 is 25.  
+So, Randy has 25 coconut trees.  
+The total number of trees is the sum of mango trees and coconut trees: 60 + 25 = 85.  
+
+Thus, Randy has 85 trees in all on his farm.
+
+=== Problem 84 ===
+Prompt:
+Samantha’s last name has three fewer letters than Bobbie’s last name. If Bobbie took two letters off her last name, she would have a last name twice the length of Jamie’s. Jamie’s full name is Jamie Grey. How many letters are in Samantha’s last name?
+[Thought Process]
+I need to find out how many letters are in Samantha's last name. Let's break down the information given.
+
+First, Samantha’s last name has three fewer letters than Bobbie’s last name. So, if I let B be the number of letters in Bobbie's last name, then Samantha's last name has B - 3 letters.
+
+Next, it says that if Bobbie took two letters off her last name, she would have a last name twice the length of Jamie’s. Jamie’s full name is Jamie Grey, so Jamie's last name is Grey, which has 4 letters. Grey is G-R-E-Y, that's 4 letters.
+
+So, Jamie's last name is Grey, which is 4 letters.
+
+Now, if Bobbie took two letters off her last name, that means she would have B - 2 letters. And that would be twice the length of Jamie’s last name. Jamie’s last name is 4, so twice that is 8.
+
+Therefore, B - 2 = 8.
+
+Is that right? Let me see.
+
+"if Bobbie took two letters off her last name, she would have a last name twice the length of Jamie’s."
+
+So, after removing two letters, Bobbie's last name length is twice Jamie's last name length.
+
+Jamie's last name is Grey, 4 letters, so twice is 8.
+
+So, B - 2 = 8.
+
+Then B = 10.
+
+Bobbie's last name has 10 letters.
+
+Then Samantha's last name has three fewer, so S = B - 3 = 10 - 3 = 7.
+
+So, Samantha's last name has 7 letters.
+
+But let me double-check.
+
+Jamie Grey: Grey is 4 letters, yes.
+
+If Bobbie has 10 letters, remove 2, get 8, which is twice 4, yes.
+
+Samantha has 3 fewer than Bobbie, so 10 - 3 = 7.
+
+But is there any trick here? The problem mentions "Bobbie" and "Jamie" – are these names indicating gender or something? But I think it's irrelevant; we just care about the last names.
+
+Also, "Bobbie took two letters off her last name" – it says "her last name", so Bobbie is female, but again, not relevant.
+
+Jamie Grey is given, so last name is fixed.
+
+But is "Grey" the last name? Jamie Grey, yes, typically that's the full name with last name Grey.
+
+Perhaps it could be a compound last name, but the problem says "Jamie Grey" and "last name", so I think Grey is the last name.
+
+Maybe "Grey" has 4 letters, but let's confirm: G-R-E-Y, that's 4.
+
+Sometimes people might think of it as 5 or something, but no, it's 4 letters.
+
+Perhaps it's case-sensitive, but no, letters are characters.
+
+Another thing: "took two letters off" – does that mean removing any two letters, or is it about shortening the name? I think it means reducing the length by two, so the last name would be two letters shorter.
+
+Similarly, "three fewer letters" means the length is three less.
+
+So, I think it's straightforward.
+
+But let me denote:
+
+Let B = length of Bobbie's last name.
+
+S = length of Samantha's last name.
+
+J = length of Jamie's last name = 4 (since Grey).
+
+Given:
+
+S = B - 3.
+
+And if Bobbie's last name was two letters shorter, it would be twice Jamie's.
+
+So, B - 2 = 2 * J = 2 * 4 = 8.
+
+Thus, B - 2 = 8, so B = 10.
+
+Then S = 10 - 3 = 7.
+
+So, Samantha's last name has 7 letters.
+
+The problem is to box the answer.
+
+But is there any other interpretation?
+
+Perhaps "took two letters off" means something else, like removing specific letters, but that doesn't make sense in this context because it's about the length.
+
+The phrase is "took two letters off her last name", and then "she would have a last name twice the length", so it's about the resulting length after removal.
+
+Similarly, "three fewer letters" is directly about length.
+
+Also, Jamie's last name is given as Grey, so fixed.
+
+Perhaps "Jamie Grey" is the full name, but last name is Grey.
+
+Unless Jamie is a first name and Grey is last name, which is standard.
+
+Perhaps in some contexts, but I think it's clear.
+
+Maybe Bobbie and Samantha have last names that we need to find, but no, we just need the length.
+
+The question is to find the number of letters in Samantha's last name.
+
+So, I think 7 is the answer.
+
+But let me see if there's any trick.
+
+Another thing: "Bobbie" – is that spelled with 'ie' or 'y'? But it doesn't matter for the length; it's the last name we care about.
+
+Similarly, Samantha is first name, last name is separate.
+
+The problem says "Samantha’s last name", "Bobbie’s last name", so it's clear.
+
+Also, "Jamie’s" in the context refers to Jamie's last name, since it says "Jamie’s" meaning Jamie's last name.
+
+The sentence: "if Bobbie took two letters off her last name, she would have a last name twice the length of Jamie’s."
+
+And "Jamie’s" is possessive, so Jamie’s last name.
+
+And we know it from "Jamie Grey."
+
+So, I think it's fine.
+
+Perhaps "Grey" has 4 letters, but is it including space or something? No, last name is "Grey", so letters are G,R,E,Y.
+
+4 letters.
+
+In some fonts, but no, we count the characters.
+
+So, I think S=7.
+
+But the problem is to box the answer.
+
+So, Samantha's last name has 7 letters.
+
+But is there a possibility that "took two letters off" means something else?
+
+For example, if the last name has repeated letters or something, but the problem doesn't say anything about that, so it's just about the length.
+
+Similarly, "twice the length" is numerical.
+
+So, I think it's straightforward.
+
+Perhaps Jamie's last name is not Grey, but the full name is Jamie Grey, so last name is Grey.
+
+Unless it's a mononym or something, but no, it says "Jamie Grey" so first and last name.
+
+Similarly, Bobbie and Samantha are referred to with first names, but last names are separate.
+
+So, I think no issue.
+
+Therefore, Samantha's last name has 7 letters.
+
+[Final Answer]
+Samantha's last name has three fewer letters than Bobbie's last name. Let \(B\) represent the number of letters in Bobbie's last name. Therefore, the number of letters in Samantha's last name is \(B - 3\).
+
+Jamie's last name is Grey, which has 4 letters (G-R-E-Y).
+
+If Bobbie took two letters off her last name, the new length would be \(B - 2\). This new length is twice the length of Jamie's last name, so:
+\[
+B - 2 = 2 \times 4 = 8
+\]
+Solving for \(B\):
+\[
+B = 8 + 2 = 10
+\]
+Thus, Bobbie's last name has 10 letters.
+
+Samantha's last name has three fewer letters than Bobbie's:
+\[
+10 - 3 = 7
+\]
+Therefore, Samantha's last name has 7 letters.
+
+\boxed{7}
+
+=== Problem 85 ===
+Prompt:
+The profit from a business transaction is shared among 2 business partners, Mike and Johnson in the ratio 2:5 respectively. If Johnson got $2500, how much will Mike have after spending some of his share on a shirt that costs $200?
+[Thought Process]
+I have this problem. Mike and Johnson share a profit in the ratio 2:5. Johnson got $2500, and I need to find out how much Mike has left after spending $200 on a shirt. First, I need to find out how much Mike got originally.
+
+The ratio is 2:5, meaning for every 2 parts that Mike gets, Johnson gets 5 parts. Since Johnson got $2500, which is 5 parts, I can find the value of one part.
+
+So, 5 parts = $2500
+
+Therefore, one part = $2500 / 5 = $500
+
+Now, Mike has 2 parts, so Mike's share = 2 * $500 = $1000
+
+Mike spends $200 on a shirt, so he has left: $1000 - $200 = $800
+
+The question is: "how much will Mike have after spending some of his share on a shirt that costs $200?" So, after spending $200, he has $800 left.
+
+I should double-check the ratio. Ratio 2:5, Johnson has 5 parts = $2500, so one part $500, Mike 2 parts $1000, yes.
+
+I can think in terms of fractions. Total parts = 2 + 5 = 7 parts.
+
+Johnson has 5/7 of the total profit = $2500
+
+So, total profit = $2500 * (7/5) = let's calculate: 2500 / 5 = 500, times 7 = $3500
+
+Then Mike's share is 2/7 of total = 2/7 * 3500 = 2 * 500 = $1000, same as before.
+
+Then, after spending $200, $1000 - $200 = $800.
+
+The problem says "spending some of his share on a shirt," so it's from his share, not from the total or anything.
+
+Also, it says "how much will Mike have," which should be the money he has left.
+
+So, I think $800 is the answer.
+
+But let me see if there's any trick. The ratio is profit shared, and Johnson got $2500, which is his share, and we found Mike's share, then he spends part of it.
+
+Perhaps the spending is after sharing, so it should be straightforward.
+
+Maybe I need to consider if the ratio includes something else, but I don't think so.
+
+Another thing: is the $2500 Johnson's share before or after any spending? The problem says "Johnson got $2500," which should be his share of the profit, before any spending, I assume. Similarly, Mike got his share, then he spends $200.
+
+The question is about Mike spending, not Johnson.
+
+So, I think it's fine.
+
+Perhaps I should express it clearly.
+
+Let me denote:
+
+Let the ratio parts be 2k for Mike and 5k for Johnson.
+
+Johnson's share: 5k = 2500
+
+So, k = 2500 / 5 = 500
+
+Mike's share: 2k = 2 * 500 = 1000
+
+After spending $200, Mike has: 1000 - 200 = 800
+
+So, Mike has $800 left.
+
+The answer should be in dollars, I think.
+
+Perhaps I need to box it as per the instruction.
+
+So, the final answer is 800.
+
+But let me see the question: "how much will Mike have after spending some of his share on a shirt that costs $200?"
+
+Yes, and I have $800.
+
+Perhaps they want the amount he spent or something, but no, it says "how much will Mike have," so it's what he has left.
+
+Maybe I misread the ratio. Ratio 2:5, Mike to Johnson, so Mike has smaller share, which makes sense, Johnson got more.
+
+Johnson got 2500, which is larger, Mike less.
+
+Yes.
+
+If ratio was Johnson to Mike, but it says "Mike and Johnson in the ratio 2:5 respectively," so Mike:Johnson = 2:5.
+
+Yes.
+
+I think it's correct.
+
+[Final Answer]
+The profit is shared between Mike and Johnson in the ratio 2:5, meaning Mike receives 2 parts and Johnson receives 5 parts of the profit.
+
+Given that Johnson received $2500, which corresponds to 5 parts, the value of one part is calculated as:  
+$2500 ÷ 5 = $500 per part.
+
+Mike's share is 2 parts, so:  
+2 × $500 = $1000.
+
+Mike spends $200 on a shirt, so the amount he has left is:  
+$1000 - $200 = $800.
+
+Thus, after spending $200, Mike has $800 remaining.
+
+\boxed{800}
+
+=== Problem 86 ===
+Prompt:
+There are 5 houses on a street, and each of the first four houses has 3 gnomes in the garden. If there are a total of 20 gnomes on the street, how many gnomes does the fifth house have?
+[Thought Process]
+I have this problem: There are 5 houses on a street, and each of the first four houses has 3 gnomes in the garden. If there are a total of 20 gnomes on the street, how many gnomes does the fifth house have?
+
+First, I need to find out how many gnomes are at the fifth house. I know that the first four houses each have 3 gnomes. So, I should calculate how many gnomes those four houses have in total.
+
+If each has 3 gnomes, then for four houses: 4 houses times 3 gnomes each. So, 4 × 3 = 12 gnomes.
+
+Now, the total gnomes on the street are 20. That includes all five houses. So, if the first four have 12 gnomes, then the fifth house must have the rest to make up 20.
+
+So, 20 total minus 12 from the first four: 20 - 12 = 8.
+
+Therefore, the fifth house has 8 gnomes.
+
+I should double-check. First four houses: 4 × 3 = 12 gnomes. Total gnomes: 20. So, 20 - 12 = 8 for the fifth house. That seems right.
+
+The problem says "each of the first four houses has 3 gnomes," and then the fifth house is separate. And total is 20. So, yes.
+
+I think that's straightforward. No tricks here.
+
+So, the fifth house has 8 gnomes.
+
+[Final Answer]
+The first four houses each have 3 gnomes, so the total number of gnomes for these houses is:  
+4 houses × 3 gnomes/house = 12 gnomes.  
+
+The total number of gnomes on the street is 20. Therefore, the number of gnomes at the fifth house is:  
+20 gnomes - 12 gnomes = 8 gnomes.  
+
+Thus, the fifth house has 8 gnomes.  
+
+\boxed{8}
+
+=== Problem 87 ===
+Prompt:
+Tim rides his bike back and forth to work for each of his 5 workdays.  His work is 20 miles away.  He also goes for a weekend bike ride of 200 miles. If he can bike at 25 mph how much time does he spend biking a week?
+[Thought Process]
+Tim rides his bike to work and back for 5 days a week. His work is 20 miles away, so that's 20 miles to work and 20 miles back, so 40 miles per day for work. Since he does this for 5 days, that's 5 times 40 miles.
+
+Let me calculate that: 5 days * 40 miles/day = 200 miles for commuting.
+
+He also goes for a weekend bike ride of 200 miles.
+
+So total miles per week: commuting + weekend ride = 200 + 200 = 400 miles.
+
+Now, he bikes at 25 mph. I need to find out how much time he spends biking. Time is distance divided by speed.
+
+So total time = total distance / speed = 400 miles / 25 mph.
+
+Let me calculate that: 400 divided by 25.
+
+25 times 16 is 400, because 25 * 16 = 400.
+
+So, 400 / 25 = 16 hours.
+
+Is that it? Seems straightforward.
+
+But let me double-check.
+
+Commuting: one way is 20 miles, so round trip is 40 miles per day.
+
+5 days: 5 * 40 = 200 miles.
+
+Weekend ride: 200 miles.
+
+Total distance: 200 + 200 = 400 miles.
+
+Speed: 25 mph.
+
+Time: 400 / 25 = 16 hours.
+
+I should consider if there's any time for breaks or something, but the problem doesn't mention anything, so I think it's just the biking time.
+
+Also, the weekend ride might be on one day or split, but since we're only concerned with time biking, and speed is constant, it shouldn't matter.
+
+Similarly, commuting is daily, but again, distance and speed give time.
+
+So, I think 16 hours is the answer.
+
+But let me write it out.
+
+Total time biking per week: 16 hours.
+
+The question says "how much time does he spend biking a week?" and I have it in hours.
+
+I should specify units.
+
+But in the answer, it should be fine.
+
+Perhaps I should express it in hours and minutes or something, but 16 hours is fine.
+
+16 hours is 16 hours.
+
+Since it's a whole number, no need for minutes.
+
+Another thing: is the speed constant? The problem says "he can bike at 25 mph," so I assume he bikes at that speed for all trips.
+
+No indication otherwise.
+
+So, I think that's it.
+
+[Final Answer]
+Tim bikes 20 miles to work and 20 miles back each workday, resulting in a daily commute of 40 miles. Over 5 workdays, this totals \(5 \times 40 = 200\) miles.
+
+Additionally, he goes for a weekend bike ride of 200 miles.
+
+The total distance biked in a week is \(200 + 200 = 400\) miles.
+
+Tim bikes at a constant speed of 25 mph. The time spent biking is calculated as distance divided by speed:  
+\[
+\frac{400 \text{ miles}}{25 \text{ mph}} = 16 \text{ hours}.
+\]
+
+Thus, Tim spends 16 hours biking each week.
+
+\boxed{16}
+
+=== Problem 88 ===
+Prompt:
+Tina makes $18.00 an hour.  If she works more than 8 hours per shift, she is eligible for overtime, which is paid by your hourly wage + 1/2 your hourly wage.  If she works 10 hours every day for 5 days, how much money does she make?
+[Thought Process]
+Tina makes $18.00 an hour normally. For overtime, which is any time over 8 hours per shift, she gets her hourly wage plus half of it. So overtime pay is $18 + $9 = $27 per hour, since half of $18 is $9.
+
+She works 10 hours every day for 5 days. So each day, she works 8 hours at the regular rate and 2 hours at the overtime rate because 10 - 8 = 2 hours overtime.
+
+First, calculate her earnings for one day.
+
+Regular pay for 8 hours: 8 hours * $18/hour = $144
+
+Overtime pay for 2 hours: 2 hours * $27/hour = $54
+
+So total for one day: $144 + $54 = $198
+
+Since she works 5 days, multiply that by 5: $198 * 5 = $990
+
+I should double-check that.
+
+Another way: total hours in a week or something, but it's per shift, daily overtime.
+
+Total regular hours: 8 hours/day * 5 days = 40 hours
+
+Total overtime hours: 2 hours/day * 5 days = 10 hours
+
+Regular pay: 40 hours * $18 = $720
+
+Overtime pay: 10 hours * $27 = $270
+
+Total: $720 + $270 = $990
+
+Same answer.
+
+Overtime is sometimes calculated as time and a half, which is 1.5 times the regular rate. $18 * 1.5 = $27, yes, that's correct.
+
+So, she makes $990.
+
+The question is for 5 days, each with 10 hours, so yes.
+
+I think that's straightforward.
+
+Let me confirm the overtime: "paid by your hourly wage + 1/2 your hourly wage" so that's wage + half wage, which is 1.5 times, yes.
+
+And it's daily overtime, since it says "per shift."
+
+So, for each day, overtime is based on exceeding 8 hours.
+
+Yes.
+
+I think $990 is correct.
+
+But let me see if there's any trick.
+
+Tina makes $18.00 an hour. Works 10 hours a day for 5 days.
+
+Overtime for hours over 8.
+
+So, 5 days * 10 hours = 50 hours total.
+
+But not all at regular rate.
+
+Regular hours: 5 days * 8 hours = 40 hours
+
+Overtime hours: 5 days * 2 hours = 10 hours
+
+Pay: 40 * 18 + 10 * 18 * 1.5
+
+10 * 18 * 1.5 = 10 * 27 = 270, same as before.
+
+40 * 18 = 720
+
+720 + 270 = 990
+
+If I do 50 hours at regular rate: 50 * 18 = 900, but she gets extra for overtime, so it should be more than 900, which 990 is.
+
+The extra is for the overtime hours, she gets half more, so for 10 hours, she gets an additional 10 * 9 = $90, so 900 + 90 = 990, same thing.
+
+Yes.
+
+I think it's solid.
+
+[Final Answer]
+Tina earns $18.00 per hour for the first 8 hours of her shift. For any hours worked beyond 8 hours, she receives overtime pay, which is calculated as her hourly wage plus half her hourly wage.  
+- Half of $18.00 is $9.00, so overtime pay is $18.00 + $9.00 = $27.00 per hour.  
+
+Each day, Tina works 10 hours:  
+- Regular hours: 8 hours  
+- Overtime hours: 10 hours - 8 hours = 2 hours  
+
+**Daily earnings:**  
+- Regular pay: 8 hours × $18.00/hour = $144.00  
+- Overtime pay: 2 hours × $27.00/hour = $54.00  
+- Total per day: $144.00 + $54.00 = $198.00  
+
+Over 5 days:  
+- Total earnings: $198.00/day × 5 days = $990.00  
+
+**Alternative calculation:**  
+- Total regular hours: 8 hours/day × 5 days = 40 hours  
+- Total overtime hours: 2 hours/day × 5 days = 10 hours  
+- Regular pay: 40 hours × $18.00/hour = $720.00  
+- Overtime pay: 10 hours × $27.00/hour = $270.00  
+- Total earnings: $720.00 + $270.00 = $990.00  
+
+Thus, Tina makes $990.00 for the week.
+
+=== Problem 89 ===
+Prompt:
+Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?
+[Thought Process]
+Tobias is buying shoes that cost $95. After buying them, he has $15 left, so he must have had $95 + $15 = $110 before buying the shoes. That makes sense because if he spends $95 and has $15 left, total money was $110.
+
+He saved up for three months. He gets a $5 allowance each month, so for three months, that's 3 * $5 = $15 from allowance.
+
+He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel a driveway.
+
+He mowed 4 lawns. So, from mowing lawns, he earned 4 * $15 = $60.
+
+Let D be the number of driveways he shoveled. So, from shoveling, he earned 7 * D dollars.
+
+His total earnings include allowance, lawn mowing, and driveway shoveling.
+
+Allowance: $15
+
+Lawn mowing: $60
+
+Driveway shoveling: $7D
+
+Total money = allowance + lawn mowing + driveway shoveling = 15 + 60 + 7D
+
+But we know total money is $110.
+
+So,
+
+15 + 60 + 7D = 110
+
+Simplify that:
+
+75 + 7D = 110
+
+Now, subtract 75 from both sides:
+
+7D = 110 - 75
+
+7D = 35
+
+Then, D = 35 / 7
+
+D = 5
+
+So, he shoveled 5 driveways.
+
+Let me double-check.
+
+Allowance: $5/month * 3 months = $15
+
+Lawn mowing: 4 lawns * $15 = $60
+
+Driveway shoveling: 5 driveways * $7 = $35
+
+Total: 15 + 60 = 75; 75 + 35 = 110
+
+Shoes cost $95, so after buying, 110 - 95 = 15, which matches the $15 left.
+
+Perfect.
+
+[Final Answer]
+Tobias had $110 before buying the shoes, since the shoes cost $95 and he had $15 left afterward ($95 + $15 = $110).
+
+He saved for three months with a $5 monthly allowance, so his allowance income is $5 \times 3 = $15$.
+
+He mowed 4 lawns at $15 per lawn, earning $4 \times 15 = $60$.
+
+Let \(D\) be the number of driveways he shoveled. He charges $7 per driveway, so his shoveling income is $7D$.
+
+His total income is the sum of his allowance, lawn mowing, and driveway shoveling:
+\[
+15 + 60 + 7D = 110
+\]
+
+Simplify the equation:
+\[
+75 + 7D = 110
+\]
+
+Subtract 75 from both sides:
+\[
+7D = 35
+\]
+
+Divide both sides by 7:
+\[
+D = 5
+\]
+
+Thus, Tobias shoveled 5 driveways.
+
+**Verification:**
+- Allowance: $15
+- Lawn mowing: $60
+- Driveway shoveling: $5 \times 7 = $35
+- Total: $15 + $60 + $35 = $110
+- After buying shoes: $110 - $95 = $15 (matches the given information).
+
+\boxed{5}
+
+=== Problem 90 ===
+Prompt:
+Weng earns $12 an hour for babysitting. Yesterday, she just did 50 minutes of babysitting. How much did she earn?
+[Thought Process]
+Weng earns $12 per hour for babysitting. She babysat for 50 minutes yesterday, and I need to find out how much she earned. Since the rate is in dollars per hour, but the time is in minutes, I should convert everything to the same units. There are 60 minutes in an hour, so 50 minutes is less than an hour.
+
+First, I'll figure out what fraction of an hour 50 minutes is. So, 50 minutes out of 60 minutes is 50/60. I can simplify that fraction. Both 50 and 60 can be divided by 10, so 50 ÷ 10 = 5 and 60 ÷ 10 = 6, so it's 5/6 of an hour.
+
+If she earns $12 for one full hour, then for 5/6 of an hour, she should earn (5/6) of $12. To find that, I multiply 5/6 by 12.
+
+So, (5/6) * 12. I can think of this as 5 * 12 / 6. 12 divided by 6 is 2, and then 5 times 2 is 10. So, that would be $10.
+
+Let me double-check. (5/6) * 12 = 5 * (12/6) = 5 * 2 = 10. Yes, that seems right.
+
+I could also calculate it as 12 * 5 / 6. 12/6 is 2, times 5 is 10. Same thing.
+
+Since 50 minutes is 50/60, which is 5/6, and 5/6 of $12.
+
+Another way: find out how much she earns per minute and then multiply by the number of minutes.
+
+She earns $12 per hour. One hour has 60 minutes, so per minute, it's 12 / 60 = $0.20 per minute.
+
+12 divided by 60 is 0.2, which is $0.20, or 20 cents per minute.
+
+Then, for 50 minutes, 50 * 0.20 = $10.00.
+
+50 * 0.2 = 10, yes.
+
+So, both ways, I get $10.
+
+The question is straightforward, and I think $10 is the answer.
+
+But let me make sure about the units. She earned $12 an hour, and 50 minutes is 50/60 hours, which is approximately 0.833 hours, and 0.833 * 12 = let's see, 0.833 * 10 = 8.33, 0.833 * 2 = 1.666, total 8.33 + 1.666 = 9.996, which is about $10, yes.
+
+Exactly, 5/6 * 12 = 60/6 = 10, no, (5/6)*12 = 60/6? 5/6 * 12 = (5*12)/6 = 60/6 = 10. Yes, exactly $10.
+
+So, I think it's correct.
+
+[Final Answer]
+Weng earns $12 per hour for babysitting. To calculate her earnings for 50 minutes, first convert the time to hours. Since there are 60 minutes in an hour, 50 minutes is \( \frac{50}{60} = \frac{5}{6} \) hours.
+
+Her earnings are then calculated as follows:  
+\[ \text{Earnings} = \frac{5}{6} \times 12 = \frac{5 \times 12}{6} = \frac{60}{6} = 10 \]  
+
+Thus, Weng earned $10 for 50 minutes of babysitting.
+
+Alternatively, calculate the per-minute rate:  
+\[ \text{Per-minute rate} = \frac{12}{60} = 0.20 \text{ dollars per minute} \]  
+For 50 minutes:  
+\[ \text{Earnings} = 50 \times 0.20 = 10 \]  
+
+Both methods confirm that Weng earned $10.
+

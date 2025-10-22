@@ -1,0 +1,371 @@
+=== Cleaning Problem 21 ===
+
+
+```python
+from z3 import *
+
+# Define constants
+apple_weight_g = 20  # Apple weight in grams
+num_pears = 2        # Number of pears my friend has
+half_pears = num_pears / 2  # 1.0 pear equivalent
+basket_weight_oz = 80       # Total weight in ounces
+
+# Convert ounces to grams (1 oz = 28.3495 g)
+basket_weight_g = basket_weight_oz * 28.3495
+
+# Create solver and variable
+solver = Solver()
+X = Real('X')  # Weight of a single pear in grams
+
+# Add constraint: total weight = apple + half pears
+solver.add(apple_weight_g + (X * half_pears) == basket_weight_g)
+
+# Solve the model
+solution = solver.check()
+
+# Check if a solution exists
+if solution == sat:
+    model = solver.model()
+    pear_weight = model[X].as_decimal(6)  # Get value with 6 decimal places
+    print(f"The weight of a single pear is: {pear_weight} grams")
+else:
+    print("No solution found.")
+```
+=== Cleaning Problem 22 ===
+
+
+```python
+from z3 import *
+
+# Define variables properly
+n = Int('n')  # Weight of one orange in grams
+w = Real('w') # Weight of the watermelon slice in grams
+p = Real('p') # Weight of the plate in grams
+
+# Create solver
+s = Solver()
+
+# Add constraints
+s.add(n > 0)  # Orange weight must be positive
+s.add(w >= 0) # Watermelon slice weight must be non-negative
+s.add(p >= 0) # Plate weight must be non-negative
+
+# Equations based on the problem
+# Initial: 3 oranges on plate = 3n + p
+# After eating 1/3 of one orange: 3n - n/3 = 8n/3 oranges remaining
+# After adding watermelon: 8n/3 + w + p = 1100g
+# Plate weight: p = 400g
+
+s.add(p == 400)
+s.add((8 * n) / 3 + w + p == 1100)
+
+# Solve the model
+if s.check() == sat:
+    solution = s.model()
+    n_value = solution[n]
+    w_value = solution[w]
+    p_value = solution[p]
+    
+    print(f"The weight of one orange is {n_value} grams.")
+    print(f"The weight of the watermelon slice is {w_value} grams.")
+    print(f"The weight of the plate is {p_value} grams.")
+else:
+    print("No solution found.")```
+=== Cleaning Problem 23 ===
+
+
+```python
+from z3 import *
+
+# Create a solver instance
+s = Solver()
+
+# Define the weight of one full rod in kg (x)
+x = Real('x')
+
+# Given:
+# - Original bucket weight: 2 kg
+# - After adding half a rod: 2.8 kg
+# So: 2 + (x/2) = 2.8
+s.add(2 + (x/2) == 2.8)
+
+# Check if the problem is solvable
+if s.check() == sat:
+    m = s.model()
+    rod_weight_kg = m[x].as_decimal(6)
+    rod_weight_g = float(rod_weight_kg) * 1000
+    print(int(rod_weight_g))
+else:
+    print("No solution found")
+```
+=== Cleaning Problem 24 ===
+
+
+```python
+bottle_volume = 1.5
+milk_fraction = 0.5
+milk_density = 1.03
+water_density = 1.00
+
+milk_volume = bottle_volume * milk_fraction
+water_volume = bottle_volume - milk_volume
+
+milk_weight = milk_volume * milk_density
+water_weight = water_volume * water_density
+
+total_weight = milk_weight + water_weight
+```
+=== Cleaning Problem 25 ===
+
+
+```python
+from z3 import *
+
+# Define symbolic variables
+jar_weight = Int("jar_weight")
+cookie_weight = Int("cookie_weight")
+num_cookies = Int("num_cookies")
+
+# Create solver
+solver = Solver()
+
+# Add constraints based on the problem
+solver.add(jar_weight == 300)           # Jar weighs 300g
+solver.add(num_cookies == 5)            # There are 5 cookies initially
+solver.add(jar_weight + num_cookies * cookie_weight == 950)  # Total weight is 950g
+
+# After eating 2 cookies, there are 3 cookies left
+remaining_cookies = num_cookies - 2
+new_total_weight = jar_weight + remaining_cookies * cookie_weight
+
+# Check if the new total weight is 650g (not 930g as in your original code)
+# 950g total - 2 cookies = 950 - 2*(cookie_weight)
+# If cookie_weight = (950-300)/5 = 650/5 = 130g
+# Then new weight = 300 + 3*130 = 300 + 390 = 690g
+solver.add(new_total_weight == 690)  # Corrected based on the math
+
+# Solve the model
+if solver.check() == sat:
+    solution = solver.model()
+    cookie_weight_value = solution[cookie_weight]
+    jar_weight_value = solution[jar_weight]
+    num_cookies_value = solution[num_cookies]
+    
+    print(f"Cookie weight: {cookie_weight_value}g")
+    print(f"Jar weight: {jar_weight_value}g") 
+    print(f"Initial number of cookies: {num_cookies_value}")
+    print(f"New total weight: {solution.evaluate(new_total_weight)}g")
+else:
+    print("No solution found.")
+```
+=== Cleaning Problem 26 ===
+
+
+```python
+from z3 import *
+
+gold_weight = 1.2 * 1000  # convert kg to g
+removed_gold = 150
+added_silver = 350
+final_weight = 1.4 * 1000  # convert kg to g
+
+# Calculate remaining gold and verify total weight
+remaining_gold = gold_weight - removed_gold
+calculated_weight = remaining_gold + added_silver
+
+# Density ratio is (gold_weight/remaining_gold) / (added_silver/added_silver)
+# Which simplifies to (gold_weight/remaining_gold) / 1
+density_ratio = gold_weight / remaining_gold
+
+print(density_ratio)
+```
+=== Cleaning Problem 27 ===
+
+
+```python
+from z3 import *
+
+# Create a solver instance
+s = Solver()
+
+# Define variables
+air_per_tire = Real('air_per_tire')
+total_weight = 820 + 4 * (9.8 + air_per_tire)
+
+# Add constraints
+s.add(total_weight == 859.2)
+
+# Solve and get result
+if s.check() == sat:
+    m = s.model()
+    print(m[air_per_tire].as_decimal(6))
+```
+=== Cleaning Problem 28 ===
+
+
+```python
+bag1 = 2.5
+bag2 = bag1 + 0.8
+bag3 = bag2 - 0.3
+total_weight = bag1 + bag2 + bag3
+```
+=== Cleaning Problem 29 ===
+
+
+```python
+heaviest = 2.4
+other_tools = [heaviest * 0.75 for _ in range(4)]
+total_kg = heaviest + sum(other_tools)
+total_grams = total_kg * 1000
+```
+=== Cleaning Problem 30 ===
+
+
+```python
+from z3 import *
+
+eggs = 3
+egg_weight = 60
+flour_weight = 180
+
+total_weight = eggs * egg_weight + flour_weight
+remaining_weight = total_weight - (total_weight * (1/4))
+
+solver = Solver()
+solver.add(remaining_weight == total_weight * (3/4))
+result = solver.check()
+
+if result == sat:
+    print(int(total_weight * (3/4)))
+```
+=== Cleaning Problem 31 ===
+
+
+```python
+oil_weight_per_liter = 920
+oil_volume = 750
+oil_mass = oil_volume * (oil_weight_per_liter / 1000)
+onion_mass = 300
+total_weight = oil_mass + onion_mass
+print(total_weight)
+```
+=== Cleaning Problem 32 ===
+
+
+```python
+from z3 import *
+
+x = Int('x')  # weight of one chair
+y = Int('y')  # weight of the table
+
+solve(2*x + y == 35, x + y + (x - 3) == 32)
+```
+=== Cleaning Problem 33 ===
+
+
+```python
+from z3 import *
+
+s = 3 + 2  # original total weight
+u = 0.5   # sugar used
+a = 1.25  # salt used
+
+remaining = s - u - a
+percentage = (remaining / s) * 100
+
+print(percentage)
+```
+=== Cleaning Problem 34 ===
+
+
+```python
+total_cans = 4
+full_weight_per_can = 1.6
+percentage_remaining = 0.6
+total_remaining_weight = total_cans * full_weight_per_can * percentage_remaining
+```
+=== Cleaning Problem 35 ===
+
+
+```python
+def solve():
+  # Let 'b' be the weight of the box in grams.
+  # Let 'p' be the weight of a single pencil in grams.
+
+  # We have two equations:
+  # 1) b + 10p = 230
+  # 2) b = 50
+
+  # Substitute b = 50 into equation 1:
+  # 50 + 10p = 230
+  # 10p = 180
+  # p = 18
+
+  # Now we have the weight of a single pencil (p = 18g).
+
+  # If 4 pencils are removed, we have 6 pencils remaining.
+  # The new total weight is b + 6p.
+
+  b = 50
+  p = 18
+  new_weight = b + 6 * p
+
+  print(new_weight)
+
+solve()
+```
+=== Cleaning Problem 37 ===
+
+
+```python
+from z3 import *
+
+bucket_capacity = 5
+bucket_weight_full = 5.3
+bucket_weight_empty = 800
+
+d = Real('d')
+s = Solver()
+s.add(d == (bucket_weight_full * 1000 - bucket_weight_empty) / (bucket_capacity * 1000))
+s.check()
+s.model()[d]
+```
+=== Cleaning Problem 38 ===
+
+
+```python
+from z3 import *
+
+cat = Int('cat')
+dog = Int('dog')
+
+solver = Solver()
+solver.add(cat + dog == 22)
+solver.add(dog == cat + 8)
+
+if solver.check() == sat:
+    model = solver.model()
+    print(model[cat])
+```
+=== Cleaning Problem 39 ===
+
+
+```python
+total_dough = 2.4 * 1000  # convert kg to grams
+bun_weight = total_dough / 8
+stored_buns = 8 - 5
+stored_dough = stored_buns * bun_weight
+print(stored_dough)
+```
+=== Cleaning Problem 40 ===
+
+
+```python
+from z3 import *
+
+f = 900
+d = f / 3
+o = 150
+result = d + o
+print(result)
+```

@@ -1,0 +1,5 @@
+Problem 85:
+The profit from a business transaction is shared among 2 business partners, Mike and Johnson in the ratio 2:5 respectively. If Johnson got $2500, how much will Mike have after spending some of his share on a shirt that costs $200?
+
+sat[mike_remaining = 800, shirt_cost = 200, johnson_share = 2500, mike_share = 1000, unit_share = 500]
+800

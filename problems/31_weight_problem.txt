@@ -1,0 +1,5 @@
+Problem 31:
+If one liter of oil weighs 920g and a chef pours 750 ml into a pan, then adds 300g of chopped onions, what is the total weight of the pan contents in grams?
+
+
+990

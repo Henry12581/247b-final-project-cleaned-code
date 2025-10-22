@@ -1,0 +1,9 @@
+Score: 24/30
+
+Wrong Problems:
+69. Predicted: 53 | Correct: 43
+70. Predicted: 8 | Correct: 16
+72. Predicted: 620000.0 | Correct: 448000
+74. ERROR parsing prediction or gold line
+77. ERROR parsing prediction or gold line
+84. Predicted: 9 | Correct: 7

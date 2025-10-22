@@ -1,0 +1,5 @@
+Problem 3:
+Estimate ∛(27π²)
+
+Result:
+6.435088191333076

@@ -1,0 +1,20 @@
+1. π^π^2 ≈ 80662.6659385545
+2. Simplification is correct: (e^{ln 3})^2 = 9
+3. 6.44
+4. 2.1714724095162588
+5. 3.375
+6. 7.999999999999999
+7. The value of (16/81)^(1/4) is: 3333333333333333/5000000000000000
+8. π^√2 ≈ 5.047497267370911
+9. √2 × √3 is equal to √6
+10. Error: name 'Log' is not defined
+11. 125
+12. Approximation of e^π: 23.140692632779263
+13. unsat
+14. e^π is larger than π^e (True)
+15. 
+16. The value of sqrt(49 / 121) is: 0.6363636363?
+17. The expressions are equivalent.
+18. Error: name 'Log' is not defined
+19. 5
+20. 17.0

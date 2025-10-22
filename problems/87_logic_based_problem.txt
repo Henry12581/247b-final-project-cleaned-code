@@ -1,0 +1,5 @@
+Problem 87:
+Tim rides his bike back and forth to work for each of his 5 workdays.  His work is 20 miles away.  He also goes for a weekend bike ride of 200 miles. If he can bike at 25 mph how much time does he spend biking a week?
+
+sat[workdays = 5, work_distance = 20, total_work_distance = 200, weekend_distance = 200, bike_speed = 25, total_distance = 400, total_hours = 16]
+16

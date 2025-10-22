@@ -1,0 +1,566 @@
+== Problem 1 ===
+Prompt:
+Evaluate π^{π^2}
+Response:
+```python
+import math
+
+def evaluate_expression():
+    pi = math.pi
+    result = round(pi ** (pi ** 2), 10)
+    return result
+
+print(evaluate_expression())
+```
+
+```python
+<code>
+```
+
+=
+```python
+import math
+
+def evaluate_expression():
+    pi = math.pi
+    result = round(pi ** (pi ** 2), 10)
+    return result
+
+print(evaluate_expression())
+```
+
+== Problem 2 ===
+Prompt:
+Simplify (e^{ln 3})^2
+Response:
+```python
+import math
+
+def simplify_expression():
+    num = math.exp(math.log(3))
+    result = num ** 2
+    return result
+
+print(simplify_expression())
+```
+
+```python
+<code>
+```
+
+=
+```python
+import math
+
+def simplify_expression():
+    num = math.exp(math.log(3))
+    result = num ** 2
+    return result
+
+print(simplify_expression())
+```
+
+== Problem 3 ===
+Prompt:
+Estimate ∛(27π²)
+Response:
+```python
+import math
+
+def estimate_cubic_root():
+    return round((27 * math.pi**2)**(1/3), 4)
+
+print(estimate_cubic_root())
+```
+
+```python
+<code>
+```
+
+=
+```python
+import math
+
+def estimate_cubic_root():
+    return round((27 * math.pi**2)**(1/3), 4)
+
+print(estimate_cubic_root())
+```
+
+== Problem 4 ===
+Prompt:
+Compute log₁₀(e^5)
+Response:
+```python
+import math
+
+result = round(math.log(10**5, 10))
+print(result)
+```
+
+```python
+import numpy as np
+
+result = round(np.log10(10**5))
+print(result)
+```
+
+=
+```python
+import math
+
+result = math.log(math.exp(5), 10)
+print(result)
+```
+
+== Problem 5 ===
+Prompt:
+Evaluate (9/4)^(3/2)
+Response:
+```python
+import math
+
+result = (9 / 4) ** (3 / 2)
+print(result)
+```
+
+```python
+import cmath
+
+result = (9 / 4) ** (3j / 2)
+print(cmath.polar(result)[0])
+```
+
+=
+```python
+result = (9 / 4) ** (3 / 2)
+print(result)
+```
+
+== Problem 6 ===
+Prompt:
+Simplify (√50 + √18) / √2
+Response:
+```python
+import sympy as sp
+
+x = sp.sqrt(50)
+y = sp.sqrt(18)
+z = sp.sqrt(2)
+
+expr = (x + y) / z
+
+simplified_expr = sp.simplify(expr)
+
+print(simplified_expr)
+```
+
+```python
+5*sp.sqrt(2)+3
+```
+
+=
+```python
+import sympy as sp
+
+x = sp.sqrt(50)
+y = sp.sqrt(18)
+z = sp.sqrt(2)
+
+expr = (x + y) / z
+
+simplified_expr = sp.simplify(expr)
+
+print(simplified_expr)
+```
+
+== Problem 7 ===
+Prompt:
+Find the value of (16/81)^(1/4)
+Response:
+```python
+import math
+
+result = (16 / 81) ** (1 / 4)
+print(result)
+```
+
+```python
+0.25
+
+=
+```python
+import math
+
+result = (16 / 81) ** (1 / 4)
+print(result)
+```
+
+== Problem 8 ===
+Prompt:
+Evaluate π^√2
+Response:
+```python
+import math
+
+result = round(math.pi ** (math.sqrt(2)), 10)
+print(result)
+```
+
+```python
+import numpy as np
+
+result = round(np.pi ** (np.sqrt(2)), 10)
+print(result)
+```
+
+=
+```python
+import math
+
+result = round(math.pi ** (math.sqrt(2)), 10)
+print(result)
+```
+
+== Problem 9 ===
+Prompt:
+Check if √2 × √3 == √6
+Response:
+```python
+import math
+
+result1 = math.sqrt(2) * math.sqrt(3)
+result2 = math.sqrt(6)
+
+print(result1 == result2)
+```
+
+```python
+False
+```
+
+=
+```python
+import math
+
+result1 = math.sqrt(2) * math.sqrt(3)
+result2 = math.sqrt(6)
+
+print(result1 == result2)
+```
+
+== Problem 10 ===
+Prompt:
+Simplify ln(e^{2x}) - ln(e^x) for x = 1
+Response:
+```python
+import math
+
+def simplify_expression(x):
+    return math.log(math.exp(2*x)) - math.log(math.exp(x))
+
+print(simplify_expression(1))
+```
+
+```python
+0.6931471805599453
+```
+
+=
+```python
+import math
+
+def simplify_expression(x):
+    return math.log(math.exp(2*x)) - math.log(math.exp(x))
+
+print(simplify_expression(1))
+```
+
+== Problem 11 ===
+Prompt:
+Find the value of (2^{log₂5})^3
+Response:
+```python
+import math
+
+def find_value():
+    base = 2
+    exponent = math.log(5, base)
+    result = (base ** exponent) ** 3
+    return result
+
+print(find_value())
+```
+
+```python
+import math
+
+def find_value():
+    base = 2
+    exponent = math.log(5, base)
+    result = (base ** exponent) ** 3
+    return round(result)
+
+print(find_value())
+```
+
+=
+```python
+import math
+
+def find_value():
+    base = 2
+    exponent = math.log(5, base)
+    result = (base ** exponent) ** 3
+    return result
+
+print(find_value())
+```
+
+== Problem 12 ===
+Prompt:
+Approximate e^π
+Response:
+```python
+import math
+
+def approximate_e_pi():
+    return round(math.e ** math.pi, 5)
+
+print(approximate_e_pi())
+```
+
+```python
+import math
+
+def approximate_e_pi():
+    n = 1000000
+    sum = 0.0
+    for i in range(n):
+        sign = (-1) ** i
+        sum += (sign / (2 * i + 1))
+    return round(4 * sum, 5)
+
+print(approximate_e_pi())
+```
+
+=
+```python
+import math
+
+def approximate_e_pi():
+    return round(math.e ** math.pi, 5)
+
+print(approximate_e_pi())
+```
+
+== Problem 13 ===
+Prompt:
+Simplify and evaluate (√3 × √12)^2
+Response:
+```python
+import math
+
+result = (math.sqrt(3) * math.sqrt(12)) ** 2
+print(result)
+```
+
+```python
+import sympy
+
+result = sympy.simplify((sympy.sqrt(3) * sympy.sqrt(12)) ** 2)
+print(result)
+```
+
+=
+```python
+import math
+
+result = (math.sqrt(3) * math.sqrt(12)) ** 2
+print(result)
+```
+
+== Problem 14 ===
+Prompt:
+Compare π^e vs e^π (True = e^π is larger)
+Response:
+```python
+import math
+
+pi_e = math.pi ** math.e
+e_pi = math.e ** math.pi
+
+if e_pi > pi_e:
+    print("True")
+else:
+    print("False")
+```
+
+=
+```python
+import math
+
+pi_e = math.pi ** math.e
+e_pi = math.e ** math.pi
+
+if e_pi > pi_e:
+    print("True")
+else:
+    print("False")
+```
+
+== Problem 15 ===
+Prompt:
+Evaluate (1/√2)^4
+Response:
+```python
+import math
+
+result = (1/math.sqrt(2))**4
+print(result)
+```
+
+```python
+0.5
+
+
+=
+```python
+import math
+
+result = (1/math.sqrt(2))**4
+print(result)
+```
+
+== Problem 16 ===
+Prompt:
+Compute √(49/121)
+Response:
+```python
+import math
+
+result = math.sqrt(49 / 121)
+print(result)
+```
+
+```python
+import decimal
+
+decimal.getcontext().prec = 10
+result = decimal.Decimal(49) / decimal.Decimal(121)
+result = result ** 0.5
+print(result)
+```
+
+=
+```python
+import math
+
+result = math.sqrt(49 / 121)
+print(result)
+```
+
+== Problem 17 ===
+Prompt:
+Rationalize 1 / (√5 - 2)
+Response:
+```python
+import sympy as sp
+
+x = sp.symbols('x')
+expr = 1 / (sp.sqrt(5) - 2)
+rationalized_expr = expr * (sp.sqrt(5) + 2) / (sp.sqrt(5) + 2)
+simplified_expr = sp.simplify(rationalized_expr)
+print(simplified_expr)
+```
+
+=
+```python
+import sympy as sp
+
+x = sp.symbols('x')
+expr = 1 / (sp.sqrt(5) - 2)
+rationalized_expr = expr * (sp.sqrt(5) + 2) / (sp.sqrt(5) + 2)
+simplified_expr = sp.simplify(rationalized_expr)
+print(simplified_expr)
+```
+
+== Problem 18 ===
+Prompt:
+Evaluate 10^{log₁₀(7.5)}
+Response:
+```python
+import math
+
+result = 10 ** math.log10(7.5)
+print(result)
+```
+
+```python
+import numpy as np
+
+result = 10 ** np.log10(7.5)
+print(result)
+```
+
+=
+```python
+import math
+
+result = 10 ** math.log10(7.5)
+print(result)
+```
+
+== Problem 19 ===
+Prompt:
+Simplify log₂(8) + log₂(4)
+Response:
+```python
+import math
+
+def simplify_log():
+    return math.log2(8) + math.log2(4)
+
+print(simplify_log())
+```
+
+```python
+import math
+
+def simplify_log():
+    return math.log2(8 * 4)
+
+print(simplify_log())
+```
+
+=
+```python
+import math
+
+def simplify_log():
+    return math.log2(8) + math.log2(4)
+
+print(simplify_log())
+```
+
+== Problem 20 ===
+Prompt:
+Evaluate (27^{1/3})^2 + (16^{1/4})^3
+Response:
+```python
+import math
+
+result = round(math.pow(27, 1/3))**2 + round(math.pow(16, 1/4))**3
+print(result)
+```
+
+```python
+<code>
+```
+```python
+import math
+
+result = round(math.pow(27, 1/3))**2 + round(math.pow(16, 1/4))**3
+print(result)
+```
+

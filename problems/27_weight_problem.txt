@@ -1,0 +1,5 @@
+Problem 27:
+A car tire weighs 9.8 kg. Four identical tires are mounted on a car that otherwise weighs 820 kg. If a digital scale shows 859.2 kg, how much air (by weight) is added to each tire?
+
+
+0

@@ -1,0 +1,5 @@
+Problem 28:
+You have 3 bags of rice. The first weighs 2.5 kg, the second is 800 g heavier, and the third is 300 g lighter than the second. What is the total weight in kilograms?
+
+
+8.8

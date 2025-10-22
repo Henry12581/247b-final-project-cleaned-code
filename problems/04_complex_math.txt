@@ -1,0 +1,5 @@
+Problem 4:
+Compute log₁₀(e^5)
+
+Result:
+2.171472409516259

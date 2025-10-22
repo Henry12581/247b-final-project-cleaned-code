@@ -1,0 +1,5 @@
+Problem 80:
+Mrs. Snyder used to spend 40% of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25% of her monthly income. How much was her previous monthly income?
+
+sat[rent = 400, initial_income = 1000, final_rent_percent = 1/4, income_increase = 600, initial_rent_percent = 2/5]
+1000

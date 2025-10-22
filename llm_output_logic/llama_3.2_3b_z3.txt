@@ -1,0 +1,745 @@
+=== Problem 61 ===
+Prompt:
+A deep-sea monster rises from the waters once every hundred years to feast on a ship and sate its hunger. Over three hundred years, it has consumed 847 people. Ships have been built larger over time, so each new ship has twice as many people as the last ship. How many people were on the ship the monster ate in the first hundred years?
+Response:
+```python
+# Define the variables
+total_people = 847
+years = 300
+monster_frequency = 100
+
+# Calculate the number of ships consumed by the monster
+num_ships = total_people / (2 ** ((years - monster_frequency) // monster_frequency))
+
+# Calculate the number of people on the first ship
+people_on_first_ship = total_people / num_ships
+
+print(people_on
+
+=== Problem 62 ===
+Prompt:
+Albert is wondering how much pizza he can eat in one day. He buys 2 large pizzas and 2 small pizzas. A large pizza has 16 slices and a small pizza has 8 slices. If he eats it all, how many pieces does he eat that day?
+Response:
+```python
+from z3 import *
+
+# Define the number of slices in each type of pizza
+large_pizza_slices = 16
+small_pizza_slices = 8
+
+# Define the total number of pizzas Albert buys
+num_large_pizzas = 2
+num_small_pizzas = 2
+
+# Calculate the total number of slices
+total_slices = large_pizza_slices * num_large_pizzas + small_pizza_slices * num_small_pizzas
+
+# Print the result
+print(total
+
+=== Problem 63 ===
+Prompt:
+Alexis is applying for a new job and bought a new set of business clothes to wear to the interview. She went to a department store with a budget of $200 and spent $30 on a button-up shirt, $46 on suit pants, $38 on a suit coat, $11 on socks, and $18 on a belt. She also purchased a pair of shoes, but lost the receipt for them. She has $16 left from her budget. How much did Alexis pay for the shoes?
+Response:
+Here is the Z3 code in Python:
+
+```python
+from z3 import *
+
+# Define the variables
+budget = 200
+shirt_cost = 30
+pants_cost = 46
+coat_cost = 38
+socks_cost = 11
+belt_cost = 18
+shoes_cost = Int('shoes_cost') # unknown cost
+
+# Set up the equation based on Alexis's remaining budget
+remaining_budget = budget - (shirt_cost + pants_cost + coat_cost + socks_cost + belt_cost) + shoes_cost
+eq = And(remaining_budget, Eq(remaining_budget, 16))
+
+# Solve for shoes_cost
+sol = solve(eq)
+
+print("The cost of the shoes is: ", sol[shoes_cost])
+```
+
+This code defines a variable `shoes_cost` as an integer and sets up an equation based on Alexis's remaining budget. The equation states that the sum of all costs minus the shoes cost, plus the shoes cost, equals her remaining budget. It then solves for the value of `shoes
+
+=== Problem 64 ===
+Prompt:
+Ann's favorite store was having a summer clearance. For $75 she bought 5 pairs of shorts for $7 each and 2 pairs of shoes for $10 each. She also bought 4 tops, all at the same price. How much did each top cost?
+Response:
+```python
+from z3 import *
+
+# Define the variables
+total_cost = 75
+shorts_price = 7
+shoes_price = 10
+num_shorts = 5
+num_shoes = 2
+num_tops = 4
+
+# Create the solver
+solver = Solver()
+
+# Set up the constraints
+constraint1 = And(shorts_price * num_shorts + shoes_price * num_shoes, total_cost)
+constraint2 = Or([And(tops_price * i, total_cost - shorts_price * num_shorts - shoes_price * num_shoes) for i in range(1, num_tops+1)])
+
+# Define the variable
+tops_price = Int('tops_price')
+
+# Add the constraints to the solver
+solver.add(constraint1)
+solver.add(constraint2)
+
+# Check if a solution exists
+if solver.check() == sat:
+    # Get the model
+    model = solver.model()
+    
+    # Print the result
+    print(f"Each top costs ${model[tops_price]}")
+else:
+    print("No
+
+=== Problem 65 ===
+Prompt:
+Bella bought stamps at the post office. Some of the stamps had a snowflake design, some had a truck design, and some had a rose design. Bella bought 11 snowflake stamps. She bought 9 more truck stamps than snowflake stamps, and 13 fewer rose stamps than truck stamps. How many stamps did Bella buy in all?
+Response:
+```python
+from z3 import *
+
+# Define the variables
+s = Solver()
+snowflake_stamps = Int('snowflake_stamps')
+truck_stamps = Int('truck_stamps')
+rose_stamps = Int('rose_stamps')
+
+# Define the constraints
+s.add(snowflake_stamps == 11)
+s.add(truck_stamps > snowflake_stamps + 9)
+s.add(rose_stamps < truck_stamps + 13)
+
+# Solve the problem
+solution = s.check()
+
+if solution == sat:
+    print("Solution found:")
+    print(f"Snowflake stamps: {snowflake_stamps}")
+    print(f"Truck stamps: {truck_stamps}")
+    print(f"Rose stamps: {rose_stamps}")
+    total_stamps = snowflake_stamps + truck_stamps + rose_stamps
+    print(f"Total stamps: {total_stamps}")
+else:
+    print("No solution
+
+=== Problem 66 ===
+Prompt:
+Betty is saving money for a new wallet which costs $100. Betty has only half of the money she needs. Her parents decided to give her $15 for that purpose, and her grandparents twice as much as her parents. How much more money does Betty need to buy the wallet?
+Response:
+```python
+from z3 import *
+
+# Define variables
+wallet_cost = 100
+betty_money = 50
+parent_contribution = 15
+grandparent_contribution = 2 * parent_contribution
+
+# Calculate total amount of money Betty has
+total_money = betty_money + parent_contribution + grandparent_contribution
+
+# Check if Betty has enough money to buy the wallet
+if total_money >= wallet_cost:
+    print("Betty has enough money to buy the wallet.")
+else:
+    # Calculate how much more money Betty needs
+    additional_money_needed = wallet_cost - total_money
+    print(f"Betty needs ${additional_money_needed} more to buy the wallet.")
+```
+
+This code uses the Z3 theorem prover to check if Betty has enough money to buy the wallet. If she does, it prints a message indicating that. Otherwise, it calculates how much more money she needs and prints
+
+=== Problem 67 ===
+Prompt:
+Brennan was researching his school project and had to download files from the internet to his computer to use for reference. After downloading 800 files, he deleted 70% of them because they were not helpful. He downloaded 400 more files but again realized that 3/5 of them were irrelevant. How many valuable files was he left with after deleting the unrelated files he downloaded in the second round?
+Response:
+Here is a Python code snippet using Z3 to solve this problem:
+
+```python
+from z3 import *
+
+# Define variables
+total_files_first_round = 800
+deleted_percentage_first_round = 70 / 100.0
+additional_files_second_round = 400
+irrelevant_percentage_second_round = 3 / 5.0
+
+# Calculate the number of deleted files in the first round
+deleted_files_first_round = total_files_first_round * deleted_percentage_first_round
+
+# Calculate the remaining files after deleting the first round
+remaining_files_after_first_round = total_files_first_round - deleted_files_first_round
+
+# Calculate the number of irrelevant files downloaded in the second round
+irrelevant_files_second_round = additional_files_second_round * irrelevant_percentage_second_round
+
+# Calculate the number of valuable files left after deleting the irrelevant files in the second round
+valuable_files_left = remaining_files_after_first_round + (additional_files_second_round - irrelevant_files_second_round)
+
+print("The final answer is", int(valuable_files_left))
+```
+
+This code uses Z3's `Int` type to represent integers and performs arithmetic operations on these integers. The result of the calculation is then printed out as an integer.
+
+Please note that you need to have Z3 installed in your Python environment to run this code. You can install it using pip: `pip install z3
+
+=== Problem 68 ===
+Prompt:
+Each bird eats 12 beetles per day, each snake eats 3 birds per day, and each jaguar eats 5 snakes per day. If there are 6 jaguars in a forest, how many beetles are eaten each day?
+Response:
+```python
+from z3 import *
+
+# Define the variables
+jaguars = 6
+snakes = Int('snakes')
+birds = Int('birds')
+beetles = Int('beetles')
+
+# Define the constraints
+snakes = 5 * jaguars
+birds = snakes / 3
+beetles = birds * 12
+
+# Solve the system of equations
+solution = Solver()
+solution.add(birds == snakes / 3)
+solution.add(beetles == birds * 12)
+
+result = solution.check()
+
+if result == sat:
+    print("The final answer is", solution.model()[beetles])
+else:
+    print("No solution exists
+
+=== Problem 69 ===
+Prompt:
+In a truck, there are 26 pink hard hats, 15 green hard hats, and 24 yellow hard hats.  If Carl takes away 4 pink hard hats, and John takes away 6 pink hard hats and twice as many green hard hats as the number of pink hard hats that he removed, then calculate the total number of hard hats that remained in the truck.
+Response:
+```python
+from z3 import *
+
+# Define the initial number of hard hats for each color
+pink_hard_hats = 26
+green_hard_hats = 15
+yellow_hard_hats = 24
+
+# Define the number of pink and green hard hats taken away by Carl and John
+carl_pink_taken_away = 4
+john_green_taken_away = carl_pink_taken_away * 2
+
+# Calculate the remaining number of hard hats for each color
+remaining_pink_hard_hats = pink_hard_hats - carl_pink_taken_away
+remaining_green_hard_hats = green_hard_hats - john_green_taken_away
+remaining_yellow_hard_hats = yellow_hard_hats
+
+# Calculate the total number of hard hats remaining in the truck
+total_remaining_hard_hats = remaining_pink_hard_hats + remaining_green_hard_hats + remaining_yellow_hard_hats
+
+print(total_remaining_hard_hats)
+
+
+=== Problem 70 ===
+Prompt:
+It takes Roque two hours to walk to work and one hour to ride his bike to work. Roque walks to and from work three times a week and rides his bike to and from work twice a week. How many hours in total does he take to get to and from work a week with walking and biking?
+Response:
+```python
+from z3 import *
+
+# Define the variables
+walk_time = 2  # time taken for one way walk
+bike_time = 1  # time taken for one way bike ride
+total_walk_days = 3  # number of days Roque walks to and from work
+total_bike_days = 2  # number of days Roque rides his bike to and from work
+
+# Calculate the total time spent walking in a week
+walk_time_per_day = walk_time * 2  # round trip
+total_walk_hours = walk_time_per_day * total_walk_days
+
+# Calculate the total time spent biking in a week
+bike_time_per_day = bike_time * 2  # round trip
+total_bike_hours = bike_time_per_day * total_bike_days
+
+# Calculate the total hours spent getting to and from work in a week
+total_hours = total_walk_hours + total_bike_hours
+
+print(total
+
+=== Problem 71 ===
+Prompt:
+Jack is stranded on a desert island. He wants some salt to season his fish. He collects 2 liters of seawater in an old bucket. If the water is 20% salt, how many ml of salt will Jack get when all the water evaporates?
+Response:
+```python
+import z3
+
+# Define the variables
+seawater_volume = 2000  # Volume of seawater collected in liters (2000 ml)
+salt_concentration = 20 / 100  # Concentration of salt in seawater as a decimal (20%)
+
+# Calculate the volume of salt in the seawater
+salt_volume = z3.Rational(seawater_volume) * z3.Rational(salt_concentration)
+
+# Convert the result to milliliters
+result_milliliters = int(float(salt_volume) * 1000)
+
+print("Jack will get", result_milliliters, "ml of salt when all the water
+
+=== Problem 72 ===
+Prompt:
+James creates a media empire.  He creates a movie for $2000.  Each DVD cost $6 to make.  He sells it for 2.5 times that much.  He sells 500 movies a day for 5 days a week.  How much profit does he make in 20 weeks?
+Response:
+```python
+import z3
+
+# Define the variables
+movie_cost = 2000
+dvd_cost = 6
+selling_price = movie_cost * 2.5
+daily_sales = 500
+days_per_week = 5
+weeks = 20
+
+# Create a Z3 solver
+solver = z3.Solver()
+
+# Calculate daily revenue
+daily_revenue = selling_price * daily_sales
+weekly_revenue = daily_revenue * days_per_week
+
+# Calculate weekly cost
+weekly_cost = dvd_cost * daily_sales + movie_cost
+
+# Add the weekly revenue and cost to the solver
+solver.add(weekly_revenue - weekly_cost >= 0)
+
+# Solve the problem
+result = solver.check()
+
+if result == z3.sat:
+    # Get the maximum profit
+    max_profit = weekly_revenue - weekly_cost
+    print(f"Maximum Profit: {max_profit}")
+else:
+    print("No solution found")
+```
+
+This code uses Z3 to model the problem and find the maximum possible profit. It defines the variables, creates a solver, calculates the daily revenue and cost, adds the weekly revenue and cost to the solver, and solves the problem. If a solution is found, it prints the maximum profit; otherwise, it prints "No solution found
+
+=== Problem 73 ===
+Prompt:
+James writes a 3-page letter to 2 different friends twice a week.  How many pages does he write a year?
+Response:
+Here is the Z3 code in Python:
+```
+from z3 import *
+
+# Define variables
+pages_per_letter = 3
+letters_per_week = 2
+weeks_per_year = 52
+friends = 2
+
+# Calculate total pages per week
+total_pages_per_week = pages_per_letter * letters_per_week
+
+# Calculate total pages per year
+total_pages_per_year = total_pages_per_week * weeks_per_year * friends
+
+print(total_pages_per_year)
+```
+This code uses the Z3 solver to calculate the total number of pages James writes in a year. It defines variables for the number of pages per letter, letters per week, weeks per year, and friends, then calculates the total pages per week by multiplying these values together. Finally, it multiplies this result by the number of friends to get the total pages
+
+=== Problem 74 ===
+Prompt:
+Jasper will serve charcuterie at his dinner party. He buys 2 pounds of cheddar cheese for $10 each, a pound of cream cheese that cost half the price of the cheddar cheese, and a pack of cold cuts that cost twice the price of the cheddar cheese. How much does he spend on the ingredients?
+Response:
+```python
+from sympy import symbols, Eq, solve
+
+# Define variables
+x = symbols('x')  # Price of cheddar cheese in dollars
+
+# Calculate total cost
+total_cost = 2*x + (1/2)*x + 2*x
+
+# Set up equation: Total cost is equal to the sum of individual costs
+equation = Eq(total_cost, 10*2)  # Jasper spent $20 on ingredients
+
+# Solve for x
+solution = solve(equation, x)
+
+print("The price of cheddar cheese is: ", solution[0])
+```
+
+This code uses Sympy to define a variable `x` representing the price of cheddar cheese in dollars. It then calculates the total cost by adding up the costs of all ingredients and sets up an equation where the total cost equals $20 (the amount Jasper spent). Finally, it solves for `x`, which represents the price of cheddar cheese.
+
+Please note that this code assumes that the prices are fixed at $10 per pound of cheddar cheese. If you want to calculate the total cost based on a variable price, you
+
+=== Problem 75 ===
+Prompt:
+Joy can read 8 pages of a book in 20 minutes. How many hours will it take her to read 120 pages?
+Response:
+Here is the Z3 code in Python:
+```
+from z3 import *
+
+# Define variables
+pages_per_minute = 8
+minutes_to_read_120_pages = Int('m')
+total_pages = 120
+
+# Set up equation
+eq = pages_per_minute * m == total_pages
+
+# Solve for minutes
+sol = solve(eq)
+
+# Convert minutes to hours
+hours = sol[0] / 60
+
+print(hours)
+```
+This code uses the Z3 solver to find the number of minutes it will take Joy to read 120 pages, and then converts that value
+
+=== Problem 76 ===
+Prompt:
+Julie is reading a 120-page book. Yesterday, she was able to read 12 pages and today, she read twice as many pages as yesterday. If she wants to read half of the remaining pages tomorrow, how many pages should she read?
+Response:
+```python
+# Define the total number of pages in the book
+total_pages = 120
+
+# Calculate the number of pages Julie read yesterday and today
+yesterday_pages = 12
+today_pages = 2 * yesterday_pages
+
+# Calculate the remaining pages after reading yesterday and today
+remaining_pages = total_pages - (yesterday_pages + today_pages)
+
+# Calculate the number of pages Julie should read tomorrow to read half of the remaining pages
+tomorrow_pages = remaining_pages // 2
+
+print(tomorrow_pages
+
+=== Problem 77 ===
+Prompt:
+Ken created a care package to send to his brother, who was away at boarding school.  Ken placed a box on a scale, and then he poured into the box enough jelly beans to bring the weight to 2 pounds.  Then, he added enough brownies to cause the weight to triple.  Next, he added another 2 pounds of jelly beans.  And finally, he added enough gummy worms to double the weight once again.  What was the final weight of the box of goodies, in pounds?
+Response:
+```python
+from z3 import *
+
+# Define the initial weight of the box (0 pounds)
+w = Int('w')
+
+# Add 2 pounds of jelly beans
+w = w + 2
+
+# Triple the weight with brownies
+w = w * 3
+
+# Add another 2 pounds of jelly beans
+w = w + 2
+
+# Double the weight with gummy worms
+w = w * 2
+
+# Print the final weight
+
+=== Problem 78 ===
+Prompt:
+Mark has a garden with flowers. He planted plants of three different colors in it. Ten of them are yellow, and there are 80% more of those in purple. There are only 25% as many green flowers as there are yellow and purple flowers. How many flowers does Mark have in his garden?
+Response:
+```python
+from z3 import *
+
+# Define the variables
+y = Int('y')  # number of yellow flowers
+p = y * 1.8   # number of purple flowers (80% more than yellow)
+g = (y + p) / 4  # number of green flowers (25% as many as yellow and purple)
+
+# Define the constraints
+y_ge_10 = And(y >= 10, True)
+p_ge_y * 1.8 = And(p >= y * 1.8, True)
+g_le_y_p = And(g <= y + p, True)
+
+# Solve the system of constraints
+solution = Solver()
+solution.add(y_ge_10)
+solution.add(p_ge_y * 1.8)
+solution.add(g_le_y_p)
+result = solution.check()
+
+if result == sat:
+    print("Solution found:")
+    print(f"Number of yellow flowers: {y}")
+    print(f"Number of purple flowers: {p}")
+    print(f"Number of green flowers: {g}")
+else:
+    print
+
+=== Problem 79 ===
+Prompt:
+Mary does her grocery shopping on Saturday. She does her shopping only at a specific store where she is allowed a credit of $100, which must be paid in full before her next shopping trip. That week she spent the full credit limit and paid $15 of it on Tuesday and $23 of it on Thursday. How much credit will Mary need to pay before her next shopping trip?
+Response:
+```python
+from z3 import *
+
+# Define the variables
+credit_limit = 100
+paid_on_tuesday = 15
+paid_on_thursday = 23
+remaining_credit = credit_limit - (paid_on_tuesday + paid_on_thursday)
+
+# Print the result
+print("Mary needs to pay", remaining_credit, "before her next shopping trip
+
+=== Problem 80 ===
+Prompt:
+Mrs. Snyder used to spend 40% of her monthly income on rent and utilities. Her salary was recently increased by $600 so now her rent and utilities only amount to 25% of her monthly income. How much was her previous monthly income?
+Response:
+```python
+from sympy import symbols, Eq, solve
+
+# Define the variable for Mrs. Snyder's previous monthly income
+x = symbols('x')
+
+# Set up the equation based on the given information
+eq = Eq(0.4*x, 0.25*(x+600))
+
+# Solve the equation for x
+solution = solve(eq, x)
+
+# Print the solution
+
+=== Problem 81 ===
+Prompt:
+Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?
+Response:
+```python
+from sympy import symbols, Eq, solve
+
+# Define the variable
+x = symbols('x')
+
+# Create an equation based on the problem statement
+equation = Eq(48 + x/2, 96)
+
+# Solve the equation for x
+solution = solve(equation, x
+
+=== Problem 82 ===
+Prompt:
+Ralph is going to practice playing tennis with a tennis ball machine that shoots out tennis balls for Ralph to hit. He loads up the machine with 175 tennis balls to start with. Out of the first 100 balls, he manages to hit 2/5 of them. Of the next 75 tennis balls, he manages to hit 1/3 of them. Out of all the tennis balls, how many did Ralph not hit?
+Response:
+```python
+from z3 import *
+
+# Define the number of tennis balls
+total_balls = 175
+
+# Calculate the number of balls hit in the first 100
+hit_first_100 = (2/5) * 100
+
+# Calculate the number of balls hit in the next 75
+hit_next_75 = (1/3) * 75
+
+# Calculate the total number of balls hit
+total_hit = hit_first_100 + hit_next_75
+
+# Calculate the number of balls not hit
+not_hit = total_balls - total_hit
+
+print
+
+=== Problem 83 ===
+Prompt:
+Randy has 60 mango trees on his farm. He also has 5 less than half as many coconut trees as mango trees. How many trees does Randy have in all on his farm?
+Response:
+```python
+from sympy import symbols, Eq, solve
+
+# Define the variable for the number of coconut trees
+x = symbols('x')
+
+# Set up the equation: 5 less than half as many coconut trees as mango trees
+eq = Eq(x, (60/2) - 5)
+
+# Solve the equation
+solution = solve(eq, x)
+coconut_trees = solution[0]
+
+# Calculate the total number of trees
+total_trees = 60 + coconut_trees
+
+=== Problem 84 ===
+Prompt:
+Samantha’s last name has three fewer letters than Bobbie’s last name. If Bobbie took two letters off her last name, she would have a last name twice the length of Jamie’s. Jamie’s full name is Jamie Grey. How many letters are in Samantha’s last name?
+Response:
+Here's the Z3 code to solve this problem:
+
+```python
+from z3 import *
+
+# Define variables for the number of letters in each last name
+samantha_last_name = Int('samantha_last_name')
+bobbie_last_name = Int('bobbie_last_name')
+jamie_last_name = Int('jamie_last_name')
+
+# Define equations based on the problem statement
+eq1 = samantha_last_name == bobbie_last_name - 3
+eq2 = bobbie_last_name - 2 == 2 * jamie_last_name
+
+# Solve the system of equations
+solution = solve([eq1, eq2], [samantha_last_name, bobbie_last_name])
+
+# Print the solution for Samantha's last name
+print("Number of letters in Samantha's last name:", solution[samantha_last_name])
+```
+
+This code defines three variables to represent the number of letters in each last name. It then sets up two equations based on the problem statement: one that relates Samantha's last name to Bobbie's, and another that relates Bobbie's last name (with two letters removed) to Jamie's last name. The `solve` function is used to find a solution for these variables, which is then printed out.
+
+Note that this code assumes that there is at least one solution to the system of equations. If no solution exists, the `solve` function will return an empty list.
+
+=== Problem 85 ===
+Prompt:
+The profit from a business transaction is shared among 2 business partners, Mike and Johnson in the ratio 2:5 respectively. If Johnson got $2500, how much will Mike have after spending some of his share on a shirt that costs $200?
+Response:
+```python
+from z3 import *
+
+# Define the variables
+mike_share = 10  # total parts
+johnson_share = 5  # total parts
+total_parts = mike_share + johnson_share
+
+# Calculate Mike's initial share
+mike_initial_share = (2/7) * total_parts
+mike_initial_share_value = 2500 / (2/7)
+
+# Calculate Mike's remaining share after buying a shirt
+shirt_cost = 200
+mike_remaining_share = mike_initial_share - shirt_cost
+
+# Print the result
+print(m
+
+=== Problem 86 ===
+Prompt:
+There are 5 houses on a street, and each of the first four houses has 3 gnomes in the garden. If there are a total of 20 gnomes on the street, how many gnomes does the fifth house have?
+Response:
+```python
+from z3 import *
+
+# Define the variables
+x = Int('x')  # number of gnomes in the fifth house
+
+# Set up the equation based on the problem statement
+eq = 4 * 3 + x - 20
+
+# Solve for x
+solution = solve(eq, x)
+
+print("The fifth house has", solution[
+
+=== Problem 87 ===
+Prompt:
+Tim rides his bike back and forth to work for each of his 5 workdays.  His work is 20 miles away.  He also goes for a weekend bike ride of 200 miles. If he can bike at 25 mph how much time does he spend biking a week?
+Response:
+```python
+from z3 import *
+
+# Define the variables
+work_distance = 40  # miles (one way)
+weekend_ride_distance = 200  # miles
+bike_speed = 25  # mph
+
+# Calculate the total distance for workdays
+total_work_distance = work_distance * 5
+
+# Calculate the total time spent biking for workdays
+total_work_time = total_work_distance / bike_speed
+
+# Calculate the total time spent biking for weekend ride
+weekend_ride_time = weekend_ride_distance / bike_speed
+
+# Calculate the total time spent biking in a week
+total_week_time = total_work_time + weekend_ride_time
+
+print(total_week_time)
+```
+
+=== Problem 88 ===
+Prompt:
+Tina makes $18.00 an hour.  If she works more than 8 hours per shift, she is eligible for overtime, which is paid by your hourly wage + 1/2 your hourly wage.  If she works 10 hours every day for 5 days, how much money does she make?
+Response:
+```python
+from z3 import *
+
+# Define the variables
+hourly_wage = 18
+hours_per_shift = 8
+overtime_rate = hourly_wage + (hourly_wage / 2)
+days_worked = 5
+total_hours = hours_per_shift * days_worked + (hours_per_shift - hours_per_shift) * days_worked
+
+# Calculate the total amount earned
+amount_earned = (hours_per_shift * hourly_wage) + ((hours_per_shift - hours_per_shift) * overtime_rate * days_worked)
+
+print(amount
+
+=== Problem 89 ===
+Prompt:
+Tobias is buying a new pair of shoes that costs $95. He has been saving up his money each month for the past three months. He gets a $5 allowance a month. He also mows lawns and shovels driveways. He charges $15 to mow a lawn and $7 to shovel. After buying the shoes, he has $15 in change. If he mows 4 lawns, how many driveways did he shovel?
+Response:
+```python
+from z3 import *
+
+# Define variables
+total_money = 95 + 15  # Total money Tobias had before buying shoes and having change
+allowance = 5 * 3      # Allowance for 3 months
+mowing_lawn = 15 * 4   # Money earned from mowing lawns
+shoveling_driveway = Int('shoveling_driveway')  # Number of driveways shoveled
+
+# Create constraints
+total_money == allowance + mowing_lawn + shoveling_driveway
+
+print(shoveling_driveway)
+```
+
+This code uses the Z3 solver to find the number of driveways Tobias shoveled. The `Int` function is used to create a variable, and the `==` operator is used to
+
+=== Problem 90 ===
+Prompt:
+Weng earns $12 an hour for babysitting. Yesterday, she just did 50 minutes of babysitting. How much did she earn?
+Response:
+```python
+import math
+
+# define the hourly wage and time worked
+hourly_wage = 12
+time_worked_minutes = 50
+
+# convert minutes to hours
+time_worked_hours = time_worked_minutes / 60
+
+# calculate earnings
+earnings = hourly_wage * time_worked_hours
+
+print(
+

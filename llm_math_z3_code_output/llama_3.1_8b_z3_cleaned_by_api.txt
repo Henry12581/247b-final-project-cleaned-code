@@ -1,0 +1,216 @@
+=== Cleaning Problem 1 ===
+
+
+```python
+import math
+
+def evaluate_expression():
+    pi = math.pi
+    result = round(pi ** (pi ** 2), 10)
+    return result
+
+print(evaluate_expression())
+```
+=== Cleaning Problem 2 ===
+
+
+```python
+import math
+
+def simplify_expression():
+    num = math.exp(math.log(3))
+    result = num ** 2
+    return result
+
+print(simplify_expression())
+```
+=== Cleaning Problem 3 ===
+
+
+```python
+import math
+
+def estimate_cubic_root():
+    return round((27 * math.pi**2)**(1/3), 4)
+
+print(estimate_cubic_root())
+```
+=== Cleaning Problem 4 ===
+
+
+```python
+import math
+
+result = math.log(math.exp(5), 10)
+print(result)
+```
+=== Cleaning Problem 5 ===
+
+
+```python
+import math
+
+result = (9 / 4) ** (3 / 2)
+print(result)
+```
+=== Cleaning Problem 6 ===
+
+
+```python
+import sympy as sp
+
+x = sp.sqrt(50)
+y = sp.sqrt(18)
+z = sp.sqrt(2)
+
+expr = (x + y) / z
+
+simplified_expr = sp.simplify(expr)
+
+print(simplified_expr)
+```
+=== Cleaning Problem 7 ===
+
+
+```python
+import math
+
+result = (16 / 81) ** (1 / 4)
+print(result)
+```
+=== Cleaning Problem 8 ===
+
+
+```python
+import math
+
+result = round(math.pi ** (math.sqrt(2)), 10)
+print(result)
+```
+=== Cleaning Problem 9 ===
+
+
+```python
+import math
+
+result1 = math.sqrt(2) * math.sqrt(3)
+result2 = math.sqrt(6)
+
+print(result1 == result2)
+```
+=== Cleaning Problem 10 ===
+
+
+```python
+import math
+
+def simplify_expression(x):
+    return math.log(math.exp(2*x)) - math.log(math.exp(x))
+
+print(simplify_expression(1))
+```
+=== Cleaning Problem 11 ===
+
+
+```python
+import math
+
+def find_value():
+    base = 2
+    exponent = math.log(5, base)
+    result = (base ** exponent) ** 3
+    return result
+
+print(find_value())
+```
+=== Cleaning Problem 12 ===
+
+
+```python
+import math
+
+def approximate_e_pi():
+    return round(math.e ** math.pi, 5)
+
+print(approximate_e_pi())
+```
+=== Cleaning Problem 13 ===
+
+
+```python
+import math
+
+result = (math.sqrt(3) * math.sqrt(12)) ** 2
+print(result)
+```
+=== Cleaning Problem 14 ===
+
+
+```python
+import math
+
+pi_e = math.pi ** math.e
+e_pi = math.e ** math.pi
+
+if e_pi > pi_e:
+    print("True")
+else:
+    print("False")
+```
+=== Cleaning Problem 15 ===
+
+
+```python
+import math
+
+result = (1/math.sqrt(2))**4
+print(result)
+```
+=== Cleaning Problem 16 ===
+
+
+```python
+import math
+
+result = math.sqrt(49 / 121)
+print(result)
+```
+=== Cleaning Problem 17 ===
+
+
+```python
+import sympy as sp
+
+x = sp.symbols('x')
+expr = 1 / (sp.sqrt(5) - 2)
+rationalized_expr = expr * (sp.sqrt(5) + 2) / (sp.sqrt(5) + 2)
+simplified_expr = sp.simplify(rationalized_expr)
+print(simplified_expr)
+```
+=== Cleaning Problem 18 ===
+
+
+```python
+import math
+
+result = 10 ** math.log10(7.5)
+print(result)
+```
+=== Cleaning Problem 19 ===
+
+
+```python
+import math
+
+def simplify_log():
+    return math.log2(8) + math.log2(4)
+
+print(simplify_log())
+```
+=== Cleaning Problem 20 ===
+
+
+```python
+result = (27**(1/3))**2 + (16**(1/4))**3
+print(result)
+```

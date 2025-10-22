@@ -1,0 +1,5 @@
+Problem 25:
+An empty jar weighs 300g. You place 5 identical cookies and the jar now weighs 950g. Later, you eat 2 cookies. What is the weight of one cookie in grams?
+
+
+130

@@ -1,0 +1,5 @@
+Problem 75:
+Joy can read 8 pages of a book in 20 minutes. How many hours will it take her to read 120 pages?
+
+sat[pages_per_20_min = 8, min_per_hour = 60, pages_per_hour = 24, pages_goal = 120, hours_per_120_pages = 5]
+5

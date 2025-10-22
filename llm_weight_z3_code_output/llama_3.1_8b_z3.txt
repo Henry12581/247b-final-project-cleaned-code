@@ -1,0 +1,657 @@
+=== Problem 21 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+apple_weight = 20  # Weight of the apple in grams
+total_weight_oz = 80  # Total weight in ounces
+pear_weight_gram = Real('pear_weight_gram')  # Weight of a pear in grams
+
+# Convert total weight from oz to g (1 oz = 28.35g)
+total_weight_g = total_weight_oz * 28.35
+
+# Define the equation based on the problem statement
+eq = apple_weight + 2 * pear_weight_gram / 2 - total_weight_g
+
+# Solve the equation
+solution = solve(eq, pear_weight_gram)
+
+print(solution)
+```
+
+This code will output the weight of a single pear in grams.
+
+=== Problem 22 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+x = Real('x')  # weight of one whole orange in grams
+
+# Given information
+sarah_oranges = 3
+brother_eats = x / 3
+watermelon_slice = 200
+plate_weight = 1.1 * 1000  # convert kg to g
+plate_itself = 400
+
+# Formulate equations
+eq1 = (x + brother_eats + watermelon_slice) - plate_weight
+eq2 = (x + plate_itself) == x
+
+# Solve the system of equations
+solution = solve([eq1, eq2], x)
+
+# Print the solution
+if solution:
+    print(f"One whole orange weighs {solution[0]} grams.")
+else:
+    print("No solution found.")
+```
+
+This code uses Z3 to solve a system of linear equations. The first equation represents the total weight on the plate after Sarah's brother eats one-third of an orange and adds a watermelon slice. The second equation is based on the fact that adding the plate itself to the weight of one whole orange should equal the weight of one whole orange.
+
+=== Problem 23 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+x = Real('x')  # Weight of one full rod in grams
+
+# Define the constraints
+eq1 = x + 500 == 2800  # Total weight after adding half a rod to the bucket
+
+# Solve the equation
+solution = solve(eq1, x)
+
+# Print the solution
+print(f"The weight of one full rod is {solution[0]} grams")
+```
+
+This code uses the Z3 solver to find the value of `x`, which represents the weight of one full rod in grams. The constraint `eq1` states that the total weight after adding half a rod to the bucket is 2.8 kg, or 2800 grams.
+
+=== Problem 24 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+milk_volume = Real('milk_volume')
+water_volume = Real('water_volume')
+
+# Given information
+total_volume = 1.5 * 1000  # Convert liters to milliliters
+milk_density = 1.03  # g/ml
+water_density = 1.00  # g/ml
+
+# Formulate constraints
+eq1 = milk_volume + water_volume == total_volume
+eq2 = milk_volume * milk_density + water_volume * water_density > 0  # Ensure positive weight
+
+# Solve the system of equations
+solution = solve([eq1, eq2], [milk_volume, water_volume])
+
+if solution:
+    milk_weight = solution[milk_volume] * milk_density
+    water_weight = solution[water_volume] * water_density
+    total_weight = milk_weight + water_weight
+    
+    print(f"The weight of the milk is {milk_weight:.2f} grams.")
+    print(f"The weight of the water is {water_weight:.2f} grams.")
+    print(f"The total weight of the bottle contents is {total_weight:.2f} grams.")
+else:
+    print("No solution found.")
+```
+
+=== Problem 25 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+weight_jar_empty = 300  # g
+num_cookies_initial = 5
+num_cookies_eaten = 2
+total_weight_with_cookies = 950  # g
+
+# Create Z3 solver
+s = Solver()
+
+# Define variable for weight of one cookie
+w = Real('w')
+
+# Formulate constraints
+s.add(w >= 0)  # Weight must be non-negative
+s.add(weight_jar_empty + num_cookies_initial * w == total_weight_with_cookies)
+s.add(num_cookies_eaten * w <= total_weight_with_cookies - weight_jar_empty)
+
+# Solve the problem
+if s.check() == sat:
+    model = s.model()
+    cookie_weight = model[w].numerator().as_long()
+    print(f"The weight of one cookie is {cookie_weight}g")
+else:
+    print("No solution found")
+```
+
+This code uses Z3 to solve for the weight of a single cookie. It first defines variables and constraints, then checks if there's a solution that satisfies all constraints. If a solution exists, it prints out the weight of one cookie in grams.
+
+=== Problem 26 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+gold_weight = Real('gold_weight')
+silver_weight = Real('silver_weight')
+
+# Define constraints
+eq1 = Eq(gold_weight - 150 + 350, 1400) # total weight after removing gold and adding silver is 1.4 kg
+eq2 = Eq(gold_weight, 1200) # initial weight of the gold bar
+
+# Solve the system of equations
+solution = solve([eq1, eq2], [gold_weight, silver_weight])
+
+# Calculate density ratio
+if solution:
+    gold_density_ratio = (solution[gold_weight] / 1200)
+    print(f"Density ratio of gold to silver by weight: {gold_density_ratio}")
+else:
+    print("No solution found")
+```
+
+This code uses the Z3 solver to find the value of `gold_weight` and then calculates the density ratio. The density ratio is calculated as `(gold_weight / 1200)`, where `1200` is the initial weight of the gold bar in grams.
+
+=== Problem 27 ===
+Response:
+```python
+from z3 import *
+
+# Define the variables
+tire_weight = 9.8  # Weight of one tire in kg
+num_tires = 4      # Number of tires
+car_weight = 820   # Weight of the car without tires in kg
+total_weight = 859.2  # Total weight shown on the digital scale in kg
+
+# Define the variable for air added to each tire
+air_added_per_tire = Real('air_added_per_tire')
+
+# Set up the equation based on the given information
+eq = (num_tires * (tire_weight + air_added_per_tire)) + car_weight == total_weight
+
+# Solve the equation
+solver = Solver()
+solver.add(eq)
+
+try:
+    # Try to solve the equation
+    solver.check()
+
+    # Get the solution for air added per tire
+    model = solver.model()
+    air_added_per_tire_value = model[air_added_per_tire].numerator() / model[air_added_per_tire].denominator()
+
+    print(f"The weight of air added to each tire is {air_added_per_tire_value} kg")
+
+except Exception as e:
+    # If no solution exists, print the error message
+    print(f"No solution found: {str(e)}")
+```
+
+This code uses Z3's Python API to solve a linear equation for the amount of air added to each tire. The `air_added_per_tire` variable is defined as a real number and used in the equation. If a solution exists, it prints out the weight of air added per tire; otherwise, it prints an error message.
+
+=== Problem 28 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+x1 = Real('x1')  # Weight of first bag in kg
+x2 = Real('x2')  # Weight of second bag in kg
+x3 = Real('x3')  # Weight of third bag in kg
+
+# Define constraints
+constraints = [
+    x1 == 2.5,  # First bag weighs 2.5 kg
+    x2 == x1 + 0.8,  # Second bag is 800 g heavier than the first (0.8 kg)
+    x3 == x2 - 0.3,  # Third bag is 300 g lighter than the second (0.3 kg)
+]
+
+# Define total weight
+total_weight = x1 + x2 + x3
+
+# Solve constraints
+solver = Solver()
+for constraint in constraints:
+    solver.add(constraint)
+
+# Check if solution exists
+if solver.check() == sat:
+    # Get model
+    model = solver.model()
+
+    # Print total weight
+    print(f'Total weight: {model[total_weight].numerator / model[total_weight].denominator} kg')
+else:
+    print('No solution found')
+```
+
+This code uses the Z3 Python API to define variables, constraints, and a total weight expression. It then solves the constraints using the `Solver` class and prints the total weight if a solution exists.
+
+=== Problem 29 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+tool_weights = [2.4] + [0.75 * 2.4 for _ in range(4)]
+
+# Convert weights to grams
+tool_weights_g = [weight * 1000 for weight in tool_weights]
+
+# Calculate total weight
+total_weight = Sum(tool_weights_g)
+
+# Create a solver and solve the equation
+solver = Solver()
+solver.add(total_weight == total_weight) # This is always true, so we can just add it to the solver
+
+# Check if the solution is possible
+if solver.check() == sat:
+    print("The final answer is", solver.model()[total_weight].as_decimal(2).replace('.', ','))
+else:
+    print("No solution found")
+```
+
+This code will output the total weight of the toolbox contents in grams.
+
+=== Problem 30 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+eggs_weight = 60 * 3  # Total weight of eggs in grams
+flour_weight = 180  # Weight of flour in grams
+removed_proportion = 1/4  # Proportion of the mixture removed
+
+# Calculate total initial weight
+total_initial_weight = eggs_weight + flour_weight
+
+# Calculate weight of the remaining batter
+remaining_batter_weight = (1 - removed_proportion) * total_initial_weight
+
+# Solve and print result
+s = Solver()
+s.add(remaining_batter_weight > 0)
+if s.check() == sat:
+    print(f"The remaining batter weighs {int(s.model()[remaining_batter_weight].as_decimal().numerator / s.model()[remaining_batter_weight].as_decimal().denominator)} grams.")
+else:
+    print("No solution found")
+```
+
+This code uses the Z3 solver to find the weight of the remaining batter. The result is printed out in grams.
+
+=== Problem 31 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+oil_weight = 920 * (750 / 1000)  # Weight of oil in grams
+onion_weight = 300  # Weight of onions in grams
+
+# Calculate total weight
+total_weight = oil_weight + onion_weight
+
+# Print result
+print(total_weight)
+```
+
+However, if you want to use Z3 for solving this problem (which is not necessary here), you can do it like this:
+
+```python
+from z3 import *
+
+# Define variables
+oil_weight = 920 * (750 / 1000)  # Weight of oil in grams
+onion_weight = 300  # Weight of onions in grams
+
+# Create a solver
+s = Solver()
+
+# Add constraints
+s.add(total_weight == oil_weight + onion_weight)
+
+# Check if the solution is valid
+if s.check() == sat:
+    print("The total weight of the pan contents is: ", s.model()[total_weight])
+else:
+    print("No solution found")
+```
+
+=== Problem 32 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+c = Int('c')  # Weight of one chair in kg
+t = Int('t')  # Weight of one table in kg
+s = Int('s')  # Weight of the stool in kg
+
+# Given constraints
+eq1 = 2*c + t == 35  # Two chairs and a table weigh 35 kg
+eq2 = c - (c-3) + t == 32  # One chair is removed, replaced with a stool weighing 3 kg less
+
+# Solve the system of equations
+solution = solve([eq1, eq2], [c, t])
+
+# Print the solution
+if solution:
+    print(f"The weight of one chair is {solution[c]} kg")
+else:
+    print("No solution found")
+```
+
+This code uses Z3 to solve a system of linear equations. The `solve` function returns a dictionary mapping variables to their values if a solution exists, or an empty dictionary otherwise.
+
+=== Problem 33 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+sugar_original = Real('sugar_original')
+salt_original = Real('salt_original')
+sugar_used = Real('sugar_used')
+salt_used = Real('salt_used')
+
+# Define constraints
+sugar_remaining = sugar_original - sugar_used
+salt_remaining = salt_original - salt_used
+
+# Given values
+sugar_original_val = 3
+salt_original_val = 2
+sugar_used_val = 0.5
+salt_used_val = 1.25
+
+# Constraints for given values
+sugar_original_eq = Eq(sugar_original, sugar_original_val)
+salt_original_eq = Eq(salt_original, salt_original_val)
+sugar_used_eq = Eq(sugar_used, sugar_used_val)
+salt_used_eq = Eq(salt_used, salt_used_val)
+
+# Calculate remaining percentage
+sugar_remaining_percentage = (sugar_remaining / sugar_original) * 100
+salt_remaining_percentage = (salt_remaining / salt_original) * 100
+
+# Solve the problem
+solver = Solver()
+solver.add(sugar_original_eq)
+solver.add(salt_original_eq)
+solver.add(sugar_used_eq)
+solver.add(salt_used_eq)
+
+result = solver.check()
+
+if result == sat:
+    model = solver.model()
+    sugar_remaining_percentage_val = (model[sugar_remaining] / model[sugar_original]) * 100
+    salt_remaining_percentage_val = (model[salt_remaining] / model[salt_original]) * 100
+    
+    print(f"Sugar remaining percentage: {sugar_remaining_percentage_val:.2f}%")
+    print(f"Salt remaining percentage: {salt_remaining_percentage_val:.2f}%")
+
+else:
+    print("No solution exists.")
+```
+
+This code uses the Z3 solver to calculate the remaining percentage of sugar and salt after using a certain amount. The `Eq` function is used to define constraints for the given values, and the `Real` type is used to represent real numbers. The `Solver` class is used to solve the problem, and the `model` attribute is used to get the solution.
+
+=== Problem 34 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+cans = 4
+weight_full_can = 1.6  # in kg
+percentage_full = 0.6
+
+# Calculate remaining weight per can
+remaining_weight_per_can = weight_full_can * (1 - percentage_full)
+
+# Calculate total remaining weight
+total_remaining_weight = cans * remaining_weight_per_can
+
+print(total_remaining_weight)
+```
+
+This code uses the Z3 library to perform symbolic mathematics, but in this case, it's not necessary because we're doing simple arithmetic. However, if you want to use Z3 for more complex calculations or constraints, you can define variables and expressions using Z3 syntax:
+
+```python
+from z3 import *
+
+# Define variables
+cans = Int('cans')
+weight_full_can = Real('weight_full_can')
+percentage_full = Real('percentage_full')
+
+# Calculate remaining weight per can
+remaining_weight_per_can = weight_full_can * (1 - percentage_full)
+
+# Calculate total remaining weight
+total_remaining_weight = cans * remaining_weight_per_can
+
+# Solve for total_remaining_weight
+solver = Solver()
+solver.add(total_remaining_weight == 4 * 1.6 * (1 - 0.6))
+print(solver.check())
+```
+
+=== Problem 35 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+pencil_weight = Real('pencil_weight')
+box_weight = Real('box_weight')
+
+# Given information
+eq1 = box_weight + 10 * pencil_weight == 230
+eq2 = box_weight == 50
+
+# Solve the system of equations
+solution = solve([eq1, eq2], [pencil_weight, box_weight])
+
+# Extract the solution for pencil weight
+if solution:
+    pencil_weight_value = solution[pencil_weight]
+    
+    # Calculate new total weight after removing 4 pencils
+    new_total_weight = (10 - 4) * pencil_weight_value + solution[box_weight]
+    
+    print(f"The new total weight is {new_total_weight}g")
+else:
+    print("No solution found")
+```
+
+This code uses the Z3 solver to find the weight of a single pencil and then calculates the new total weight after removing 4 pencils.
+
+=== Problem 36 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+crates = 8
+weight_per_crate = 15.5  # in kg
+packaging_weight = 2.5   # in kg
+
+# Calculate total packaging weight
+total_packaging_weight = crates * packaging_weight
+
+# Calculate total weight of bananas
+total_banana_weight = (weight_per_crate - packaging_weight) * crates
+
+print(f"Total weight of just the bananas: {total_banana_weight} kg")
+```
+
+This code calculates the total weight of just the bananas by subtracting the packaging weight from each crate's weight and then multiplying by the number of crates.
+
+=== Problem 37 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+bucket_weight_empty = 800  # in grams
+water_volume = 5  # in liters
+total_weight_bucket_water = 5300  # in grams (5.3 kg * 1000g/kg)
+
+# Calculate weight of water only
+weight_water_only = total_weight_bucket_water - bucket_weight_empty
+
+# Convert volume from liters to milliliters
+volume_water_ml = water_volume * 1000
+
+# Calculate density of water
+density_water_g_ml = weight_water_only / volume_water_ml
+
+print(density_water_g_ml)
+```
+
+However, if you want to use Z3 for symbolic computation:
+
+```python
+from z3 import *
+
+# Define variables
+bucket_weight_empty = 800  # in grams
+water_volume_liters = 5  # in liters
+total_weight_bucket_water = 5300  # in grams (5.3 kg * 1000g/kg)
+
+# Calculate weight of water only
+weight_water_only = total_weight_bucket_water - bucket_weight_empty
+
+# Convert volume from liters to milliliters
+volume_water_ml = water_volume_liters * 1000
+
+# Define symbolic density variable
+density_water_g_ml = Real('density_water_g_ml')
+
+# Set up equation for density
+eq_density = Eq(density_water_g_ml, weight_water_only / volume_water_ml)
+
+# Solve the equation
+solution = solve(eq_density, [density_water_g_ml])
+
+print(solution[density_water_g_ml])
+```
+
+=== Problem 38 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+cat_weight = Int('cat_weight')
+dog_weight = Int('dog_weight')
+
+# Define constraints
+weight_equation = cat_weight + dog_weight == 22
+weight_difference = dog_weight - cat_weight == 8
+
+# Solve the equation
+solution = solve([weight_equation, weight_difference], [cat_weight])
+
+# Print the solution
+if solution:
+    print(f"The weight of the cat is {solution[cat_weight]} kg")
+else:
+    print("No solution found")
+```
+
+This code uses Z3 to define two variables `cat_weight` and `dog_weight`, and then defines two constraints: one for the total weight of the cat and dog, and another for the difference in their weights. The `solve` function is used to find a solution that satisfies both constraints, which is then printed out.
+
+=== Problem 39 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+weight_per_bun = Real('weight_per_bun')
+num_stored_buns = Int('num_stored_buns')
+
+# Given information
+total_weight_kg = 2.4
+num_buns = 8
+baked_buns = 5
+
+# Convert total weight to grams
+total_weight_g = total_weight_kg * 1000
+
+# Calculate the weight per bun in grams
+weight_per_bun_expr = total_weight_g / num_buns
+
+# The number of stored buns is the difference between the total number of buns and the baked ones
+num_stored_buns_expr = num_buns - baked_buns
+
+# Calculate the weight of the stored dough in grams
+stored_dough_weight_expr = weight_per_bun_expr * num_stored_buns_expr
+
+# Solve for the weight per bun (assuming it's a real number)
+solver = Solver()
+solver.add(weight_per_bun == weight_per_bun_expr)
+
+if solver.check() == sat:
+    model = solver.model()
+    print(f"The weight of each bun is {model[weight_per_bun].numerator()}g")
+else:
+    print("No solution found")
+
+# Calculate the weight of the stored dough
+print(f"The weight of the stored dough is {(stored_dough_weight_expr.numerator())}g")
+```
+
+This code will output the weight per bun and the weight of the stored dough in grams.
+
+=== Problem 40 ===
+Response:
+```python
+from z3 import *
+
+# Define variables
+flour_weight = 900 * (1/3)  # One-third of 900g
+oil_weight = 150
+final_weight = Real('final_weight')
+
+# Create a solver
+solver = Solver()
+
+# Add constraints
+solver.add(final_weight == flour_weight + oil_weight)
+
+# Check the solution
+if solver.check() == sat:
+    print("The final weight of the mixture is:", solver.model()[final_weight].numerator() / solver.model()[final_weight].denominator())
+else:
+    print("No solution found")
+```
+
+However, since we are dealing with a simple arithmetic problem here, we can directly calculate the result without using Z3.
+
+```python
+flour_weight = 900 * (1/3)
+oil_weight = 150
+
+final_weight = flour_weight + oil_weight
+print(final_weight)
+```
+

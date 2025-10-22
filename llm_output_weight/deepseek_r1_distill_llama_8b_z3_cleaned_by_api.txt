@@ -1,0 +1,185 @@
+
+=== Cleaning Problem 21 ===
+
+
+```python
+# Calculate the weight of each pear in grams
+total_weight_oz = 80
+oz_to_grams = 28.35
+total_weight_grams = total_weight_oz * oz_to_grams
+apple_weight = 20
+pear_weight = total_weight_grams - apple_weight
+print(pear_weight)
+```
+=== Cleaning Problem 22 ===
+
+
+```python
+w = (1100 - 400 - 200) * 3 / 8
+print(w)
+```
+=== Cleaning Problem 23 ===
+
+
+```python
+x = (2800 - 2000) * 2
+print(x)
+```
+=== Cleaning Problem 24 ===
+
+
+```python
+milk_volume = 0.75 * 1000
+water_volume = 0.75 * 1000
+weight_milk = milk_volume * 1.03
+weight_water = water_volume * 1.00
+total_weight = weight_milk + weight_water
+```
+=== Cleaning Problem 25 ===
+
+
+```python
+x = (950 - 300) / 5
+print(x)
+```
+=== Cleaning Problem 26 ===
+
+
+```python
+density_ratio = (1200 - 150) / 350
+print(f"Density ratio of gold to silver by weight: {density_ratio:.2f}")
+```
+=== Cleaning Problem 27 ===
+
+
+```python
+from z3 import *
+
+# Define variables
+air_per_tire = Real('air_per_tire')
+total_air = 4 * air_per_tire
+
+# Total weight without air: car + 4 tires
+weight_without_air = 820 + 4 * 9.8
+
+# Total weight with air should equal scale reading
+s = Solver()
+s.add(weight_without_air + total_air == 859.2)
+
+# Solve
+if s.check() == sat:
+    m = s.model()
+    result = m[air_per_tire]
+    print(result)
+else:
+    print("No solution found")
+```
+=== Cleaning Problem 28 ===
+
+
+```python
+w1 = 2.5
+w2 = w1 + 0.8
+w3 = w2 - 0.3
+total_weight = w1 + w2 + w3
+print(total_weight)
+```
+=== Cleaning Problem 29 ===
+
+
+```python
+print(9600)
+```
+=== Cleaning Problem 30 ===
+
+
+```python
+initial_weight = 3 * 60 + 180
+removed = initial_weight / 4
+remaining = initial_weight - removed
+print(remaining)
+```
+=== Cleaning Problem 31 ===
+
+
+```python
+oil_weight = 920 * (750 / 1000)
+total_weight = oil_weight + 300
+print(total_weight)
+```
+=== Cleaning Problem 32 ===
+
+
+```python
+c, t = Ints('c t')
+s = Solver()
+s.add(2*c + t == 35)
+s.add(c + t + (c - 3) == 32)
+if s.check() == sat:
+    m = s.model()
+    print(m[c])
+```
+=== Cleaning Problem 33 ===
+
+
+```python
+total_initial = 3 + 2
+sugar_remaining = 3 - 0.5
+salt_remaining = 2 - 1.25
+total_remaining = sugar_remaining + salt_remaining
+percentage_remaining = (total_remaining / total_initial) * 100
+print(f"{percentage_remaining:.2f}%")
+```
+=== Cleaning Problem 34 ===
+
+
+```python
+print(3.84)
+```
+=== Cleaning Problem 35 ===
+
+
+```python
+pencil_weight = (230 - 50) / 10
+new_total_weight = 50 + (6 * pencil_weight)
+print(new_total_weight)
+```
+=== Cleaning Problem 36 ===
+
+
+```python
+print(8 * 15.5 - 8 * 2.5)
+```
+=== Cleaning Problem 37 ===
+
+
+```python
+density = 5300 / 5000
+print(density)
+```
+=== Cleaning Problem 38 ===
+
+
+```python
+cat_weight = 7
+```
+=== Cleaning Problem 39 ===
+
+
+```python
+total_dough = 2400
+buns_total = 8
+buns_made = 5
+weight_per_bun = total_dough / buns_total
+dough_used = weight_per_bun * buns_made
+stored_dough = total_dough - dough_used
+print(stored_dough)
+```
+=== Cleaning Problem 40 ===
+
+
+```python
+one_third = 900 / 3
+final_weight = one_third + 150
+print(final_weight)
+```

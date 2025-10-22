@@ -1,0 +1,5 @@
+Problem 23:
+Tom has 4 identical metal rods. He cuts one in half and adds it to a 2 kg bucket. The total weight becomes 2.8 kg. How much does one full rod weigh in grams?
+
+
+1600

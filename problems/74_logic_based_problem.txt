@@ -1,0 +1,5 @@
+Problem 74:
+Jasper will serve charcuterie at his dinner party. He buys 2 pounds of cheddar cheese for $10 each, a pound of cream cheese that cost half the price of the cheddar cheese, and a pack of cold cuts that cost twice the price of the cheddar cheese. How much does he spend on the ingredients?
+
+sat[cold_cuts_cost = 20, cheddar_cheese_cost = 10, cream_cheese_cost = 5, total_cost = 35]
+35

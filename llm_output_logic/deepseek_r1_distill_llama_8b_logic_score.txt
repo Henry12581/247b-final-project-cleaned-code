@@ -1,0 +1,13 @@
+Score: 20/30
+
+Wrong Problems:
+63. Predicted: 16 | Correct: 41
+64. Predicted: 13.75 | Correct: 5
+68. Predicted: 0 | Correct: 1080
+69. Predicted: 47 | Correct: 43
+70. Predicted: 13 | Correct: 16
+72. Predicted: 450 | Correct: 448000
+73. Predicted: 780 | Correct: 624
+74. Predicted: 32.5 | Correct: 35
+84. Predicted: 9 | Correct: 7
+87. Predicted: 12 | Correct: 16

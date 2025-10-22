@@ -1,0 +1,5 @@
+Problem 69:
+In a truck, there are 26 pink hard hats, 15 green hard hats, and 24 yellow hard hats.  If Carl takes away 4 pink hard hats, and John takes away 6 pink hard hats and twice as many green hard hats as the number of pink hard hats that he removed, then calculate the total number of hard hats that remained in the truck.
+
+sat[initial_total = 65, john_pink = 6, initial_yellow = 24, initial_pink = 26, initial_green = 15, carl_pink = 4, john_green = 12, remaining_total = 43]
+43

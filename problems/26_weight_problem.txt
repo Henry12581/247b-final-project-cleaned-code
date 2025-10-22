@@ -1,0 +1,5 @@
+Problem 26:
+A gold bar weighs 1.2 kg. After removing 150g from it and adding 350g of silver, the total weight becomes 1.4 kg. What is the density ratio of gold to silver by weight?
+
+
+7/3

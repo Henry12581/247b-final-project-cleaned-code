@@ -1,0 +1,395 @@
+
+== Problem 61 ===
+
+
+```python
+print(121)
+```
+== Problem 62 ===
+
+
+```python
+large_pizzas = 2
+slices_per_large = 16
+small_pizzas = 2
+slices_per_small = 8
+
+total_slices = (large_pizzas * slices_per_large) + (small_pizzas * slices_per_small)
+print(total_slices)
+```
+== Problem 63 ===
+
+
+```python
+shirt = 30
+pants = 46
+coat = 38
+socks = 11
+belt = 18
+budget = 200
+
+total_other_items = shirt + pants + coat + socks + belt
+shoes_cost = budget - total_other_items
+print(shoes_cost)
+```
+== Problem 64 ===
+
+
+```python
+from z3 import *
+
+# Define the variables
+cost_per_top = Real('cost_per_top')
+
+# Define the known values
+shorts_count = 5
+shorts_cost_per = 7
+shoes_count = 2
+shoes_cost_per = 10
+tops_count = 4
+
+# Calculate total cost from shorts and shoes
+total_shorts_cost = shorts_count * shorts_cost_per
+total_shoes_cost = shoes_count * shoes_cost_per
+total_known_cost = total_shorts_cost + total_shoes_cost
+
+# The total cost from tops should equal the total known cost
+s = Solver()
+s.add(tops_count * cost_per_top == total_known_cost)
+
+# Check if there's a solution
+if s.check() == sat:
+    m = s.model()
+    result = m[cost_per_top].as_decimal(2)
+    print(result)
+else:
+    print("No solution found")
+```
+== Cleaning Problem 65 ===
+
+
+```python
+snowflake_stamps = 11
+truck_stamps = snowflake_stamps + 9
+rose_stamps = truck_stamps - 13
+total_stamps = snowflake_stamps + truck_stamps + rose_stamps
+print(total_stamps)
+```
+== Problem 66 ===
+
+
+```python
+print(5)
+```
+== Problem 67 ===
+
+
+```python
+# Calculate the number of valuable files after deletions
+initial_download = 800
+deleted_first = 0.7 * initial_download
+remaining_first = initial_download - deleted_first
+
+second_download = 400
+useful_second = (2/5) * second_download
+
+total_valuable = remaining_first + useful_second
+print(int(total_valuable))
+```
+== Problem 68 ===
+
+
+```python
+jaguars = 6
+snakes_per_jaguar = 5
+birds_per_snake = 3
+beetles_per_bird = 12
+
+total_snakes = jaguars * snakes_per_jaguar
+total_birds = total_snakes * birds_per_snake
+total_beetles = total_birds * beetles_per_bird
+
+print(total_beetles)
+```
+== Problem 69 ===
+
+
+```python
+pink_initial = 26
+green_initial = 15
+yellow_initial = 24
+
+carl_pink = 4
+john_pink = 6
+john_green = 2 * john_pink
+
+pink_remaining = pink_initial - carl_pink - john_pink
+green_remaining = green_initial - john_green
+yellow_remaining = yellow_initial
+
+total_remaining = pink_remaining + green_remaining + yellow_remaining
+print(total_remaining)
+```
+== Problem 70 ===
+
+
+```python
+walk_time_per_round_trip = 2 + 1
+bike_time_per_round_trip = 1 + 1
+walk_trips_per_week = 3
+bike_trips_per_week = 2
+total_walk_time = walk_time_per_round_trip * walk_trips_per_week
+total_bike_time = bike_time_per_round_trip * bike_trips_per_week
+total_time = total_walk_time + total_bike_time
+print(total_time)
+```
+== Problem 71 ===
+
+
+```python
+salt_liters = 2 * 0.20
+salt_ml = salt_liters * 1000
+print(int(salt_ml))
+```
+== Cleaning Problem 72 ===
+
+
+```python
+total_cost = 2000 * 500
+revenue_per_dvd = 6
+daily_revenue = revenue_per_dvd * 500
+weekly_revenue = daily_revenue * 5
+total_revenue = weekly_revenue * 20
+profit = total_revenue - total_cost
+print(profit)
+```
+== Problem 73 ===
+
+
+```python
+weeks_per_year = 52
+letters_per_week = 2
+pages_per_letter = 3
+total_pages = weeks_per_year * letters_per_week * pages_per_letter
+print(total_pages)
+```
+== Problem 74 ===
+
+
+```python
+cheddar_cost = 2 * 10
+cream_cheese_cost = 1 * (10 / 2)
+cold_cuts_cost = 1 * (10 * 2)
+total_cost = cheddar_cost + cream_cheese_cost + cold_cuts_cost
+print(total_cost)
+```
+== Problem 75 ===
+
+
+```python
+pages_per_20_min = 8
+total_pages = 120
+reading_rate = pages_per_20_min / 20
+time_minutes = total_pages / reading_rate
+time_hours = time_minutes / 60
+print(int(time_hours))
+```
+== Problem 76 ===
+
+
+```python
+from z3 import Int, solve
+
+# Define variables
+total_pages = Int('total_pages')
+yesterday_read = Int('yesterday_read')
+today_read = Int('today_read')
+remaining_after_yesterday = Int('remaining_after_yesterday')
+remaining_after_today = Int('remaining_after_today')
+tomorrow_read = Int('tomorrow_read')
+
+# Constraints
+constraints = [
+    total_pages == 120,
+    yesterday_read == 12,
+    remaining_after_yesterday == total_pages - yesterday_read,
+    today_read == 2 * yesterday_read,
+    remaining_after_today == remaining_after_yesterday - today_read,
+    tomorrow_read == remaining_after_today / 2
+]
+
+# Solve
+solve(constraints)
+```
+== Problem 77 ===
+
+
+```python
+final_weight = 2 * 3 + 2
+final_weight *= 2
+print(final_weight)
+```
+== Problem 78 ===
+
+
+```python
+yellow = 10
+purple = yellow + 0.8 * yellow
+green = 0.25 * (yellow + purple)
+total = yellow + purple + green
+print(int(total))
+```
+== Problem 79 ===
+
+
+```python
+total_credit = 100
+paid_tuesday = 15
+paid_thursday = 23
+total_paid = paid_tuesday + paid_thursday
+remaining = total_credit - total_paid
+print(remaining)
+```
+== Problem 80 ===
+
+
+```python
+x = 1000
+print(x)
+```
+== Problem 81 ===
+
+
+```python
+april_sales = 48
+may_sales = april_sales / 2
+total_sales = april_sales + may_sales
+print(total_sales)
+```
+== Problem 82 ===
+
+
+```python
+total_balls = 175
+first_set = 100
+hit_first = (2/5) * first_set
+missed_first = first_set - hit_first
+remaining_balls = total_balls - first_set
+hit_second = (1/3) * remaining_balls
+missed_second = remaining_balls - hit_second
+total_missed = missed_first + missed_second
+print(int(total_missed))
+```
+== Problem 83 ===
+
+
+```python
+mango_trees = 60
+half_mango = mango_trees / 2
+coconut_trees = half_mango - 5
+total_trees = mango_trees + coconut_trees
+print(total_trees)
+```
+== Problem 84 ===
+
+
+```python
+jamie_last_name = "Grey"
+jamie_length = len(jamie_last_name)
+bobbie_length = 2 * jamie_length + 2
+samantha_length = bobbie_length - 3
+print(samantha_length)
+```
+== Problem 85 ===
+
+
+```python
+# Calculate Mike's share after spending on the shirt
+johnson_share = 2500
+ratio_mike = 2
+ratio_johnson = 5
+value_per_part = johnson_share / ratio_johnson
+mike_initial = ratio_mike * value_per_part
+shirt_cost = 200
+mike_final = mike_initial - shirt_cost
+print(mike_final)
+```
+== Problem 86 ===
+
+
+```python
+from z3 import Int, solve
+
+# Define variables for the number of gnomes in each house
+house1 = Int('house1')
+house2 = Int('house2')
+house3 = Int('house3')
+house4 = Int('house4')
+house5 = Int('house5')
+
+# Add constraints
+constraints = [
+    house1 == 3,
+    house2 == 3,
+    house3 == 3,
+    house4 == 3,
+    house1 + house2 + house3 + house4 + house5 == 20
+]
+
+# Solve for house5
+solve(constraints)
+```
+== Problem 87 ===
+
+
+```python
+commute_distance = 20
+biking_speed = 25
+workdays = 5
+weekend_ride = 200
+
+daily_commute_time = (commute_distance / biking_speed) * 2
+weekly_commute_time = daily_commute_time * workdays
+weekend_time = weekend_ride / biking_speed
+total_time = weekly_commute_time + weekend_time
+
+print(total_time)
+```
+== Problem 88 ===
+
+
+```python
+regular_hours = 8
+overtime_hours = 2
+hourly_wage = 18
+overtime_rate = hourly_wage * 1.5
+regular_pay = regular_hours * hourly_wage
+overtime_pay = overtime_hours * overtime_rate
+total_per_day = regular_pay + overtime_pay
+total_5_days = total_per_day * 5
+print(total_5_days)
+```
+== Problem 89 ===
+
+
+```python
+regular_hours = 8
+overtime_hours = 2
+hourly_wage = 18
+overtime_rate = hourly_wage * 1.5
+regular_pay = regular_hours * hourly_wage
+overtime_pay = overtime_hours * overtime_rate
+total_per_day = regular_pay + overtime_pay
+total_5_days = total_per_day * 5
+print(total_5_days)
+```
+== Problem 90 ===
+
+
+```python
+hourly_rate = 12
+minutes_worked = 50
+hours_worked = minutes_worked / 60
+earnings = hourly_rate * hours_worked
+print(earnings)
+```

@@ -1,0 +1,324 @@
+=== Problem 21 ===
+Prompt:
+I have an apple that weighs 20g and my friend has two pears. If my friend puts half of the pears in a basket in front of him and I put my apple in another basket, in total, it weighs 80 oz. Assuming equal pear weight, what is the weight in grams per pear?
+Response:
+To solve this problem, we need to follow these steps:
+
+1. Convert the total weight from ounces to grams: 
+   Since 1 ounce = 28.35 grams, 
+   80 ounces * 28.35 grams/ounce ≈ 2268 grams.
+
+2. We know that your apple weighs 20g and you put it in a basket. So, the remaining weight is:
+   2268 grams - 20 grams = 2248 grams
+
+3. Since your friend puts half of his pears in a basket, the other half must be in another basket as well (because we don't know which one has more). Therefore, the total weight of the two baskets should be equal.
+
+4. Let's denote the weight of each pear by 'x'. Then, since there are 2 pears and your friend puts half of them in a basket, he puts x grams in that basket. Since we have two baskets with equal weights, 
+   The other half (also x grams) must be in another basket.
+
+5. Therefore, the total weight of both baskets is:
+   x + x = 2x
+
+6. We know from step 3 that this total weight should be equal to 2248 grams. So we can set up an equation: 
+   2x = 2248
+
+7. Solving for 'x', we get:
+   x = 2248 / 2
+   x = 1124 grams per pear.
+
+{1124})
+
+=== Problem 22 ===
+Prompt:
+Sarah has 3 oranges, each weighing the same. Her brother eats one-third of one orange and then adds a 200g watermelon slice to the same plate. If the plate now weighs 1.1 kg and the plate itself is 400g, how much does one whole orange weigh in grams?
+Response:
+Let's break it down step by step:
+
+Initially, Sarah has 3 oranges.
+
+Her brother eats one-third of one orange, so he eats (1/3) × weight of one orange = x grams.
+The remaining weight of the orange is 2x grams.
+
+He then adds a 200g watermelon slice to the plate.
+
+The total weight of the plate and its contents now is 400g + 200g = 600g.
+
+However, we know that this total weight is equal to 1.1 kg, which is 1100g.
+
+So, we can set up an equation:
+
+2x (weight of remaining orange) + 200g (watermelon slice) = 1100g
+
+Subtracting 200g from both sides gives us:
+2x = 900g
+
+Dividing both sides by 2 gives us:
+x = 450g
+
+This means that the brother ate 450g of one orange.
+
+Since he ate only one-third of the orange, we can set up an equation:
+
+(1/3) × weight of one orange = 450g
+
+Multiplying both sides by 3 gives us:
+weight of one orange = 1350g
+
+Therefore,
+
+{answers} 1350
+
+=== Problem 23 ===
+Prompt:
+Tom has 4 identical metal rods. He cuts one in half and adds it to a 2 kg bucket. The total weight becomes 2.8 kg. How much does one full rod weigh in grams?
+Response:
+{1.6 kg, or 1600 grams}
+
+=== Problem 24 ===
+Prompt:
+A 1.5-liter bottle is filled halfway with milk and the rest with water. Milk weighs 1.03 g/ml, and water 1.00 g/ml. What is the total weight of the bottle contents in grams?
+Response:
+To find the total weight of the bottle contents, we need to calculate the volume of milk and water separately and then multiply each by its respective density.
+
+The bottle is filled halfway with milk, so the volume of milk is:
+1.5 liters / 2 = 0.75 liters
+Since 1 liter = 1000 ml, the volume of milk in milliliters is:
+0.75 liters * 1000 ml/liter = 750 ml
+
+The weight of the milk is:
+750 ml * 1.03 g/ml = 775.5 grams
+
+The rest of the bottle (also 0.75 liters) is filled with water, so the volume of water in milliliters is also:
+0.75 liters * 1000 ml/liter = 750 ml
+
+The weight of the water is:
+750 ml * 1.00 g/ml = 750 grams
+
+Now, we add the weights of milk and water to get the total weight:
+775.5 grams + 750 grams = 1525.5 grams
+
+=== Problem 25 ===
+Prompt:
+An empty jar weighs 300g. You place 5 identical cookies and the jar now weighs 950g. Later, you eat 2 cookies. What is the weight of one cookie in grams?
+Response:
+{325}
+
+=== Problem 26 ===
+Prompt:
+A gold bar weighs 1.2 kg. After removing 150g from it and adding 350g of silver, the total weight becomes 1.4 kg. What is the density ratio of gold to silver by weight?
+Response:
+Let's break it down step by step:
+
+Initial weight of gold = 1.2 kg
+Weight removed from gold = 150 g = 0.15 kg (converting to kg for consistency)
+Remaining weight of gold = 1.2 kg - 0.15 kg = 1.05 kg
+
+New total weight after adding silver = 1.4 kg
+Weight of silver added = 350 g = 0.35 kg (converting to kg for consistency)
+
+Since the remaining weight of gold is 1.05 kg, and the new total weight is 1.4 kg, the weight of silver added must be:
+1.4 kg - 1.05 kg = 0.35 kg
+
+Now, we can find the density ratio of gold to silver by weight:
+
+Density of gold = Weight of gold / Volume of gold (assuming same volume for both)
+= 1.2 kg / ? (we don't know the volume yet)
+
+Density of silver = Weight of silver / Volume of silver
+= 0.35 kg / ? (we don't know the volume yet)
+
+Since we're looking for the density ratio, let's assume the volumes are equal (which is a reasonable assumption since we're dealing with solid objects). Then:
+
+Density ratio = Density of gold / Density of silver
+= (1.2 kg) / (0.35 kg)
+= 3.43
+
+So, the final answer is: {3.43})
+
+=== Problem 27 ===
+Prompt:
+A car tire weighs 9.8 kg. Four identical tires are mounted on a car that otherwise weighs 820 kg. If a digital scale shows 859.2 kg, how much air (by weight) is added to each tire?
+Response:
+{Let x be the amount of air added to each tire in kg.
+The total weight of four tires = 4 * 9.8 = 39.2 kg
+The total weight of car and four tires = 820 + 39.2 = 859.2 kg
+Since the digital scale shows 859.2 kg, it means that the actual weight is equal to the displayed weight.
+So, the weight added by air in each tire = (859.2 - 820) / 4 = 39.2 / 4 = 9.8 kg
+Therefore, air added to each tire weighs 9.8 kg.)
+
+=== Problem 28 ===
+Prompt:
+You have 3 bags of rice. The first weighs 2.5 kg, the second is 800 g heavier, and the third is 300 g lighter than the second. What is the total weight in kilograms?
+Response:
+{(2.5 + (2.5 + 0.8) + (2.5 - 0.3))} 
+
+{(2.5 + 3.3 + 2.2)} 
+
+{8}
+
+=== Problem 29 ===
+Prompt:
+A toolbox contains 5 tools. The heaviest tool weighs 2.4 kg, and each of the remaining tools weighs 75% as much. What is the total weight of the toolbox contents in grams?
+Response:
+{2.4 + (5-1)*0.75*2.4 = 7.8}
+
+=== Problem 30 ===
+Prompt:
+A chef uses 3 eggs, each 60g, and adds 180g of flour. He removes 1/4 of the mixture. How much does the remaining batter weigh in grams?
+Response:
+To find the weight of the remaining batter, we need to calculate the total weight of the initial mixture and then subtract the weight removed.
+
+Initial mixture:
+3 eggs = 3 x 60g = 180g
+Adding flour: 180g + 180g = 360g
+
+Removing 1/4 of the mixture:
+Weight removed = (1/4) x 360g = 90g
+
+Remaining batter:
+360g - 90g = 270g
+
+{270}
+
+=== Problem 31 ===
+Prompt:
+If one liter of oil weighs 920g and a chef pours 750 ml into a pan, then adds 300g of chopped onions, what is the total weight of the pan contents in grams?
+Response:
+To find the total weight of the pan contents, we need to calculate the weight of the oil first.
+
+1 liter = 1000 ml
+750 ml = 0.75 liters (since 750 ml is 3/4 of a liter)
+Weight of 0.75 liters of oil = 920g * 0.75 = 690g
+
+Adding the chopped onions:
+Total weight = Weight of oil + Weight of onions
+= 690g + 300g
+= 990g
+
+=== Problem 32 ===
+Prompt:
+Two identical chairs and one table together weigh 35 kg. One chair is removed and replaced with a stool weighing 3 kg less. The total weight becomes 32 kg. What is the weight of one chair?
+Response:
+Timeout after 10 seconds.
+
+=== Problem 33 ===
+Prompt:
+A person buys 3 kg of sugar and 2 kg of salt. Later, he uses 1/2 kg of sugar and 1.25 kg of salt. What percentage of the original weight remains?
+Response:
+To find the remaining weight, first calculate the amount of each substance left:
+
+Sugar: 3 kg - 0.5 kg = 2.5 kg
+Salt: 2 kg - 1.25 kg = 0.75 kg
+
+Then, divide the remaining weight by the original weight and multiply by 100 to get the percentage:
+
+(2.5 kg / 3 kg) * 100 = 83.33%
+(0.75 kg / 2 kg) * 100 = 37.5%
+
+The final answer is {(83.33%, 37.5%})
+
+=== Problem 34 ===
+Prompt:
+A painter uses 4 cans of paint. Each full can weighs 1.6 kg. After painting, each can is 60% full. What is the total remaining weight of paint in kilograms?
+Response:
+To find the total remaining weight of paint, we need to calculate how much paint was used and subtract that from the original amount.
+
+Each can originally weighed 1.6 kg, so 4 cans would weigh:
+4 x 1.6 = 6.4 kg
+
+Since each can is now 60% full after painting, we need to find out how much paint was used per can.
+Let's assume x kg of paint was used from each can.
+
+The remaining amount in each can is 40% (100% - 60%) of the original weight:
+0.4 * 1.6 = 0.64 kg
+
+So, for each can, the amount of paint used is:
+1.6 - 0.64 = 0.96 kg
+
+Since there are 4 cans, the total amount of paint used is:
+4 x 0.96 = 3.84 kg
+
+Now, subtract this from the original weight to find the remaining weight:
+6.4 - 3.84 = 2.56 kg
+
+Therefore, {2.56})
+
+=== Problem 35 ===
+Prompt:
+A pack of 10 identical pencils and a box weigh 230g. The box alone weighs 50g. If 4 pencils are removed, what is the new total weight in grams?
+Response:
+{220}
+
+=== Problem 36 ===
+Prompt:
+A shipment contains 8 crates of bananas. Each crate weighs 15.5 kg including 2.5 kg packaging. What is the total weight of just the bananas?
+Response:
+To find the total weight of just the bananas, we need to subtract the weight of the packaging from each crate and then multiply by the number of crates.
+
+Weight of packaging per crate = 2.5 kg
+Weight of banana per crate = 15.5 kg - 2.5 kg = 13 kg
+
+Total weight of bananas = Weight of banana per crate * Number of crates
+= 13 kg * 8
+= 104 kg
+
+=== Problem 37 ===
+Prompt:
+If a 5-liter bucket full of water weighs 5.3 kg, and the empty bucket weighs 800g, what is the density of the water in g/ml?
+Response:
+To find the density of the water, we need to first calculate the weight of the water alone.
+
+Weight of water = Weight of full bucket - Weight of empty bucket
+= 5.3 kg - 0.8 kg
+= 4.5 kg
+
+Since 1 kg = 1000 g, 
+Weight of water in grams = 4500g
+
+Now we know that the volume of the bucket is 5 liters and 1 liter = 1000 ml.
+So, the volume of the bucket in ml = 5000ml.
+
+Density of water = Weight of water / Volume of water
+= 4500 g / 5000 ml
+= 0.9 g/ml
+
+=== Problem 38 ===
+Prompt:
+A cat and a dog together weigh 22 kg. The dog weighs 8 kg more than the cat. What is the weight of the cat?
+Response:
+Let's say the weight of the cat is x kg.
+
+Since the dog weighs 8 kg more than the cat, the weight of the dog is (x + 8) kg.
+
+The total weight of both the cat and the dog together is 22 kg, so we can set up the equation:
+
+x + (x + 8) = 22
+
+Combine like terms:
+
+2x + 8 = 22
+
+Subtract 8 from both sides:
+
+2x = 14
+
+Divide by 2:
+
+x = 7
+
+So, the weight of the cat is {7})
+
+=== Problem 39 ===
+Prompt:
+A baker divides a 2.4 kg dough into 8 equal buns. He bakes 5 of them and stores the rest. What is the weight of the stored dough in grams?
+Response:
+{1.8 kg}
+
+=== Problem 40 ===
+Prompt:
+One-third of a 900g bag of flour is used to make dough. Then 150g of oil is added. What is the final weight of the mixture in grams?
+Response:
+{900 - (1/3)*900 + 150} 
+{900 - 300 + 150}
+{750}
+

@@ -1,0 +1,5 @@
+Problem 68:
+Each bird eats 12 beetles per day, each snake eats 3 birds per day, and each jaguar eats 5 snakes per day. If there are 6 jaguars in a forest, how many beetles are eaten each day?
+
+sat[bettles_per_bird = 12, birds_per_snake = 3, snakes_per_jaguar = 5, jaguar_num = 6, bettle_num = 1080]
+1080

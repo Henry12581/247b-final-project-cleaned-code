@@ -1,0 +1,5 @@
+Problem 71:
+Jack is stranded on a desert island. He wants some salt to season his fish. He collects 2 liters of seawater in an old bucket. If the water is 20% salt, how many ml of salt will Jack get when all the water evaporates?
+
+sat[liters_to_ml = 1000, salt_ml = 400, salt_content = 1/5, seawater_liters = 2, seawater_ml = 2000]
+400

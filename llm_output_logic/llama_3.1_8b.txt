@@ -1,0 +1,519 @@
+=== Problem 61 ===
+Response:
+Let's denote the number of people on the first ship as 'x'. 
+
+Since each new ship has twice as many people as the last ship, the second ship will have 2x people and the third ship will have 4x people.
+
+The total number of people consumed by the monster over three hundred years is given as 847. We can write an equation based on this information:
+
+x + 2x + 4x = 847
+
+Combine like terms:
+7x = 847
+
+Divide both sides by 7:
+x = 121
+
+So, there were 121 people on the ship the monster ate in the first hundred years.
+
+=== Problem 62 ===
+Response:
+To find out the total number of slices Albert will eat, we need to calculate the total number of slices from both large and small pizzas.
+
+Large pizzas: 2 * 16 = 32 slices
+Small pizzas: 2 * 8 = 16 slices
+
+Total slices: 32 + 16 = 48 slices
+
+So, if Albert eats all the pizza he bought, he will eat a total of 48 pieces that day.
+
+=== Problem 63 ===
+Response:
+To find out how much Alexis paid for the shoes, we need to subtract the total amount she spent on other items and the remaining money from her initial budget.
+
+Initial budget: $200
+Remaining money: $16
+
+Total spent on other items:
+- Button-up shirt: $30
+- Suit pants: $46
+- Suit coat: $38
+- Socks: $11
+- Belt: $18
+
+Total spent on other items = $30 + $46 + $38 + $11 + $18 = $143
+
+Now, let's subtract the total amount she spent and the remaining money from her initial budget to find out how much was spent on shoes:
+$200 (initial budget) - $143 (total spent on other items) - $16 (remaining money) = $41
+
+So, Alexis paid $41 for the shoes.
+
+=== Problem 64 ===
+Response:
+To find out how much each top cost, we need to first calculate the total amount Ann spent on the items she already knows the prices for.
+
+5 pairs of shorts for $7 each: 5 x $7 = $35
+2 pairs of shoes for $10 each: 2 x $10 = $20
+
+Total spent on shorts and shoes: $35 + $20 = $55
+
+Ann spent a total of $75, so the amount she spent on tops is:
+$75 - $55 = $20
+
+Since Ann bought 4 tops at the same price, we can divide the total amount spent on tops by 4 to find out how much each top cost:
+$20 / 4 = $5
+
+Each top costs $5.
+
+=== Problem 65 ===
+Response:
+To find the total number of stamps Bella bought, we need to calculate the number of each type of stamp and add them together.
+
+1. Snowflake stamps: Bella bought 11.
+2. Truck stamps: She bought 9 more than snowflake stamps, so she bought 11 + 9 = 20 truck stamps.
+3. Rose stamps: She bought 13 fewer rose stamps than truck stamps, so she bought 20 - 13 = 7 rose stamps.
+
+Now, let's add the number of each type of stamp together:
+11 (snowflake) + 20 (truck) + 7 (rose) = 38
+
+Bella bought a total of 38 stamps.
+
+=== Problem 66 ===
+Response:
+To find out how much more money Betty needs, we first need to determine how much money she has in total.
+
+Betty initially had half of the money needed for the wallet: $100 / 2 = $50.
+Her parents gave her $15, so now she has: $50 + $15 = $65.
+Her grandparents gave her twice as much as her parents: 2 * $15 = $30. 
+Now Betty has a total of: $65 + $30 = $95.
+
+Since the wallet costs $100 and Betty has $95, she needs: $100 - $95 = $5 more to buy the wallet.
+
+=== Problem 67 ===
+Response:
+To find out how many valuable files Brennan had left, we need to calculate the number of relevant files after each deletion.
+
+Initially, Brennan downloaded 800 files and deleted 70% of them:
+70% of 800 = (70/100) * 800 = 560
+So, he was left with: 800 - 560 = 240
+
+Then, he downloaded 400 more files. He realized that 3/5 of these were irrelevant:
+3/5 of 400 = (3/5) * 400 = 240
+So, the number of relevant files from this download is: 400 - 240 = 160
+
+Now, we add the remaining relevant files from both downloads to find out how many valuable files Brennan had left in total:
+240 + 160 = 400
+
+Therefore, after deleting the unrelated files he downloaded in the second round, Brennan was left with 400 valuable files.
+
+=== Problem 68 ===
+Response:
+To find out the total number of beetles eaten each day, we need to follow the food chain from top to bottom.
+
+1. Jaguars eat 5 snakes per day.
+   Since there are 6 jaguars, they will eat: 6 * 5 = 30 snakes per day.
+
+2. Snakes eat 3 birds per day.
+   So, the 30 snakes will eat: 30 * 3 = 90 birds per day.
+
+3. Birds eat 12 beetles per day.
+   Therefore, the 90 birds will eat: 90 * 12 = 1080 beetles per day.
+
+So, each day in this forest ecosystem, a total of 1080 beetles are eaten.
+
+=== Problem 69 ===
+Response:
+To find out how many hard hats are left after Carl and John take some, we need to follow these steps:
+
+1. Calculate the initial total number of hard hats: 
+   26 (pink) + 15 (green) + 24 (yellow) = 65
+
+2. Determine how many pink and green hard hats John took:
+   - John removed 6 pink hard hats.
+   - He also removed twice as many green hard hats, which is 2 * 6 = 12.
+
+3. Calculate the total number of hard hats taken by Carl and John:
+   - Carl took away 4 pink hard hats.
+   - John took away 6 (pink) + 12 (green) = 18 hard hats in total.
+
+4. Subtract the total number of hard hats taken from the initial total to find out how many are left:
+   Initial total: 65
+   Total taken: 4 (by Carl) + 18 (by John) = 22
+   Remaining hard hats: 65 - 22 = 43
+
+Therefore, there are 43 hard hats remaining in the truck.
+
+=== Problem 70 ===
+Response:
+To find the total time taken by Roque, we need to calculate the time taken for each mode of transportation and then add them together.
+
+Walking:
+- Time taken per trip = 2 hours (to work) + 2 hours (from work) = 4 hours
+- Number of trips per week = 3 times a week * 2 (to and from work) = 6 trips/week
+- Total time spent walking per week = 4 hours/trip * 6 trips/week = 24 hours/week
+
+Biking:
+- Time taken per trip = 1 hour (to work) + 1 hour (from work) = 2 hours
+- Number of trips per week = 2 times a week * 2 (to and from work) = 4 trips/week
+- Total time spent biking per week = 2 hours/trip * 4 trips/week = 8 hours/week
+
+Total time taken to get to and from work per week:
+= Time spent walking + Time spent biking
+= 24 hours/week + 8 hours/week
+= 32 hours/week
+
+=== Problem 71 ===
+Response:
+To find out how much salt Jack gets, we need to first convert the volume from liters to milliliters (since there are 1000 mL in a liter). 
+
+2 liters = 2 * 1000 mL = 2000 mL.
+
+Next, since the seawater is 20% salt, we can calculate the amount of salt by finding 20% of the total volume. To do this, multiply the total volume (in milliliters) by 0.20 (which is equivalent to 20%).
+
+Amount of salt = Total volume * Percentage of salt
+= 2000 mL * 0.20
+= 400 mL
+
+So when all the water evaporates, Jack will get 400 mL of salt.
+
+=== Problem 72 ===
+Response:
+To find the profit James makes, we need to calculate his revenue and cost.
+
+1. Revenue:
+   - Selling price per DVD: $6 * 2.5 = $15
+   - Number of DVDs sold per day: 500
+   - Number of days worked per week: 5
+   - Number of weeks worked: 20
+   - Total number of DVDs sold in 20 weeks: 500 * 5 * 20 = 50,000
+   - Revenue: 50,000 * $15 = $750,000
+
+2. Cost:
+   - Initial cost for the movie: $2000
+   - Number of DVDs made: 50,000 (assuming he makes as many as he sells)
+   - Cost per DVD: $6
+   - Total cost for making DVDs: 50,000 * $6 = $300,000
+   - Total cost including initial movie cost: $300,000 + $2000 = $300,002
+
+3. Profit:
+   - Profit = Revenue - Total cost
+   - Profit = $750,000 - $300,002
+   - Profit = $449,998
+
+=== Problem 73 ===
+Response:
+To find out how many pages James writes in a year, we need to calculate the total number of letters written per week and then multiply it by the number of weeks in a year.
+
+James writes 3-page letters to 2 friends twice a week. 
+So, the total number of pages written per week is:
+(3 * 2) = 6 pages per day (since he writes twice a week)
+Since there are 7 days in a week, we multiply by 7:
+6 * 7 = 42 pages per week
+
+There are approximately 52 weeks in a year. 
+So, the total number of pages written in a year is:
+42 * 52 ≈ 2184 pages
+
+=== Problem 74 ===
+Response:
+To find out how much Jasper spent on the ingredients, we need to calculate the total cost.
+
+1. Cheddar cheese: 2 pounds * $10 per pound = $20
+2. Cream cheese: The cream cheese costs half the price of cheddar cheese, which is $10 / 2 = $5 per pound.
+   Since he bought a pound of cream cheese, it will be $5.
+3. Cold cuts: The cold cuts cost twice the price of cheddar cheese, which is $10 * 2 = $20.
+
+Now, let's add up the total cost:
+$20 (cheddar) + $5 (cream cheese) + $20 (cold cuts) = $45
+
+Jasper spent a total of $45 on the ingredients.
+
+=== Problem 75 ===
+Response:
+To find out how long it takes Joy to read 120 pages, we need to first determine how many pages she reads per minute.
+
+Since Joy can read 8 pages in 20 minutes, we divide the number of pages by the time:
+
+8 pages / 20 minutes = 0.4 pages per minute
+
+Now, let's convert this rate to hours (60 minutes per hour):
+
+0.4 pages/minute * 60 minutes/hour = 24 pages/hour
+
+To find out how long it takes Joy to read 120 pages at a rate of 24 pages per hour:
+
+Time = Total pages / Rate
+Time = 120 pages / 24 pages/hour
+Time = 5 hours
+
+Therefore, it will take Joy 5 hours to read 120 pages.
+
+=== Problem 76 ===
+Response:
+To find out how many pages Julie has left after reading 12 pages yesterday and twice that amount (24) today, we need to subtract these from the total number of pages in the book.
+
+Total pages = 120
+Pages read so far = 12 + 24 = 36
+Remaining pages = Total pages - Pages read so far
+= 120 - 36
+= 84
+
+Since Julie wants to read half of the remaining pages tomorrow, we need to divide the remaining pages by 2.
+
+Pages to be read tomorrow = Remaining pages / 2
+= 84 / 2
+= 42
+
+=== Problem 77 ===
+Response:
+To find the final weight of the box, let's break down the steps:
+
+1. Initially, the weight is 2 pounds (jelly beans).
+2. After adding brownies, the weight triples to 3 * 2 = 6 pounds.
+3. Then, he adds another 2 pounds of jelly beans, making it 6 + 2 = 8 pounds.
+4. Finally, he adds enough gummy worms to double the weight once again, so the final weight is 2 * 8 = 16 pounds.
+
+The final weight of the box of goodies is 16 pounds.
+
+=== Problem 78 ===
+Response:
+To find the total number of flowers, we need to calculate the number of purple flowers first.
+
+Since there are 10 yellow flowers and 80% more purple flowers than yellow ones:
+Number of purple flowers = 10 + (80/100 * 10) 
+= 10 + 8
+= 18
+
+Now, let's find the total number of yellow and purple flowers:
+Total yellow and purple flowers = Number of yellow flowers + Number of purple flowers
+= 10 + 18
+= 28
+
+Since there are only 25% as many green flowers as there are yellow and purple flowers:
+Number of green flowers = (25/100) * Total number of yellow and purple flowers
+= (1/4) * 28
+= 7
+
+Now, let's find the total number of flowers in Mark's garden:
+Total flowers = Number of yellow flowers + Number of purple flowers + Number of green flowers
+= 10 + 18 + 7
+= 35
+
+=== Problem 79 ===
+Response:
+To find out how much credit Mary needs to pay, we first need to calculate how much she still owes after paying $15 on Tuesday and $23 on Thursday.
+
+The initial amount owed was the full credit limit of $100. 
+
+After paying $15 on Tuesday: $100 - $15 = $85
+After paying $23 on Thursday: $85 - $23 = $62
+
+So, Mary needs to pay $62 before her next shopping trip.
+
+=== Problem 80 ===
+Response:
+Let's denote Mrs. Snyder's previous monthly income as 'x'. 
+
+Since she used to spend 40% of her income on rent and utilities, the amount spent is 0.4x.
+
+After a $600 increase in salary, her new monthly income becomes x + 600.
+
+Now, her rent and utilities only amount to 25% of her new income, which is (x + 600) * 0.25 = 0.25(x + 600).
+
+Since the actual amount spent on rent and utilities hasn't changed, we can set up an equation:
+
+0.4x = 0.25(x + 600)
+
+Distribute 0.25 to x and 600:
+0.4x = 0.25x + 150
+
+Subtract 0.25x from both sides:
+0.15x = 150
+
+Divide by 0.15:
+x = 1000
+
+So, Mrs. Snyder's previous monthly income was $1000.
+
+=== Problem 81 ===
+Response:
+To find out how many clips Natalia sold altogether in April and May, we need to add the number of clips she sold in April (48) to the number of clips she sold in May.
+
+Since she sold half as many clips in May compared to April, we can calculate this by dividing 48 by 2:
+
+48 / 2 = 24
+
+So Natalia sold 24 clips in May. 
+
+Now, let's add the number of clips she sold in April (48) and May (24):
+
+48 + 24 = 72
+
+Therefore, Natalia sold a total of 72 clips altogether in April and May.
+
+=== Problem 82 ===
+Response:
+To find out how many tennis balls Ralph didn't hit, we need to calculate the total number of balls he hit and subtract that from the total number of balls.
+
+First, let's calculate the number of balls Ralph hit in each set:
+
+1. Out of 100 balls, he hit 2/5 of them:
+   Number of balls hit = (2/5) * 100
+   Number of balls hit = 40
+
+2. Out of 75 balls, he hit 1/3 of them:
+   Number of balls hit = (1/3) * 75
+   Number of balls hit = 25
+
+Now, let's add the number of balls Ralph hit in both sets:
+Total number of balls hit = 40 + 25
+Total number of balls hit = 65
+
+Since there are a total of 175 tennis balls, we can subtract the number of balls Ralph hit from this total to find out how many he didn't hit:
+Number of balls not hit = Total number of balls - Total number of balls hit
+Number of balls not hit = 175 - 65
+Number of balls not hit = 110
+
+Therefore, Ralph did not hit 110 tennis balls.
+
+=== Problem 83 ===
+Response:
+To find out how many coconut trees Randy has, we need to first calculate half the number of mango trees and then subtract 5 from that.
+
+Half the number of mango trees = 60 / 2 = 30
+Coconut trees = 30 - 5 = 25
+
+Now, let's add the number of mango trees and coconut trees together:
+
+Total number of trees = 60 (mango) + 25 (coconut) = 85
+
+Randy has a total of 85 trees on his farm.
+
+=== Problem 84 ===
+Response:
+To find out how many letters are in Samantha's last name, we need to first determine the number of letters in Bobbie's last name and then subtract 3.
+
+Jamie's last name has 5 letters: G-R-E-Y. 
+
+Bobbie took two letters off her last name so that it would be twice as long as Jamie's. This means if she removed 2 letters, her last name would have 10 letters (twice the length of Jamie's).
+
+Since Bobbie removed 2 letters to get a total of 10, we can find out how many letters were in her original last name by adding back those two letters: 10 + 2 = 12.
+
+Samantha's last name has three fewer letters than Bobbie's. So, if Bobbie's last name had 12 letters, Samantha's would have 12 - 3 = 9 letters.
+
+=== Problem 85 ===
+Response:
+To find out how much Mike has initially, we need to first determine the total parts in the ratio (2 + 5 = 7) and then calculate Mike's share. 
+
+Johnson got $2500, which is 5/7 of the total profit. To find the total profit, we can multiply Johnson's share by 7/5:
+
+Total Profit = $2500 * (7/5)
+= $3500
+
+Now that we know the total profit, we can calculate Mike's initial share:
+
+Mike's Initial Share = Total Profit * (2/7)
+= $3500 * (2/7)
+= $1000
+
+After spending some of his share on a shirt that costs $200, Mike will be left with:
+
+Mike's Remaining Share = Mike's Initial Share - Cost of Shirt
+= $1000 - $200
+= $800
+
+=== Problem 86 ===
+Response:
+To find out how many gnomes the fifth house has, we need to subtract the total number of gnomes in the first four houses from the total number of gnomes on the street.
+
+Each of the first four houses has 3 gnomes. So, the total number of gnomes in these houses is:
+4 houses * 3 gnomes per house = 12 gnomes
+
+Now, subtract this from the total number of gnomes on the street (20):
+20 - 12 = 8
+
+So, the fifth house has 8 gnomes.
+
+=== Problem 87 ===
+Response:
+To find the total time spent biking, we need to calculate the time spent on daily commutes and the weekend ride.
+
+Daily commute:
+- Distance = 20 miles (each way) * 2 = 40 miles
+- Time per day = distance / speed = 40 miles / 25 mph = 1.6 hours
+
+Since Tim works for 5 days, total time spent on daily commutes is: 
+- Total daily commute time = 1.6 hours/day * 5 days = 8 hours
+
+Weekend ride:
+- Distance = 200 miles
+- Time = distance / speed = 200 miles / 25 mph = 8 hours
+
+Total weekly biking time:
+- Total weekly biking time = total daily commute time + weekend ride time = 8 hours + 8 hours = 16 hours
+
+=== Problem 88 ===
+Response:
+To find Tina's total earnings, we need to calculate her regular pay and her overtime pay separately.
+
+Regular pay: 
+Tina makes $18.00 an hour. She works 8 hours per shift (since anything above that is considered overtime). So, for the first 4 days (20 hours), she earns:
+$18/hour * 20 hours = $360
+
+Overtime pay: 
+For the last day, Tina works 10 hours, which includes 2 hours of overtime. Her regular rate is $18/hour and her overtime rate is $18 + ($18/2) = $27/hour.
+So, for the last day:
+- Regular pay: $18/hour * 8 hours = $144
+- Overtime pay: $27/hour * 2 hours = $54
+Total earnings for the last day: $144 + $54 = $198
+
+Now, let's add up her total earnings for all 5 days:
+$360 (first 4 days) + $198 (last day) = $558
+
+Therefore, Tina makes a total of $558.
+
+=== Problem 89 ===
+Response:
+To find out how much money Tobias earned from mowing lawns, we need to multiply the number of lawns by his charge per lawn.
+
+Number of lawns: 4
+Charge per lawn: $15
+Total earnings from mowing lawns: 4 * $15 = $60
+
+Tobias also gets a monthly allowance. Since he has been saving up for three months, we need to multiply the allowance by the number of months.
+
+Allowance per month: $5
+Number of months: 3
+Total allowance earned: $5 * 3 = $15
+
+We know that Tobias spent $95 on shoes and had $15 in change. So, his total earnings must be $95 + $15 = $110.
+
+Now we can find out how much money he earned from shoveling driveways by subtracting the total allowance earned and the earnings from mowing lawns from his total earnings.
+
+Total earnings: $110
+Earnings from mowing lawns: $60
+Allowance earned: $15
+Earnings from shoveling driveways: $110 - ($60 + $15) = $35
+
+Since he charges $7 to shovel a driveway, we can find out how many driveways he shoveled by dividing his earnings from shoveling driveways by the charge per driveway.
+
+Charge per driveway: $7
+Earnings from shoveling driveways: $35
+Number of driveways shoveled: $35 / $7 = 5
+
+Therefore, Tobias shoveled 5 driveways.
+
+=== Problem 90 ===
+Response:
+To find out how much Weng earned, we need to convert her working hours into a fraction of an hour and then multiply it by her hourly wage.
+
+Since there are 60 minutes in an hour, we can divide the number of minutes worked (50) by 60 to get the fraction of an hour:
+
+50 minutes / 60 = 5/6 hour
+
+Now, we can multiply this fraction by Weng's hourly wage ($12):
+
+(5/6 hour) * $12/hour = $10
+
+So, Weng earned $10 for babysitting yesterday.
+

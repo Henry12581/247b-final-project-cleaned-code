@@ -1,0 +1,510 @@
+
+== Problem 61 ===
+
+
+```python
+from z3 import *
+
+x = Int('x')
+eq1 = x + 2*x + 4*x == 847
+solution = solve(eq1)
+print(solution)
+```
+== Problem 62 ===
+
+
+```python
+from z3 import *
+
+large_pizzas = 2
+small_pizzas = 2
+slices_per_large_pizza = 16
+slices_per_small_pizza = 8
+
+solver = Solver()
+total_slices_eaten = Int('total_slices_eaten')
+equation = total_slices_eaten == (large_pizzas * slices_per_large_pizza) + (small_pizzas * slices_per_small_pizza)
+solver.add(equation)
+
+if solver.check() == sat:
+    model = solver.model()
+    print(f"Albert eats {model[total_slices_eaten].as_long()} pieces that day.")
+else:
+    print("No solution found.")
+```
+== Problem 63 ===
+
+
+```python
+from z3 import *
+
+budget = 200
+shirt_price = 30
+pants_price = 46
+coat_price = 38
+socks_price = 11
+belt_price = 18
+remaining_budget = 16
+shoes_price = Real('shoes_price')
+
+solver = Solver()
+solver.add(shirt_price + pants_price + coat_price + socks_price + belt_price + shoes_price == budget - remaining_budget)
+
+result = solver.check()
+if result == sat:
+    print(solver.model()[shoes_price].numerator() / solver.model()[shoes_price].denominator())
+```
+== Problem 64 ===
+
+
+```python
+from z3 import *
+
+x = Real('x')
+s = Solver()
+s.add(5*7 + 2*10 + 4*x == 75)
+if s.check() == sat:
+    m = s.model()
+    print(f"The cost of each top is ${m[x]}")
+else:
+    print("No solution found")
+```
+== Problem 65 ===
+
+
+```python
+from z3 import *
+
+snowflake = Int('snowflake')
+truck = Int('truck')
+rose = Int('rose')
+
+s = Solver()
+s.add(snowflake == 11)
+s.add(truck == snowflake + 9)
+s.add(rose == truck - 13)
+
+if s.check() == sat:
+    model = s.model()
+    total_stamps = (model[snowflake].as_long()) + (model[truck].as_long()) + (model[rose].as_long())
+    print(f"Bella bought {total_stamps} stamps in all.")
+else:
+    print("No solution found.")
+```
+== Problem 66 ===
+
+
+```python
+from z3 import *
+
+wallet_price = 100
+betty_money = wallet_price / 2
+parents_contribution = 15
+grandparents_contribution = 2 * parents_contribution
+total_betty_money = betty_money + parents_contribution + grandparents_contribution
+more_money_needed = wallet_price - total_betty_money
+print("The final answer is", more_money_needed)
+```
+== Problem 67 ===
+
+
+```python
+total_files = 800
+deleted_first_round = 70 * total_files / 100
+remaining_after_first_round = total_files - deleted_first_round
+
+downloaded_second_round = 400
+irrelevant_second_round = (3/5) * downloaded_second_round
+remaining_after_second_round = downloaded_second_round - irrelevant_second_round
+
+valuable_files_left = remaining_after_first_round + remaining_after_second_round
+print(valuable_files_left)
+```
+== Problem 68 ===
+
+
+```python
+beetles_per_snake = 12
+snakes_per_bird = 3
+birds_per_jaguar = 5
+num_jaguars = 6
+beetles_per_day = num_jaguars * birds_per_jaguar * snakes_per_bird * beetles_per_snake
+print("The number of beetles eaten per day is:", beetles_per_day)
+```
+== Problem 69 ===
+
+
+```python
+from z3 import *
+
+pink_hard_hats = 26
+green_hard_hats = 15
+yellow_hard_hats = 24
+removed_pink_hard_hats_carl = 4
+removed_green_hard_hats_john = 2 * removed_pink_hard_hats_carl
+
+remaining_pink_hard_hats = pink_hard_hats - removed_pink_hard_hats_carl
+remaining_green_hard_hats = green_hard_hats - removed_green_hard_hats_john
+remaining_yellow_hard_hats = yellow_hard_hats
+
+total_remaining_hard_hats = remaining_pink_hard_hats + remaining_green_hard_hats + remaining_yellow_hard_hats
+
+print("The total number of hard hats that remained in the truck is:", total_remaining_hard_hats)
+```
+== Problem 70 ===
+
+
+```python
+from z3 import *
+
+x = Int('x')
+y = Int('y')
+s = Optimize()
+s.add(x >= 2)
+s.add(y <= 1)
+s.minimize(x * 6 + y * 4)
+if s.check() == sat:
+    m = s.model()
+    result = m.evaluate(x * 6 + y * 4)
+    print(result)
+```
+== Problem 71 ===
+
+
+```python
+from z3 import *
+
+# Define variables
+water_volume = 2000  # Volume of seawater in milliliters (2 liters)
+salt_percentage = 20  # Percentage of salt in seawater
+
+# Calculate volume of salt in milliliters
+salt_volume = water_volume * (salt_percentage / 100)
+
+print(f"Jack will get {salt_volume} ml of salt.")
+```
+== Problem 72 ===
+
+
+```python
+from z3 import *
+
+cost_per_movie = 2000
+cost_per_dvd = 6
+selling_price_per_dvd = cost_per_dvd * 2.5
+daily_sales_revenue = selling_price_per_dvd * 500
+weekly_sales_revenue = daily_sales_revenue * 5
+weekly_profit = weekly_sales_revenue - (cost_per_movie + (selling_price_per_dvd - cost_per_dvd) * 500)
+total_profit = weekly_profit * 20
+print("Total Profit: ", total_profit)
+```
+== Problem 73 ===
+
+
+```python
+pages_per_letter = 3
+letters_per_week = 4
+weeks_per_year = 52
+total_letters_per_year = letters_per_week * weeks_per_year
+total_pages_per_year = pages_per_letter * total_letters_per_year
+print(total_pages_per_year)
+```
+== Problem 74 ===
+
+
+```python
+from z3 import *
+
+x = Real('x')
+y = Real('y')
+z = Real('z')
+
+s = Solver()
+s.add(x == 10)
+s.add(y == x / 2)
+s.add(z == 2 * x)
+total_cost = 2*x + y + z
+
+if s.check() == sat:
+    model = s.model()
+    print(f"Jasper spends ${model.eval(total_cost).as_decimal()} on the ingredients.")
+```
+== Problem 75 ===
+
+
+```python
+from z3 import *
+
+unknown_time_hours = Int('unknown_time_hours')
+equation = (120 / 8) * 20 / 60 == unknown_time_hours
+solve(equation)
+```
+== Problem 76 ===
+
+
+```python
+from z3 import *
+
+pages_read_yesterday = Int('pages_read_yesterday')
+pages_read_today = Int('pages_read_today')
+remaining_pages = Int('remaining_pages')
+pages_to_read_tomorrow = Int('pages_to_read_tomorrow')
+
+s = Solver()
+s.add(pages_read_yesterday == 12)
+s.add(pages_read_today == pages_read_yesterday * 2)
+s.add(remaining_pages == 120 - (pages_read_yesterday + pages_read_today))
+s.add(pages_to_read_tomorrow == remaining_pages / 2)
+
+if s.check() == sat:
+    model = s.model()
+    print(model[pages_to_read_tomorrow])
+```
+== Problem 77 ===
+
+
+```python
+from z3 import *
+
+jelly_beans_1 = Int('jelly_beans_1')
+brownies = Int('brownies')
+jelly_beans_2 = Int('jelly_beans_2')
+gummy_worms = Int('gummy_worms')
+weight = Int('weight')
+
+solver = Solver()
+solver.add(weight == 0)
+solver.add(weight + 2 == 2)
+solver.add(weight * 3 == 6)
+solver.add(weight + 2 == 8)
+solver.add(weight * 2 == 16)
+solver.add(jelly_beans_1 >= 0, brownies >= 0, jelly_beans_2 >= 0, gummy_worms >= 0)
+
+if solver.check() == sat:
+    model = solver.model()
+    print(f"Final weight: {model[weight].as_long()} pounds")
+else:
+    print("No solution found.")
+```
+== Problem 78 ===
+
+
+```python
+from z3 import *
+
+yellow = Int('yellow')
+purple = Int('purple')
+green = Int('green')
+
+yellow_val = 10
+purple_val = yellow_val + (int(0.8 * yellow_val))
+green_val = int((0.25 * (yellow_val + purple_val)))
+
+s = Solver()
+s.add(yellow == yellow_val)
+s.add(purple == purple_val)
+s.add(green == green_val)
+
+if s.check() == sat:
+    m = s.model()
+    print(f"Number of yellow flowers: {m[yellow].as_long()}")
+    print(f"Number of purple flowers: {m[purple].as_long()}")
+    print(f"Number of green flowers: {m[green].as_long()}")
+```
+== Problem 79 ===
+
+
+```python
+from z3 import *
+
+credit_limit = 100
+paid_tuesday = 15
+paid_thursday = 23
+remaining_credit = credit_limit - paid_tuesday - paid_thursday
+print(f'Mary needs to pay ${remaining_credit} before her next shopping trip.')
+```
+== Problem 80 ===
+
+
+```python
+from z3 import *
+
+x = Real('x')
+s = Solver()
+s.add(x * 0.4 == (x + 600) * 0.25)
+if s.check() == sat:
+    model = s.model()
+    previous_income = model[x].as_decimal(6)
+    print(f"The previous monthly income was: ${previous_income}")
+else:
+    print("No solution found.")
+```
+== Problem 81 ===
+
+
+```python
+from z3 import *
+
+april_clips = Int('april_clips')
+may_clips = Int('may_clips')
+s = Solver()
+s.add(april_clips == 48)
+s.add(may_clips == april_clips / 2)
+s.check()
+result = s.model()
+may_clips_value = result[may_clips].as_long()
+print(48 + may_clips_value)
+```
+== Problem 82 ===
+
+
+```python
+from z3 import *
+
+total_balls = 175
+first_100_hit = (2/5) * 100
+next_75_hit = (1/3) * 75
+all_hit = first_100_hit + next_75_hit
+not_hit = total_balls - all_hit
+print(f'Ralph did not hit {not_hit} tennis balls.')
+```
+== Problem 83 ===
+
+
+```python
+from z3 import *
+
+mango_trees = Int('mango_trees')
+coconut_trees = Int('coconut_trees')
+total_trees = Int('total_trees')
+
+solver = Solver()
+solver.add(mango_trees == 60)
+solver.add(coconut_trees == (mango_trees / 2) - 5)
+solver.add(total_trees == mango_trees + coconut_trees)
+
+if solver.check() == sat:
+    model = solver.model()
+    print(f"Total number of trees on Randy's farm: {model[total_trees]}")
+```
+== Problem 84 ===
+
+
+```python
+from z3 import *
+
+s = Solver()
+samantha = Int('samantha')
+bobbie = Int('bobbie')
+s.add(samantha == bobbie - 3)
+s.add((bobbie - 2) == 2 * 5)
+if s.check() == sat:
+    print(s.model()[samantha])
+```
+== Problem 85 ===
+
+
+```python
+from z3 import *
+
+mike_share = Real('mike_share')
+johnson_share = Real('johnson_share')
+s = Solver()
+s.add(mike_share / 2 == johnson_share / 5)
+s.add(johnson_share == 2500)
+if s.check() == sat:
+    model = s.model()
+    mike_total = model[mike_share].as_decimal(2)
+    mike_remaining = float(mike_total) - 200
+    print(f"Mike's total share: ${mike_total}")
+    print(f"Mike's remaining money after buying shirt: ${mike_remaining}")
+else:
+    print("No solution found")
+```
+== Problem 86 ===
+
+
+```python
+from z3 import *
+
+x1, x2, x3, x4 = Ints('x1 x2 x3 x4')
+s = Solver()
+s.add(x1 + x2 + x3 + x4 == 12)
+if s.check() == sat:
+    m = s.model()
+    sum_first_four = m[x1].as_long() + m[x2].as_long() + m[x3].as_long() + m[x4].as_long()
+    print(20 - sum_first_four)
+else:
+    print("No solution found")
+```
+== Problem 87 ===
+
+
+```python
+from z3 import *
+
+work_distance = 20 * 2
+weekend_distance = 200
+total_workdays = 5
+speed_mph = 25
+
+weekly_biking_distance = (work_distance * total_workdays) + weekend_distance
+time_spent_biking = Real('time')
+solver = Solver()
+solver.add(time_spent_biking >= weekly_biking_distance / speed_mph)
+solution = solver.check()
+
+if solution == sat:
+    model = solver.model()
+    time_value = model[time_spent_biking]
+    print(time_value.numerator() / time_value.denominator())
+```
+== Problem 88 ===
+
+
+```python
+from z3 import *
+
+hourly_wage = 18
+overtime_rate = 0.5
+hours_per_shift = 8
+total_hours_worked = 50
+shifts_per_week = 5
+
+regular_earnings = (hours_per_shift * hourly_wage) * shifts_per_week
+overtime_hours = total_hours_worked - (hours_per_shift * shifts_per_week)
+
+if overtime_hours > 0:
+    overtime_pay = (hourly_wage + (hourly_wage * overtime_rate)) * overtime_hours
+else:
+    overtime_pay = 0
+
+total_earnings = regular_earnings + overtime_pay
+print("Total Earnings: $", int(total_earnings))
+```
+== Problem 89 ===
+
+
+```python
+from z3 import *
+
+x = Int('x')
+s = Solver()
+s.add(5 * 3 + 15 * 4 + 7 * x - 95 == 15)
+if s.check() == sat:
+    print("Number of driveways shoveled:", s.model()[x].as_long())
+else:
+    print("No solution")
+```
+== Problem 90 ===
+
+
+```python
+from z3 import *
+
+hourly_wage = 12
+minutes_worked = 50
+hours_worked = minutes_worked / 60
+earnings = hours_worked * hourly_wage
+print(f"Weng earned ${int(earnings)}")
+```

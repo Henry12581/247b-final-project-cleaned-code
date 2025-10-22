@@ -1,0 +1,5 @@
+Problem 76:
+Julie is reading a 120-page book. Yesterday, she was able to read 12 pages and today, she read twice as many pages as yesterday. If she wants to read half of the remaining pages tomorrow, how many pages should she read?
+
+sat[remaining = 84, today = 24, yesterday = 12, goal = 42, pages_total = 120]
+42

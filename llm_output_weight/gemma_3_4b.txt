@@ -1,0 +1,10 @@
+=== Problem 21 ===
+Prompt:
+I have an apple that weighs 20g and my friend has two pears. If my friend puts half of the pears in a basket in front of him and I put my apple in another basket, in total, it weighs 80 oz. Assuming equal pear weight, what is the weight in grams per pear?
+Response:
+Timeout after 120 seconds.
+
+=== Problem 22 ===
+Prompt:
+Sarah has 3 oranges, each weighing the same. Her brother eats one-third of one orange and then adds a 200g watermelon slice to the same plate. If the plate now weighs 1.1 kg and the plate itself is 400g, how much does one whole orange weigh in grams?
+Response:

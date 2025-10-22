@@ -1,0 +1,5 @@
+Problem 39:
+A baker divides a 2.4 kg dough into 8 equal buns. He bakes 5 of them and stores the rest. What is the weight of the stored dough in grams?
+
+
+900

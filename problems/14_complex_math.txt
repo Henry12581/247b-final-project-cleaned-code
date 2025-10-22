@@ -1,0 +1,5 @@
+Problem 14:
+Compare π^e vs e^π (True = e^π is larger)
+
+Result:
+True

@@ -1,0 +1,713 @@
+=== Problem 61 ===
+Response:
+<think>
+First, I need to determine how many people were on the ship during the first hundred years.
+
+The monster rises once every 100 years and consumes a certain number of people each time. Over 300 years, it has consumed a total of 847 people.
+
+Each new ship built has twice as many people as the previous one. This means the number of people on each ship doubles with each century.
+
+To find out how many people were on the first ship, I'll set up an equation where S represents the number of people on the first ship. Since there are three ships over 300 years, and each subsequent ship has twice as many people, the total number of people consumed can be expressed as:
+
+S + 2S + 4S = 847
+
+Combining like terms gives:
+
+7S = 847
+
+Solving for S:
+
+S = 121
+
+Therefore, there were 121 people on the first ship
+
+=== Problem 62 ===
+Response:
+<think>
+To determine the total number of pizza slices Albert eats in one day, I will start by calculating the number of slices from each type of pizza.
+
+First, there are 2 large pizzas, and each large pizza has 16 slices. So, the total number of slices from the large pizzas is:
+2 × 16 = 32 slices
+
+Next, there are also 2 small pizzas, with each small pizza having 8 slices. Therefore, the total number of slices from the small pizzas is:
+2 × 8 = 16 slices
+
+Finally,
+
+=== Problem 63 ===
+Response:
+<think>
+To determine how much Alexis paid for the shoes, I'll start by calculating the total amount she spent on the other items.
+
+First, add up the costs:
+- Button-up shirt: \$30
+- Suit pants: \$46
+- Suit coat: \$38
+- Socks: \$11
+- Belt: \$18
+
+Adding these together gives a subtotal of \$143.
+
+Next, subtract this subtotal from her total budget to find out how much she spent on the shoes:
+\$200 (Budget) - \$143 (Subtotal) = \$57
+
+Therefore, Alexis paid \$57 for the shoes.
+</think>
+
+To determine how much Alexis paid for the shoes, let's break down the
+
+=== Problem 64 ===
+Response:
+<think>
+First, I need to determine the total amount Ann spent on her purchases.
+
+Ann bought 5 pairs of shorts at $7 each. To find the total cost for the shorts, I multiply the number of pairs by the cost per pair: 5 * $7 = $35.
+
+She also purchased 2 pairs of shoes at $10 each. The total cost for the shoes is calculated as 2 * $10 = $20.
+
+Additionally, Ann bought 4 tops, and all items in her purchase have the same price. 
+
+To find out how much she spent on the tops, I add the costs of the shorts and shoes: $35 + $20 = $55.
+
+Since the total amount spent is $55 and there are 4 tops, each top costs $55 divided by 4, which equals $13.75.
+</think>
+
+Let's determine the cost of each top step by step using Z3 code in Python.
+
+**Given:**
+- **Number of pairs of shorts (s):** 5
+- **Cost per pair of shorts (c₁):** \$7
+- **Number of pairs of shoes (s₂):** 2
+- **Cost per pair of shoes (c₂):** \$10
+- **Number of tops (t):** 4
+- **Total cost of all items (T):** \$75
+
+**Step 1:** Calculate the total cost spent on shorts.
+\[ \text{Cost}_{\text{shorts}} = s \times c₁ = 5 \times 7 = 35 \]
+
+**Step 2:** Calculate the total cost spent on shoes.
+\[ \text{Cost}_{\text{shoes}} = s₂ \times c₂ = 2 \times 10 = 20 \]
+
+**Step 3:** Calculate the total amount Ann spent on all items.
+\[ T = \text{Cost}_{\text{shorts}} + \text{Cost}_{\text{shoes}} = 35 + 20 = 55 \]
+
+**Step 4:** Determine the cost per top since all tops have the same price and there are 4 tops.
+\[ t \times c₃ = T \]
+\[ 4 \times c₃ = 55 \]
+\[ c₃ = \frac{55}{4} = 13.75 \]
+
+**Final Answer:**
+Each top costs \boxed{\$13.75}.
+
+=== Problem 65 ===
+Response:
+<think>
+First, I'll define the variables based on the problem statement.
+
+Let S represent the number of snowflake stamps Bella bought. According to the problem, Bella bought 11 snowflake stamps, so S = 11.
+
+Next, let T represent the number of truck stamps. The problem states that Bella bought 9 more truck stamps than snowflake stamps, which means T = S + 9. Substituting the value of S, we get T = 11 + 9 = 20.
+
+Then, let R represent the number of rose stamps. It's mentioned that Bella bought 13 fewer rose stamps than truck stamps, so R = T - 13. Using the value of T, we find R = 20 - 13 = 7.
+
+Finally, to determine the total number of stamps Bella bought, I'll add up all the individual quantities: S + T + R = 11 + 20 + 7 = 38.
+</think>
+
+Bella bought 11 snowflake stamps. She bought 9 more truck stamps than snowflake stamps, which means:
+
+\[
+\text{Truck stamps} = 11 + 9 = 20
+\]
+
+She also bought 13 fewer rose stamps than truck stamps, which means:
+
+\[
+\text{Rose stamps} = 20 - 13 = 7
+\]
+
+Adding up all the stamps she bought:
+
+\[
+\text{Total stamps} = 11 + 20 + 7 = 38
+\]
+
+The total number of stamps Bella bought is \boxed{38}.
+
+=== Problem 66 ===
+Response:
+<think>
+Okay, let's try to figure out how much more money Betty needs to buy the wallet. So, the wallet costs $100, and Betty has only half of what she needs. Hmm, that means Betty currently has $50 saved up because half of $100 is $50.
+
+Now, her parents are giving her some money for the wallet—$15. That's a good start! But then her grandparents decide to give her twice as much as her parents. So, if her parents gave $15, then her grandparents must be giving her $30 because that's twice $15.
+
+Let me add up what Betty has now. She started with $50, got an additional $15 from her parents, and another $30 from her grandparents. So, $50 plus $15 is $65, and then adding the $30 brings it to a total of $95.
+
+Wait, but the wallet costs $100. So, how much more does Betty need? She has $95, and the wallet is $100. That means she needs $5 more to make up the total amount required.
+
+I think that's it! Betty just needs an extra $5 to buy the wallet.
+</think>
+
+Betty needs \(\boxed{5}\) dollars more to buy the wallet.
+
+=== Problem 67 ===
+Response:
+<think>
+Okay, so Brennan is working on his school project and needs some reference material. He starts by downloading 800 files from the internet. But then he realizes that most of these aren't helpful for his project. First, he deletes 70% of them because they weren't useful. Then, he downloads another 400 files, but again, a portion of those are irrelevant. He wants to know how many valuable files he has left after deleting the unrelated ones from both downloads.
+
+Alright, let's break this down step by step. First, Brennan downloads 800 files. Out of these, 70% are not helpful and get deleted. So, I need to figure out how many files that is. To find 70% of 800, I can calculate:
+
+0.7 * 800 = 560
+
+So, he deletes 560 files. That means the number of useful files after the first deletion would be:
+
+800 - 560 = 240
+
+Okay, so Brennan has 240 useful files left after the first round of deletions.
+
+Now, Brennan downloads another 400 files. Again, he finds that 3/5 of these are irrelevant and deletes them. I need to find out how many of those 400 files are useful. To do this, I can calculate 2/5 of 400 because 1 - 3/5 = 2/5.
+
+0.4 * 400 = 160
+
+So, he keeps 160 files from the second download that are useful.
+
+Now, to find out how many valuable files Brennan has in total after both deletions, I need to add the remaining useful files from both downloads:
+
+240 (from first download) + 160 (from second download) = 400
+
+Therefore, Brennan is left with 400 valuable files after deleting the unrelated ones from both rounds of downloading.
+
+But wait, let me double-check my calculations to make sure I didn't make any mistakes. For the first deletion:
+
+70% of 800 is indeed 560, so 800 - 560 = 240. That seems correct.
+
+For the second download, 3/5 of 400 is 240, which means he deletes 240 files, leaving him with 160 useful ones. Adding those to the previous 240 gives us 400. Yeah, that checks out.
+
+So, Brennan has a total of 400 valuable files left after deleting the irrelevant ones from both downloads.
+</think>
+
+Brennan was left with \(\boxed{400}\) valuable files after deleting the unrelated files he downloaded in the second round.
+
+=== Problem 68 ===
+Response:
+<think>
+Alright, let's tackle this problem step by step. It seems like we're dealing with a chain of predation where different animals eat each other, and we need to figure out the total number of beetles being consumed daily.
+
+First, let's break down the information given:
+
+1. **Birds**: Each bird eats 12 beetles per day.
+2. **Snakes**: Each snake is eaten by a jaguar, but before that, each snake eats 3 birds per day.
+3. **Jaguars**: Each jaguar eats 5 snakes per day.
+
+We have 6 jaguars in the forest. So, let's start from the top and work our way down to find out how many beetles are being eaten by the jaguars.
+
+### Step 1: Calculate the number of birds eaten by snakes.
+Each snake eats 3 birds per day. Since each jaguar eats 5 snakes per day, we need to determine how many snakes are being eaten by the 6 jaguars and then calculate the total number of birds consumed.
+
+But wait, this seems a bit circular. Let's approach it differently.
+
+### Step 2: Determine the number of snakes eaten by jaguars.
+Each jaguar eats 5 snakes per day. With 6 jaguars:
+\[
+6 \text{ jaguars} \times 5 \text{ snakes/day/jaguar} = 30 \text{ snakes/day}
+\]
+
+So, 30 snakes are being eaten by the jaguars each day.
+
+### Step 3: Calculate the number of birds consumed by snakes.
+Each snake eats 3 birds per day. With 30 snakes:
+\[
+30 \text{ snakes} \times 3 \text{ birds/day/snake} = 90 \text{ birds/day}
+\]
+
+Thus, 90 birds are being eaten by the snakes each day.
+
+### Step 4: Calculate the total number of beetles consumed.
+Each bird eats 12 beetles per day. With 90 birds:
+\[
+90 \text{ birds} \times 12 \text{ beetles/day/bird} = 1080 \text{ beetles/day}
+\]
+
+Therefore, a total of **1,080 beetles** are being eaten each day by the birds, which in turn were eaten by the snakes, and finally by the jaguars.
+</think>
+
+The total number of beetles eaten each day is \(\boxed{1080}\).
+
+=== Problem 69 ===
+Response:
+<think>
+First, I will determine how many pink hard hats are taken by Carl and John.
+
+Carl takes away 4 pink hard hats.
+
+John takes away 6 pink hard hats and twice that number in green hard hats, which means John removes 12 green hard hats.
+
+Next, I will calculate the total number of each color hard hat removed:
+
+- Pink: 4 (Carl) + 6 (John) = 10
+- Green: 0 (Carl) + 12 (John) = 12
+
+Then, I will subtract these amounts from the original quantities in the truck:
+
+- Pink: 26 - 10 = 16
+- Green: 15 - 12 = 3
+- Yellow: 24 - 0 = 24
+
+Finally, I will add up the remaining hard hats to find the total number that remained in the truck.
+
+Total remaining hard hats = 16 (Pink) + 3 (Green) +
+
+=== Problem 70 ===
+Response:
+<think>
+First, I need to determine how much time Roque spends walking and biking each day.
+
+Roque takes two hours to walk to work and one hour to ride his bike to work. Therefore, each round trip (to and from work) by walking takes 2 + 1 = 3 hours. He walks this route three times a week, so the total time spent walking is 3 trips/day * 3 hours/trip * 7 days/week = 63 hours.
+
+Similarly, riding his bike to work takes one hour each way, so each round trip by biking takes 1 + 1 = 2 hours. He bikes this route twice a week, so the total time spent biking is 2 trips/day * 2 hours/trip * 7 days/week = 28 hours.
+
+Adding both activities together, Roque spends a total of 63 + 28 = 91
+
+=== Problem 71 ===
+Response:
+<think>
+First, I need to determine the amount of salt present in the 2 liters of seawater that is 20% salt.
+
+To calculate this, I'll multiply the total volume of the seawater by the percentage of salt it contains. So, 2 liters multiplied by 0.20 equals 0.4 liters of salt.
+
+Next, since all the water evaporates, Jack will be left with only the salt. Therefore, the amount of salt Jack will have is 400 milliliters.
+</think>
+
+**Solution:**
+
+Jack collects **2 liters** of seawater that is **20% salt**. We need to determine how many milliliters (ml) of salt he
+
+=== Problem 72 ===
+Response:
+<think>
+First, I need to determine the cost of producing one movie. James spends \$2000 on each movie.
+
+Next, calculate the revenue generated from selling one movie. Each DVD costs \$6 to produce and is sold for \$2.5 times the production cost. So, the selling price per movie is \$2.5 multiplied by \$2000, which equals \$5000.
+
+Then, find out how many DVDs James sells in total each day. He sells 500 movies a day, and each movie includes one DVD, so he sells 500 DVDs daily.
+
+Calculate the revenue from selling these DVDs each day: \$6 per DVD times 500 DVDs equals \$3000 per day.
+
+Since James works for 5 days a week, his weekly revenue is \$3000 multiplied by 5, resulting in \$15,000 per week.
+
+To find the total revenue over 20 weeks, multiply the weekly revenue by 20: \$15,000 times 20 equals \$300,000.
+
+Finally, subtract the total cost from the total revenue to determine the profit. The total cost is \$2000 multiplied by 500 movies, which equals \$1,000,000. Subtracting this from the total revenue gives a profit of \$299,000.
+</think>
+
+Let's break down James' business operations
+
+=== Problem 73 ===
+Response:
+<think>
+First, I need to determine how many weeks are in a year. There are 52 weeks in a year.
+
+Next, James writes two letters each week. So, the total number of letters he writes in a year is 2 multiplied by 52, which equals 104 letters.
+
+Each letter consists of 3 pages. Therefore, the total number of pages written in a year is 3 pages per letter multiplied by 104 letters, resulting in 312 pages.
+</think>
+
+**Solution:**
+
+1. **Determine the number of weeks in a year:**
+   
+   \[
+   \
+
+=== Problem 74 ===
+Response:
+<think>
+First, I need to determine the total cost of each ingredient Jasper purchased.
+
+Jasper buys 2 pounds of cheddar cheese at $10 per pound. To find the cost of the cheddar cheese, I multiply the price per pound by the number of pounds: 2 * $10 = $20.
+
+Next, he purchases a pound of cream cheese that costs half the price of the cheddar cheese. Since the cheddar cheese is $10 per pound, half of that would be $5 per pound. Therefore, the cost for the cream cheese is 1 * $5 = $5.
+
+Then, Jasper buys a pack of cold cuts that cost twice the price of the cheddar cheese. The cheddar cheese is $10 per pound, so twice that amount is $20 per pound. He does not specify how many pounds or units of cold cuts he purchased, but since the problem asks for the total cost, I will assume he buys 1 unit (1 pack) of cold cuts. Thus, the cost for the cold cuts is 1 * $20 = $20.
+
+Finally, to find the total amount Jasper spent on all ingredients, I add up the costs: $20 (cheddar cheese) +
+
+=== Problem 75 ===
+Response:
+<think>
+To determine how long Joy will take to read 120 pages, I'll start by calculating her reading rate.
+
+First, I'll find out how many pages she reads per minute by dividing the number of pages she can read in 20 minutes by 20. This gives me her reading speed.
+
+Next, I'll use this reading speed to calculate how long it will take her to read 120 pages by dividing 120 by her reading rate.
+
+Finally, since the question asks for the time in hours, I'll convert the total minutes into hours by dividing by 60 and rounding to the nearest whole number.
+
+<think>
+**Solution:**
+
+1. **Determine Joy's Reading Rate:**
+   
+   Joy can read **8 pages** in **20 minutes**.
+
+   \[
+   \text{Reading Rate} = \frac{\text{Number of Pages}}{\text{Time (in minutes)}} = \frac{8\,\text{pages}}{20\,\text{minutes}}
+   \]
+
+2. **Calculate Time to Read 120 Pages:**
+   
+   Using the reading rate, we can find out how long it will take Joy to read **120 pages**.
+
+   \[
+   \text{Time (in minutes)} = \frac{\text{Number of Pages}}{\text{Reading Rate}} = \frac{120\,\text{pages}}{\frac{8}{20}\,\text{pages per minute}}
+   \]
+
+3. **Simplify the Calculation:**
+   
+   \[
+   \frac{120}{\frac{8}{20}} = 120 \times \frac{20}{8} = 120 \times 2.5 = 300\,\text{minutes}
+   \]
+
+4. **Convert Minutes to Hours:**
+   
+   Since there are **60 minutes** in an hour,
+
+   \[
+   300\,\text{minutes} \div 60 = 5\,\text{hours}
+   \]
+
+**Final Answer:**
+
+\boxed{5\,\text{hours}}
+
+=== Problem 76 ===
+Response:
+<think>
+First, I need to determine how many pages Julie has left to read after her reading sessions.
+
+She started with a total of 120 pages.
+
+Yesterday, she read 12 pages, so the remaining pages are 120 minus 12, which equals 108 pages.
+
+Today, she read twice as many pages as yesterday. Since she read 12 pages yesterday, today she read 2 times 12, totaling 24 pages.
+
+Subtracting today's reading from the remaining pages: 108 minus 24 gives her 84 pages left to read.
+
+Tomorrow, Julie wants to read half of these remaining pages. Half of 84 is 42 pages.
+
+Therefore, Julie should read 42 pages tomorrow.
+</think>
+
+Let's break down the problem step by step using **Z3 arithmetic**:
+
+1. **Total Pages in the
+
+=== Problem 77 ===
+Response:
+<think>
+To determine the final weight of the box, I'll break down each step systematically.
+
+First, Ken starts with an empty box weighing 0 pounds. He adds jelly beans until the box weighs 2 pounds.
+
+Next, he adds brownies, which cause the total weight to triple. Tripling 2 pounds gives a new weight of 6 pounds.
+
+Then, Ken adds another 2 pounds of jelly beans, bringing the total to 8 pounds.
+
+Finally, he adds gummy worms that double the current weight. Doubling 8 pounds results in a final weight of 16 pounds.
+</think>
+
+Let's break down each step systematically to find the final weight of the box:
+
+1. **Initial Weight (Box Only):**
+   - The box itself weighs **
+
+=== Problem 78 ===
+Response:
+<think>
+First, I need to determine the number of each type of flower Mark has planted in his garden.
+
+Let's start by defining variables for each color:
+- Let Y represent the number of yellow flowers.
+- Let P represent the number of purple flowers.
+- Let G represent the number of green flowers.
+
+According to the problem, there are 10 yellow flowers. So, I'll set Y = 10.
+
+Next, it states that there are 80% more purple flowers than yellow ones. To find the number of purple flowers, I'll calculate 80% of Y and add it to Y:
+P = Y + 0.8 * Y = 1.8 * Y
+Substituting Y with 10 gives P = 1.8 * 10 = 18.
+
+Now, for the green flowers, the problem states that there are only 25% as many green flowers as there are yellow and purple flowers combined. First, I'll find the total number of non-green flowers by adding Y and P:
+Total non-green = Y + P = 10 + 18 = 28
+
+Then, calculate 25% of this total to find
+
+=== Problem 79 ===
+Response:
+<think>
+First, I recognize that Mary has a credit limit of \$100 at her store.
+
+She spent the entire credit limit during the week.
+
+On Tuesday, she paid \$15, and on Thursday, she paid \$23.
+
+To find out how much she still needs to pay, I will add the amounts she has already paid: \$15 + \$23 = \$38.
+
+Finally, subtracting this from her total credit limit gives the remaining amount she needs to pay before her next shopping trip: \$100 - \$38 = \$62.
+</think>
+
+Let's break down Mary's payments step by step
+
+=== Problem 80 ===
+Response:
+<think>
+First, I'll define the variable for Mrs. Snyder's original monthly income.
+
+Let \( x \) represent her original monthly income.
+
+Initially, she spent 40% of her income on rent and utilities. This means her expenditure on these expenses is \( 0.40x \).
+
+After her salary was increased by $600, her new income became \( x + 600 \). The percentage allocated for rent and utilities decreased to 25%, so the expenditure is now \( 0.25(x + 600) \).
+
+Setting up the equation based on the change in expenses:
+\[
+0.40x = 0.25(x + 600)
+\]
+
+Solving for \( x \):
+\[
+0.40x = 0.25x + 150
+\]
+\[
+0.15x = 150
+\]
+\[
+x = \frac{150}{0.15} = 1000
+\
+
+=== Problem 81 ===
+Response:
+<think>
+First, I need to determine how many clips Natalia sold in April. She sold 48 clips to her friends.
+
+Next, in May, she sold half as many clips as she did in April. To find this amount, I'll calculate half of 48, which is 24.
+
+Finally, to find the total number of clips sold in both months, I'll add the April and May sales together: 48 plus 24 equals 72.
+</think>
+
+**Solution
+
+=== Problem 82 ===
+Response:
+<think>
+First, I need to determine the total number of tennis balls Ralph attempted to hit.
+
+He starts with 175 balls. From the first 100 balls, he successfully hits \( \frac{2}{5} \) of them. Calculating this gives:
+\[
+\frac{2}{5} \times 100 = 40 \text{ balls}
+\]
+So, he missed \( 100 - 40 = 60 \) balls in the first set.
+
+Next, from the remaining 75 balls, he hits \( \frac{1}{3} \):
+\[
+\frac{1}{3} \times 75 = 25 \text{ balls}
+\]
+This means he missed \( 75 - 25 = 50 \) balls in the second set.
+
+Adding up all the missed balls:
+\[
+60 + 50 = 110
+\]
+Therefore, Ralph did not hit a total of 
+
+=== Problem 83 ===
+Response:
+<think>
+First, I need to determine the number of coconut trees Randy has.
+
+He has 60 mango trees. The problem states that he has 5 fewer than half as many coconut trees as mango trees. To find half of 60, I divide by 2, which gives me 30. Then, subtracting 5 from 30 results in 25 coconut trees.
+
+Finally, to find the total number of trees on Randy's farm, I add the number of mango trees and coconut trees together: 60 + 25 equals 85.
+</think>
+
+Let's solve the problem step by step using **z3 code** in Python.
+
+### Problem Statement:
+Randy has 60 mango trees on his farm. He also has 5 fewer than half as many coconut trees as mango trees. How many trees does Randy have in all on his farm?
+
+### Solution:
+
+1. **Define Variables:**
+   - Let `mango_trees` represent the number of mango trees.
+   - Let `coconut_trees` represent the number of coconut trees.
+
+2. **Assign Values:**
+   - `mango_trees = 
+
+=== Problem 84 ===
+Response:
+<think>
+First, I need to determine how many letters are in Jamie's last name. Jamie's last name is "Grey," which has 4 letters.
+
+Next, according to the problem, if Bobbie took two letters off her last name, her last name would be twice the length of Jamie's last name. So, Bobbie's original last name must be twice 4 letters plus the two letters she removed. This means Bobbie's last name is 10 letters long.
+
+Samantha's last name has three fewer letters than Bobbie's last name. Therefore, Samantha's last name would be 10 minus 3, which equals 7 letters.
+</think>
+
+Let's break down the problem step by step to find out how many letters are in Samantha’s last name.
+
+1. **Jamie's Last Name:**
+   - Jamie’s full name is **Jamie Grey
+
+=== Problem 85 ===
+Response:
+<think>
+To determine how much Mike has after purchasing the shirt, I'll start by calculating his initial share based on the given profit ratio.
+
+The total parts in the ratio are 2 (Mike) + 5 (Johnson) = 7 parts. If Johnson received $2500, which corresponds to 5 parts, each part is worth $500 because $2500 divided by 5 equals $500.
+
+Therefore, Mike's initial share is 2 parts multiplied by $500, totaling $1000.
+
+Next, I'll account for the expense Mike incurred by purchasing a shirt that costs $200. Subtracting this amount from Mike's initial share gives his remaining profit: $1000 - $200 = $800.
+
+So, after spending $200 on the shirt, Mike will have $800 left.
+<think>
+**Solution:**
+
+We are given that the profit is shared between **Mike** and **Johnson** in the ratio of **2:5** respectively. 
+
+1. **Determine each partner's share of the total profit:**
+   
+   - Let the total profit be \( P \).
+   - According to the ratio:
+     - Mike's share = \( 2 \) parts
+     - Johnson's share = \( 5 \) parts
+   - Total parts = \( 2 + 5 = 7 \) parts
+   
+2. **Calculate the value of one part:**
+   
+   - Johnson received \$2500, which corresponds to \( 5 \) parts.
+   - Therefore, the value of one part is:
+     \[
+     \text{Value per part} = \frac{\$2500}{5} = \$500
+     \]
+   
+3. **Calculate Mike's initial share:**
+   
+   - Mike has \( 2 \) parts.
+   - So, Mike's initial share is:
+     \[
+     \text{Mike's share} = 2 \times \$500 = \$1000
+     \]
+   
+4. **Deduct the amount spent on the shirt:**
+   
+   - Mike spends \$200 on a shirt.
+   - Therefore, Mike's remaining profit is:
+     \[
+     \text{Mike's final share} = \$1000 - \$200 = \$800
+     \]
+   
+**Final Answer:**  
+\boxed{\$800}
+=== Problem 86 ===
+Response:
+<think>
+To determine how many gnomes are in the fifth house, I'll start by calculating the total number of gnomes in the first four houses.
+
+Each of the first four houses has 3 gnomes, so there are 4 houses multiplied by 3 gnomes per house, which equals 12 gnomes.
+
+Given that there are a total of 20 gnomes on the street, I'll subtract the number of gnomes in the first four houses from the total to find out how many gnomes are left for the fifth house.
+
+So, 20 total gnomes minus 12 gnomes equals 8 gnomes in the fifth house.
+</think>
+
+To determine how many gnomes are in the fifth house, let's break down the problem step by step using **Z3 arithmetic**.
+
+### Given:
+- There are **5 houses** on a street.
+- Each of
+
+=== Problem 87 ===
+Response:
+<think>
+To determine the total time Tim spends biking in a week, I'll break down his activities into individual components.
+
+First, during his five workdays, Tim commutes to and from work each day. Since his workplace is 20 miles away and he bikes at 25 mph, each round trip will take him (20 / 25) hours, which is 0.8 hours per day. Over five days, this amounts to 4 hours.
+
+Additionally, on the weekend, Tim goes on a longer bike ride of 200 miles. The time taken for this ride is calculated by dividing the distance by his biking speed: (200 / 25) hours, resulting in 8 hours.
+
+Finally, I'll add the time spent commuting and the time spent on the weekend ride to find the total weekly biking time
+
+=== Problem 88 ===
+Response:
+<think>
+First, I need to determine Tina's total earnings based on her hourly rate and the number of hours she works each day.
+
+Tina earns $18.00 per hour. She works 10 hours each day for 5 consecutive days. To find her daily earnings, I multiply her hourly wage by the number of hours worked: 18 * 10 = $180.00 per day.
+
+Next, I calculate her total earnings over the 5-day period by multiplying her daily earnings by the number of days: 180 * 5 = $900.00.
+
+Since she works more than 8 hours in a shift, any hours beyond the first 8 are considered overtime. However, in this scenario, Tina works exactly 10 hours each day, which means all her working hours qualify for regular pay because she doesn't exceed the
+
+=== Problem 89 ===
+Response:
+<think>
+Tina makes $18.00 an hour. If she works more than 8 hours per shift, she is eligible for overtime, which is paid at her hourly wage plus half of her hourly wage. 
+
+If Tina works 10 hours every day for 5 days, we need to calculate how much money she makes.
+
+1. **Calculate regular pay for each 8-hour shift:**
+   - Each shift has 8 regular hours.
+   - Regular pay per hour: $18
+   - Regular pay for 8 hours: \(8 \times 18 = 144\)
+
+2. **Calculate overtime pay for the remaining 2 hours in each shift:**
+   - Overtime rate: \(18 + \frac{1}{2} \times 18 = 27\) dollars per hour
+   - Overtime pay for 2 hours: \(2 \times 27 = 54\)
+
+3. **Total pay per shift:**
+   - Regular pay + Overtime pay: \(144 + 54 = 198\)
+
+4. **Calculate total pay for 5 shifts:**
+   - Total pay per day (shift): $198
+   - Total pay for 5 days: \(5 \times 198 = 990\)
+
+Thus, Tina makes a total of \(\boxed{990}\) dollars.
+<think>
+
+Tina makes a total of \(\boxed{990}\) dollars.
+
+=== Problem 90 ===
+Response:
+<think>
+First, I need to determine Weng's hourly rate, which is $12 per hour.
+
+Next, I'll calculate the total time she spent babysitting, which is 50 minutes.
+
+Since her pay rate is in hours, I should convert the 50-minute duration into hours. There are 60 minutes in an hour, so 50 minutes is equal to 5/6 of an hour.
+
+Finally, I'll multiply her hourly rate by the total time worked to find her earnings for the day.
+<think>
+**Solution:**
+
+1. **Identify the given values:**
+   - **Hourly Rate (R):** \$12/hour
+   - **Time Worked (T):** 50 minutes
+
+2. **Convert Time from Minutes to Hours:**
+   
+   \[
+   T = 50 \text{ minutes} = \frac{50}{60} \text{ hours} = \frac{5}{6} \text{ hours}
+   \]
+
+3. **Calculate the Total Earnings:**
+   
+   \[
+   \text{Earnings} = R \times T = \$12 \times \frac{5}{6} \text{ hours}
+   \]
+   
+   \[
+   \text{Earnings} = \$10
+   \]
+
+**Final Answer:** Weng earned \boxed{\$10}.

@@ -1,0 +1,994 @@
+=== Problem 21 ===
+Prompt:
+I have an apple that weighs 20g and my friend has two pears. If my friend puts half of the pears in a basket in front of him and I put my apple in another basket, in total, it weighs 80 oz. Assuming equal pear weight, what is the weight in grams per pear?
+[Thought Process]
+
+
+[Final Answer]
+Alright, let's tackle this problem step by step. I'll try to break it down to understand what's given and what's being asked.
+
+### Understanding the Problem
+
+We have a few pieces of information:
+
+1. **My apple**: weighs 20 grams.
+2. **My friend's pears**: has two pears.
+   - Puts half of the pears in a basket in front of him.
+   - Assuming equal weight for each pear.
+3. **Baskets**:
+   - One basket has half of the pears.
+   - Another basket has my apple.
+4. **Total weight**: The combined weight of both baskets is 80 oz.
+5. **Question**: What is the weight in grams per pear?
+
+### Identifying What We Need to Find
+
+We need to find the weight of one pear in grams. 
+
+### Breaking Down the Information
+
+First, let's clarify the quantities:
+
+- Number of pears my friend has: 2.
+- Half of the pears: 2 / 2 = 1 pear.
+  
+So:
+- Basket 1: 1 pear.
+- Basket 2: 1 apple (20 grams).
+
+Total weight of both baskets: 80 oz.
+
+But wait, the apple's weight is given in grams, and the total weight is in ounces. We'll need to make sure all weights are in the same unit to solve the problem. 
+
+### Converting Units
+
+We have:
+- 1 oz (ounce) ≈ 28.3495 grams.
+
+Total weight in grams:
+80 oz * 28.3495 g/oz ≈ 80 * 28.3495 ≈ 2267.96 grams.
+
+So, both baskets together weigh approximately 2267.96 grams.
+
+### Setting Up the Equation
+
+Basket 1: 1 pear → let's call the weight of one pear = P grams.
+Basket 2: 1 apple = 20 grams.
+
+Total weight: P (pear) + 20 (apple) = 2267.96 grams.
+
+So:
+P + 20 = 2267.96
+P = 2267.96 - 20
+P = 2247.96 grams.
+
+### Verifying the Answer
+
+This seems like a very heavy pear—over 2 kilograms per pear! That doesn't seem right. Maybe I made a mistake in interpreting the problem.
+
+### Re-evaluating the Problem
+
+Let me read the problem again:
+
+"I have an apple that weighs 20g and my friend has two pears. If my friend puts half of the pears in a basket in front of him and I put my apple in another basket, in total, it weighs 80 oz. Assuming equal pear weight, what is the weight in grams per pear?"
+
+Wait, maybe the "another basket" is the same as the basket in front of him. Maybe both items are going into the same basket. 
+
+Alternative interpretation:
+- Friend puts half of his pears (1 pear) into a basket.
+- I put my apple into the same basket.
+- Total weight of that basket: 80 oz.
+
+Then:
+1 pear + 1 apple = 80 oz.
+1 pear + 20 g = 80 oz.
+
+Convert 80 oz to grams:
+80 oz * 28.3495 g/oz ≈ 2267.96 g.
+
+So:
+P + 20 = 2267.96
+P = 2267.96 - 20 = 2247.96 g.
+
+Still getting a very heavy pear. Maybe the issue is in the unit conversion or the interpretation.
+
+### Checking Units
+
+The apple is 20 grams, and the total is 80 oz. That's a large total compared to the apple. Maybe the total is supposed to be in grams, not ounces. 
+
+But the problem clearly says 80 oz. Alternatively, maybe the apple's weight is in ounces, but it's given as 20g.
+
+Alternatively, maybe "it weighs 80 oz" refers to the total weight of the pears and apple combined in the baskets, with each basket having its own content.
+
+Original interpretation seems correct based on wording, leading to a pear weighing ~2248 grams, which is unrealistic. 
+
+Perhaps the issue is in the unit given for the total weight. Maybe it's a typo, and it's 80 grams, not oz. 
+
+If total is 80 grams:
+P + 20 = 80
+P = 60 grams per pear.
+
+That seems more reasonable for a pear's weight.
+
+But the problem states 80 oz, so unless it's a mistake, the pear is ~2248 grams.
+
+### Conclusion
+
+Given the problem as stated, with total weight at 80 oz:
+
+1 pear + 1 apple = 80 oz.
+1 pear + 20 g = 2267.96 g.
+1 pear = 2247.96 g.
+
+This seems unrealistic for a pear's weight, so there might be an error in the problem's units. 
+
+However, based strictly on the given information:
+
+**Weight per pear: approximately 2248 grams.**
+
+But more likely, the "80 oz" was intended to be "80 g", making each pear 60 grams, which is reasonable.
+
+Given no option to correct the problem, the answer is:
+
+**2248 grams per pear.** 
+
+But this seems too high, suggesting a possible unit error in the problem. 
+
+Assuming the total weight is indeed 80 oz:
+
+1 oz ≈ 28.35 g
+80 oz ≈ 2268 g
+
+Apple: 20 g
+So pear: 2268 g - 20 g = 2248 g
+
+**Final Answer: Each pear weighs approximately 2248 grams.** 
+
+However, this is unusually heavy for a pear, so please verify the total weight's unit (likely should be grams, not ounces). If total is 80 g:
+
+Pear = 80 g - 20 g = 60 g per pear, which is more realistic. 
+
+Given the original problem states 80 oz, the answer is:
+
+**2248 grams per pear.** 
+
+But realistically, there might be a unit mistake in the problem. 
+
+For practical purposes, if we assume "80" is in grams:
+
+Each pear would weigh 60 grams. 
+
+But strictly following the problem:
+
+80 oz total:
+80 oz = 80 * 28.35 ≈ 2268 g
+Apple: 20 g
+Pear: 2268 - 20 = 2248 g
+
+**Final Answer: Each pear weighs approximately 2248 grams.** 
+
+(Though this seems incorrect due to likely unit error in the problem.) 
+
+If the total was meant to be 80 grams:
+
+Then pear = 80 - 20 = 60 grams, which is reasonable. 
+
+Given the original, proceeding with 80 oz:
+
+**Each pear weighs approximately 2248 grams.** 
+
+---
+
+**Final Numerical Answer:**
+
+Each pear weighs approximately **2248 grams**. 
+
+(Note: This seems unusually high; the total weight might be intended to be in grams, making each pear 60 grams.) 
+
+Given the problem as stated with 80 oz:
+
+\[ \text{Weight per pear} = 80 \text{ oz} \times 28.3495 \frac{\text{g}}{\text{oz}} - 20 \text{ g} \]
+\[ = 2267.96 \text{ g} - 20 \text{ g} \]
+\[ = 2247.96 \text{ g} \]
+\[ \approx 2248 \text{ grams per pear} \] 
+
+**Answer:** Each pear weighs approximately **2248 grams**.
+
+=== Problem 22 ===
+Prompt:
+Sarah has 3 oranges, each weighing the same. Her brother eats one-third of one orange and then adds a 200g watermelon slice to the same plate. If the plate now weighs 1.1 kg and the plate itself is 400g, how much does one whole orange weigh in grams?
+[Thought Process]
+
+
+[Final Answer]
+Let's break down the problem step by step to find the weight of one whole orange.
+
+### **Given:**
+- **Number of oranges:** 3
+- **Brother's action:** Eats \( \frac{1}{3} \) of one orange.
+- **Adds:** 200g watermelon slice.
+- **Total plate weight now:** 1.1 kg (1100g)
+- **Weight of the plate itself:** 400g
+
+### **Let:**
+- \( w \) = weight of one whole orange in grams.
+
+### **Step 1: Calculate the initial weight of the oranges on the plate.**
+Sarah has 3 whole oranges on the plate initially:
+\[
+3w \text{ grams}
+\]
+
+### **Step 2: Account for the brother eating \( \frac{1}{3} \) of one orange.**
+The brother eats \( \frac{1}{3} \) of one orange, so the remaining portion of that orange is:
+\[
+\frac{2}{3}w \text{ grams}
+\]
+The other two oranges remain whole:
+\[
+2w \text{ grams}
+\]
+**Total oranges on the plate after eating:**
+\[
+2w + \frac{2}{3}w = \frac{8}{3}w \text{ grams}
+\]
+
+### **Step 3: Add the 200g watermelon slice to the plate.**
+The total weight on the plate now is:
+\[
+\frac{8}{3}w + 200 \text{ grams}
+\]
+
+### **Step 4: Include the weight of the plate (400g) to get the total weight.**
+\[
+\frac{8}{3}w + 200 + 400 = 1100 \text{ grams}
+\]
+
+### **Step 5: Solve for \( w \).**
+\[
+\frac{8}{3}w + 600 = 1100
+\]
+\[
+\frac{8}{3}w = 500
+\]
+\[
+8w = 1500
+\]
+\[
+w = \frac{1500}{8}
+\]
+\[
+w = 187.5 \text{ grams}
+\]
+
+### **Final Answer:**
+\[
+\boxed{187.5}
+\]
+
+=== Problem 23 ===
+Prompt:
+Tom has 4 identical metal rods. He cuts one in half and adds it to a 2 kg bucket. The total weight becomes 2.8 kg. How much does one full rod weigh in grams?
+[Thought Process]
+
+
+[Final Answer]
+Let's determine the weight of one full metal rod step by step.
+
+1. **Initial Information:**
+   - **Number of rods:** 4 (identical)
+   - **Action:** Tom cuts **one** rod in half and adds **both halves** to a 2 kg bucket.
+   - **Resulting weight:** 2.8 kg.
+
+2. **Understanding the Addition:**
+   - When Tom cuts one rod in half, he adds **two pieces** (each half) to the bucket.
+   - Therefore, the total weight added is the weight of **one full rod**.
+
+3. **Calculating the Weight Added:**
+   - **Initial bucket weight:** 2 kg
+   - **Final bucket weight:** 2.8 kg
+   - **Weight added (one full rod):** \( 2.8 \, \text{kg} - 2 \, \text{kg} = 0.8 \, \text{kg} \)
+
+4. **Converting to Grams:**
+   - \( 1 \, \text{kg} = 1000 \, \text{grams} \)
+   - \( 0.8 \, \text{kg} = 800 \, \text{grams} \)
+
+5. **Conclusion:**
+   - **One full rod weighs** \( \boxed{800} \) grams.
+
+**Answer:** \boxed{800}
+
+=== Problem 24 ===
+Prompt:
+A 1.5-liter bottle is filled halfway with milk and the rest with water. Milk weighs 1.03 g/ml, and water 1.00 g/ml. What is the total weight of the bottle contents in grams?
+[Thought Process]
+
+
+[Final Answer]
+To determine the total weight of the contents in the 1.5-liter bottle, we'll follow these steps:
+
+1. **Convert the Bottle's Volume to Milliliters (ml):**
+   - 1 liter = 1000 ml
+   - 1.5 liters = 1500 ml
+
+2. **Calculate the Volume of Milk and Water:**
+   - The bottle is filled halfway with milk and the rest with water.
+   - Volume of milk = \( \frac{1500 \text{ ml}}{2} = 750 \text{ ml} \)
+   - Volume of water = \( 1500 \text{ ml} - 750 \text{ ml} = 750 \text{ ml} \)
+
+3. **Compute the Weight of Milk and Water:**
+   - **Milk:**
+     - Weight = Volume × Density
+     - \( 750 \text{ ml} \times 1.03 \text{ g/ml} = 772.5 \text{ g} \)
+   
+   - **Water:**
+     - Weight = Volume × Density
+     - \( 750 \text{ ml} \times 1.00 \text{ g/ml} = 750 \text{ g} \)
+
+4. **Find the Total Weight:**
+   - Total weight = Weight of milk + Weight of water
+   - \( 772.5 \text{ g} + 750 \text{ g} = 1522.5 \text{ g} \)
+
+**Final Answer:**
+\[
+\boxed{1522.5}
+\]
+
+=== Problem 25 ===
+Prompt:
+An empty jar weighs 300g. You place 5 identical cookies and the jar now weighs 950g. Later, you eat 2 cookies. What is the weight of one cookie in grams?
+[Thought Process]
+
+
+[Final Answer]
+Let's solve the problem step by step.
+
+1. **Determine the total weight of the cookies:**
+   
+   - **Weight of the empty jar:** 300g
+   - **Weight of the jar with 5 cookies:** 950g
+   
+   \[
+   \text{Total weight of 5 cookies} = 950g - 300g = 650g
+   \]
+
+2. **Calculate the weight of one cookie:**
+   
+   \[
+   \text{Weight of one cookie} = \frac{650g}{5} = 130g
+   \]
+
+3. **Verify the weight after eating 2 cookies:**
+   
+   - **Number of cookies eaten:** 2
+   - **Total weight of eaten cookies:** \(2 \times 130g = 260g\)
+   - **Remaining weight of the jar with cookies:** \(950g - 260g = 690g\)
+   
+   However, this step is not necessary for the question asked, but it confirms our calculation is consistent.
+
+**Final Answer:**
+
+\[
+\boxed{130}
+\]
+
+=== Problem 26 ===
+Prompt:
+A gold bar weighs 1.2 kg. After removing 150g from it and adding 350g of silver, the total weight becomes 1.4 kg. What is the density ratio of gold to silver by weight?
+[Thought Process]
+
+
+[Final Answer]
+Let's solve the problem step by step.
+
+### **Given:**
+- **Initial weight of gold bar (W₁):** 1.2 kg = 1200 g
+- **Gold removed (W₂):** 150 g
+- **Silver added (W₃):** 350 g
+- **Final total weight (W₄):** 1.4 kg = 1400 g
+
+### **Step 1: Calculate the remaining gold after removal.**
+\[
+\text{Remaining gold} = W₁ - W₂ = 1200\, \text{g} - 150\, \text{g} = 1050\, \text{g}
+\]
+
+### **Step 2: Verify the final weight after adding silver.**
+\[
+\text{Total weight} = \text{Remaining gold} + \text{Silver added} = 1050\, \text{g} + 350\, \text{g} = 1400\, \text{g}
+\]
+This matches the given final weight, confirming our calculations.
+
+### **Step 3: Determine the density ratio of gold to silver by weight.**
+The density ratio by weight is simply the ratio of the remaining gold to the added silver.
+
+\[
+\text{Density ratio (Gold : Silver)} = \frac{\text{Remaining gold}}{\text{Silver added}} = \frac{1050\, \text{g}}{350\, \text{g}} = 3
+\]
+
+### **Final Answer:**
+\[
+\boxed{3}
+\]
+
+=== Problem 27 ===
+Prompt:
+A car tire weighs 9.8 kg. Four identical tires are mounted on a car that otherwise weighs 820 kg. If a digital scale shows 859.2 kg, how much air (by weight) is added to each tire?
+[Thought Process]
+
+
+[Final Answer]
+Let's determine how much air (by weight) is added to each tire step by step.
+
+### **Given:**
+- **Weight of one tire:** 9.8 kg
+- **Number of tires:** 4
+- **Car weight (excluding tires):** 820 kg
+- **Total weight measured by the scale:** 859.2 kg
+
+### **Step 1: Calculate the Total Weight Without Air**
+First, find the combined weight of the car and the tires without any air.
+
+\[
+\text{Total weight without air} = \text{Car weight} + (\text{Weight of one tire} \times \text{Number of tires})
+\]
+
+\[
+\text{Total weight without air} = 820\,\text{kg} + (9.8\,\text{kg} \times 4) = 820\,\text{kg} + 39.2\,\text{kg} = 859.2\,\text{kg}
+\]
+
+### **Step 2: Determine the Weight of the Air**
+The scale measures the same weight (859.2 kg) as the calculated weight without air. This implies that the air inside the tires does not contribute any additional weight to the measurement.
+
+\[
+\text{Weight of air in all tires} = \text{Total measured weight} - \text{Total weight without air} = 859.2\,\text{kg} - 859.2\,\text{kg} = 0\,\text{kg}
+\]
+
+### **Step 3: Calculate the Air Weight per Tire**
+Since the total air weight is 0 kg, each tire contains:
+
+\[
+\text{Air weight per tire} = \frac{0\,\text{kg}}{4} = 0\,\text{kg}
+\]
+
+### **Final Answer:**
+\[
+\boxed{0}
+\]
+
+=== Problem 28 ===
+Prompt:
+You have 3 bags of rice. The first weighs 2.5 kg, the second is 800 g heavier, and the third is 300 g lighter than the second. What is the total weight in kilograms?
+[Thought Process]
+
+
+[Final Answer]
+Let's determine the total weight of the three bags of rice step by step.
+
+1. **First Bag:**
+   - **Weight:** 2.5 kg
+
+2. **Second Bag:**
+   - It is 800 grams heavier than the first bag.
+   - Convert 800 grams to kilograms: \( 800 \text{ g} = 0.8 \text{ kg} \)
+   - **Weight:** \( 2.5 \text{ kg} + 0.8 \text{ kg} = 3.3 \text{ kg} \)
+
+3. **Third Bag:**
+   - It is 300 grams lighter than the second bag.
+   - Convert 300 grams to kilograms: \( 300 \text{ g} = 0.3 \text{ kg} \)
+   - **Weight:** \( 3.3 \text{ kg} - 0.3 \text{ kg} = 3.0 \text{ kg} \)
+
+4. **Total Weight:**
+   - **Calculation:** \( 2.5 \text{ kg} + 3.3 \text{ kg} + 3.0 \text{ kg} = 8.8 \text{ kg} \)
+
+**Final Answer:**
+\[
+\boxed{8.8 \text{ kg}}
+\]
+
+=== Problem 29 ===
+Prompt:
+A toolbox contains 5 tools. The heaviest tool weighs 2.4 kg, and each of the remaining tools weighs 75% as much. What is the total weight of the toolbox contents in grams?
+[Thought Process]
+
+
+[Final Answer]
+To determine the total weight of the toolbox contents in grams, let's break down the problem step by step.
+
+1. **Identify the Weights:**
+   - **Heaviest tool:** 2.4 kg
+   - **Remaining 4 tools:** Each weighs 75% of the heaviest tool.
+
+2. **Calculate the Weight of Each Remaining Tool:**
+   \[
+   75\% \text{ of } 2.4\, \text{kg} = 0.75 \times 2.4\, \text{kg} = 1.8\, \text{kg}
+   \]
+   
+3. **Compute the Total Weight:**
+   - **Heaviest tool:** 2.4 kg
+   - **4 remaining tools:** \(4 \times 1.8\, \text{kg} = 7.2\, \text{kg}\)
+   
+   \[
+   \text{Total weight} = 2.4\, \text{kg} + 7.2\, \text{kg} = 9.6\, \text{kg}
+   \]
+   
+4. **Convert Kilograms to Grams:**
+   \[
+   1\, \text{kg} = 1000\, \text{grams}
+   \]
+   \[
+   9.6\, \text{kg} = 9.6 \times 1000\, \text{grams} = 9600\, \text{grams}
+   \]
+   
+5. **Final Answer:**
+   \[
+   \boxed{9600}
+   \]
+
+=== Problem 30 ===
+Prompt:
+A chef uses 3 eggs, each 60g, and adds 180g of flour. He removes 1/4 of the mixture. How much does the remaining batter weigh in grams?
+[Thought Process]
+
+
+[Final Answer]
+Let's break down the problem step by step to find the weight of the remaining batter.
+
+### **1. Calculate the Total Weight of the Eggs:**
+The chef uses **3 eggs**, each weighing **60 grams**.
+\[
+3 \text{ eggs} \times 60 \text{ grams} = 180 \text{ grams}
+\]
+
+### **2. Add the Flour:**
+The chef adds **180 grams** of flour to the eggs.
+\[
+180 \text{ grams (eggs)} + 180 \text{ grams (flour)} = 360 \text{ grams}
+\]
+
+### **3. Determine the Amount Removed:**
+The chef removes **\(\frac{1}{4}\)** of the mixture.
+\[
+\frac{1}{4} \times 360 \text{ grams} = 90 \text{ grams}
+\]
+
+### **4. Calculate the Remaining Batter:**
+Subtract the removed portion from the total mixture.
+\[
+360 \text{ grams} - 90 \text{ grams} = 270 \text{ grams}
+\]
+
+### **Final Answer:**
+\[
+\boxed{270}
+\]
+
+=== Problem 31 ===
+Prompt:
+If one liter of oil weighs 920g and a chef pours 750 ml into a pan, then adds 300g of chopped onions, what is the total weight of the pan contents in grams?
+[Thought Process]
+
+
+[Final Answer]
+Let's break down the problem step by step to find the total weight of the pan contents.
+
+### 1. **Weight of the Oil Poured into the Pan**
+
+- **Given:**
+  - 1 liter (1000 ml) of oil weighs 920 grams.
+  - The chef pours 750 ml of oil into the pan.
+
+- **Calculation:**
+  - First, find the weight per milliliter of oil:
+    \[
+    \text{Weight per ml} = \frac{920 \text{ g}}{1000 \text{ ml}} = 0.92 \text{ g/ml}
+    \]
+  - Then, calculate the weight of 750 ml of oil:
+    \[
+    750 \text{ ml} \times 0.92 \text{ g/ml} = 690 \text{ g}
+    \]
+
+### 2. **Weight of the Chopped Onions Added**
+
+- **Given:**
+  - The chef adds 300 grams of chopped onions to the pan.
+
+### 3. **Total Weight of the Pan Contents**
+
+- **Calculation:**
+  - Add the weight of the oil and the chopped onions together:
+    \[
+    690 \text{ g (oil)} + 300 \text{ g (onions)} = 990 \text{ g}
+    \]
+
+### **Final Answer**
+
+\[
+\boxed{990}
+\]
+
+=== Problem 32 ===
+Prompt:
+Two identical chairs and one table together weigh 35 kg. One chair is removed and replaced with a stool weighing 3 kg less. The total weight becomes 32 kg. What is the weight of one chair?
+[Thought Process]
+
+
+[Final Answer]
+Let's solve the problem step by step.
+
+1. **Define the Variables:**
+   - Let the weight of one chair be \( C \) kg.
+   - Let the weight of the table be \( T \) kg.
+
+2. **First Scenario:**
+   - Two chairs and one table together weigh 35 kg.
+   \[
+   2C + T = 35 \quad \text{(Equation 1)}
+   \]
+
+3. **Second Scenario:**
+   - One chair is removed and replaced with a stool that weighs 3 kg less than the chair.
+   - The stool's weight: \( C - 3 \) kg.
+   - The new total weight is 32 kg.
+   \[
+   C + (C - 3) + T = 32
+   \]
+   Simplify:
+   \[
+   2C - 3 + T = 32 \quad \text{(Equation 2)}
+   \]
+
+4. **Solve the Equations:**
+   - Subtract Equation 2 from Equation 1:
+   \[
+   (2C + T) - (2C - 3 + T) = 35 - 32
+   \]
+   \[
+   2C + T - 2C + 3 - T = 3
+   \]
+   \[
+   3 = 3
+   \]
+   - This confirms the equations are consistent.
+
+   - Now, solve Equation 1 for \( T \):
+   \[
+   T = 35 - 2C
+   \]
+   
+   - Substitute \( T \) into Equation 2:
+   \[
+   2C - 3 + (35 - 2C) = 32
+   \]
+   \[
+   2C - 3 + 35 - 2C = 32
+   \]
+   \[
+   32 = 32
+   \]
+   - This again confirms consistency.
+
+   - To find \( C \), observe that the stool weighs 3 kg less than the chair, and the total weight decreased by 3 kg (from 35 kg to 32 kg). This implies:
+   \[
+   \text{Weight of one chair} = 3 \text{ kg (difference)} + 3 \text{ kg (stool's weight difference)} = 6 \text{ kg}
+   \]
+   
+   - However, let's verify this:
+   - If \( C = 6 \) kg:
+     \[
+     T = 35 - 2 \times 6 = 23 \text{ kg}
+     \]
+     - Check the second scenario:
+     \[
+     6 + (6 - 3) + 23 = 6 + 3 + 23 = 32 \text{ kg}
+     \]
+     - This checks out.
+
+5. **Final Answer:**
+   \[
+   \boxed{6}
+   \]
+
+**The weight of one chair is 6 kg.**
+
+=== Problem 33 ===
+Prompt:
+A person buys 3 kg of sugar and 2 kg of salt. Later, he uses 1/2 kg of sugar and 1.25 kg of salt. What percentage of the original weight remains?
+[Thought Process]
+
+
+[Final Answer]
+Let's determine what percentage of the original weight remains after the person uses some of the sugar and salt.
+
+### **Step 1: Calculate the Original Total Weight**
+- **Sugar Purchased:** 3 kg
+- **Salt Purchased:** 2 kg
+
+\[
+\text{Original Weight} = 3\,\text{kg} + 2\,\text{kg} = 5\,\text{kg}
+\]
+
+### **Step 2: Calculate the Amount Used**
+- **Sugar Used:** \(\frac{1}{2}\,\text{kg} = 0.5\,\text{kg}\)
+- **Salt Used:** \(1.25\,\text{kg}\)
+
+\[
+\text{Total Used} = 0.5\,\text{kg} + 1.25\,\text{kg} = 1.75\,\text{kg}
+\]
+
+### **Step 3: Determine the Remaining Weight**
+\[
+\text{Remaining Weight} = \text{Original Weight} - \text{Total Used} = 5\,\text{kg} - 1.75\,\text{kg} = 3.25\,\text{kg}
+\]
+
+### **Step 4: Calculate the Percentage Remaining**
+\[
+\text{Percentage Remaining} = \left( \frac{\text{Remaining Weight}}{\text{Original Weight}} \right) \times 100 = \left( \frac{3.25}{5} \right) \times 100 = 65\%
+\]
+
+### **Final Answer**
+\[
+\boxed{65\%}
+\]
+
+=== Problem 34 ===
+Prompt:
+A painter uses 4 cans of paint. Each full can weighs 1.6 kg. After painting, each can is 60% full. What is the total remaining weight of paint in kilograms?
+[Thought Process]
+
+
+[Final Answer]
+Let's calculate the total remaining weight of the paint step by step.
+
+1. **Weight of Each Full Can:**
+   \[
+   1.6 \text{ kg}
+   \]
+
+2. **Weight of Paint Used per Can:**
+   - Since each can is 60% full after painting, 40% of the paint has been used.
+   \[
+   \text{Weight used per can} = 1.6 \text{ kg} \times 40\% = 1.6 \times 0.4 = 0.64 \text{ kg}
+   \]
+
+3. **Remaining Weight per Can:**
+   \[
+   \text{Remaining weight per can} = 1.6 \text{ kg} - 0.64 \text{ kg} = 0.96 \text{ kg}
+   \]
+
+4. **Total Remaining Weight for 4 Cans:**
+   \[
+   \text{Total remaining weight} = 4 \times 0.96 \text{ kg} = 3.84 \text{ kg}
+   \]
+
+Alternatively, you can calculate it directly by considering the remaining percentage:
+
+\[
+\text{Total remaining weight} = 4 \times 1.6 \text{ kg} \times 60\% = 6.4 \times 0.6 = 3.84 \text{ kg}
+\]
+
+**Final Answer:**
+\[
+\boxed{3.84}
+\]
+
+=== Problem 35 ===
+Prompt:
+A pack of 10 identical pencils and a box weigh 230g. The box alone weighs 50g. If 4 pencils are removed, what is the new total weight in grams?
+[Thought Process]
+
+
+[Final Answer]
+Let's break down the problem step by step to find the new total weight after removing 4 pencils.
+
+### **Given:**
+- **Total weight of 10 pencils + box = 230g**
+- **Weight of the box alone = 50g**
+
+### **Step 1: Find the weight of the 10 pencils.**
+Since the box weighs 50g, the combined weight of the 10 pencils is:
+\[
+\text{Weight of 10 pencils} = \text{Total weight} - \text{Weight of box} = 230g - 50g = 180g
+\]
+
+### **Step 2: Determine the weight of one pencil.**
+All pencils are identical, so the weight of one pencil is:
+\[
+\text{Weight of one pencil} = \frac{\text{Weight of 10 pencils}}{10} = \frac{180g}{10} = 18g
+\]
+
+### **Step 3: Calculate the weight of the remaining pencils after removing 4.**
+If 4 pencils are removed, the number of remaining pencils is:
+\[
+10 \text{ pencils} - 4 \text{ pencils} = 6 \text{ pencils}
+\]
+The weight of the remaining 6 pencils is:
+\[
+6 \times 18g = 108g
+\]
+
+### **Step 4: Find the new total weight including the box.**
+Add the weight of the remaining pencils to the weight of the box:
+\[
+\text{New total weight} = \text{Weight of 6 pencils} + \text{Weight of box} = 108g + 50g = 158g
+\]
+
+### **Final Answer:**
+\[
+\boxed{158}
+\]
+
+=== Problem 36 ===
+Prompt:
+A shipment contains 8 crates of bananas. Each crate weighs 15.5 kg including 2.5 kg packaging. What is the total weight of just the bananas?
+[Thought Process]
+
+
+[Final Answer]
+To determine the total weight of just the bananas in the shipment, follow these steps:
+
+1. **Calculate the net weight of bananas per crate:**
+   
+   Each crate has a total weight of **15.5 kg**, which includes **2.5 kg** of packaging. Therefore, the weight of the bananas alone in one crate is:
+   
+   \[
+   \text{Net weight per crate} = \text{Total weight per crate} - \text{Packaging weight}
+   \]
+   
+   \[
+   \text{Net weight per crate} = 15.5\,\text{kg} - 2.5\,\text{kg} = 13\,\text{kg}
+   \]
+
+2. **Calculate the total weight of bananas for all crates:**
+   
+   There are **8 crates** in the shipment. Multiply the net weight per crate by the number of crates:
+   
+   \[
+   \text{Total weight of bananas} = \text{Net weight per crate} \times \text{Number of crates}
+   \]
+   
+   \[
+   \text{Total weight of bananas} = 13\,\text{kg} \times 8 = 104\,\text{kg}
+   \]
+
+**Final Answer:**
+
+\[
+\boxed{104\,\text{kg}}
+\]
+
+=== Problem 37 ===
+Prompt:
+If a 5-liter bucket full of water weighs 5.3 kg, and the empty bucket weighs 800g, what is the density of the water in g/ml?
+[Thought Process]
+
+
+[Final Answer]
+To determine the density of the water in grams per milliliter (g/mL), follow these steps:
+
+1. **Convert all measurements to consistent units (grams and milliliters):**
+   - **Total weight of the bucket with water:** 5.3 kg = 5300 grams
+   - **Weight of the empty bucket:** 800 grams
+   - **Volume of water:** 5 liters = 5000 milliliters
+
+2. **Calculate the weight of the water alone:**
+   \[
+   \text{Weight of water} = \text{Total weight} - \text{Weight of bucket} = 5300\,\text{g} - 800\,\text{g} = 4500\,\text{g}
+   \]
+
+3. **Compute the density of the water:**
+   \[
+   \text{Density} = \frac{\text{Mass of water}}{\text{Volume of water}} = \frac{4500\,\text{g}}{5000\,\text{mL}} = 0.9\,\text{g/mL}
+   \]
+
+**Final Answer:**
+\[
+\boxed{0.9\,\text{g/mL}}
+\]
+
+=== Problem 38 ===
+Prompt:
+A cat and a dog together weigh 22 kg. The dog weighs 8 kg more than the cat. What is the weight of the cat?
+[Thought Process]
+
+
+[Final Answer]
+Let's solve the problem step by step.
+
+**Given:**
+1. The combined weight of the cat and the dog is **22 kg**.
+2. The dog weighs **8 kg more** than the cat.
+
+**Let’s define:**
+- Let \( C \) be the weight of the cat (in kg).
+- Then, the weight of the dog is \( C + 8 \) kg.
+
+**Set up the equation based on the combined weight:**
+\[
+C + (C + 8) = 22
+\]
+
+**Simplify and solve for \( C \):**
+\[
+2C + 8 = 22
+\]
+\[
+2C = 22 - 8
+\]
+\[
+2C = 14
+\]
+\[
+C = \frac{14}{2}
+\]
+\[
+C = 7
+\]
+
+**Answer:**
+The cat weighs \(\boxed{7}\) kg.
+
+=== Problem 39 ===
+Prompt:
+A baker divides a 2.4 kg dough into 8 equal buns. He bakes 5 of them and stores the rest. What is the weight of the stored dough in grams?
+[Thought Process]
+
+
+[Final Answer]
+To determine the weight of the stored dough in grams, follow these steps:
+
+1. **Total Dough Weight:**
+   - The baker starts with **2.4 kg** of dough.
+
+2. **Convert Kilograms to Grams:**
+   - Since **1 kg = 1000 grams**,
+   - **2.4 kg = 2.4 × 1000 = 2400 grams**.
+
+3. **Divide Dough into Equal Buns:**
+   - The dough is divided into **8 equal buns**.
+   - Weight of each bun = **Total dough / Number of buns**
+   - **2400 grams / 8 = 300 grams** per bun.
+
+4. **Calculate Stored Dough:**
+   - The baker bakes **5 buns** and stores the rest.
+   - Number of buns stored = **Total buns - Baked buns = 8 - 5 = 3 buns**.
+   - Weight of stored dough = **Number of stored buns × Weight per bun**
+   - **3 × 300 grams = 900 grams**.
+
+**Final Answer:**
+\[
+\boxed{900}
+\]
+
+=== Problem 40 ===
+Prompt:
+One-third of a 900g bag of flour is used to make dough. Then 150g of oil is added. What is the final weight of the mixture in grams?
+[Thought Process]
+
+
+[Final Answer]
+Let's break down the problem step by step to find the final weight of the mixture.
+
+1. **Calculate the amount of flour used:**
+   
+   \[
+   \text{Flour used} = \frac{1}{3} \times 900\,\text{g} = 300\,\text{g}
+   \]
+
+2. **Determine the remaining flour:**
+   
+   \[
+   \text{Remaining flour} = 900\,\text{g} - 300\,\text{g} = 600\,\text{g}
+   \]
+
+3. **Add the oil to the remaining flour:**
+   
+   \[
+   \text{Final weight} = \text{Remaining flour} + \text{Oil} = 600\,\text{g} + 150\,\text{g} = 750\,\text{g}
+   \]
+
+**Final Answer:**
+
+\[
+\boxed{750}
+\]
+

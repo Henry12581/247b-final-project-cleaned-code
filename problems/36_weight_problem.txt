@@ -1,0 +1,5 @@
+Problem 36:
+A shipment contains 8 crates of bananas. Each crate weighs 15.5 kg including 2.5 kg packaging. What is the total weight of just the bananas?
+
+
+104

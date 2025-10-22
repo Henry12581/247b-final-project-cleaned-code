@@ -1,0 +1,5 @@
+Problem 37:
+If a 5-liter bucket full of water weighs 5.3 kg, and the empty bucket weighs 800g, what is the density of the water in g/ml?
+
+
+0.9

@@ -1,0 +1,5 @@
+Problem 72:
+James creates a media empire.  He creates a movie for $2000.  Each DVD cost $6 to make.  He sells it for 2.5 times that much.  He sells 500 movies a day for 5 days a week.  How much profit does he make in 20 weeks?
+
+sat[profit = 448000, total_gross = 750000, total_cost = 302000, total_sold = 50000, total_weeks = 20, dvd_per_week_sold = 2500,days_per_week_sold = 5, dvd_per_day_sold = 500, movie_cost = 2000, dvd_cost = 6, dvd_price = 15]
+448000

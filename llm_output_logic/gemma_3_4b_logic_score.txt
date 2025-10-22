@@ -1,0 +1,29 @@
+Score: 4/30
+
+Wrong Problems:
+61. Predicted: 171 | Correct: 121
+62. Predicted: 96 | Correct: 48
+63. Predicted: 54 | Correct: 41
+64. Predicted: 12.50 | Correct: 5
+65. Predicted: 61 | Correct: 38
+66. Predicted: 25 | Correct: 5
+68. Predicted: 180 | Correct: 1080
+69. Predicted: 53 | Correct: 43
+70. Predicted: 10 | Correct: 16
+71. Predicted: 160 | Correct: 400
+72. Predicted: 249000000 | Correct: 448000
+73. Predicted: 180 | Correct: 624
+74. Predicted: 23 | Correct: 35
+75. Predicted: 4.5 | Correct: 5
+76. Predicted: 48 | Correct: 42
+77. Predicted: 10 | Correct: 16
+78. Predicted: 130 | Correct: 35
+79. Predicted: 72 | Correct: 62
+80. Predicted: 2400 | Correct: 1000
+81. Predicted: 192 | Correct: 72
+84. Predicted: 10 | Correct: 7
+85. Predicted: 1500 | Correct: 800
+86. Predicted: 2 | Correct: 8
+88. Predicted: 450.0 | Correct: 990
+89. Predicted: 3 | Correct: 5
+90. Predicted: 6 | Correct: 10

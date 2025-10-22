@@ -1,0 +1,5 @@
+Problem 18:
+Evaluate 10^{log₁₀(7.5)}
+
+Result:
+7.500000000000001
