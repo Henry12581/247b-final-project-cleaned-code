@@ -7,7 +7,7 @@ PROBLEM_DIR = "problems"
 OUTPUT_FILE = "deepseek_v3_math_z3.txt"
 MODEL_ID = "deepseek-chat"
 BASE_URL = "https://api.deepseek.com/v1"
-API_KEY = "sk-276e8e3edd764c0b90875711c47806ee"  # Replace with your actual key
+API_KEY = "sk-xxxxx"  # Replace with your actual key
 
 # Connect to DeepSeek API
 client = OpenAI(base_url=BASE_URL, api_key=API_KEY)

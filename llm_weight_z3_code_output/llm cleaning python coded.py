@@ -45,7 +45,7 @@ INPUT_FILE = "deepseek_r1_distill_llama_8b_z3.txt"
 OUTPUT_FILE = "out.txt"
 MODEL_ID = "deepseek-chat"
 BASE_URL = "https://api.deepseek.com/v1"
-API_KEY = "sk-276e8e3edd764c0b90875711c47806ee"  # Replace with your actual key
+API_KEY = "sk-xxxxx"  # Replace with your actual key
 
 # Connect to DeepSeek API
 client = OpenAI(base_url=BASE_URL, api_key=API_KEY)
