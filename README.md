@@ -1,10 +1,10 @@
-## 📚 Project Summary: LLM Evaluation via Z3 Code Generation
+## Project Summary: LLM Evaluation via Z3 Code Generation
 
 This project establishes a pipeline to evaluate various **Large Language Models (LLMs)** based on their ability to generate logically correct **Z3 SMT solver code**. The evaluation process includes generating Z3 code, cleaning it for execution, running the code, and scoring the logical correctness of the results. 
 
 ---
 
-### 🛠️ Supported LLM Integration Methods
+### Supported LLM Integration Methods
 
 The pipeline can integrate with models using the following methods:
 
@@ -13,7 +13,7 @@ The pipeline can integrate with models using the following methods:
 
 ---
 
-### 📂 Project Structure & Key Components
+### Project Structure & Key Components
 
 The project is organized around different task types (logic, math, weight) and core pipeline scripts.
 
@@ -36,7 +36,7 @@ The project is organized around different task types (logic, math, weight) and c
 
 ---
 
-### 📝 Meaning of `_z3` in Filenames
+### Meaning of `_z3` in Filenames
 
 The suffix `_z3` indicates that the file strictly adheres to the following conditions:
 
@@ -44,7 +44,7 @@ The suffix `_z3` indicates that the file strictly adheres to the following condi
 
 ---
 
-### 📊 Output Files for Each LLM
+### Output Files for Each LLM
 
 For every model evaluated, four specific files are generated to track the process from raw output to final score (using `llama_3.1_8b` as an example):
 
