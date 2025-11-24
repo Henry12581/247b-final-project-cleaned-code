@@ -17,13 +17,13 @@ def parse_value(value):
             return float(eval(value))  # handles fractions like 2/3
         return float(value)
     except Exception:
-        return value  # return as-is if unparseable
+        return value
 
-# Path to current directory or specify directory
+# Path to current directory
 working_dir = Path(__file__).parent
 gold_file = working_dir / "logic_correct_answers.txt"
 
-# Read gold answers once
+# Read answers once
 gold_lines = gold_file.read_text(encoding="utf-8").strip().splitlines()
 
 # Find all prediction files

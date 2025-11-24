@@ -19,7 +19,7 @@ def parse_value(value):
     except Exception:
         return value  # return as-is if unparseable
 
-# Path to current directory or specify directory
+# Path to current directory
 working_dir = Path(__file__).parent
 gold_file = working_dir / "math_correct_answers.txt"
 

@@ -1,25 +1,18 @@
 from z3 import *
-
 # Define variables
-mike_share = Real('mike_share')
-johnson_share = Real('johnson_share')
+mike_share = Int('mike_share')
+johnson_share = Int('johnson_share')
 
-# Create solver
+# Set up the ratio and Johnson's share
 s = Solver()
-
-# Add ratio constraint: Mike:Johnson = 2:5
-s.add(mike_share / 2 == johnson_share / 5)
-
-# Add Johnson's share constraint
+s.add(mike_share * 5 == johnson_share * 2)  # 2:5 ratio (Mike:Johnson)
 s.add(johnson_share == 2500)
 
-# Solve
-if s.check() == sat:
-    model = s.model()
-    mike_total = model[mike_share].as_decimal(2)
-    mike_remaining = float(mike_total) - 200
+# Solve for Mike's original share
+s.check()
+model = s.model()
+mike_original = model[mike_share].as_long()
 
-    print(f"Mike's total share: ${mike_total}")
-    print(f"Mike's remaining money after buying shirt: ${mike_remaining}")
-else:
-    print("No solution found")
+# Calculate Mike's remaining amount after spending $200
+mike_remaining = mike_original - 200
+print(mike_remaining)

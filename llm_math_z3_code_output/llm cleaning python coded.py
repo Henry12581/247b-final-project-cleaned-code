@@ -5,7 +5,7 @@ import atexit
 import traceback
 from openai import OpenAI
 
-# ===== Redirect stdout to terminal and file =====
+# Redirect stdout to terminal and file
 class Tee:
     def __init__(self, *streams):
         self.streams = streams
@@ -23,7 +23,7 @@ stdout_log = open("deepseek_v3_full_z3_cleaned_by_api.txt", "w", encoding="utf-8
 sys.stdout = Tee(sys.__stdout__, stdout_log)
 atexit.register(stdout_log.close)
 
-# ===== CONFIG =====
+# CONFIG
 INPUT_FILE = "deepseek_v3_full_z3.txt"
 OUTPUT_FILE = "out.txt"
 MODEL_ID = "deepseek-chat"

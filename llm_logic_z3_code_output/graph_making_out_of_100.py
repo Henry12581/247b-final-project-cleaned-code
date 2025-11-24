@@ -1,7 +1,7 @@
 import os
 import matplotlib.pyplot as plt
 
-# Use current directory or change to a full path string
+# Use current directory
 directory = os.path.dirname(__file__)
 score_files = [f for f in os.listdir(directory) if f.endswith("_logic_score.txt")]
 
@@ -13,7 +13,6 @@ for file in sorted(score_files):
     try:
         with open(path, "r", encoding="utf-8") as f:
             first_line = f.readline().strip()
-            # Expect format: "Score: 17/20"
             if "Score:" in first_line and "/" in first_line:
                 score_str = first_line.split("Score:")[1].strip()
                 parts = score_str.split("/")

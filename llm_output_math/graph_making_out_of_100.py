@@ -1,7 +1,7 @@
 import os
 import matplotlib.pyplot as plt
 
-# Use current directory or change to a full path string
+# Use current directory
 directory = os.path.dirname(__file__)
 score_files = [f for f in os.listdir(directory) if f.endswith("_math_score.txt")]
 

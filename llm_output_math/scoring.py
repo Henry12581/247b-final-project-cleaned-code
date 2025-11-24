@@ -2,7 +2,7 @@ from pathlib import Path
 import math
 import re
 
-# === Set the model prefix here ===
+# Set the model prefix here
 prefix = "deepseek_v3_full"
 
 # Construct file paths based on prefix

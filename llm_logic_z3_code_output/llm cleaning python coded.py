@@ -6,7 +6,7 @@ import traceback
 from openai import OpenAI
 
 
-# ===== Redirect stdout to terminal and file =====
+# Redirect stdout to terminal and file
 class Tee:
     def __init__(self, *streams):
         self.streams = streams
@@ -40,7 +40,7 @@ def cleanup():
 
 atexit.register(cleanup)
 
-# ===== CONFIG =====
+# CONFIG
 INPUT_FILE = "llama_3.1_8b_z3.txt"
 OUTPUT_FILE = "out.txt"
 MODEL_ID = "deepseek-chat"
