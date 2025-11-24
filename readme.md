@@ -1,5 +1,3 @@
-README
-
 This project evaluates different LLMs by generating and executing Z3 code. The pipeline supports:
 
 DeepSeek API (using DeepSeek’s provided API)
