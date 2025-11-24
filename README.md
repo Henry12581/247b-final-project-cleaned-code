@@ -52,5 +52,5 @@ For every model evaluated, four specific files are generated to track the proces
 | :--- | :--- | :--- |
 | `llama_3.1_8b_z3` | The **raw Z3 code output** generated directly by the LLM. | **Generation** |
 | `llama_3.1_8b_z3_cleaned_by_api` | The **debugged and cleaned** version of the Z3 code, processed by the cleaning pipeline or API. | **Cleaning** |
-| `llama_3.1_8b_z3_extracted_llm_answers` | The **execution results** from running the cleaned Z3 code via `test.exe`. Contains the computed answers. | **Execution** |
+| `llama_3.1_8b_z3_extracted_llm_answers` | The **execution results** from running the cleaned Z3 code. Contains the computed answers. | **Execution** |
 | `llama_3.1_8b_z3_logic_score` | The **final evaluation score** for the model, including incorrect answers for debugging purposes. | **Scoring** |
