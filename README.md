@@ -1,6 +1,7 @@
 ## 📚 Project Summary: LLM Evaluation via Z3 Code Generation
 
-This project establishes a pipeline to evaluate various Large Language Models (LLMs) based on their ability to generate logically correct Z3 SMT solver code. The evaluation process includes generating Z3 code, cleaning it for execution, running the code, and scoring the logical correctness of the results. This process validates how effectively LLMs can integrate symbolic reasoning.
+This project establishes a pipeline to evaluate various **Large Language Models (LLMs)** based on their ability to generate logically correct **Z3 SMT solver code**. The evaluation process includes generating Z3 code, cleaning it for execution, running the code, and scoring the logical correctness of the results. 
+
 ---
 
 ### 🛠️ Supported LLM Integration Methods
