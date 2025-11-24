@@ -30,7 +30,7 @@ The project is organized around different task types (logic, math, weight) and c
 | `lmstudio_pipeline.py` | Main script for running the evaluation using the **LM Studio** local model pipeline. | Pipeline |
 | `lmstudio_pipeline_z3.py` | Z3 processing within the LM Studio pipeline. | Pipeline |
 | `run_z3.py` | a debug script, i simply copy paste z3 code genmerated by llm to see where the z3 code is wrong. 
-| `deepseek_v3_math_z3.txt` | raw deepseek file were outputed derectlly to the main  directory. | Data/Config |
+| `deepseek_v3_math_z3.txt` | all deepseek related output file, raw or with z3 were outputed derectlly to the main directory. | Data/Config |
 | `readme.md` | The current project documentation file. | Documentation |
 
 ---
